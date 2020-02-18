@@ -20,11 +20,11 @@
 
 <body class="">
 <?php
-include("include/navbar.php");
+include("../include/navbar.php");
 ?>
   <div class="main-content">
       <?php
-      include("include/navbar_top.php")
+      include("../include/navbar_top.php")
       ?>
     <!-- Header -->
     <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
@@ -112,7 +112,7 @@ include("include/navbar.php");
                 <div class="card-header bg-transparent">
                   <div class="row align-items-center">
                     <div class="col">
-                      <h6 class="text-uppercase text-muted ls-1 mb-1">Add news</h6>
+                      <h6 class="text-uppercase text-muted ls-1 mb-1">Add "Кисту чист"</h6>
                       <h2 class="mb-0">In English</h2>
                     </div>
                   </div>
@@ -160,7 +160,7 @@ include("include/navbar.php");
 
       <div class="container-fluid">
         <?php
-        include("include/footer.php")
+        include("../include/footer.php")
         ?>
       </div>
     </div>
