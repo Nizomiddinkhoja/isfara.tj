@@ -29,17 +29,17 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\news" />
-      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\who_is" />
-      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\category" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\gallery" />
       <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\request" />
       <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\questions" />
       <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\video" />
       <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\slider" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\news" />
+      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\who_is" />
+      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\category" />
     </key>
   </component>
   <component name="ServiceViewManager">

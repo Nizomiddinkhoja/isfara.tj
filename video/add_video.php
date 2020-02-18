@@ -20,11 +20,11 @@
 
 <body class="">
 <?php
-include("include/navbar.php");
+include("../include/navbar.php");
 ?>
   <div class="main-content">
       <?php
-      include("include/navbar_top.php")
+      include("../include/navbar_top.php")
       ?>
     <!-- Header -->
     <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
@@ -117,14 +117,36 @@ include("include/navbar.php");
           </div>
         </div>
 
+
           <div class="container-fluid mt-4">
               <!-- Table -->
               <div class="row">
                   <div class="col">
-                      <div class="card">
-                        <div class="text-center">
-                           <button type="button" class="btn btn-primary my-4">Сохранить</button>
-                        </div>
+                      <div class="card shadow">
+                          <div class="card-body">
+                              <div class="card-columns">
+                                  <div class="form-group mb-3">
+                                      <div class="input-group input-group-alternative">
+                                          <div class="input-group-prepend">
+                                              <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                          </div>
+                                          <input type="text" id="src" name="src" class="form-control" placeholder="Ссылка" >
+                                      </div>
+                                  </div>
+                                  <div class="form-group mb-3">
+                                      <div class="input-group input-group-alternative">
+                                          <div class="input-group-prepend">
+                                              <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                          </div>
+                                          <!--  <label>Фото: </label> -->
+                                          <input type="file" name="filename" required="required" class="form-control" >
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="text-center">
+                                  <button type="button" class="btn btn-primary my-4">Сохранить</button>
+                              </div>
+                          </div>
                       </div>
                   </div>
               </div>
@@ -133,7 +155,7 @@ include("include/navbar.php");
 
       <div class="container-fluid">
         <?php
-        include("include/footer.php")
+        include("../include/footer.php")
         ?>
       </div>
     </div>

@@ -1,18 +1,3 @@
-<!--
-
-=========================================================
-* Argon Dashboard - v1.1.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,11 +20,11 @@
 
 <body class="">
 <?php
-include("include/navbar.php");
+include("../include/navbar.php");
 ?>
   <div class="main-content">
       <?php
-      include("include/navbar_top.php")
+      include("../include/navbar_top.php")
       ?>
     <!-- Header -->
     <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
@@ -55,7 +40,7 @@ include("include/navbar.php");
                 <div class="card-header bg-transparent">
                   <div class="row align-items-center">
                     <div class="col">
-                      <h6 class="text-uppercase text-muted ls-1 mb-1">Воридкунии "Кисту чист"</h6>
+                      <h6 class="text-uppercase text-muted ls-1 mb-1">Воридкунии сурат</h6>
                       <h2 class="mb-0">Бо забони точики</h2>
                     </div>
                   </div>
@@ -68,16 +53,7 @@ include("include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <input class="form-control" placeholder="Ному насаб" type="text">
-                      </div>
-                    </div>
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                        </div>
-                        <textarea class="form-control" placeholder="Вазифа" style="height :50px" ></textarea>
-                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->
+                        <input class="form-control" placeholder="Сарлавха" type="text">
                       </div>
                     </div>
                   </div>
@@ -91,7 +67,7 @@ include("include/navbar.php");
                 <div class="card-header bg-transparent">
                   <div class="row align-items-center">
                     <div class="col">
-                      <h6 class="text-uppercase text-muted ls-1 mb-1">Добавление "Кисту чист"</h6>
+                      <h6 class="text-uppercase text-muted ls-1 mb-1">Добавление фото</h6>
                       <h2 class="mb-0">На русском языке</h2>
                     </div>
                   </div>
@@ -104,16 +80,7 @@ include("include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <input class="form-control" placeholder="ФИО" type="text">
-                      </div>
-                    </div>
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                        </div>
-                        <textarea class="form-control" placeholder="Должность" style="height :50px" ></textarea>
-                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->
+                        <input class="form-control" placeholder="Заголовок" type="text">
                       </div>
                     </div>
                   </div>
@@ -127,7 +94,7 @@ include("include/navbar.php");
                 <div class="card-header bg-transparent">
                   <div class="row align-items-center">
                     <div class="col">
-                      <h6 class="text-uppercase text-muted ls-1 mb-1">Add news</h6>
+                      <h6 class="text-uppercase text-muted ls-1 mb-1">Add picture</h6>
                       <h2 class="mb-0">In English</h2>
                     </div>
                   </div>
@@ -140,16 +107,7 @@ include("include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <input class="form-control" placeholder="Full name" type="text">
-                      </div>
-                    </div>
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                        </div>
-                        <textarea class="form-control" placeholder="Position" style="height :50px" ></textarea>
-                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->
+                        <input class="form-control" placeholder="Title" type="text">
                       </div>
                     </div>
                   </div>
@@ -159,14 +117,36 @@ include("include/navbar.php");
           </div>
         </div>
 
+
           <div class="container-fluid mt-4">
               <!-- Table -->
               <div class="row">
                   <div class="col">
-                      <div class="card">
-                        <div class="text-center">
-                           <button type="button" class="btn btn-primary my-4">Сохранить</button>
-                        </div>
+                      <div class="card shadow">
+                          <div class="card-body">
+                              <div class="card-columns">
+                                  <div class="form-group mb-3">
+                                      <div class="input-group input-group-alternative">
+                                          <div class="input-group-prepend">
+                                              <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                          </div>
+                                          <input type="date" id="date" name="birthday" class="form-control" placeholder="Дата" >
+                                      </div>
+                                  </div>
+                                  <div class="form-group mb-3">
+                                      <div class="input-group input-group-alternative">
+                                          <div class="input-group-prepend">
+                                              <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                          </div>
+                                          <!--  <label>Фото: </label> -->
+                                          <input type="file" name="filename" required="required" class="form-control"  >
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="text-center">
+                                  <button type="button" class="btn btn-primary my-4">Сохранить</button>
+                              </div>
+                          </div>
                       </div>
                   </div>
               </div>
@@ -175,7 +155,7 @@ include("include/navbar.php");
 
       <div class="container-fluid">
         <?php
-        include("include/footer.php")
+        include("../include/footer.php")
         ?>
       </div>
     </div>
