@@ -93,7 +93,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="./examples/maps.html">
+                    <a class="nav-link " href="./category.php">
                         <i class="ni ni-ungroup text-orange"></i> Категория
                     </a>
                 </li>
