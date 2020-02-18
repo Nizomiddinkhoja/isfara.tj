@@ -8,14 +8,14 @@
     Argon Dashboard - Free Dashboard for Bootstrap 4 by Creative Tim
   </title>
   <!-- Favicon -->
-  <link href="../assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <link href="./../assets/img/brand/favicon.png" rel="icon" type="image/png">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <!-- Icons -->
-  <link href="../assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
-  <link href="../assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+  <link href="./../assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+  <link href="./../assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
   <!-- CSS Files -->
-  <link href="../assets/css/argon-dashboard.css?v=1.1.2" rel="stylesheet" />
+  <link href="./../assets/css/argon-dashboard.css?v=1.1.2" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -24,7 +24,7 @@ include("../include/navbar.php");
 ?>
   <div class="main-content">
       <?php
-      include("../include/navbar_top.php")
+      include ("../include/navbar_top.php")
       ?>
     <!-- Header -->
     <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
@@ -37,10 +37,10 @@ include("../include/navbar.php");
         <div class="col">
           <div class="card shadow" class="col-md-12" style="display: inherit;">
             <div class="card-header border-0" class="col-md-8" >
-              <h2 class="mb-0" >Новости</h2>
+              <h2 class="mb-0" >Галерея</h2>
 
             <div  class="col text-right"  class="col-md-4">
-                  <a href="#!" class="btn btn-sm btn-primary">Добавить новость</a>
+                  <a href="#!" class="btn btn-sm btn-primary">Добавить фото</a>
                 </div>
             </div>
             <div class="table-responsive">
@@ -139,8 +139,8 @@ include("../include/navbar.php");
           </div>
         </div>
       </div>
-      <?php
-         include("../include/footer.php")
+                    <?php
+        include ("../include/footer.php")
         ?>
     </div>
   </div>

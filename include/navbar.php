@@ -6,7 +6,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Brand -->
-        <a class="navbar-brand pt-0" href="./index.php">
+        <a class="navbar-brand pt-0" href="../index.php">
             <img src="./../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
         </a>
         <!-- User -->
@@ -57,7 +57,7 @@
             <div class="navbar-collapse-header d-md-none">
                 <div class="row">
                     <div class="col-6 collapse-brand">
-                        <a href="./index.php">
+                        <a href="../index.php">
                             <img src="./../assets/img/brand/blue.png">
                         </a>
                     </div>
@@ -83,37 +83,37 @@
             <!-- Navigation -->
             <ul class="navbar-nav">
                 <li class="nav-item  active ">
-                    <a class="nav-link  active " href="./index.php">
+                    <a class="nav-link  active " href="../index.php">
                         <i class="ni ni-tv-2 text-primary"></i> Главная
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="./news.php">
+                    <a class="nav-link " href="../news/news.php">
                         <i class="ni ni-planet text-blue"></i> Новости
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="./category.php">
+                    <a class="nav-link " href="../category/category.php">
                         <i class="ni ni-ungroup text-orange"></i> Категория
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="./examples/tables.html">
+                    <a class="nav-link " href="../gallery/gallery.php">
                         <i class="ni ni-image text-blue"></i> Галерея
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./examples/login.html">
+                    <a class="nav-link" href="../questions/questions.php">
                         <i class="fa fa-question text-info"></i> Вопросы
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./examples/register.html">
+                    <a class="nav-link" href="../request/request.php">
                         <i class="ni ni-email-83 text-blue"></i> Электронная очередь
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./examples/register.html">
+                    <a class="nav-link" href="../slider/slider.php">
                         <i class="ni ni-album-2 text-purple"></i> Слайдер
                     </a>
                 </li>
@@ -123,12 +123,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./examples/register.html">
+                    <a class="nav-link" href="../video/video.php">
                         <i class="ni ni-button-play text-red"></i> Видео
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./examples/register.html">
+                    <a class="nav-link" href="../Who_is/who_is.php">
                         <i class="ni ni-badge text-yellow"></i> Кто Что
                     </a>
                 </li>

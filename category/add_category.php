@@ -20,11 +20,11 @@
 
 <body class="">
 <?php
-include("include/navbar.php");
+include("../include/navbar.php");
 ?>
   <div class="main-content">
       <?php
-      include("include/navbar_top.php")
+      include("../include/navbar_top.php")
       ?>
     <!-- Header -->
     <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
@@ -161,7 +161,7 @@ include("include/navbar.php");
       </form>
       <div class="container-fluid">
           <?php
-          include("include/footer.php")
+          include("../include/footer.php")
           ?>
       </div>
     </div>

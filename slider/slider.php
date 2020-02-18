@@ -37,10 +37,10 @@ include("../include/navbar.php");
         <div class="col">
           <div class="card shadow" class="col-md-12" style="display: inherit;">
             <div class="card-header border-0" class="col-md-8" >
-              <h2 class="mb-0" >Новости</h2>
+              <h2 class="mb-0" >Слайдер</h2>
 
             <div  class="col text-right"  class="col-md-4">
-                  <a href="#!" class="btn btn-sm btn-primary">Добавить новость</a>
+                  <a href="#!" class="btn btn-sm btn-primary">Добавить слайдер</a>
                 </div>
             </div>
             <div class="table-responsive">

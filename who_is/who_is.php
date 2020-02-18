@@ -24,7 +24,7 @@ include("../include/navbar.php");
 ?>
   <div class="main-content">
       <?php
-      include("../include/navbar_top.php")
+      include ("../include/navbar_top.php")
       ?>
     <!-- Header -->
     <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
@@ -37,10 +37,10 @@ include("../include/navbar.php");
         <div class="col">
           <div class="card shadow" class="col-md-12" style="display: inherit;">
             <div class="card-header border-0" class="col-md-8" >
-              <h2 class="mb-0" >Новости</h2>
+              <h2 class="mb-0" >Кисту чист?</h2>
 
             <div  class="col text-right"  class="col-md-4">
-                  <a href="#!" class="btn btn-sm btn-primary">Добавить новость</a>
+                  <a href="#!" class="btn btn-sm btn-primary">Добавить "Кисту чист?"</a>
                 </div>
             </div>
             <div class="table-responsive">
@@ -49,6 +49,7 @@ include("../include/navbar.php");
             <div class="col-md-4">
               <img src="../img/news/bajik.png" class="col-md-10">
               <h2>Ном</h2>
+              <h5>Вазифа</h5>
                   <a href="#!" class="btn btn-sm btn-success">Изменить</a>
                   <a href="#!" class="btn btn-sm btn-danger">Удалить</a>
             </div>
@@ -56,6 +57,7 @@ include("../include/navbar.php");
             <div class="col-md-4">
               <img src="../img/news/bajik.png" class="col-md-10">
               <h2>Ном</h2>
+              <h5>Вазифа</h5>
                   <a href="#!" class="btn btn-sm btn-success">Изменить</a>
                   <a href="#!" class="btn btn-sm btn-danger">Удалить</a>
             </div>
@@ -63,6 +65,7 @@ include("../include/navbar.php");
             <div class="col-md-4">
               <img src="../img/news/bajik.png" class="col-md-10">
               <h2>Ном</h2>
+              <h5>Вазифа</h5>
                   <a href="#!" class="btn btn-sm btn-success">Изменить</a>
                   <a href="#!" class="btn btn-sm btn-danger">Удалить</a>
             </div>
@@ -70,6 +73,7 @@ include("../include/navbar.php");
             <div class="col-md-4">
               <img src="../img/news/bajik.png" class="col-md-10">
               <h2>Ном</h2>
+              <h5>Вазифа</h5>
                   <a href="#!" class="btn btn-sm btn-success">Изменить</a>
                   <a href="#!" class="btn btn-sm btn-danger">Удалить</a>
             </div>
@@ -77,6 +81,7 @@ include("../include/navbar.php");
             <div class="col-md-4">
               <img src="../img/news/bajik.png" class="col-md-10">
               <h2>Ном</h2>
+              <h5>Вазифа</h5>
                   <a href="#!" class="btn btn-sm btn-success">Изменить</a>
                   <a href="#!" class="btn btn-sm btn-danger">Удалить</a>
             </div>
@@ -84,6 +89,7 @@ include("../include/navbar.php");
             <div class="col-md-4">
               <img src="../img/news/bajik.png" class="col-md-10">
               <h2>Ном</h2>
+              <h5>Вазифа</h5>
                   <a href="#!" class="btn btn-sm btn-success">Изменить</a>
                   <a href="#!" class="btn btn-sm btn-danger">Удалить</a>
             </div>
@@ -91,6 +97,7 @@ include("../include/navbar.php");
             <div class="col-md-4">
               <img src="../img/news/bajik.png" class="col-md-10">
               <h2>Ном</h2>
+              <h5>Вазифа</h5>
                   <a href="#!" class="btn btn-sm btn-success">Изменить</a>
                   <a href="#!" class="btn btn-sm btn-danger">Удалить</a>
             </div>
@@ -98,6 +105,7 @@ include("../include/navbar.php");
             <div class="col-md-4">
               <img src="../img/news/bajik.png" class="col-md-10">
               <h2>Ном</h2>
+              <h5>Вазифа</h5>
                   <a href="#!" class="btn btn-sm btn-success">Изменить</a>
                   <a href="#!" class="btn btn-sm btn-danger">Удалить</a>              
             </div>
@@ -105,6 +113,7 @@ include("../include/navbar.php");
             <div class="col-md-4">
               <img src="../img/news/bajik.png" class="col-md-10">
               <h2>Ном</h2>
+              <h5>Вазифа</h5>
                   <a href="#!" class="btn btn-sm btn-success">Изменить</a>
                   <a href="#!" class="btn btn-sm btn-danger">Удалить</a>
             </div>
@@ -139,8 +148,8 @@ include("../include/navbar.php");
           </div>
         </div>
       </div>
-      <?php
-         include("../include/footer.php")
+                    <?php
+        include ("../include/footer.php")
         ?>
     </div>
   </div>
