@@ -7,7 +7,7 @@
         </button>
         <!-- Brand -->
         <a class="navbar-brand pt-0" href="./index.php">
-            <img src="./assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+            <img src="./../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
         </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
@@ -26,7 +26,7 @@
                 <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="media align-items-center">
               <span class="avatar avatar-sm rounded-circle">
-                <img alt="Image placeholder" src="./assets/img/theme/team-1-800x800.jpg
+                <img alt="Image placeholder" src="./../assets/img/theme/team-1-800x800.jpg
 ">
               </span>
                     </div>
@@ -58,7 +58,7 @@
                 <div class="row">
                     <div class="col-6 collapse-brand">
                         <a href="./index.php">
-                            <img src="./assets/img/brand/blue.png">
+                            <img src="./../assets/img/brand/blue.png">
                         </a>
                     </div>
                     <div class="col-6 collapse-close">
@@ -138,33 +138,7 @@
                     </a>
                 </li>
             </ul>
-            <!-- Divider -->
-<!--            <hr class="my-3">-->
-<!--            <h6 class="navbar-heading text-muted">Documentation</h6>-->
-<!--            <ul class="navbar-nav mb-md-3">-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html">-->
-<!--                        <i class="ni ni-spaceship"></i> Getting started-->
-<!--                    </a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html">-->
-<!--                        <i class="ni ni-palette"></i> Foundation-->
-<!--                    </a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html">-->
-<!--                        <i class="ni ni-ui-04"></i> Components-->
-<!--                    </a>-->
-<!--                </li>-->
-<!--            </ul>-->
-<!--            <ul class="navbar-nav">-->
-<!--                <li class="nav-item active active-pro">-->
-<!--                    <a class="nav-link" href="./examples/upgrade.html">-->
-<!--                        <i class="ni ni-send text-dark"></i> Upgrade to PRO-->
-<!--                    </a>-->
-<!--                </li>-->
-<!--            </ul>-->
+
         </div>
     </div>
 </nav>
