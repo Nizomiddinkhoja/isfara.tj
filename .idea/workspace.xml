@@ -24,9 +24,19 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../login.loc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\who_is" />
+      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\news" />
+      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\category" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc" />
+    </key>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -50,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581930224616</updated>
-      <workItem from="1581930229417" duration="9098000" />
+      <workItem from="1581930229417" duration="12759000" />
     </task>
     <servers />
   </component>
@@ -70,10 +80,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="604" y="340" key="NewPhpFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1581935739384" />
-    <state x="277" y="59" key="SettingsEditor" timestamp="1582013474843">
+    <state x="277" y="59" key="SettingsEditor" timestamp="1582013660785">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="277" y="59" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1582013474843" />
+    <state x="277" y="59" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1582013660785" />
     <state x="465" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1581930228239">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

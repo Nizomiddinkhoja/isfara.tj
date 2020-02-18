@@ -35,7 +35,7 @@
 
 <body class="">
 <?php
-    include("include/navbar.php")
+include("include/navbar.php")
 ?>
   <div class="main-content">
       <?php
