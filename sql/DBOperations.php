@@ -35,4 +35,42 @@ WHERE l.`name`='ru' AND c.`status`=1 AND cn.`name`='category'";
         echo $sql;
         return mysqli_query($com->getDb(), $sql);
     }
+
+
+    public function  get_news(){
+        $com = new DbConnect();
+        $sql = "SELECT n.id, t.title, t.description, n.img  FROM  news n JOIN texts t ON t.id_menu = n.id 
+JOIN locale l ON l.id=t.locale 
+JOIN content cn ON cn.id=t.id_content 
+WHERE l.name='ru' AND n.status=1 AND cn.name='news'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+
+    public function  get_edit_news_tj($id){
+        $com = new DbConnect();
+        $sql = "SELECT n.id, t.title, t.description, n.img, t.body  FROM  news n JOIN texts t ON t.id_menu = n.id 
+JOIN locale l ON l.id=t.locale 
+JOIN content cn ON cn.id=t.id_content 
+WHERE l.name=\"ru\" AND n.status=1 AND cn.name=\"news\" and n.`id`='".$id."'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+    public function  get_edit_news_ru($id){
+        $com = new DbConnect();
+        $sql = "SELECT n.id, t.title, t.description, n.img, t.body   FROM  news n JOIN texts t ON t.id_menu = n.id
+JOIN locale l ON l.id=t.locale
+JOIN content cn ON cn.id=t.id_content
+WHERE l.name='ru' AND n.status=1 AND cn.name='news' and n.`id`='".$id."'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+    public function  get_edit_news_en($id){
+        $com = new DbConnect();
+        $sql = "SELECT n.id, t.title, t.description, n.img, t.body   FROM  news n JOIN texts t ON t.id_menu = n.id
+JOIN locale l ON l.id=t.locale
+JOIN content cn ON cn.id=t.id_content
+WHERE l.name='en' AND n.status=1 AND cn.name='news' and n.`id`='".$id."'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+
 }
