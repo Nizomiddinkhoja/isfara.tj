@@ -98,8 +98,18 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="../slider/slider.php">
+                        <i class="ni ni-album-2 text-purple"></i> Слайдер
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link " href="../gallery/gallery.php">
                         <i class="ni ni-image text-blue"></i> Галерея
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Who_is/who_is.php">
+                        <i class="ni ni-badge text-yellow"></i> Кто Что
                     </a>
                 </li>
                 <li class="nav-item">
@@ -113,28 +123,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../slider/slider.php">
-                        <i class="ni ni-album-2 text-purple"></i> Слайдер
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./examples/register.html">
-                        <i class="fa fa-users text-orange"></i> Посетители
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="../video/video.php">
                         <i class="ni ni-button-play text-red"></i> Видео
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../Who_is/who_is.php">
-                        <i class="ni ni-badge text-yellow"></i> Кто Что
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./examples/register.html">
-                        <i class="ni ni-key-25 text-black-50"></i> Администраторы
                     </a>
                 </li>
             </ul>
