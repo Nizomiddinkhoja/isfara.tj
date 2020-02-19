@@ -4,9 +4,9 @@ include  __DIR__."/DB.php";
 class DBOperations
 {
 
-    public function  getUserByEmail($email){
+    public function  login($login, $password){
         $com = new DbConnect();
-        $sql = "select * from users where email='$email'";
+        $sql = "select * from users where login='$login' and password='".md5($password)."'";
         return mysqli_query($com->getDb(), $sql);
     }
 }

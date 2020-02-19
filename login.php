@@ -1,18 +1,22 @@
-<!--
+<?php
+session_start();
+include ("sql/DBOperations.php");
+if(isset($_POST["submit"])){
+    $dbOperation = new DBOperations();
+    $login = $_POST["login"];
+    $password = $_POST["password"];
+    $result = $dbOperation->login($login, $password);
+    if(mysqli_num_rows($result)> 0){
+        $_SESSION["is_auth"] = true;
+        header("Location: index.php");
+    }else{
+        $message = "Неправильный логин или пароль!!!";
+    }
 
-=========================================================
-* Argon Dashboard - v1.1.2
-=========================================================
+}
 
-* Product Page: https://www.creative-tim.com/product/argon-dashboard
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
+?>
 
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,13 +72,13 @@
           <div class="card bg-secondary shadow border-0">
                         <div class="card-body px-lg-5 py-lg-5">
               <div class="text-muted text-center mt-2 mb-3"><small>Авторизация</small></div>
-              <form role="form">
+              <form role="form" method="post">
                 <div class="form-group mb-3">
                   <div class="input-group input-group-alternative">
                     <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                      <span class="input-group-text"><i class="fa fa-user"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Логин" type="email">
+                    <input class="form-control" name="login" placeholder="Логин" type="text">
                   </div>
                 </div>
                 <div class="form-group">
@@ -82,11 +86,11 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Пароль" type="password">
+                    <input class="form-control" name="password" placeholder="Пароль" type="password">
                   </div>
                 </div>
                 <div class="text-center">
-                  <button type="button" class="btn btn-primary my-4">Вход</button>
+                  <button type="submit" name="submit" class="btn btn-primary my-4">Вход</button>
                 </div>
               </form>
             </div>

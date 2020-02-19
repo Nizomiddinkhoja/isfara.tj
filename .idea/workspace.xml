@@ -65,6 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1581930224616</updated>
       <workItem from="1581930229417" duration="13831000" />
+      <workItem from="1582099392124" duration="895000" />
     </task>
     <servers />
   </component>
@@ -92,9 +93,13 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="93" y="93" width="1350" height="648" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1582018327872" />
-    <state x="465" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1581930228239">
+    <state x="465" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1582099394434">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="465" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1581930228239" />
+    <state x="465" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1582099394434" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1582099988108">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1582099988108" />
   </component>
 </project>
