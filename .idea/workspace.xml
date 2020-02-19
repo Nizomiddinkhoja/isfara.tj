@@ -24,22 +24,22 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/gallery" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/category" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\gallery" />
-      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\request" />
-      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\questions" />
-      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\video" />
-      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\slider" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\news" />
       <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\who_is" />
       <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\category" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\category" />
+      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\gallery" />
+      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\request" />
+      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\questions" />
+      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\video" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -81,10 +81,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1582013411996" />
-    <state x="604" y="340" key="NewPhpFileDialog" timestamp="1581935739384">
+    <state x="604" y="340" key="NewPhpFileDialog" timestamp="1582101238313">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="604" y="340" key="NewPhpFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1581935739384" />
+    <state x="604" y="340" key="NewPhpFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1582101238313" />
     <state x="277" y="59" key="SettingsEditor" timestamp="1582013660785">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
