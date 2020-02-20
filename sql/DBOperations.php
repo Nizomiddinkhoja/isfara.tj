@@ -144,5 +144,9 @@ WHERE l.`name`='en' AND c.`status`=1 AND cn.`name`='category'";
 
         return mysqli_query($com->getDb(), $sql);
     }
-
+    public function deleteNews($id){
+        $com = new DbConnect();
+        $sql = "UPDATE news SET status=0 Where id=$id";
+        return mysqli_query($com->getDb(), $sql);
+    }
 }

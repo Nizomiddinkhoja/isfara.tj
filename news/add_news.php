@@ -7,16 +7,49 @@ $message="";
 if(isset($_POST["submit"])){
     $title_ru = $_POST["title_ru"]; $title_tj = $_POST["title_tj"]; $title_en = $_POST["title_en"];
     $date= $_POST["date"];
-    $img= $_POST["filename"];
     $category_tj= $_POST["category_tj"];
     $short_description_ru = $_POST["short_description_ru"]; $short_description_tj = $_POST["short_description_tj"]; $short_description_en = $_POST["short_description_en"];
 $full_description_ru = $_POST["full_description_ru"]; $full_description_tj = $_POST["full_description_tj"]; $full_description_en = $_POST["full_description_en"];
     try{
-        $dbOperation->addNews($category_tj,$date, $img);
-        $dbOperation->addNewsText($title_tj, $short_description_tj, $full_description_tj, "tj");
-        $dbOperation->addNewsText($title_ru, $short_description_ru, $full_description_ru, "ru");
-        $dbOperation->addNewsText($title_en, $short_description_en, $full_description_en, "en");
-        $message = "<h4 class='alert-success'>Успешно сохранено!</h4>";
+        if($_FILES["filename"]["size"] > 1024*3*1024)
+        {
+            echo ("Размер файла превышает три мегабайта");
+            exit;
+        }
+//        // Проверяем загружен ли файл
+//        if(is_uploaded_file($_FILES["filename"]["tmp_name"]))
+//        {
+//            // Если файл загружен успешно, перемещаем его
+//            // из временной директории в конечную
+//            move_uploaded_file($_FILES["filename"]["tmp_name"], "../../img/".$_FILES["filename"]["name"]);
+//            $file = $_FILES["filename"]["name"];
+//
+//            $dbOperation->addNews($category_tj, $date, $file);
+//            $message = "<h4 class='alert-success'>Успешно сохранено!</h4>";
+//        } else {
+//            echo("Ошибка загрузки файла");
+//        }
+
+        if(isset($_FILES['filename'])) {
+            // проверяем, можно ли загружать изображение
+            $check = can_upload($_FILES['filename']);
+
+            if($check === true){
+                // загружаем изображение на сервер
+                make_upload($_FILES["filename"]["tmp_name"], "../../img/".$_FILES["filename"]["name"]);
+        $file = $_FILES["filename"]["name"];
+                echo "<strong>Файл успешно загружен!</strong>";
+            }
+            else{
+                // выводим сообщение об ошибке
+                echo "<strong>$check</strong>";
+            }
+        }
+//        $dbOperation->addNewsText($title_tj, $short_description_tj, $full_description_tj, "tj");
+//        $dbOperation->addNewsText($title_ru, $short_description_ru, $full_description_ru, "ru");
+//        $dbOperation->addNewsText($title_en, $short_description_en, $full_description_en, "en");
+          var_dump($_POST);
+
     }catch (Exception $exception){
         $message = "<h4 class='alert-danger'>Ошибка: ". $exception->getMessage()."</h4>";
     }
@@ -292,7 +325,7 @@ include("../include/navbar.php");
                                               <span class="input-group-text"><i class="fa fa-file"></i></span>
                                           </div>
                                           <!--  <label>Фото: </label> -->
-                                          <input type="file" name="filename" required="required" class="form-control"  >
+                                          <input  type="file" name="filename" required="required" class="form-control"  >
                                       </div>
                                   </div>
                               </div>
