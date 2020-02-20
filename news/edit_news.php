@@ -12,7 +12,7 @@ if($_SESSION["is_auth"]) {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>
-    Изменени новостя
+    Изменение новостя
   </title>
   <!-- Favicon -->
   <link href="../assets/img/brand/favicon.png" rel="icon" type="image/png">
@@ -41,7 +41,7 @@ include("../include/navbar.php");
         <div class="container-fluid mt--7">
           <div class="row">
               <?php
-              $result = $dbOperation->get_edit_news_ru($id);
+              $result = $dbOperation->get_edit_news_tj($id);
               if(mysqli_num_rows($result)> 0) {
                   $row = mysqli_fetch_array($result);
               }
@@ -66,7 +66,7 @@ include("../include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="fa fa-newspaper"></i></span>
                         </div>
-                        <input class="form-control"  type="text"  required="required" value="'.$row['title'].'">
+                        <input class="form-control"  type="text"  required="required" placeholder="Сарлавхаи хабар" value="'.$row['title'].'">
                       </div>
                     </div>
                     <div class="form-group mb-3">
@@ -74,7 +74,7 @@ include("../include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="fa fa-newspaper"></i></span>
                         </div>
-                        <textarea class="form-control"   style="height :50px">'.$row['description'].'</textarea>
+                        <textarea class="form-control" placeholder="Матни кутох"  style="height :50px">'.$row['description'].'</textarea>
                         <!-- <input class="form-control" placeholder="Описание" type="text"> -->
                       </div>
                     </div>
@@ -92,22 +92,39 @@ include("../include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <select class="form-control" placeholder="Выберите категорию" id="" name="" form="">
-                          <option value="none" hidden="">Категорияро интихоб кунед</option>
-                          <option value="volvo">Volvo</option>
-                          <option value="saab">Saab</option>
-                          <option value="opel">Opel</option>
-                          <option value="audi">Audi</option>
+                                               <select class="form-control" id="" name="category_tj">
+<!--                          <option value="none" hidden="">Категорияро интихоб кунед</option>-->
+
+                            '?>
+                            <?php
+                            $result = $dbOperation->get_Categories_tj();
+                            if(mysqli_num_rows($result)> 0){
+                                while ($row = mysqli_fetch_array($result)){
+                                    echo
+                                        ' 
+                                    <option value="'.$row['id'].'">'.$row['title'].'</option>            
+            ' ;
+                                }
+                            }
+                            ?>
+
+                        </select>
+
                         </select>
                       </div>
                     </div>
                   </div>
                 </div>
-            '
-              ?>
               </div>
             </div>
 
+    <?php
+    $result = $dbOperation->get_edit_news_ru($id);
+    if(mysqli_num_rows($result)> 0) {
+        $row = mysqli_fetch_array($result);
+    }
+
+    echo '
             <div class="col-xl-4">
               <div class="card shadow">
                 <div class="card-header bg-transparent">
@@ -126,7 +143,7 @@ include("../include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <input class="form-control" placeholder="Название" type="text">
+                        <input class="form-control" placeholder="Название" type="text" value="'.$row['title'].'">
                       </div>
                     </div>
                     <div class="form-group mb-3">
@@ -134,7 +151,7 @@ include("../include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <textarea class="form-control" placeholder="Краткое описание" style="height :50px" ></textarea>
+                        <textarea class="form-control" placeholder="Краткое описание" style="height :50px" >'.$row['description'].'</textarea>
                         <!-- <input class="form-control" placeholder="Описание" type="text"> -->
                       </div>
                     </div>
@@ -143,7 +160,7 @@ include("../include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <textarea class="form-control" placeholder="Полное описание" style="height :150px" ></textarea>
+                        <textarea class="form-control" placeholder="Полное описание" style="height :150px" >'.$row['body'].'</textarea>
                         <!-- <input class="form-control" placeholder="Описание" type="text"> -->
                       </div>
                     </div>
@@ -152,12 +169,22 @@ include("../include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <select class="form-control" placeholder="Выберите категорию" id="" name="" form="">
-                          <option value="none" hidden="">Выберите категорию</option>
-                          <option value="volvo">Volvo</option>
-                          <option value="saab">Saab</option>
-                          <option value="opel">Opel</option>
-                          <option value="audi">Audi</option>
+                                                <select class="form-control" id="" name="category_tj">
+<!--                          <option value="none" hidden="">Категорияро интихоб кунед</option>-->
+
+                            '?>
+                            <?php
+                            $result = $dbOperation->get_Categories_tj();
+                            if(mysqli_num_rows($result)> 0){
+                                while ($row = mysqli_fetch_array($result)){
+                                    echo
+                                        '
+                                    <option value="'.$row['id'].'">'.$row['title'].'</option>            
+            ' ;
+                                }
+                            }
+                            ?>
+
                         </select>
                       </div>
                     </div>
@@ -166,6 +193,14 @@ include("../include/navbar.php");
               </div>
             </div>
 
+
+    <?php
+    $result = $dbOperation->get_edit_news_en($id);
+    if(mysqli_num_rows($result)> 0) {
+        $row = mysqli_fetch_array($result);
+    }
+
+    echo '
             <div class="col-xl-4">
               <div class="card shadow">
                 <div class="card-header bg-transparent">
@@ -184,7 +219,7 @@ include("../include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <input class="form-control" placeholder="Title" type="text">
+                        <input class="form-control" placeholder="Title" type="text" value="'.$row['title'].'">
                       </div>
                     </div>
                     <div class="form-group mb-3">
@@ -192,7 +227,7 @@ include("../include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <textarea class="form-control" placeholder="Short description" style="height :50px" ></textarea>
+                        <textarea class="form-control" placeholder="Short description" style="height :50px" >'.$row['description'].'</textarea>
                         <!-- <input class="form-control" placeholder="Описание" type="text"> -->
                       </div>
                     </div>
@@ -201,7 +236,7 @@ include("../include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <textarea class="form-control" placeholder="Full description" style="height :150px" ></textarea>
+                        <textarea class="form-control" placeholder="Full description" style="height :150px" >'.$row['body'].'</textarea>
                         <!-- <input class="form-control" placeholder="Описание" type="text"> -->
                       </div>
                     </div>
@@ -210,12 +245,22 @@ include("../include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <select class="form-control" placeholder="Выберите категорию" id="" name="" form="">
-                          <option value="none" hidden="">Choose category</option>
-                          <option value="volvo">Volvo</option>
-                          <option value="saab">Saab</option>
-                          <option value="opel">Opel</option>
-                          <option value="audi">Audi</option>
+                        <select class="form-control" id="" name="category_tj">
+<!--                          <option value="none" hidden="">Категорияро интихоб кунед</option>-->
+
+                            '?>
+                            <?php
+                            $result = $dbOperation->get_Categories_tj();
+                            if(mysqli_num_rows($result)> 0){
+                                while ($row = mysqli_fetch_array($result)){
+                                    echo
+                                        ' 
+                                    <option value="'.$row['id'].'">'.$row['title'].'</option>            
+            ' ;
+                                }
+                            }
+                            ?>
+
                         </select>
                       </div>
                     </div>
@@ -225,6 +270,8 @@ include("../include/navbar.php");
                 </div>
               </div>
             </div>
+          
+
           </div>
         </div>
 
@@ -235,29 +282,31 @@ include("../include/navbar.php");
                       <div class="card shadow">
                           <div class="card-body">
                               <div class="card-columns">
-                                  <div class="form-group mb-3">
+<!--                                  <div class="form-group mb-4">-->
+<!--                                      <div class="input-group input-group-alternative">-->
+
+<!--                                          <div class="input-group-prepend">-->
+<!--                                              <span class="input-group-text"><i class="ni ni-email-83"></i></span>-->
+<!--                                          </div>-->
+<!--                                          <select class="form-control" placeholder="Выберите автора" id="" name="" form="">-->
+<!--                                              <option value="none" hidden="">Муаллифро интихоб кунед</option>-->
+<!--                                              <option value="volvo">Volvo</option>-->
+<!--                                              <option value="saab">Saab</option>-->
+<!--                                              <option value="opel">Opel</option>-->
+<!--                                              <option value="audi">Audi</option>-->
+<!--                                          </select>-->
+<!--                                      </div>-->
+<!--                                  </div>-->
+                                  <div class="form-group mb-4">
                                       <div class="input-group input-group-alternative">
                                           <div class="input-group-prepend">
+                                              
                                               <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                           </div>
-                                          <select class="form-control" placeholder="Выберите автора" id="" name="" form="">
-                                              <option value="none" hidden="">Муаллифро интихоб кунед</option>
-                                              <option value="volvo">Volvo</option>
-                                              <option value="saab">Saab</option>
-                                              <option value="opel">Opel</option>
-                                              <option value="audi">Audi</option>
-                                          </select>
+                                          <input type="date" id="date" name="birthday" class="form-control" value="<?=$row['date']?>">
                                       </div>
                                   </div>
-                                  <div class="form-group mb-3">
-                                      <div class="input-group input-group-alternative">
-                                          <div class="input-group-prepend">
-                                              <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                                          </div>
-                                          <input type="date" id="date" name="birthday" class="form-control" placeholder="Дата" >
-                                      </div>
-                                  </div>
-                                  <div class="form-group mb-3">
+                                  <div class="form-group mb-4">
                                       <div class="input-group input-group-alternative">
                                           <div class="input-group-prepend">
                                               <span class="input-group-text"><i class="ni ni-email-83"></i></span>
