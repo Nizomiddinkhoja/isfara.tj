@@ -61,7 +61,7 @@ if ($_SESSION["is_auth"]) {
                                             <img src="../img/communications.png" class="col-md-10">
                                             <h2><?=$category[1]?></h2>
                                             <a href="edit_category.php?id=<?=$category[0]?>" class="btn btn-sm btn-success">Изменить</a>
-                                            <a href="delete_category.php<?=$category[0]?>" class="btn btn-sm btn-danger">Удалить</a>
+                                            <a href="delete_category.php?id=<?=$category[0]?>" class="btn btn-sm btn-danger">Удалить</a>
                                         </div>
                                         <?php
                                     }
