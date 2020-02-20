@@ -13,9 +13,9 @@ if(isset($_POST["submit"])){
         $dbOperation->addCategoryText($title_ru, $description_ru, "ru");
         $dbOperation->addCategoryText($title_en, $description_en, "en");
         $dbOperation->addCategoryText($title_tj, $description_tj, "tj");
-        $message = "<h4 class='alert-success'>Успешно сохранено!</h4>";
+        $message = "<h4 class='text-success'>Успешно сохранено!</h4>";
     }catch (Exception $exception){
-        $message = "<h4 class='alert-danger'>Ошибка: ". $exception->getMessage()."</h4>";
+        $message = "<h4 class='text-danger'>Ошибка: ". $exception->getMessage()."</h4>";
     }
 }
 ?>
@@ -49,7 +49,11 @@ include("../include/navbar.php");
       ?>
     <!-- Header -->
     <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
-      <?=$message?>
+        <?php if($message != ""){?>
+        <div class="card shadow ml-4 mr-5 pt-3 pb-2 pl-1">
+                <?=$message?>
+        </div>
+        <?}?>
     </div>
       <form role="form" method="post">
     <div class="container-fluid mt--7">
