@@ -1,3 +1,11 @@
+<?php
+session_start();
+include ("../sql/DBOperations.php");
+$dbOperation = new DBOperations();
+if($_SESSION["is_auth"]) {
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +13,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>
-    Argon Dashboard - Free Dashboard for Bootstrap 4 by Creative Tim
+    Добавление слайдера
   </title>
   <!-- Favicon -->
   <link href="../assets/img/brand/favicon.png" rel="icon" type="image/png">
@@ -40,74 +48,32 @@ include("../include/navbar.php");
               <h2 class="mb-0" >Слайдер</h2>
 
             <div  class="col text-right"  class="col-md-4">
-                  <a href="#!" class="btn btn-sm btn-primary">Добавить слайдер</a>
+                  <a href="add_slider.php" class="btn btn-sm btn-primary">Добавить слайдер</a>
                 </div>
             </div>
             <div class="table-responsive">
               <div class="row" style="margin: unset;">
-           
-            <div class="col-md-4">
-              <img src="../img/news/bajik.png" class="col-md-10">
-              <h2>Ном</h2>
-                  <a href="#!" class="btn btn-sm btn-success">Изменить</a>
-                  <a href="#!" class="btn btn-sm btn-danger">Удалить</a>
-            </div>
+
+
+    <?php
+    $result = $dbOperation->getSlider();
+    if(mysqli_num_rows($result)> 0){
+        while ($row = mysqli_fetch_array($result)){
+
+            echo
+            ' 
 
             <div class="col-md-4">
-              <img src="../img/news/bajik.png" class="col-md-10">
-              <h2>Ном</h2>
-                  <a href="#!" class="btn btn-sm btn-success">Изменить</a>
-                  <a href="#!" class="btn btn-sm btn-danger">Удалить</a>
+              <img src="../../img/'.$row['img'].'" class="col-md-10">
+              <h2>'.$row['title'].'</h2>
+                  <a href="edit_slider.php?id='.$row['id'].'" class="btn btn-sm btn-success">Изменить</a>
+                  <a href="delete_slider.php?id='.$row['id'].'" class="btn btn-sm btn-danger">Удалить</a>
             </div>
+' ;
+                }
+            }
+                  ?>
 
-            <div class="col-md-4">
-              <img src="../img/news/bajik.png" class="col-md-10">
-              <h2>Ном</h2>
-                  <a href="#!" class="btn btn-sm btn-success">Изменить</a>
-                  <a href="#!" class="btn btn-sm btn-danger">Удалить</a>
-            </div>
-           
-            <div class="col-md-4">
-              <img src="../img/news/bajik.png" class="col-md-10">
-              <h2>Ном</h2>
-                  <a href="#!" class="btn btn-sm btn-success">Изменить</a>
-                  <a href="#!" class="btn btn-sm btn-danger">Удалить</a>
-            </div>
-
-            <div class="col-md-4">
-              <img src="../img/news/bajik.png" class="col-md-10">
-              <h2>Ном</h2>
-                  <a href="#!" class="btn btn-sm btn-success">Изменить</a>
-                  <a href="#!" class="btn btn-sm btn-danger">Удалить</a>
-            </div>
-
-            <div class="col-md-4">
-              <img src="../img/news/bajik.png" class="col-md-10">
-              <h2>Ном</h2>
-                  <a href="#!" class="btn btn-sm btn-success">Изменить</a>
-                  <a href="#!" class="btn btn-sm btn-danger">Удалить</a>
-            </div>
-           
-            <div class="col-md-4">
-              <img src="../img/news/bajik.png" class="col-md-10">
-              <h2>Ном</h2>
-                  <a href="#!" class="btn btn-sm btn-success">Изменить</a>
-                  <a href="#!" class="btn btn-sm btn-danger">Удалить</a>
-            </div>
-
-            <div class="col-md-4">
-              <img src="../img/news/bajik.png" class="col-md-10">
-              <h2>Ном</h2>
-                  <a href="#!" class="btn btn-sm btn-success">Изменить</a>
-                  <a href="#!" class="btn btn-sm btn-danger">Удалить</a>              
-            </div>
-
-            <div class="col-md-4">
-              <img src="../img/news/bajik.png" class="col-md-10">
-              <h2>Ном</h2>
-                  <a href="#!" class="btn btn-sm btn-success">Изменить</a>
-                  <a href="#!" class="btn btn-sm btn-danger">Удалить</a>
-            </div>
           </div>
             </div>
 
@@ -155,3 +121,8 @@ include("../include/navbar.php");
 </body>
 
 </html>
+    <?php
+}
+else{
+    header("Location: login.php");
+}

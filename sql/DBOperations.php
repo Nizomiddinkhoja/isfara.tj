@@ -121,25 +121,26 @@ WHERE l.`name`='$locale' AND w.`status`=1 AND cn.`name`='who_is' AND w.id=$id";
 
     public function  get_news(){
         $com = new DbConnect();
-        $sql = "SELECT n.id, t.title, t.description, n.img  FROM  news n JOIN texts t ON t.id_menu = n.id 
+        $sql = "SELECT n.id, t.title, t.description, n.img, n.category_id, n.date  FROM  news n JOIN texts t ON t.id_menu = n.id 
+JOIN category c ON t.id_menu = c.id 
 JOIN locale l ON l.id=t.locale 
 JOIN content cn ON cn.id=t.id_content 
-WHERE l.name='ru' AND n.status=1 AND cn.name='news'";
+WHERE l.name=\"ru\" AND n.status=1 AND cn.name=\"news\" ";
         return mysqli_query($com->getDb(), $sql);
     }
 
 
     public function  get_edit_news_tj($id){
         $com = new DbConnect();
-        $sql = "SELECT n.id, t.title, t.description, n.img, t.body  FROM  news n JOIN texts t ON t.id_menu = n.id 
+        $sql = "SELECT n.id, t.title, t.description, n.img, t.body, n.date  FROM  news n JOIN texts t ON t.id_menu = n.id 
 JOIN locale l ON l.id=t.locale 
 JOIN content cn ON cn.id=t.id_content 
-WHERE l.name=\"ru\" AND n.status=1 AND cn.name=\"news\" and n.`id`='".$id."'";
+WHERE l.name=\"tj\" AND n.status=1 AND cn.name=\"news\" and n.`id`='".$id."'";
         return mysqli_query($com->getDb(), $sql);
     }
     public function  get_edit_news_ru($id){
         $com = new DbConnect();
-        $sql = "SELECT n.id, t.title, t.description, n.img, t.body   FROM  news n JOIN texts t ON t.id_menu = n.id
+        $sql = "SELECT n.id, t.title, t.description, n.img, t.body, n.date   FROM  news n JOIN texts t ON t.id_menu = n.id
 JOIN locale l ON l.id=t.locale
 JOIN content cn ON cn.id=t.id_content
 WHERE l.name='ru' AND n.status=1 AND cn.name='news' and n.`id`='".$id."'";
@@ -147,12 +148,149 @@ WHERE l.name='ru' AND n.status=1 AND cn.name='news' and n.`id`='".$id."'";
     }
     public function  get_edit_news_en($id){
         $com = new DbConnect();
-        $sql = "SELECT n.id, t.title, t.description, n.img, t.body   FROM  news n JOIN texts t ON t.id_menu = n.id
+        $sql = "SELECT n.id, t.title, t.description, n.img, t.body, n.date   FROM  news n JOIN texts t ON t.id_menu = n.id
 JOIN locale l ON l.id=t.locale
 JOIN content cn ON cn.id=t.id_content
 WHERE l.name='en' AND n.status=1 AND cn.name='news' and n.`id`='".$id."'";
         return mysqli_query($com->getDb(), $sql);
     }
 
+    public function get_Categories_tj(){
+        $com = new DbConnect();
+        $sql = "SELECT c.`id`, t.`title` FROM  category c JOIN texts t ON t.`id_menu` = c.`id` 
+JOIN locale l ON l.`id`=t.`locale` 
+JOIN content cn ON cn.`id`=t.`id_content` 
+WHERE l.`name`='tj' AND c.`status`=1 AND cn.`name`='category'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function get_Categories_ru(){
+        $com = new DbConnect();
+        $sql = "SELECT c.`id`, t.`title`FROM  category c JOIN texts t ON t.`id_menu` = c.`id` 
+JOIN locale l ON l.`id`=t.`locale` 
+JOIN content cn ON cn.`id`=t.`id_content` 
+WHERE l.`name`='ru' AND c.`status`=1 AND cn.`name`='category'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function get_Categories_en(){
+        $com = new DbConnect();
+        $sql = "SELECT c.`id`, t.`title` FROM  category c JOIN texts t ON t.`id_menu` = c.`id` 
+JOIN locale l ON l.`id`=t.`locale` 
+JOIN content cn ON cn.`id`=t.`id_content` 
+WHERE l.`name`='en' AND c.`status`=1 AND cn.`name`='category'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+
+    public function addNews($category_id,$date, $img){
+        $com = new DbConnect();
+
+        $sql = "INSERT INTO `news`(`id`, `category_id`, `date`, `author_id`, `img`, `visitor_id`, `status`) VALUES (DEFAULT, $category_id,'$date', DEFAULT, '$img', DEFAULT, 1 )";
+        echo $sql;
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+
+    public function addNewsText($title, $description, $body, $locale)
+    {
+        $com = new DbConnect();
+        $sql = "INSERT INTO texts(id_content, id_menu, title, description, body, locale) VALUES((SELECT id FROM content WHERE `name`='news'),
+										(SELECT MAX(id) FROM news),
+										'$title',
+										'$description',
+										'$body',
+										(SELECT id FROM locale WHERE `name`='$locale'))";
+
+        return mysqli_query($com->getDb(), $sql);
+    }
+    public function deleteNews($id){
+        $com = new DbConnect();
+        $sql = "UPDATE news SET status=0 Where id=$id";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function editNews($id, $category ,$date, $img){
+        $com = new DbConnect();
+        $sql = "UPDATE `news` SET `category_id`='$category',`date`='$date',`img`='$img' WHERE id='$id'";
+        return mysqli_query($com->getDb(), $sql);
+
+    }
+
+    public function editNewsText($id, $title,$description, $body, $locale){
+        $com = new DbConnect();
+        $sql = "UPDATE texts SET `title`='$title',`description`='$description',`body`='$body' WHERE id_menu = '$id' AND locale=(SELECT id FROM locale WHERE `name`='$locale') AND id_content=(SELECT id FROM content WHERE `name`='news')";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+
+
+
+
+
+    public function getSlider(){
+        $com = new DbConnect();
+        $sql = "SELECT s.`id`, t.`title`, s.img FROM  slider s JOIN texts t ON t.`id_menu` = s.`id` 
+    JOIN locale l ON l.`id`=t.`locale` 
+    JOIN content cn ON cn.`id`=t.`id_content` 
+    WHERE l.`name`='tj' AND s.`status`=1 AND cn.`name`='slider'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+
+    public function addSlider(){
+        $com = new DbConnect();
+        $sql = "INSERT INTO `slider`(`id`, `img`, `status`) VALUES (DEFAULT, 'img', 1)";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+
+
+
+    public function addSliderText($title, $locale)
+    {
+        $com = new DbConnect();
+        $sql = "    INSERT INTO texts(id_content, id_menu, title, description, body, locale) VALUES((SELECT id FROM content WHERE `name`='slider'),
+    										(SELECT MAX(id) FROM slider),
+    										'$title',
+    										'',
+    										'',
+    										(SELECT id FROM locale WHERE `name`='$locale'))";
+
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function deleteSlider($id){
+        $com = new DbConnect();
+        $sql = "UPDATE slider SET status=0 Where id=$id";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+
+
+    public function editSlider($id,  $img){
+        $com = new DbConnect();
+        $sql = "UPDATE slider SET slider.img = '$img' WHERE id='$id'";
+        return mysqli_query($com->getDb(), $sql);
+        var_dump($sql);
+    }
+
+    public function editSliderText($id, $title,  $locale){
+        $com = new DbConnect();
+        $sql = "UPDATE texts SET title = '$title' WHERE id_menu = '$id' AND locale=(SELECT id FROM locale WHERE `name`='$locale') AND id_content=(SELECT id FROM content WHERE `name`='slider')";
+        return mysqli_query($com->getDb(), $sql);
+        var_dump($sql);
+    }
+
+
+    public function getSliderByID($id, $locale){
+        $com = new DbConnect();
+        $sql = "
+SELECT t.`title`, s.`img` FROM  slider s JOIN texts t ON t.`id_menu` = s.`id`
+JOIN locale l ON l.`id`=t.`locale`
+JOIN content cn ON cn.`id`=t.`id_content`
+WHERE l.`name`='$locale' AND s.`status`=1 AND cn.`name`='slider' AND s.id=$id";
+        return mysqli_query($com->getDb(), $sql);
+    }
 
 }

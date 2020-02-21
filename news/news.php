@@ -62,10 +62,10 @@ include("../include/navbar.php");
                               ' 
             <div class="col-md-4">
           
-              <img src="../img/news/'.$row['img'].'" class="col-md-10">
+              <img src="../../img/news/'.$row['img'].'" class="col-md-10">
               <h2>'.$row['title'].'</h2>
                   <a  href="edit_news.php?id='.$row['id'].'"  class="btn btn-sm btn-success">Изменить</a>
-                  <a href="delete_news.php" class="btn btn-sm btn-danger">Удалить</a> 
+                  <a href="delete_news.php?id='.$row['id'].'" class="btn btn-sm btn-danger">Удалить</a> 
             
             </div>' ;
                 }
