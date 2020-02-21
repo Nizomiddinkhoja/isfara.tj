@@ -4,21 +4,26 @@ include("../sql/DBOperations.php");
 if ($_SESSION["is_auth"]) {
     $dbOperation = new DBOperations();
     $message="";
+    $id = $_GET["id"];
     if(isset($_POST["submit"])){
         $title_ru = $_POST["title_ru"]; $title_tj = $_POST["title_tj"]; $title_en = $_POST["title_en"];
         $category_tj= $_POST["category_tj"];
-        $img="banner.png";
-         try{
-
-            $dbOperation->addSlider($img);
-            $dbOperation->addSliderText($title_tj, "tj");
-            $dbOperation->addSliderText($title_ru,  "ru");
-            $dbOperation->addSliderText($title_en,  "en");
-             $message = "<h4 class='text-success'>Успешно сохранено!</h4>";
-        }catch (Exception $exception){
-            $message = "<h4 class='alert-danger'>Ошибка: ". $exception->getMessage()."</h4>";
+        try {
+            $dbOperation->editSlider($id,  "img");
+            $dbOperation->editSliderText($id, $title_tj,  "tj");
+            $dbOperation->editSliderText($id, $title_ru,  "ru");
+            $dbOperation->editSliderText($id, $title_en,  "en");
+            $message = "<h4 class='alert-success'>Успешно изменено!</h4>";
+        } catch (Exception $exception) {
+            $message = "<h4 class='alert-danger'>Ошибка: " . $exception->getMessage() . "</h4>";
         }
     }
+
+    $row_tj = mysqli_fetch_array($dbOperation->getSliderByID($id, 'tj'));
+    $row_ru = mysqli_fetch_array($dbOperation->getSliderByID($id, 'ru'));
+    $row_en = mysqli_fetch_array($dbOperation->getSliderByID($id, 'en'));
+
+
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,7 +62,7 @@ include("../include/navbar.php");
               </div>
           <?}?>
       </div>
-      <form role="form"  method="post">
+      <form role="form" method="post" action="edit_slider.php?id=<?=$id?>">
         <div class="container-fluid mt--7">
           <div class="row">
 
@@ -78,9 +83,9 @@ include("../include/navbar.php");
                     <div class="form-group mb-3">
                       <div class="input-group input-group-alternative">
                         <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>
                         </div>
-                        <input class="form-control" placeholder="Сарлавха" name="title_tj" type="text">
+                        <input class="form-control" value="<?=$row_tj[0]?>" placeholder="Сарлавха" name="title_tj" type="text">
                       </div>
                     </div>
                     </div>
@@ -103,9 +108,9 @@ include("../include/navbar.php");
                     <div class="form-group mb-3">
                       <div class="input-group input-group-alternative">
                         <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>
                         </div>
-                        <input class="form-control" placeholder="Заголовок" name="title_ru" type="text">
+                        <input class="form-control" placeholder="Заголовок" value="<?=$row_ru[0]?>" name="title_ru" type="text">
                       </div>
                     </div>
                   </div>
@@ -128,9 +133,9 @@ include("../include/navbar.php");
                    <div class="form-group mb-3">
                       <div class="input-group input-group-alternative">
                         <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>
                         </div>
-                        <input class="form-control" placeholder="Title"  name="title_en" type="text">
+                        <input class="form-control" placeholder="Title"  value="<?=$row_en[0]?>"  name="title_en" type="text">
                       </div>
                     </div>
                   </div>
@@ -150,7 +155,7 @@ include("../include/navbar.php");
                             <div class="form-group mb-4">
                                 <div class="input-group input-group-alternative">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                        <span class="input-group-text"><i class="fa fa-arrow-alt-circle-down"></i></span>
                                     </div>
                                     <select class="form-control" id="" name="category_tj">
                                         <!--                          <option value="none" hidden="">Категорияро интихоб кунед</option>-->
@@ -172,7 +177,7 @@ include("../include/navbar.php");
                             <div class="form-group mb-4">
                                 <div class="input-group input-group-alternative">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                        <span class="input-group-text"><i class="fa fa-file"></i></span>
                                     </div>
                                     <!--  <label>Фото: </label> -->
                                     <input type="file" name="filename" required="required" class="form-control"  >

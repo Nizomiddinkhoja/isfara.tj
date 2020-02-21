@@ -24,7 +24,7 @@ $full_description_ru = $_POST["full_description_ru"]; $full_description_tj = $_P
 //            move_uploaded_file($_FILES["filename"]["tmp_name"], "../../img/".$_FILES["filename"]["name"]);
 //            $file = $_FILES["filename"]["name"];
 //
-//            $dbOperation->addNews($category_tj, $date, $file);
+
 //            $message = "<h4 class='alert-success'>Успешно сохранено!</h4>";
 //        } else {
 //            echo("Ошибка загрузки файла");
@@ -38,6 +38,7 @@ $full_description_ru = $_POST["full_description_ru"]; $full_description_tj = $_P
                 // загружаем изображение на сервер
                 make_upload($_FILES["filename"]["tmp_name"], "../../img/".$_FILES["filename"]["name"]);
         $file = $_FILES["filename"]["name"];
+                $dbOperation->addNews($category_tj, $date, $file);
                 echo "<strong>Файл успешно загружен!</strong>";
             }
             else{
@@ -45,10 +46,10 @@ $full_description_ru = $_POST["full_description_ru"]; $full_description_tj = $_P
                 echo "<strong>$check</strong>";
             }
         }
-//        $dbOperation->addNewsText($title_tj, $short_description_tj, $full_description_tj, "tj");
-//        $dbOperation->addNewsText($title_ru, $short_description_ru, $full_description_ru, "ru");
-//        $dbOperation->addNewsText($title_en, $short_description_en, $full_description_en, "en");
-          var_dump($_POST);
+        $dbOperation->addNewsText($title_tj, $short_description_tj, $full_description_tj, "tj");
+        $dbOperation->addNewsText($title_ru, $short_description_ru, $full_description_ru, "ru");
+        $dbOperation->addNewsText($title_en, $short_description_en, $full_description_en, "en");
+        $message = "<h4 class='text-success'>Успешно сохранено!</h4>";
 
     }catch (Exception $exception){
         $message = "<h4 class='alert-danger'>Ошибка: ". $exception->getMessage()."</h4>";
@@ -84,9 +85,13 @@ include("../include/navbar.php");
       include("../include/navbar_top.php")
       ?>
     <!-- Header -->
-    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
-      
-    </div>
+      <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+          <?php if($message != ""){?>
+              <div class="card shadow ml-4 mr-5 pt-3 pb-2 pl-1">
+                  <?=$message?>
+              </div>
+          <?}?>
+      </div>
       <form role="form" method="post">
         <div class="container-fluid mt--7">
           <div class="row">

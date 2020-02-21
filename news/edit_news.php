@@ -1,9 +1,27 @@
 <?php
 session_start();
-include ("../sql/DBOperations.php");
-$dbOperation = new DBOperations();
-if($_SESSION["is_auth"]) {
-    $id=$_GET["id"];
+include("../sql/DBOperations.php");
+if ($_SESSION["is_auth"]) {
+    $dbOperation = new DBOperations();
+    $message="";
+
+    $id = $_GET["id"];
+    if(isset($_POST["submit"])){
+        $title_ru = $_POST["title_ru"]; $title_tj = $_POST["title_tj"]; $title_en = $_POST["title_en"];
+        $date= $_POST["date"];
+        $category_tj= $_POST["category_tj"];
+        $short_description_ru = $_POST["short_description_ru"]; $short_description_tj = $_POST["short_description_tj"]; $short_description_en = $_POST["short_description_en"];
+        $full_description_ru = $_POST["full_description_ru"]; $full_description_tj = $_POST["full_description_tj"]; $full_description_en = $_POST["full_description_en"];
+        try {
+            $dbOperation->editNews($id, $category_tj, $date,"img");
+            $dbOperation->editNewsText($id, $title_tj, $short_description_tj, $full_description_tj, "tj");
+            $dbOperation->editNewsText($id, $title_ru, $short_description_ru, $full_description_ru, "ru");
+            $dbOperation->editNewsText($id, $title_en, $short_description_en, $full_description_en, "en");
+            $message = "<h4 class='alert-success'>Успешно изменено!</h4>";
+        } catch (Exception $exception) {
+            $message = "<h4 class='alert-danger'>Ошибка: " . $exception->getMessage() . "</h4>";
+        }
+    }
 ?>
     <!DOCTYPE html>
 <html lang="en">
@@ -34,10 +52,14 @@ include("../include/navbar.php");
       include("../include/navbar_top.php")
       ?>
     <!-- Header -->
-    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
-      
-    </div>
-      <form role="form">
+      <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+          <?php if($message != ""){?>
+              <div class="card shadow ml-4 mr-5 pt-3 pb-2 pl-1">
+                  <?=$message?>
+              </div>
+          <?}?>
+      </div>
+      <form role="form" method="post" action="edit_news.php?id=<?=$id?>">
         <div class="container-fluid mt--7">
           <div class="row">
               <?php
@@ -66,7 +88,7 @@ include("../include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="fa fa-newspaper"></i></span>
                         </div>
-                        <input class="form-control"  type="text"  required="required" placeholder="Сарлавхаи хабар" value="'.$row['title'].'">
+                        <input class="form-control"  type="text"  required="required" name="title_tj" placeholder="Сарлавхаи хабар" value="'.$row['title'].'">
                       </div>
                     </div>
                     <div class="form-group mb-3">
@@ -74,7 +96,7 @@ include("../include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="fa fa-newspaper"></i></span>
                         </div>
-                        <textarea class="form-control" placeholder="Матни кутох"  style="height :50px">'.$row['description'].'</textarea>
+                        <textarea class="form-control" placeholder="Матни кутох"  name="short_description_tj"  style="height :50px">'.$row['description'].'</textarea>
                         <!-- <input class="form-control" placeholder="Описание" type="text"> -->
                       </div>
                     </div>
@@ -83,7 +105,7 @@ include("../include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <textarea class="form-control" placeholder="Матни пурра" style="height :150px" >'.$row['body'].'</textarea>
+                        <textarea class="form-control" placeholder="Матни пурра"   name="full_description_tj"  style="height :150px" >'.$row['body'].'</textarea>
                         <!-- <input class="form-control" placeholder="Описание" type="text"> -->
                       </div>
                     </div>
@@ -143,7 +165,7 @@ include("../include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <input class="form-control" placeholder="Название" type="text" value="'.$row['title'].'">
+                        <input class="form-control" placeholder="Название" name="title_ru"  type="text" value="'.$row['title'].'">
                       </div>
                     </div>
                     <div class="form-group mb-3">
@@ -151,7 +173,7 @@ include("../include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <textarea class="form-control" placeholder="Краткое описание" style="height :50px" >'.$row['description'].'</textarea>
+                        <textarea class="form-control" placeholder="Краткое описание"  name="short_description_ru"  style="height :50px" >'.$row['description'].'</textarea>
                         <!-- <input class="form-control" placeholder="Описание" type="text"> -->
                       </div>
                     </div>
@@ -160,7 +182,7 @@ include("../include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <textarea class="form-control" placeholder="Полное описание" style="height :150px" >'.$row['body'].'</textarea>
+                        <textarea class="form-control" placeholder="Полное описание"  name="full_description_ru"  style="height :150px" >'.$row['body'].'</textarea>
                         <!-- <input class="form-control" placeholder="Описание" type="text"> -->
                       </div>
                     </div>
@@ -219,7 +241,7 @@ include("../include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <input class="form-control" placeholder="Title" type="text" value="'.$row['title'].'">
+                        <input class="form-control" placeholder="Title"  name="title_en" type="text" value="'.$row['title'].'">
                       </div>
                     </div>
                     <div class="form-group mb-3">
@@ -227,7 +249,7 @@ include("../include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <textarea class="form-control" placeholder="Short description" style="height :50px" >'.$row['description'].'</textarea>
+                        <textarea class="form-control" placeholder="Short description"  name="short_description_en"  style="height :50px" >'.$row['description'].'</textarea>
                         <!-- <input class="form-control" placeholder="Описание" type="text"> -->
                       </div>
                     </div>
@@ -236,7 +258,7 @@ include("../include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <textarea class="form-control" placeholder="Full description" style="height :150px" >'.$row['body'].'</textarea>
+                        <textarea class="form-control" placeholder="Full description"  name="full_description_en"   style="height :150px" >'.$row['body'].'</textarea>
                         <!-- <input class="form-control" placeholder="Описание" type="text"> -->
                       </div>
                     </div>
@@ -303,7 +325,7 @@ include("../include/navbar.php");
                                               
                                               <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                           </div>
-                                          <input type="date" id="date" name="birthday" class="form-control" value="<?=$row['date']?>">
+                                          <input type="date" id="date" name="date" class="form-control" value="<?=$row['date']?>">
                                       </div>
                                   </div>
                                   <div class="form-group mb-4">
@@ -317,7 +339,7 @@ include("../include/navbar.php");
                                   </div>
                               </div>
                               <div class="text-center">
-                                  <button type="button" class="btn btn-primary my-4">Сохранить</button>
+                                  <button type="submit" name="submit" class="btn btn-primary my-4">Сохранить</button>
                               </div>
                           </div>
                       </div>
