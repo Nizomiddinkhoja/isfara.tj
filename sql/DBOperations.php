@@ -406,4 +406,33 @@ JOIN content cn ON cn.`id`=t.`id_content`
         WHERE l.`name`='$locale' AND g.`status`=1 AND cn.`name`='video' AND g.id=$id";
         return mysqli_query($com->getDb(), $sql);
     }
+
+    public function getQuestions(){
+        $com = new DbConnect();
+        $sql = "SELECT q.`id`, t.`title` FROM  questions q JOIN texts t ON t.`id_menu` = q.`id`
+JOIN locale l ON l.`id`=t.locale
+JOIN content cn ON cn.`id`=t.`id_content`
+WHERE l.`name`='tj' AND q.`status`=1 AND cn.`name` = 'questions'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function getAnswer($id_questions){
+        $com = new DbConnect();
+        $sql = "SELECT a.`id`, t.`title` FROM  answer a JOIN texts t ON t.`id_menu` = a.`id`
+JOIN questions q ON q.id = a.id_questions
+JOIN locale l ON l.`id`=t.locale
+JOIN content cn ON cn.`id`=t.`id_content`
+WHERE l.`name`='tj' AND a.`status`=1 AND cn.`name`='answer' and q.id = '$id_questions'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+
+    public function getRequest($id)
+    {
+        $com = new DbConnect();
+        $sql = "SELECT `id`, `last_name`, `first_name`, `email`, `phone`, `title`, `text`, `date` FROM `request` WHERE `id`='$id'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+
 }
