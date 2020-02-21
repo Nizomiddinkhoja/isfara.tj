@@ -233,4 +233,77 @@ WHERE l.`name`='$locale' AND s.`status`=1 AND cn.`name`='slider' AND s.id=$id";
         return mysqli_query($com->getDb(), $sql);
     }
 
+
+
+
+    public function getGallery(){
+        $com = new DbConnect();
+        $sql = "SELECT g.`id`, t.`title`, g.img, g.date FROM  gallery g JOIN texts t ON t.`id_menu` = g.`id`
+JOIN locale l ON l.`id`=t.locale
+JOIN content cn ON cn.`id`=t.`id_content`
+WHERE l.`name`='tj' AND g.`status`=1 AND cn.`name` = 'gallery'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+    public function deleteGallery($id){
+        $com = new DbConnect();
+        $sql = "UPDATE gallery SET status=0 Where id=$id";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+
+    public function addGallery($img, $date){
+        $com = new DbConnect();
+        $sql = "INSERT INTO `gallery`(`id`, `img`, `date`, `status`) VALUES (DEFAULT, '$img', '$date', 1 )";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function addGalleryText($title, $locale)
+    {
+        $com = new DbConnect();
+        $sql = "    INSERT INTO texts(id_content, id_menu, title, description, body, locale) VALUES((SELECT id FROM content WHERE `name`='gallery'),
+    										(SELECT MAX(id) FROM gallery),
+    										'$title',
+    										'',
+    										'',
+    										(SELECT id FROM locale WHERE `name`='$locale'))";
+
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function editGallery($id, $img,  $date){
+        $com = new DbConnect();
+        $sql = "UPDATE `gallery` SET `img`='$img',`date`='$date' WHERE `id`='$id'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function editGalleryText($id, $title,  $locale){
+        $com = new DbConnect();
+        $sql = "UPDATE texts SET title = '$title'  WHERE id_menu = $id AND locale=(SELECT id FROM locale WHERE `name`='$locale') AND id_content=(SELECT id FROM content WHERE `name`='gallery')";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function getGalleryByID($id, $locale){
+        $com = new DbConnect();
+        $sql = "SELECT t.`title`, g.`date` FROM  gallery g JOIN texts t ON t.`id_menu` = g.`id` 
+        JOIN locale l ON l.`id`=t.`locale` 
+        JOIN content cn ON cn.`id`=t.`id_content` 
+        WHERE l.`name`='$locale' AND g.`status`=1 AND cn.`name`='gallery' AND g.id=$id";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function getVideo(){
+        $com = new DbConnect();
+        $sql = "SELECT v.`id`, t.`title`, v.source FROM  video v JOIN texts t ON t.`id_menu` = v.`id`
+JOIN locale l ON l.`id`=t.locale
+JOIN content cn ON cn.`id`=t.`id_content`
+WHERE l.`name`='tj' AND v.`status`=1 AND cn.`name` = 'video'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function deleteVideo($id){
+        $com = new DbConnect();
+        $sql = "UPDATE video SET status=0 Where id=$id";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
 }

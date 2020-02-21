@@ -1,3 +1,26 @@
+<?php
+session_start();
+include("../sql/DBOperations.php");
+if ($_SESSION["is_auth"]) {
+$dbOperation = new DBOperations();
+$message="";
+if(isset($_POST["submit"])){
+    $title_ru = $_POST["title_ru"]; $title_tj = $_POST["title_tj"]; $title_en = $_POST["title_en"];
+    $src=$_POST["src"];
+    if $src=""
+
+    $video='img1';
+    try{
+        $dbOperation->addGallery($img, $date);
+        $dbOperation->addGalleryText($title_tj,  "tj");
+        $dbOperation->addGalleryText($title_ru,  "ru");
+        $dbOperation->addGalleryText($title_en,  "en");
+        $message = "<h4 class='text-success'>Успешно сохранено!</h4>";
+    }catch (Exception $exception){
+        $message = "<h4 class='text-danger'>Ошибка: ". $exception->getMessage()."</h4>";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,9 +74,9 @@ include("../include/navbar.php");
                     <div class="form-group mb-3">
                       <div class="input-group input-group-alternative">
                         <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>
                         </div>
-                        <input class="form-control" placeholder="Ном" type="text">
+                        <input class="form-control" placeholder="Ном" name="title_tj" type="text">
                       </div>
                     </div>
                   </div>
@@ -78,9 +101,9 @@ include("../include/navbar.php");
                     <div class="form-group mb-3">
                       <div class="input-group input-group-alternative">
                         <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>
                         </div>
-                        <input class="form-control" placeholder="Название" type="text">
+                        <input class="form-control" placeholder="Название" name="title_ru" type="text">
                       </div>
                     </div>
                   </div>
@@ -105,9 +128,9 @@ include("../include/navbar.php");
                    <div class="form-group mb-3">
                       <div class="input-group input-group-alternative">
                         <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>
                         </div>
-                        <input class="form-control" placeholder="Name" type="text">
+                        <input class="form-control" placeholder="Name" name="title_en" type="text">
                       </div>
                     </div>
                   </div>
@@ -125,18 +148,18 @@ include("../include/navbar.php");
                       <div class="card shadow">
                           <div class="card-body">
                               <div class="card-columns">
-                                  <div class="form-group mb-3">
+                                  <div class="form-group mb-4">
                                       <div class="input-group input-group-alternative">
                                           <div class="input-group-prepend">
-                                              <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                              <span class="input-group-text"><i class="fa fa-link"></i></span>
                                           </div>
                                           <input type="text" id="src" name="src" class="form-control" placeholder="Ссылка" >
                                       </div>
                                   </div>
-                                  <div class="form-group mb-3">
+                                  <div class="form-group mb-4">
                                       <div class="input-group input-group-alternative">
                                           <div class="input-group-prepend">
-                                              <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                              <span class="input-group-text"><i class="fa fa-file"></i></span>
                                           </div>
                                           <!--  <label>Фото: </label> -->
                                           <input type="file" name="filename" required="required" class="form-control" >

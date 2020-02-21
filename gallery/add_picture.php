@@ -1,3 +1,24 @@
+<?php
+session_start();
+include("../sql/DBOperations.php");
+if ($_SESSION["is_auth"]) {
+$dbOperation = new DBOperations();
+$message="";
+if(isset($_POST["submit"])){
+    $title_ru = $_POST["title_ru"]; $title_tj = $_POST["title_tj"]; $title_en = $_POST["title_en"];
+    $date=$_POST["date"];
+    $img='img1';
+    try{
+      $dbOperation->addGallery($img, $date);
+        $dbOperation->addGalleryText($title_tj,  "tj");
+        $dbOperation->addGalleryText($title_ru,  "ru");
+        $dbOperation->addGalleryText($title_en,  "en");
+       $message = "<h4 class='text-success'>Успешно сохранено!</h4>";
+    }catch (Exception $exception){
+        $message = "<h4 class='text-danger'>Ошибка: ". $exception->getMessage()."</h4>";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +26,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>
-    Кисту чист - Панель управления
+    Добавление галереи
   </title>
   <!-- Favicon -->
   <link href="../assets/img/brand/favicon.png" rel="icon" type="image/png">
@@ -27,10 +48,14 @@ include("../include/navbar.php");
       include("../include/navbar_top.php")
       ?>
     <!-- Header -->
-    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
-      
-    </div>
-      <form role="form">
+      <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+          <?php if($message != ""){?>
+              <div class="card shadow ml-4 mr-5 pt-3 pb-2 pl-1">
+                  <?=$message?>
+              </div>
+          <?}?>
+      </div>
+      <form role="form" method="post">
         <div class="container-fluid mt--7">
           <div class="row">
 
@@ -40,7 +65,7 @@ include("../include/navbar.php");
                 <div class="card-header bg-transparent">
                   <div class="row align-items-center">
                     <div class="col">
-                      <h6 class="text-uppercase text-muted ls-1 mb-1">Воридкунии сурат</h6>
+                      <h6 class="text-uppercase text-muted ls-1 mb-1">Воридкунии расм</h6>
                       <h2 class="mb-0">Бо забони точики</h2>
                     </div>
                   </div>
@@ -53,7 +78,7 @@ include("../include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <input class="form-control" placeholder="Сарлавха" type="text">
+                        <input class="form-control" placeholder="Сарлавха"  name="title_tj" type="text">
                       </div>
                     </div>
                   </div>
@@ -80,7 +105,7 @@ include("../include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <input class="form-control" placeholder="Заголовок" type="text">
+                        <input class="form-control" placeholder="Заголовок"  name="title_ru" type="text">
                       </div>
                     </div>
                   </div>
@@ -107,7 +132,7 @@ include("../include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <input class="form-control" placeholder="Title" type="text">
+                        <input class="form-control" placeholder="Title" name="title_en" type="text">
                       </div>
                     </div>
                   </div>
@@ -125,15 +150,15 @@ include("../include/navbar.php");
                       <div class="card shadow">
                           <div class="card-body">
                               <div class="card-columns">
-                                  <div class="form-group mb-3">
+                                  <div class="form-group mb-4">
                                       <div class="input-group input-group-alternative">
                                           <div class="input-group-prepend">
                                               <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                           </div>
-                                          <input type="date" id="date" name="birthday" class="form-control" placeholder="Дата" >
+                                          <input type="date" id="date" name="date" class="form-control" placeholder="Дата" >
                                       </div>
                                   </div>
-                                  <div class="form-group mb-3">
+                                  <div class="form-group mb-4">
                                       <div class="input-group input-group-alternative">
                                           <div class="input-group-prepend">
                                               <span class="input-group-text"><i class="ni ni-email-83"></i></span>
@@ -144,7 +169,7 @@ include("../include/navbar.php");
                                   </div>
                               </div>
                               <div class="text-center">
-                                  <button type="button" class="btn btn-primary my-4">Сохранить</button>
+                                  <button type="submit" name="submit" class="btn btn-primary my-4">Сохранить</button>
                               </div>
                           </div>
                       </div>
@@ -179,3 +204,8 @@ include("../include/navbar.php");
 </body>
 
 </html>
+    <?php
+} else {
+    header("Location: login.php");
+}
+?>
