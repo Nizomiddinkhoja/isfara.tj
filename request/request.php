@@ -60,7 +60,7 @@ include("../include/navbar.php");
                 </thead>
                 <tbody>
                 <?php
-                $result = $dbOperation->getVideo();
+                $result = $dbOperation->getRequest();
                 if(mysqli_num_rows($result)>0) {
                     while ($row = mysqli_fetch_array($result)) {
 
@@ -87,12 +87,12 @@ include("../include/navbar.php");
                         '.$row[5].'
                       </div>
                     </td>
-                    <td>
+                    <!--<td>
                       <div class="d-flex align-items-center">
-                        <span class="mr-2">'.$row[6].'</span>
+                        <span class="mr-2">.$row[6].</span>
                       
                       </div>
-                    </td>
+                    </td>-->
 
                     <td>
                       '.$row[7].'
@@ -104,7 +104,7 @@ include("../include/navbar.php");
                         </a>
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                           <a class="dropdown-item" href="#">Подробнее</a>
-                          <a class="dropdown-item" href="#">Удалить</a>
+                          <a class="dropdown-item" href="delete_request.php?id='.$row[0].'">Удалить</a>
                         </div>
                       </div>
                     </td>
