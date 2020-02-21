@@ -59,7 +59,7 @@ include("../include/navbar.php");
                       while ($gallery = mysqli_fetch_array($result)) {
                           ?>
                           <div class="col-md-4">
-                              <img src="../img/communications.png" class="col-md-10">
+                              <img src="../img/<?=$gallery[2]?>" class="col-md-10">
                               <h2><?=$gallery[1]?></h2>
                               <a href="edit_gallery.php?id=<?=$gallery[0]?>" class="btn btn-sm btn-success">Изменить</a>
                               <a href="delete_gallery.php?id=<?=$gallery[0]?>" class="btn btn-sm btn-danger">Удалить</a>

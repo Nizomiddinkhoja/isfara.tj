@@ -76,6 +76,7 @@ WHERE l.`name`='ru' AND w.`status`=1 AND cn.`name`='who_is'";
     public function editWhoIs($id, $img){
         $com = new DbConnect();
         $sql = "UPDATE who_is SET img='$img' WHERE id=$id";
+        echo $sql;
         mysqli_query($com->getDb(), $sql);
     }
 
@@ -210,19 +211,30 @@ WHERE l.`name`='en' AND c.`status`=1 AND cn.`name`='category'";
         return mysqli_query($com->getDb(), $sql);
     }
 
-    public function editNews($id, $category ,$date, $img){
+    public function editNews($id, $category ,$date){
         $com = new DbConnect();
-        $sql = "UPDATE `news` SET `category_id`='$category',`date`='$date',`img`='$img' WHERE id='$id'";
+        $sql = "UPDATE `news` SET `category_id`='$category',`date`='$date' WHERE id='$id'";
         return mysqli_query($com->getDb(), $sql);
 
     }
 
+    public function editNewsImg($id, $img){
+        $com = new DbConnect();
+        $sql = "UPDATE `news` SET `img`='$img' WHERE id='$id'";
+        return mysqli_query($com->getDb(), $sql);
+
+    }
     public function editNewsText($id, $title,$description, $body, $locale){
         $com = new DbConnect();
         $sql = "UPDATE texts SET `title`='$title',`description`='$description',`body`='$body' WHERE id_menu = '$id' AND locale=(SELECT id FROM locale WHERE `name`='$locale') AND id_content=(SELECT id FROM content WHERE `name`='news')";
         return mysqli_query($com->getDb(), $sql);
     }
 
+    public function deleteNewsImg($id){
+        $com = new DbConnect();
+        $sql = "UPDATE news SET img=''Where id=$id";
+        return mysqli_query($com->getDb(), $sql);
+    }
 
 
 
@@ -238,9 +250,10 @@ WHERE l.`name`='en' AND c.`status`=1 AND cn.`name`='category'";
     }
 
 
-    public function addSlider(){
+    public function addSlider($img){
         $com = new DbConnect();
-        $sql = "INSERT INTO `slider`(`id`, `img`, `status`) VALUES (DEFAULT, 'img', 1)";
+        $sql = "INSERT INTO `slider`(`id`, `img`, `status`) VALUES (DEFAULT, '$img', 1)";
+        echo $sql;
         return mysqli_query($com->getDb(), $sql);
     }
 
@@ -266,13 +279,24 @@ WHERE l.`name`='en' AND c.`status`=1 AND cn.`name`='category'";
         return mysqli_query($com->getDb(), $sql);
     }
 
+    public function deleteSliderImg($id){
+        $com = new DbConnect();
+        $sql = "UPDATE slider SET img='' Where id=$id";
+        return mysqli_query($com->getDb(), $sql);
+    }
 
 
-    public function editSlider($id,  $img){
+
+    public function editSliderImg($id,  $img){
         $com = new DbConnect();
         $sql = "UPDATE slider SET slider.img = '$img' WHERE id='$id'";
         return mysqli_query($com->getDb(), $sql);
-        var_dump($sql);
+    }
+
+    public function editSlider($id,  $category){
+        $com = new DbConnect();
+        $sql = "UPDATE slider SET slider.category_id = '$img' WHERE id='$id'";
+        return mysqli_query($com->getDb(), $sql);
     }
 
     public function editSliderText($id, $title,  $locale){
@@ -330,9 +354,15 @@ WHERE l.`name`='tj' AND g.`status`=1 AND cn.`name` = 'gallery'";
         return mysqli_query($com->getDb(), $sql);
     }
 
-    public function editGallery($id, $img,  $date){
+    public function editGallery($id,  $date){
         $com = new DbConnect();
-        $sql = "UPDATE `gallery` SET `img`='$img',`date`='$date' WHERE `id`='$id'";
+        $sql = "UPDATE `gallery` SET `date`='$date' WHERE `id`='$id'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function editGalleryImg($id,  $img){
+        $com = new DbConnect();
+        $sql = "UPDATE `gallery` SET `img`='$img' WHERE `id`='$id'";
         return mysqli_query($com->getDb(), $sql);
     }
 
@@ -344,10 +374,16 @@ WHERE l.`name`='tj' AND g.`status`=1 AND cn.`name` = 'gallery'";
 
     public function getGalleryByID($id, $locale){
         $com = new DbConnect();
-        $sql = "SELECT t.`title`, g.`date` FROM  gallery g JOIN texts t ON t.`id_menu` = g.`id` 
+        $sql = "SELECT t.`title`, g.`date`, g.img FROM  gallery g JOIN texts t ON t.`id_menu` = g.`id` 
         JOIN locale l ON l.`id`=t.`locale` 
         JOIN content cn ON cn.`id`=t.`id_content` 
         WHERE l.`name`='$locale' AND g.`status`=1 AND cn.`name`='gallery' AND g.id=$id";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function deleteGalleryImg($id){
+        $com = new DbConnect();
+        $sql = "UPDATE `gallery` SET `img`='' WHERE `id`='$id'";
         return mysqli_query($com->getDb(), $sql);
     }
 

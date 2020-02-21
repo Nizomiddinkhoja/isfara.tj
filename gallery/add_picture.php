@@ -7,15 +7,20 @@ $message="";
 if(isset($_POST["submit"])){
     $title_ru = $_POST["title_ru"]; $title_tj = $_POST["title_tj"]; $title_en = $_POST["title_en"];
     $date=$_POST["date"];
-    $img='img1';
-    try{
-      $dbOperation->addGallery($img, $date);
-        $dbOperation->addGalleryText($title_tj,  "tj");
-        $dbOperation->addGalleryText($title_ru,  "ru");
-        $dbOperation->addGalleryText($title_en,  "en");
-       $message = "<h4 class='text-success'>Успешно сохранено!</h4>";
-    }catch (Exception $exception){
-        $message = "<h4 class='text-danger'>Ошибка: ". $exception->getMessage()."</h4>";
+    $file = "";
+    if (isset($_FILES["filename"]) && $_FILES["photo"]["error"] == 0) {
+        if(move_uploaded_file($_FILES["filename"]["tmp_name"], "../../img/" . $_FILES["filename"]["name"])) {
+            $file = $_FILES["filename"]["name"];
+            try {
+                $dbOperation->addGallery($file, $date);
+                $dbOperation->addGalleryText($title_tj, "tj");
+                $dbOperation->addGalleryText($title_ru,  "ru");
+                $dbOperation->addGalleryText($title_en,  "en");
+                $message = "<h4 class='text-success'>Успешно сохранено!</h4>";
+            } catch (Exception $exception) {
+                $message = "<h4 class='text-danger'>Ошибка: " . $exception->getMessage() . "</h4>";
+            }
+        }
     }
 }
 ?>
@@ -55,7 +60,7 @@ include("../include/navbar.php");
               </div>
           <?}?>
       </div>
-      <form role="form" method="post">
+      <form role="form" method="post" enctype="multipart/form-data">
         <div class="container-fluid mt--7">
           <div class="row">
 

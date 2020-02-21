@@ -8,8 +8,14 @@ if ($_SESSION["is_auth"]) {
     if(isset($_POST["submit"])){
         $title_ru = $_POST["title_ru"]; $title_tj = $_POST["title_tj"]; $title_en = $_POST["title_en"];
         $category_tj= $_POST["category_tj"];
+        $file = "";
+        if (isset($_FILES["filename"]) && $_FILES["photo"]["error"] == 0) {
+            if(move_uploaded_file($_FILES["filename"]["tmp_name"], "../../img/" . $_FILES["filename"]["name"])) {
+                $file = $_FILES["filename"]["name"];
+                $dbOperation->editSliderImg($id, $file);
+            }
+        }
         try {
-            $dbOperation->editSlider($id,  "img");
             $dbOperation->editSliderText($id, $title_tj,  "tj");
             $dbOperation->editSliderText($id, $title_ru,  "ru");
             $dbOperation->editSliderText($id, $title_en,  "en");
@@ -62,7 +68,7 @@ include("../include/navbar.php");
               </div>
           <?}?>
       </div>
-      <form role="form" method="post" action="edit_slider.php?id=<?=$id?>">
+      <form role="form" method="post" action="edit_slider.php?id=<?=$id?>" enctype="multipart/form-data">
         <div class="container-fluid mt--7">
           <div class="row">
 
@@ -154,33 +160,23 @@ include("../include/navbar.php");
                         <div class="card-columns">
                             <div class="form-group mb-4">
                                 <div class="input-group input-group-alternative">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fa fa-arrow-alt-circle-down"></i></span>
-                                    </div>
-                                    <select class="form-control" id="" name="category_tj">
-                                        <!--                          <option value="none" hidden="">Категорияро интихоб кунед</option>-->
-                                        <?php
-                                        $result = $dbOperation->get_Categories_tj();
-                                        if(mysqli_num_rows($result)> 0){
-                                            while ($row = mysqli_fetch_array($result)){
-                                                echo
-                                                    ' 
-                                    <option value="'.$row['id'].'">'.$row['title'].'</option>            
-            ' ;
-                                            }
-                                        }
-                                        ?>
 
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group mb-4">
-                                <div class="input-group input-group-alternative">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fa fa-file"></i></span>
-                                    </div>
-                                    <!--  <label>Фото: </label> -->
-                                    <input type="file" name="filename" required="required" class="form-control"  >
+                                    <?
+                                    if($row_ru['img']){
+
+                                        echo '<img src="../../img/'.$row_ru['img'].'" class="col-md-4"><br>
+                                            <a href="delete_img_slider.php?id='.$id.'">Удалить</a><br><br>';
+
+                                    }else{
+                                        echo '<div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                            </div>
+                                            <!--  <label>Фото: </label> -->
+
+                                            <input type="file" name="filename" required="required" class="form-control" value="'.$row_tj[1].'">
+                                        ';
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
