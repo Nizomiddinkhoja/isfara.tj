@@ -366,4 +366,44 @@ WHERE l.`name`='tj' AND v.`status`=1 AND cn.`name` = 'video'";
         return mysqli_query($com->getDb(), $sql);
     }
 
+
+    public function addVideo($src, $is_youtube){
+        $com = new DbConnect();
+        $sql = "INSERT INTO `video`(`id`, `source`, `is_youtube`, `status`) VALUES (DEFAULT, '$src', '$is_youtube', 1 )";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function addVideoText($title, $locale)
+    {
+        $com = new DbConnect();
+        $sql = "    INSERT INTO texts(id_content, id_menu, title, description, body, locale) VALUES((SELECT id FROM content WHERE `name`='video'),
+    										(SELECT MAX(id) FROM video),
+    										'$title',
+    										'',
+    										'',
+    										(SELECT id FROM locale WHERE `name`='$locale'))";
+
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function editVideo($id, $src,  $is_youtube){
+        $com = new DbConnect();
+        $sql = "UPDATE `video` SET `source`='$src',`is_youtube`='$is_youtube',`status`=1 WHERE `id`='$id'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function editVideoText($id, $title,  $locale){
+        $com = new DbConnect();
+        $sql = "UPDATE texts SET title = '$title'  WHERE id_menu = $id AND locale=(SELECT id FROM locale WHERE `name`='$locale') AND id_content=(SELECT id FROM content WHERE `name`='video')";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function getVideoByID($id, $locale){
+        $com = new DbConnect();
+        $sql = "SELECT t.`title`, g.`source`, g.`is_youtube` FROM  video g JOIN texts t ON t.`id_menu` = g.`id` 
+JOIN locale l ON l.`id`=t.`locale`
+JOIN content cn ON cn.`id`=t.`id_content` 
+        WHERE l.`name`='$locale' AND g.`status`=1 AND cn.`name`='video' AND g.id=$id";
+        return mysqli_query($com->getDb(), $sql);
+    }
 }

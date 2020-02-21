@@ -7,18 +7,23 @@ $message="";
 if(isset($_POST["submit"])){
     $title_ru = $_POST["title_ru"]; $title_tj = $_POST["title_tj"]; $title_en = $_POST["title_en"];
     $src=$_POST["src"];
-    if $src=""
-
-    $video='img1';
+    if ($src=""){
+        $is_youtube='0';
+        $video=$_POST["filename"];
+    }else{
+        $is_youtube='1';
+        $video=$_POST["src"];
+    }
     try{
-        $dbOperation->addGallery($img, $date);
-        $dbOperation->addGalleryText($title_tj,  "tj");
-        $dbOperation->addGalleryText($title_ru,  "ru");
-        $dbOperation->addGalleryText($title_en,  "en");
+        $dbOperation->addVideo($video, $is_youtube);
+        $dbOperation->addVideoText($title_tj,  "tj");
+        $dbOperation->addVideoText($title_ru,  "ru");
+        $dbOperation->addVideoText($title_en,  "en");
         $message = "<h4 class='text-success'>Успешно сохранено!</h4>";
     }catch (Exception $exception){
         $message = "<h4 class='text-danger'>Ошибка: ". $exception->getMessage()."</h4>";
     }
+}
 }
 ?>
 <!DOCTYPE html>
@@ -49,11 +54,15 @@ include("../include/navbar.php");
       <?php
       include("../include/navbar_top.php")
       ?>
-    <!-- Header -->
-    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
-      
-    </div>
-      <form role="form">
+      <!-- Header -->
+      <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+          <?php if($message != ""){?>
+              <div class="card shadow ml-4 mr-5 pt-3 pb-2 pl-1">
+                  <?=$message?>
+              </div>
+          <?}?>
+      </div>
+      <form role="form" method="post">
         <div class="container-fluid mt--7">
           <div class="row">
 
@@ -162,12 +171,12 @@ include("../include/navbar.php");
                                               <span class="input-group-text"><i class="fa fa-file"></i></span>
                                           </div>
                                           <!--  <label>Фото: </label> -->
-                                          <input type="file" name="filename" required="required" class="form-control" >
+                                          <input type="file" name="filename"  class="form-control" >
                                       </div>
                                   </div>
                               </div>
                               <div class="text-center">
-                                  <button type="button" class="btn btn-primary my-4">Сохранить</button>
+                                  <button type="submit" name="submit" class="btn btn-primary my-4">Сохранить</button>
                               </div>
                           </div>
                       </div>
