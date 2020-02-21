@@ -12,8 +12,15 @@ if ($_SESSION["is_auth"]) {
         $category_tj= $_POST["category_tj"];
         $short_description_ru = $_POST["short_description_ru"]; $short_description_tj = $_POST["short_description_tj"]; $short_description_en = $_POST["short_description_en"];
         $full_description_ru = $_POST["full_description_ru"]; $full_description_tj = $_POST["full_description_tj"]; $full_description_en = $_POST["full_description_en"];
+        $file = "";
+        if (isset($_FILES["filename"]) && $_FILES["photo"]["error"] == 0) {
+            if(move_uploaded_file($_FILES["filename"]["tmp_name"], "../../img/" . $_FILES["filename"]["name"])) {
+                $file = $_FILES["filename"]["name"];
+                $dbOperation->editNewsImg($id, $file);
+            }
+        }
         try {
-            $dbOperation->editNews($id, $category_tj, $date,"img");
+            $dbOperation->editNews($id, $category_tj, $date);
             $dbOperation->editNewsText($id, $title_tj, $short_description_tj, $full_description_tj, "tj");
             $dbOperation->editNewsText($id, $title_ru, $short_description_ru, $full_description_ru, "ru");
             $dbOperation->editNewsText($id, $title_en, $short_description_en, $full_description_en, "en");
@@ -59,7 +66,7 @@ include("../include/navbar.php");
               </div>
           <?}?>
       </div>
-      <form role="form" method="post" action="edit_news.php?id=<?=$id?>">
+      <form role="form" method="post" action="edit_news.php?id=<?=$id?>" enctype="multipart/form-data">
         <div class="container-fluid mt--7">
           <div class="row">
               <?php
@@ -272,12 +279,12 @@ include("../include/navbar.php");
 
                             '?>
                             <?php
-                            $result = $dbOperation->get_Categories_tj();
-                            if(mysqli_num_rows($result)> 0){
-                                while ($row = mysqli_fetch_array($result)){
+                            $result1 = $dbOperation->get_Categories_tj();
+                            if(mysqli_num_rows($result1)> 0){
+                                while ($row1 = mysqli_fetch_array($result1)){
                                     echo
                                         ' 
-                                    <option value="'.$row['id'].'">'.$row['title'].'</option>            
+                                    <option value="'.$row1['id'].'">'.$row1['title'].'</option>            
             ' ;
                                 }
                             }
@@ -330,12 +337,22 @@ include("../include/navbar.php");
                                   </div>
                                   <div class="form-group mb-4">
                                       <div class="input-group input-group-alternative">
-                                          <div class="input-group-prepend">
-                                              <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                                          </div>
-                                          <!--  <label>Фото: </label> -->
-                                          <input type="file" name="filename" required="required" class="form-control"  >
-                                      </div>
+                                          <?
+                                          if($row[3]){
+
+                                              echo '<img src="../../img/'.$row[3].'" class="col-md-4"><br>
+                                            <a href="delete_img_news.php?id='.$id.'">Удалить</a><br><br>';
+
+                                          }else{
+                                              echo '<div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                            </div>
+                                            <!--  <label>Фото: </label> -->
+
+                                            <input type="file" name="filename" required="required" class="form-control" value="<?=$row_tj[3]?>">
+                                        ';
+                                          }
+                                          ?></div>
                                   </div>
                               </div>
                               <div class="text-center">

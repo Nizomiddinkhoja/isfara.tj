@@ -11,44 +11,16 @@ if(isset($_POST["submit"])){
     $short_description_ru = $_POST["short_description_ru"]; $short_description_tj = $_POST["short_description_tj"]; $short_description_en = $_POST["short_description_en"];
 $full_description_ru = $_POST["full_description_ru"]; $full_description_tj = $_POST["full_description_tj"]; $full_description_en = $_POST["full_description_en"];
     try{
-        if($_FILES["filename"]["size"] > 1024*3*1024)
-        {
-            echo ("Размер файла превышает три мегабайта");
-            exit;
-        }
-//        // Проверяем загружен ли файл
-//        if(is_uploaded_file($_FILES["filename"]["tmp_name"]))
-//        {
-//            // Если файл загружен успешно, перемещаем его
-//            // из временной директории в конечную
-//            move_uploaded_file($_FILES["filename"]["tmp_name"], "../../img/".$_FILES["filename"]["name"]);
-//            $file = $_FILES["filename"]["name"];
-//
-
-//            $message = "<h4 class='alert-success'>Успешно сохранено!</h4>";
-//        } else {
-//            echo("Ошибка загрузки файла");
-//        }
-
-        if(isset($_FILES['filename'])) {
-            // проверяем, можно ли загружать изображение
-            $check = can_upload($_FILES['filename']);
-
-            if($check === true){
-                // загружаем изображение на сервер
-                make_upload($_FILES["filename"]["tmp_name"], "../../img/".$_FILES["filename"]["name"]);
-        $file = $_FILES["filename"]["name"];
-                $dbOperation->addNews($category_tj, $date, $file);
-                echo "<strong>Файл успешно загружен!</strong>";
-            }
-            else{
-                // выводим сообщение об ошибке
-                echo "<strong>$check</strong>";
+        if (isset($_FILES["filename"]) && $_FILES["photo"]["error"] == 0) {
+            if(move_uploaded_file($_FILES["filename"]["tmp_name"], "../../img/" . $_FILES["filename"]["name"])) {
+                $file = $_FILES["filename"]["name"];
+                    $dbOperation->addNews($category_tj, $date, $file);
+                    $dbOperation->addNewsText($title_tj, $short_description_tj, $full_description_tj, "tj");
+                    $dbOperation->addNewsText($title_ru, $short_description_ru, $full_description_ru, "ru");
+                    $dbOperation->addNewsText($title_en, $short_description_en, $full_description_en, "en");
+                    $message = "<h4 class='text-success'>Успешно сохранено!</h4>";
             }
         }
-        $dbOperation->addNewsText($title_tj, $short_description_tj, $full_description_tj, "tj");
-        $dbOperation->addNewsText($title_ru, $short_description_ru, $full_description_ru, "ru");
-        $dbOperation->addNewsText($title_en, $short_description_en, $full_description_en, "en");
         $message = "<h4 class='text-success'>Успешно сохранено!</h4>";
 
     }catch (Exception $exception){
@@ -92,7 +64,7 @@ include("../include/navbar.php");
               </div>
           <?}?>
       </div>
-      <form role="form" method="post">
+      <form role="form" method="post" enctype="multipart/form-data">
         <div class="container-fluid mt--7">
           <div class="row">
             <div class="col-xl-4">

@@ -7,16 +7,20 @@ if ($_SESSION["is_auth"]) {
     if(isset($_POST["submit"])){
         $title_ru = $_POST["title_ru"]; $title_tj = $_POST["title_tj"]; $title_en = $_POST["title_en"];
         $category_tj= $_POST["category_tj"];
-        $img="banner.png";
-         try{
-
-            $dbOperation->addSlider($img);
-            $dbOperation->addSliderText($title_tj, "tj");
-            $dbOperation->addSliderText($title_ru,  "ru");
-            $dbOperation->addSliderText($title_en,  "en");
-             $message = "<h4 class='text-success'>Успешно сохранено!</h4>";
-        }catch (Exception $exception){
-            $message = "<h4 class='alert-danger'>Ошибка: ". $exception->getMessage()."</h4>";
+        $file = "";
+        if (isset($_FILES["filename"]) && $_FILES["photo"]["error"] == 0) {
+            if(move_uploaded_file($_FILES["filename"]["tmp_name"], "../../img/" . $_FILES["filename"]["name"])) {
+                $file = $_FILES["filename"]["name"];
+                try {
+                    $dbOperation->addSlider($file);
+                    $dbOperation->addSliderText($title_tj, "tj");
+                    $dbOperation->addSliderText($title_ru,  "ru");
+                    $dbOperation->addSliderText($title_en,  "en");
+                    $message = "<h4 class='text-success'>Успешно сохранено!</h4>";
+                } catch (Exception $exception) {
+                    $message = "<h4 class='text-danger'>Ошибка: " . $exception->getMessage() . "</h4>";
+                }
+            }
         }
     }
     ?>
@@ -57,7 +61,7 @@ include("../include/navbar.php");
               </div>
           <?}?>
       </div>
-      <form role="form"  method="post">
+      <form role="form"  method="post" enctype="multipart/form-data">
         <div class="container-fluid mt--7">
           <div class="row">
 
@@ -147,28 +151,6 @@ include("../include/navbar.php");
                 <div class="card shadow">
                     <div class="card-body">
                         <div class="card-columns">
-                            <div class="form-group mb-4">
-                                <div class="input-group input-group-alternative">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                                    </div>
-                                    <select class="form-control" id="" name="category_tj">
-                                        <!--                          <option value="none" hidden="">Категорияро интихоб кунед</option>-->
-                                        <?php
-                                        $result = $dbOperation->get_Categories_tj();
-                                        if(mysqli_num_rows($result)> 0){
-                                            while ($row = mysqli_fetch_array($result)){
-                                                echo
-                                                    ' 
-                                    <option value="'.$row['id'].'">'.$row['title'].'</option>            
-            ' ;
-                                            }
-                                        }
-                                        ?>
-
-                                    </select>
-                                </div>
-                            </div>
                             <div class="form-group mb-4">
                                 <div class="input-group input-group-alternative">
                                     <div class="input-group-prepend">

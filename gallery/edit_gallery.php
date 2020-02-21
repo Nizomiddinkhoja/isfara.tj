@@ -8,9 +8,15 @@ $id = $_GET["id"];
 if(isset($_POST["submit"])){
     $title_ru = $_POST["title_ru"]; $title_tj = $_POST["title_tj"]; $title_en = $_POST["title_en"];
     $date=$_POST["date"];
-    $img='img1';
+    $file = "";
+    if (isset($_FILES["filename"]) && $_FILES["photo"]["error"] == 0) {
+        if(move_uploaded_file($_FILES["filename"]["tmp_name"], "../../img/" . $_FILES["filename"]["name"])) {
+            $file = $_FILES["filename"]["name"];
+            $dbOperation->editGalleryImg($id, $file);
+        }
+    }
     try {
-        $dbOperation->editGallery($id, $img,  $date);
+        $dbOperation->editGallery($id,  $date);
         $dbOperation->editGalleryText($id, $title_tj,  "tj");
         $dbOperation->editGalleryText($id, $title_ru,  "ru");
         $dbOperation->editGalleryText($id, $title_en,  "en");
@@ -60,7 +66,7 @@ include("../include/navbar.php");
               </div>
           <?}?>
       </div>
-      <form role="form" method="post" action="edit_gallery.php?id=<?=$id?>">
+      <form role="form" method="post" action="edit_gallery.php?id=<?=$id?>" enctype="multipart/form-data">
     <div class="container-fluid mt--7">
       <div class="row">
 
@@ -169,12 +175,22 @@ include("../include/navbar.php");
                                 </div>
                                 <div class="form-group mb-4">
                                     <div class="input-group input-group-alternative">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                                        </div>
-                                        <!--  <label>Фото: </label> -->
-                                        <input type="file" name="filename" required="required" class="form-control"  >
-                                    </div>
+                                        <?
+                                        if($row_tj['img']){
+
+                                            echo '<img src="../../img/'.$row_tj['img'].'" class="col-md-4"><br>
+                                            <a href="delete_img_gallery.php?id='.$id.'">Удалить</a><br><br>';
+
+                                        }else{
+                                            echo '<div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                            </div>
+                                            <!--  <label>Фото: </label> -->
+
+                                            <input type="file" name="filename" required="required" class="form-control" value="'.$row_tj['img'].'">
+                                        ';
+                                        }
+                                        ?></div>
                                 </div>
                             </div>
                             <div class="text-center">
