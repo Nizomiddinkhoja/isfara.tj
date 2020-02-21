@@ -7,21 +7,27 @@ if ($_SESSION["is_auth"]) {
     $id = $_GET["id"];
     if(isset($_POST["submit"])){
         $title_ru = $_POST["title_ru"]; $title_tj = $_POST["title_tj"]; $title_en = $_POST["title_en"];
-        $date=$_POST["date"];
-        $img='img1';
-        try {
-            $dbOperation->editGallery($id, $img,  $date);
-            $dbOperation->editGalleryText($id, $title_tj,  "tj");
-            $dbOperation->editGalleryText($id, $title_ru,  "ru");
-            $dbOperation->editGalleryText($id, $title_en,  "en");
+        $src=$_POST["src"];
+        if ($src=""){
+            $is_youtube='0';
+            $video=$_POST["filename"];
+        }else{
+            $is_youtube='1';
+            $video=$_POST["src"];
+        }
+        try{
+            $dbOperation->editVideo($id, $video,  $is_youtube);
+            $dbOperation->editVideoText($id, $title_tj,  "tj");
+            $dbOperation->editVideoText($id, $title_ru,  "ru");
+            $dbOperation->editVideoText($id, $title_en,  "en");
             $message = "<h4 class='alert-success'>Успешно изменено!</h4>";
         } catch (Exception $exception) {
             $message = "<h4 class='alert-danger'>Ошибка: " . $exception->getMessage() . "</h4>";
         }
     }
-    $row_tj = mysqli_fetch_array($dbOperation->getGalleryByID($id, 'tj'));
-    $row_ru = mysqli_fetch_array($dbOperation->getGalleryByID($id, 'ru'));
-    $row_en = mysqli_fetch_array($dbOperation->getGalleryByID($id, 'en'));
+    $row_tj = mysqli_fetch_array($dbOperation->getVideoByID($id, 'tj'));
+    $row_ru = mysqli_fetch_array($dbOperation->getVideoByID($id, 'ru'));
+    $row_en = mysqli_fetch_array($dbOperation->getVideoByID($id, 'en'));
 
     ?>
     <!DOCTYPE html>
@@ -79,7 +85,7 @@ if ($_SESSION["is_auth"]) {
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                             </div>
-                                            <input class="form-control" placeholder="Ном" type="text">
+                                            <input class="form-control" placeholder="Ном" value="<?=$row_tj[0]?>" name="$row_tj" type="text">
                                         </div>
                                     </div>
                                 </div>
@@ -106,7 +112,7 @@ if ($_SESSION["is_auth"]) {
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                             </div>
-                                            <input class="form-control" placeholder="Название" type="text">
+                                            <input class="form-control" placeholder="Название" value="<?=$row_ru[0]?>" name="$row_ru" type="text">
                                         </div>
                                     </div>
                                 </div>
@@ -133,7 +139,7 @@ if ($_SESSION["is_auth"]) {
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                             </div>
-                                            <input class="form-control" placeholder="Name" type="text">
+                                            <input class="form-control" placeholder="Name" value="<?=$row_en[0]?>" name="$row_en" type="text">
                                         </div>
                                     </div>
                                 </div>
@@ -156,7 +162,7 @@ if ($_SESSION["is_auth"]) {
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                             </div>
-                                            <input type="text" id="src" name="src" class="form-control" placeholder="Ссылка" >
+                                            <input type="text" id="src" name="src"  class="form-control" placeholder="Ссылка" >
                                         </div>
                                     </div>
                                     <div class="form-group mb-4">

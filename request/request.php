@@ -1,3 +1,9 @@
+<?php
+session_start();
+include("../sql/DBOperations.php");
+if ($_SESSION["is_auth"]) {
+$dbOperation = new DBOperations();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,37 +59,43 @@ include("../include/navbar.php");
                   </tr>
                 </thead>
                 <tbody>
+                <?php
+                $result = $dbOperation->getVideo();
+                if(mysqli_num_rows($result)>0) {
+                    while ($row = mysqli_fetch_array($result)) {
 
+                        echo
+                        '
                   <tr>
                     <th scope="row">
                       <div class="media align-items-center"> 
                         <div class="media-body">
-                          <span class="mb-0 text-sm">ФИО</span>
+                          <span class="mb-0 text-sm">'.$row[1].' '.$row[2].'</span>
                         </div>
                       </div>
                     </th>
                     <td>
-                      eee@gmail.com
+                      '.$row[3].'
                     </td>
                     <td>
                       <span class="badge badge-dot mr-4">
-                        <i class="bg-warning"></i>928800333<!-- class="bg-success" -->
+                        <i class="bg-warning"></i>'.$row[4].'<!-- class="bg-success" -->
                       </span>
                     </td>
                     <td>
                       <div class="avatar-group">
-                        Zagolovok
+                        '.$row[5].'
                       </div>
                     </td>
                     <td>
                       <div class="d-flex align-items-center">
-                        <span class="mr-2">Matn</span>
+                        <span class="mr-2">'.$row[6].'</span>
                       
                       </div>
                     </td>
 
                     <td>
-                      18.02.2020
+                      '.$row[7].'
                     </td>
                     <td class="text-right">
                       <div class="dropdown">
@@ -97,236 +109,238 @@ include("../include/navbar.php");
                       </div>
                     </td>
                   </tr>
+                        
+                   ';}}
+                   ?>
 
-
-
-                  <tr>
-                    <th scope="row">
-                      <div class="media align-items-center"> 
-                        <div class="media-body">
-                          <span class="mb-0 text-sm">ФИО</span>
-                        </div>
-                      </div>
-                    </th>
-                    <td>
-                      eee@gmail.com
-                    </td>
-                    <td>
-                      <span class="badge badge-dot mr-4">
-                        <i class="bg-warning"></i>928800333<!-- class="bg-success" -->
-                      </span>
-                    </td>
-                    <td>
-                      <div class="avatar-group">
-                        Zagolovok
-                      </div>
-                    </td>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <span class="mr-2">Matn</span>
-                      
-                      </div>
-                    </td>
-
-                    <td>
-                      18.02.2020
-                    </td>
-                    <td class="text-right">
-                      <div class="dropdown">
-                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="fas fa-ellipsis-v"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                          <a class="dropdown-item" href="#">Подробнее</a>
-                          <a class="dropdown-item" href="#">Удалить</a>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-
-
-
-                  <tr>
-                    <th scope="row">
-                      <div class="media align-items-center"> 
-                        <div class="media-body">
-                          <span class="mb-0 text-sm">ФИО</span>
-                        </div>
-                      </div>
-                    </th>
-                    <td>
-                      eee@gmail.com
-                    </td>
-                    <td>
-                      <span class="badge badge-dot mr-4">
-                        <i class="bg-warning"></i>928800333<!-- class="bg-success" -->
-                      </span>
-                    </td>
-                    <td>
-                      <div class="avatar-group">
-                        Zagolovok
-                      </div>
-                    </td>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <span class="mr-2">Matn</span>
-                      
-                      </div>
-                    </td>
-
-                    <td>
-                      18.02.2020
-                    </td>
-                    <td class="text-right">
-                      <div class="dropdown">
-                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="fas fa-ellipsis-v"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                          <a class="dropdown-item" href="#">Подробнее</a>
-                          <a class="dropdown-item" href="#">Удалить</a>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-
-
-
-                  <tr>
-                    <th scope="row">
-                      <div class="media align-items-center"> 
-                        <div class="media-body">
-                          <span class="mb-0 text-sm">ФИО</span>
-                        </div>
-                      </div>
-                    </th>
-                    <td>
-                      eee@gmail.com
-                    </td>
-                    <td>
-                      <span class="badge badge-dot mr-4">
-                        <i class="bg-warning"></i>928800333<!-- class="bg-success" -->
-                      </span>
-                    </td>
-                    <td>
-                      <div class="avatar-group">
-                        Zagolovok
-                      </div>
-                    </td>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <span class="mr-2">Matn</span>
-                      
-                      </div>
-                    </td>
-
-                    <td>
-                      18.02.2020
-                    </td>
-                    <td class="text-right">
-                      <div class="dropdown">
-                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="fas fa-ellipsis-v"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                          <a class="dropdown-item" href="#">Подробнее</a>
-                          <a class="dropdown-item" href="#">Удалить</a>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-
-
-
-                  <tr>
-                    <th scope="row">
-                      <div class="media align-items-center"> 
-                        <div class="media-body">
-                          <span class="mb-0 text-sm">ФИО</span>
-                        </div>
-                      </div>
-                    </th>
-                    <td>
-                      eee@gmail.com
-                    </td>
-                    <td>
-                      <span class="badge badge-dot mr-4">
-                        <i class="bg-warning"></i>928800333<!-- class="bg-success" -->
-                      </span>
-                    </td>
-                    <td>
-                      <div class="avatar-group">
-                        Zagolovok
-                      </div>
-                    </td>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <span class="mr-2">Matn</span>
-                      
-                      </div>
-                    </td>
-
-                    <td>
-                      18.02.2020
-                    </td>
-                    <td class="text-right">
-                      <div class="dropdown">
-                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="fas fa-ellipsis-v"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                          <a class="dropdown-item" href="#">Подробнее</a>
-                          <a class="dropdown-item" href="#">Удалить</a>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-
-
-
-                  <tr>
-                    <th scope="row">
-                      <div class="media align-items-center"> 
-                        <div class="media-body">
-                          <span class="mb-0 text-sm">ФИО</span>
-                        </div>
-                      </div>
-                    </th>
-                    <td>
-                      eee@gmail.com
-                    </td>
-                    <td>
-                      <span class="badge badge-dot mr-4">
-                        <i class="bg-warning"></i>928800333<!-- class="bg-success" -->
-                      </span>
-                    </td>
-                    <td>
-                      <div class="avatar-group">
-                        Zagolovok
-                      </div>
-                    </td>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <span class="mr-2">Matn</span>
-                      
-                      </div>
-                    </td>
-
-                    <td>
-                      18.02.2020
-                    </td>
-                    <td class="text-right">
-                      <div class="dropdown">
-                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="fas fa-ellipsis-v"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                          <a class="dropdown-item" href="#">Подробнее</a>
-                          <a class="dropdown-item" href="#">Удалить</a>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
+<!---->
+<!--                  <tr>-->
+<!--                    <th scope="row">-->
+<!--                      <div class="media align-items-center"> -->
+<!--                        <div class="media-body">-->
+<!--                          <span class="mb-0 text-sm">ФИО</span>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </th>-->
+<!--                    <td>-->
+<!--                      eee@gmail.com-->
+<!--                    </td>-->
+<!--                    <td>-->
+<!--                      <span class="badge badge-dot mr-4">-->
+<!--                        <i class="bg-warning"></i>928800333 -->
+<!--                      </span>-->
+<!--                    </td>-->
+<!--                    <td>-->
+<!--                      <div class="avatar-group">-->
+<!--                        Zagolovok-->
+<!--                      </div>-->
+<!--                    </td>-->
+<!--                    <td>-->
+<!--                      <div class="d-flex align-items-center">-->
+<!--                        <span class="mr-2">Matn</span>-->
+<!--                      -->
+<!--                      </div>-->
+<!--                    </td>-->
+<!---->
+<!--                    <td>-->
+<!--                      18.02.2020-->
+<!--                    </td>-->
+<!--                    <td class="text-right">-->
+<!--                      <div class="dropdown">-->
+<!--                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                          <i class="fas fa-ellipsis-v"></i>-->
+<!--                        </a>-->
+<!--                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">-->
+<!--                          <a class="dropdown-item" href="#">Подробнее</a>-->
+<!--                          <a class="dropdown-item" href="#">Удалить</a>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </td>-->
+<!--                  </tr>-->
+<!---->
+<!---->
+<!---->
+<!--                  <tr>-->
+<!--                    <th scope="row">-->
+<!--                      <div class="media align-items-center"> -->
+<!--                        <div class="media-body">-->
+<!--                          <span class="mb-0 text-sm">ФИО</span>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </th>-->
+<!--                    <td>-->
+<!--                      eee@gmail.com-->
+<!--                    </td>-->
+<!--                    <td>-->
+<!--                      <span class="badge badge-dot mr-4">-->
+<!--                        <i class="bg-warning"></i>928800333
+<!--                      </span>-->
+<!--                    </td>-->
+<!--                    <td>-->
+<!--                      <div class="avatar-group">-->
+<!--                        Zagolovok-->
+<!--                      </div>-->
+<!--                    </td>-->
+<!--                    <td>-->
+<!--                      <div class="d-flex align-items-center">-->
+<!--                        <span class="mr-2">Matn</span>-->
+<!--                      -->
+<!--                      </div>-->
+<!--                    </td>-->
+<!---->
+<!--                    <td>-->
+<!--                      18.02.2020-->
+<!--                    </td>-->
+<!--                    <td class="text-right">-->
+<!--                      <div class="dropdown">-->
+<!--                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                          <i class="fas fa-ellipsis-v"></i>-->
+<!--                        </a>-->
+<!--                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">-->
+<!--                          <a class="dropdown-item" href="#">Подробнее</a>-->
+<!--                          <a class="dropdown-item" href="#">Удалить</a>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </td>-->
+<!--                  </tr>-->
+<!---->
+<!---->
+<!---->
+<!--                  <tr>-->
+<!--                    <th scope="row">-->
+<!--                      <div class="media align-items-center"> -->
+<!--                        <div class="media-body">-->
+<!--                          <span class="mb-0 text-sm">ФИО</span>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </th>-->
+<!--                    <td>-->
+<!--                      eee@gmail.com-->
+<!--                    </td>-->
+<!--                    <td>-->
+<!--                      <span class="badge badge-dot mr-4">-->
+<!--                        <i class="bg-warning"></i>928800333 -->
+<!--                      </span>-->
+<!--                    </td>-->
+<!--                    <td>-->
+<!--                      <div class="avatar-group">-->
+<!--                        Zagolovok-->
+<!--                      </div>-->
+<!--                    </td>-->
+<!--                    <td>-->
+<!--                      <div class="d-flex align-items-center">-->
+<!--                        <span class="mr-2">Matn</span>-->
+<!--                      -->
+<!--                      </div>-->
+<!--                    </td>-->
+<!---->
+<!--                    <td>-->
+<!--                      18.02.2020-->
+<!--                    </td>-->
+<!--                    <td class="text-right">-->
+<!--                      <div class="dropdown">-->
+<!--                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                          <i class="fas fa-ellipsis-v"></i>-->
+<!--                        </a>-->
+<!--                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">-->
+<!--                          <a class="dropdown-item" href="#">Подробнее</a>-->
+<!--                          <a class="dropdown-item" href="#">Удалить</a>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </td>-->
+<!--                  </tr>-->
+<!---->
+<!---->
+<!---->
+<!--                  <tr>-->
+<!--                    <th scope="row">-->
+<!--                      <div class="media align-items-center"> -->
+<!--                        <div class="media-body">-->
+<!--                          <span class="mb-0 text-sm">ФИО</span>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </th>-->
+<!--                    <td>-->
+<!--                      eee@gmail.com-->
+<!--                    </td>-->
+<!--                    <td>-->
+<!--                      <span class="badge badge-dot mr-4">-->
+<!--                        <i class="bg-warning"></i>928800333 -->
+<!--                      </span>-->
+<!--                    </td>-->
+<!--                    <td>-->
+<!--                      <div class="avatar-group">-->
+<!--                        Zagolovok-->
+<!--                      </div>-->
+<!--                    </td>-->
+<!--                    <td>-->
+<!--                      <div class="d-flex align-items-center">-->
+<!--                        <span class="mr-2">Matn</span>-->
+<!--                      -->
+<!--                      </div>-->
+<!--                    </td>-->
+<!---->
+<!--                    <td>-->
+<!--                      18.02.2020-->
+<!--                    </td>-->
+<!--                    <td class="text-right">-->
+<!--                      <div class="dropdown">-->
+<!--                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                          <i class="fas fa-ellipsis-v"></i>-->
+<!--                        </a>-->
+<!--                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">-->
+<!--                          <a class="dropdown-item" href="#">Подробнее</a>-->
+<!--                          <a class="dropdown-item" href="#">Удалить</a>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </td>-->
+<!--                  </tr>-->
+<!---->
+<!---->
+<!---->
+<!--                  <tr>-->
+<!--                    <th scope="row">-->
+<!--                      <div class="media align-items-center"> -->
+<!--                        <div class="media-body">-->
+<!--                          <span class="mb-0 text-sm">ФИО</span>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </th>-->
+<!--                    <td>-->
+<!--                      eee@gmail.com-->
+<!--                    </td>-->
+<!--                    <td>-->
+<!--                      <span class="badge badge-dot mr-4">-->
+<!--                        <i class="bg-warning"></i>928800333     -->
+<!--                      </span>-->
+<!--                    </td>-->
+<!--                    <td>-->
+<!--                      <div class="avatar-group">-->
+<!--                        Zagolovok-->
+<!--                      </div>-->
+<!--                    </td>-->
+<!--                    <td>-->
+<!--                      <div class="d-flex align-items-center">-->
+<!--                        <span class="mr-2">Matn</span>-->
+<!--                      -->
+<!--                      </div>-->
+<!--                    </td>-->
+<!---->
+<!--                    <td>-->
+<!--                      18.02.2020-->
+<!--                    </td>-->
+<!--                    <td class="text-right">-->
+<!--                      <div class="dropdown">-->
+<!--                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                          <i class="fas fa-ellipsis-v"></i>-->
+<!--                        </a>-->
+<!--                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">-->
+<!--                          <a class="dropdown-item" href="#">Подробнее</a>-->
+<!--                          <a class="dropdown-item" href="#">Удалить</a>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </td>-->
+<!--                  </tr>-->
 
 
 
@@ -387,3 +401,9 @@ include("../include/navbar.php");
 </body>
 
 </html>
+    <?php
+}
+else{
+    header("Location: login.php");
+}
+?>
