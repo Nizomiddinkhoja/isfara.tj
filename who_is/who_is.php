@@ -1,3 +1,9 @@
+<?php
+session_start();
+include("../sql/DBOperations.php");
+if ($_SESSION["is_auth"]) {
+$dbOperation = new DBOperations();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +11,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>
-    Argon Dashboard - Free Dashboard for Bootstrap 4 by Creative Tim
+    Кто Что - Панель управления
   </title>
   <!-- Favicon -->
   <link href="../assets/img/brand/favicon.png" rel="icon" type="image/png">
@@ -40,83 +46,32 @@ include("../include/navbar.php");
               <h2 class="mb-0" >Кисту чист?</h2>
 
             <div  class="col text-right"  class="col-md-4">
-                  <a href="#!" class="btn btn-sm btn-primary">Добавить "Кисту чист?"</a>
+                  <a href="add_who_is.php" class="btn btn-sm btn-primary">Добавить "Кисту чист?"</a>
                 </div>
             </div>
             <div class="table-responsive">
               <div class="row" style="margin: unset;">
-           
-            <div class="col-md-4">
-              <img src="../img/news/bajik.png" class="col-md-10">
-              <h2>Ном</h2>
-              <h5>Вазифа</h5>
-                  <a href="#!" class="btn btn-sm btn-success">Изменить</a>
-                  <a href="#!" class="btn btn-sm btn-danger">Удалить</a>
-            </div>
 
-            <div class="col-md-4">
-              <img src="../img/news/bajik.png" class="col-md-10">
-              <h2>Ном</h2>
-              <h5>Вазифа</h5>
-                  <a href="#!" class="btn btn-sm btn-success">Изменить</a>
-                  <a href="#!" class="btn btn-sm btn-danger">Удалить</a>
-            </div>
+                  <?php
+                  $result = $dbOperation->getWhoIs();
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($whoIs = mysqli_fetch_array($result)) {
+                            ?>
 
-            <div class="col-md-4">
-              <img src="../img/news/bajik.png" class="col-md-10">
-              <h2>Ном</h2>
-              <h5>Вазифа</h5>
-                  <a href="#!" class="btn btn-sm btn-success">Изменить</a>
-                  <a href="#!" class="btn btn-sm btn-danger">Удалить</a>
-            </div>
-           
-            <div class="col-md-4">
-              <img src="../img/news/bajik.png" class="col-md-10">
-              <h2>Ном</h2>
-              <h5>Вазифа</h5>
-                  <a href="#!" class="btn btn-sm btn-success">Изменить</a>
-                  <a href="#!" class="btn btn-sm btn-danger">Удалить</a>
-            </div>
+                            <div class="col-md-4">
+                                <img src="../../img/<?= $whoIs[3] ?>" class="col-md-10">
+                                <h2><?= $whoIs[1] ?></h2>
+                                <h5><?= $whoIs[2] ?></h5>
+                                <a href="edit_who_is.php?id=<?= $whoIs[0] ?>"
+                                   class="btn btn-sm btn-success">Изменить</a>
+                                <a href="delete_who_is.php?id=<?= $whoIs[0] ?>"
+                                   class="btn btn-sm btn-danger">Удалить</a>
+                            </div>
+                            <?
 
-            <div class="col-md-4">
-              <img src="../img/news/bajik.png" class="col-md-10">
-              <h2>Ном</h2>
-              <h5>Вазифа</h5>
-                  <a href="#!" class="btn btn-sm btn-success">Изменить</a>
-                  <a href="#!" class="btn btn-sm btn-danger">Удалить</a>
-            </div>
-
-            <div class="col-md-4">
-              <img src="../img/news/bajik.png" class="col-md-10">
-              <h2>Ном</h2>
-              <h5>Вазифа</h5>
-                  <a href="#!" class="btn btn-sm btn-success">Изменить</a>
-                  <a href="#!" class="btn btn-sm btn-danger">Удалить</a>
-            </div>
-           
-            <div class="col-md-4">
-              <img src="../img/news/bajik.png" class="col-md-10">
-              <h2>Ном</h2>
-              <h5>Вазифа</h5>
-                  <a href="#!" class="btn btn-sm btn-success">Изменить</a>
-                  <a href="#!" class="btn btn-sm btn-danger">Удалить</a>
-            </div>
-
-            <div class="col-md-4">
-              <img src="../img/news/bajik.png" class="col-md-10">
-              <h2>Ном</h2>
-              <h5>Вазифа</h5>
-                  <a href="#!" class="btn btn-sm btn-success">Изменить</a>
-                  <a href="#!" class="btn btn-sm btn-danger">Удалить</a>              
-            </div>
-
-            <div class="col-md-4">
-              <img src="../img/news/bajik.png" class="col-md-10">
-              <h2>Ном</h2>
-              <h5>Вазифа</h5>
-                  <a href="#!" class="btn btn-sm btn-success">Изменить</a>
-                  <a href="#!" class="btn btn-sm btn-danger">Удалить</a>
-            </div>
+                        }
+                    }
+                            ?>
           </div>
             </div>
 
@@ -164,3 +119,9 @@ include("../include/navbar.php");
 </body>
 
 </html>
+    <?php
+}
+else{
+    header("Location: login.php");
+}
+?>

@@ -58,6 +58,66 @@ WHERE l.`name`='$locale' AND c.`status`=1 AND cn.`name`='category' AND c.id=$id"
         return mysqli_query($com->getDb(), $sql);
     }
 
+    public function getWhoIs(){
+        $com = new DbConnect();
+        $sql = "SELECT w.`id`, t.`title`, t.`description`, w.img FROM  who_is w JOIN texts t ON t.`id_menu` = w.`id` 
+JOIN locale l ON l.`id`=t.`locale` 
+JOIN content cn ON cn.`id`=t.`id_content` 
+WHERE l.`name`='ru' AND w.`status`=1 AND cn.`name`='who_is'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function addWhoIs($img){
+        $com = new DbConnect();
+        $sql = "INSERT INTO who_is(id, img, `status`) VALUE(DEFAULT, '$img', 1)";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function editWhoIs($id, $img){
+        $com = new DbConnect();
+        $sql = "UPDATE who_is SET img='$img' WHERE id=$id";
+        mysqli_query($com->getDb(), $sql);
+    }
+
+    public function editWhoIsText($id, $title, $description, $locale){
+        $com = new DbConnect();
+        $sql = "UPDATE texts SET title = '$title', description = '$description' WHERE id_menu = $id AND locale=(SELECT id FROM locale WHERE `name`='$locale') AND id_content=(SELECT id FROM content WHERE `name`='who_is')";
+        mysqli_query($com->getDb(), $sql);
+    }
+
+    public function addWhoIsText($title, $description, $locale){
+        $com = new DbConnect();
+        $sql = "INSERT INTO texts(id_content, id_menu, title, description, body, locale) VALUES((SELECT id FROM content WHERE `name`='who_is'),
+										(SELECT MAX(id) FROM who_is),
+										'$title',
+										'$description',
+										'',
+										(SELECT id FROM locale WHERE `name`='$locale'))";
+        echo $sql;
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function getWhoIsByID($id, $locale){
+        $com = new DbConnect();
+        $sql = "
+SELECT  t.`title`, t.`description`, w.img FROM  who_is w JOIN texts t ON t.`id_menu` = w.`id` 
+JOIN locale l ON l.`id`=t.`locale` 
+JOIN content cn ON cn.`id`=t.`id_content` 
+WHERE l.`name`='$locale' AND w.`status`=1 AND cn.`name`='who_is' AND w.id=$id";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function deleteWhoIsImg($id){
+        $com = new DbConnect();
+        $sql = "UPDATE who_is SET img='' Where id=$id";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function deleteWhoIs($id){
+        $com = new DbConnect();
+        $sql = "UPDATE who_is SET status=0 Where id=$id";
+        return mysqli_query($com->getDb(), $sql);
+    }
 
     public function  get_news(){
         $com = new DbConnect();
