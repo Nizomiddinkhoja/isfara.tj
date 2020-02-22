@@ -403,6 +403,14 @@ WHERE l.`name`='tj' AND v.`status`=1 AND cn.`name` = 'video'";
     }
 
 
+    public function deleteVideo2($id){
+        $com = new DbConnect();
+        $sql = "UPDATE video SET source='' Where id=$id";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+
+
     public function addVideo($src, $is_youtube){
         $com = new DbConnect();
         $sql = "INSERT INTO `video`(`id`, `source`, `is_youtube`, `status`) VALUES (DEFAULT, '$src', '$is_youtube', 1 )";

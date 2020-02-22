@@ -58,7 +58,7 @@ include("../include/navbar.php");
                       while ($video = mysqli_fetch_array($result)) {
                           ?>
                           <div class="col-md-4">
-                              <img src="../img/communications.png" class="col-md-10">
+                              <img src="../img/video-player.png" class="col-md-10">
                               <h2><?=$video[1]?></h2>
                               <a href="edit_video.php?id=<?=$video[0]?>" class="btn btn-sm btn-success">Изменить</a>
                               <a href="delete_video.php?id=<?=$video[0]?>" class="btn btn-sm btn-danger">Удалить</a>
