@@ -8,7 +8,7 @@ if ($_SESSION["is_auth"]) {
     if(isset($_POST["submit"])){
         $title_ru = $_POST["title_ru"]; $title_tj = $_POST["title_tj"]; $title_en = $_POST["title_en"];
         $src=$_POST["src"];
-        if ($src=""){
+        if (empty($src)){
             $is_youtube='0';
             $video=$_POST["filename"];
         }else{
@@ -62,7 +62,7 @@ if ($_SESSION["is_auth"]) {
         <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
 
         </div>
-        <form role="form">
+        <form role="form" method="post" enctype="multipart/form-dataq">
             <div class="container-fluid mt--7">
                 <div class="row">
 
@@ -162,16 +162,27 @@ if ($_SESSION["is_auth"]) {
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                             </div>
-                                            <input type="text" id="src" name="src"  class="form-control" placeholder="Ссылка" >
+                                            <input type="text" id="src" name="src"  class="form-control" placeholder="Ссылка" value="<?=$row_tj[2]==1?$row_tj[1]:''?>">
                                         </div>
                                     </div>
                                     <div class="form-group mb-4">
                                         <div class="input-group input-group-alternative">
-                                            <div class="input-group-prepend">
+                                            <?
+                                            if($row_ru[2]==0 && $row_tj[1]!=""){
+
+                                                echo '<img src="../img/video-player.png" class="form-control-file"><br>
+                                            <a href="delete_video_.php?id='.$id.'">Удалить</a><br><br>';
+
+                                            }else{
+                                                echo '<div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                             </div>
                                             <!--  <label>Фото: </label> -->
-                                            <input type="file" name="filename" required="required" class="form-control" >
+
+                                            <input type="file" name="filename" required="required" class="form-control"">
+                                        ';
+                                            }
+                                            ?>
                                         </div>
                                     </div>
                                 </div>

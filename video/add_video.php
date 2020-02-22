@@ -6,10 +6,14 @@ $dbOperation = new DBOperations();
 $message="";
 if(isset($_POST["submit"])){
     $title_ru = $_POST["title_ru"]; $title_tj = $_POST["title_tj"]; $title_en = $_POST["title_en"];
-    $src=$_POST["src"];
-    if ($src=""){
+    $src = $_POST['src'];
+    if (empty($src)){
         $is_youtube='0';
-        $video=$_POST["filename"];
+        if (isset($_FILES)) {
+            if(move_uploaded_file($_FILES["filename"]["tmp_name"], "../../img/" . $_FILES["filename"]["name"])) {
+                $video = $_FILES["filename"]["name"];
+            }
+        }
     }else{
         $is_youtube='1';
         $video=$_POST["src"];
@@ -62,7 +66,7 @@ include("../include/navbar.php");
               </div>
           <?}?>
       </div>
-      <form role="form" method="post">
+      <form role="form" method="post" enctype="multipart/form-data">
         <div class="container-fluid mt--7">
           <div class="row">
 
