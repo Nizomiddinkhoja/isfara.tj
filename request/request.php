@@ -53,8 +53,8 @@ include("../include/navbar.php");
                     <th scope="col">E-mail</th>
                     <th scope="col">Телефон</th>
                     <th scope="col">Заголовок</th>
-                    <th scope="col">Текст</th>
-                    <th scope="col">Дата</th>
+                      <th scope="col">Дата</th>
+                      <th scope="col"></th>
                     <th scope="col"></th>
                   </tr>
                 </thead>
@@ -63,6 +63,13 @@ include("../include/navbar.php");
                 $result = $dbOperation->getRequest();
                 if(mysqli_num_rows($result)>0) {
                     while ($row = mysqli_fetch_array($result)) {
+
+                        if ($row[8]=='1'){
+                            $class="bg-success";
+                        }else{
+                            $class="bg-warning";
+                        }
+
 
                         echo
                         '
@@ -79,7 +86,7 @@ include("../include/navbar.php");
                     </td>
                     <td>
                       <span class="badge badge-dot mr-4">
-                        <i class="bg-warning"></i>'.$row[4].'<!-- class="bg-success" -->
+                         '.$row[4].'<!-- class="bg-success" -->
                       </span>
                     </td>
                     <td>
@@ -96,253 +103,68 @@ include("../include/navbar.php");
 
                     <td>
                       '.$row[7].'
+                    </td>                   
+                    <td>
+                    <span class="badge badge-dot mr-4" style="align-content: center;">
+                        <i class="'.$class.'"></i><!-- //class="bg-success" -->
+                      </span>
+                      
                     </td>
+                    
                     <td class="text-right">
                       <div class="dropdown">
                         <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <i class="fas fa-ellipsis-v"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                          <a class="dropdown-item" href="#">Подробнее</a>
+                          <a class="dropdown-item"  data-toggle="modal" data-target="#exampleModalLong'.$row[0].'" style="cursor: pointer;">Подробнее</a>
                           <a class="dropdown-item" href="delete_request.php?id='.$row[0].'">Удалить</a>
                         </div>
                       </div>
                     </td>
                   </tr>
+                  
+                  
+                  
+                  <!-- Modal -->
+                    <div class="modal fade" id="exampleModalLong'.$row[0].'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Электронная очередь</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                          <h1 style="text-align-last:   center;">'.$row[1].' '.$row[2].'</h1>
+                        <h2 style="text-align-last:  center;">'.$row[5].'</h2>
+                        <p><br>'.$row[6].'</p>
+
+                        <div > 
+                          <img src="smartphone.png" alt="">
+                            <p style="margin-left: 5px; display: inline-block;">'.$row[4].'</p>
+                        </div>
+                        <div>
+                            <img src="paper-plane.png" alt="">
+                            <p style="margin-left: 5px; display: inline-block;">'.$row[3].'</p>
+                        </div>
+                         <div>
+                            <img src="paper-plane.png" alt="">
+                            <p style="margin-left: 5px; display: inline-block;">'.$row[7].'</p>
+                        </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                            <a  class="btn btn-primary" href="edit_view_request.php?id='.$row[0].'">Просмотрено</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>      
                         
                    ';}}
                    ?>
-
-<!---->
-<!--                  <tr>-->
-<!--                    <th scope="row">-->
-<!--                      <div class="media align-items-center"> -->
-<!--                        <div class="media-body">-->
-<!--                          <span class="mb-0 text-sm">ФИО</span>-->
-<!--                        </div>-->
-<!--                      </div>-->
-<!--                    </th>-->
-<!--                    <td>-->
-<!--                      eee@gmail.com-->
-<!--                    </td>-->
-<!--                    <td>-->
-<!--                      <span class="badge badge-dot mr-4">-->
-<!--                        <i class="bg-warning"></i>928800333 -->
-<!--                      </span>-->
-<!--                    </td>-->
-<!--                    <td>-->
-<!--                      <div class="avatar-group">-->
-<!--                        Zagolovok-->
-<!--                      </div>-->
-<!--                    </td>-->
-<!--                    <td>-->
-<!--                      <div class="d-flex align-items-center">-->
-<!--                        <span class="mr-2">Matn</span>-->
-<!--                      -->
-<!--                      </div>-->
-<!--                    </td>-->
-<!---->
-<!--                    <td>-->
-<!--                      18.02.2020-->
-<!--                    </td>-->
-<!--                    <td class="text-right">-->
-<!--                      <div class="dropdown">-->
-<!--                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-<!--                          <i class="fas fa-ellipsis-v"></i>-->
-<!--                        </a>-->
-<!--                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">-->
-<!--                          <a class="dropdown-item" href="#">Подробнее</a>-->
-<!--                          <a class="dropdown-item" href="#">Удалить</a>-->
-<!--                        </div>-->
-<!--                      </div>-->
-<!--                    </td>-->
-<!--                  </tr>-->
-<!---->
-<!---->
-<!---->
-<!--                  <tr>-->
-<!--                    <th scope="row">-->
-<!--                      <div class="media align-items-center"> -->
-<!--                        <div class="media-body">-->
-<!--                          <span class="mb-0 text-sm">ФИО</span>-->
-<!--                        </div>-->
-<!--                      </div>-->
-<!--                    </th>-->
-<!--                    <td>-->
-<!--                      eee@gmail.com-->
-<!--                    </td>-->
-<!--                    <td>-->
-<!--                      <span class="badge badge-dot mr-4">-->
-<!--                        <i class="bg-warning"></i>928800333
-<!--                      </span>-->
-<!--                    </td>-->
-<!--                    <td>-->
-<!--                      <div class="avatar-group">-->
-<!--                        Zagolovok-->
-<!--                      </div>-->
-<!--                    </td>-->
-<!--                    <td>-->
-<!--                      <div class="d-flex align-items-center">-->
-<!--                        <span class="mr-2">Matn</span>-->
-<!--                      -->
-<!--                      </div>-->
-<!--                    </td>-->
-<!---->
-<!--                    <td>-->
-<!--                      18.02.2020-->
-<!--                    </td>-->
-<!--                    <td class="text-right">-->
-<!--                      <div class="dropdown">-->
-<!--                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-<!--                          <i class="fas fa-ellipsis-v"></i>-->
-<!--                        </a>-->
-<!--                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">-->
-<!--                          <a class="dropdown-item" href="#">Подробнее</a>-->
-<!--                          <a class="dropdown-item" href="#">Удалить</a>-->
-<!--                        </div>-->
-<!--                      </div>-->
-<!--                    </td>-->
-<!--                  </tr>-->
-<!---->
-<!---->
-<!---->
-<!--                  <tr>-->
-<!--                    <th scope="row">-->
-<!--                      <div class="media align-items-center"> -->
-<!--                        <div class="media-body">-->
-<!--                          <span class="mb-0 text-sm">ФИО</span>-->
-<!--                        </div>-->
-<!--                      </div>-->
-<!--                    </th>-->
-<!--                    <td>-->
-<!--                      eee@gmail.com-->
-<!--                    </td>-->
-<!--                    <td>-->
-<!--                      <span class="badge badge-dot mr-4">-->
-<!--                        <i class="bg-warning"></i>928800333 -->
-<!--                      </span>-->
-<!--                    </td>-->
-<!--                    <td>-->
-<!--                      <div class="avatar-group">-->
-<!--                        Zagolovok-->
-<!--                      </div>-->
-<!--                    </td>-->
-<!--                    <td>-->
-<!--                      <div class="d-flex align-items-center">-->
-<!--                        <span class="mr-2">Matn</span>-->
-<!--                      -->
-<!--                      </div>-->
-<!--                    </td>-->
-<!---->
-<!--                    <td>-->
-<!--                      18.02.2020-->
-<!--                    </td>-->
-<!--                    <td class="text-right">-->
-<!--                      <div class="dropdown">-->
-<!--                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-<!--                          <i class="fas fa-ellipsis-v"></i>-->
-<!--                        </a>-->
-<!--                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">-->
-<!--                          <a class="dropdown-item" href="#">Подробнее</a>-->
-<!--                          <a class="dropdown-item" href="#">Удалить</a>-->
-<!--                        </div>-->
-<!--                      </div>-->
-<!--                    </td>-->
-<!--                  </tr>-->
-<!---->
-<!---->
-<!---->
-<!--                  <tr>-->
-<!--                    <th scope="row">-->
-<!--                      <div class="media align-items-center"> -->
-<!--                        <div class="media-body">-->
-<!--                          <span class="mb-0 text-sm">ФИО</span>-->
-<!--                        </div>-->
-<!--                      </div>-->
-<!--                    </th>-->
-<!--                    <td>-->
-<!--                      eee@gmail.com-->
-<!--                    </td>-->
-<!--                    <td>-->
-<!--                      <span class="badge badge-dot mr-4">-->
-<!--                        <i class="bg-warning"></i>928800333 -->
-<!--                      </span>-->
-<!--                    </td>-->
-<!--                    <td>-->
-<!--                      <div class="avatar-group">-->
-<!--                        Zagolovok-->
-<!--                      </div>-->
-<!--                    </td>-->
-<!--                    <td>-->
-<!--                      <div class="d-flex align-items-center">-->
-<!--                        <span class="mr-2">Matn</span>-->
-<!--                      -->
-<!--                      </div>-->
-<!--                    </td>-->
-<!---->
-<!--                    <td>-->
-<!--                      18.02.2020-->
-<!--                    </td>-->
-<!--                    <td class="text-right">-->
-<!--                      <div class="dropdown">-->
-<!--                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-<!--                          <i class="fas fa-ellipsis-v"></i>-->
-<!--                        </a>-->
-<!--                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">-->
-<!--                          <a class="dropdown-item" href="#">Подробнее</a>-->
-<!--                          <a class="dropdown-item" href="#">Удалить</a>-->
-<!--                        </div>-->
-<!--                      </div>-->
-<!--                    </td>-->
-<!--                  </tr>-->
-<!---->
-<!---->
-<!---->
-<!--                  <tr>-->
-<!--                    <th scope="row">-->
-<!--                      <div class="media align-items-center"> -->
-<!--                        <div class="media-body">-->
-<!--                          <span class="mb-0 text-sm">ФИО</span>-->
-<!--                        </div>-->
-<!--                      </div>-->
-<!--                    </th>-->
-<!--                    <td>-->
-<!--                      eee@gmail.com-->
-<!--                    </td>-->
-<!--                    <td>-->
-<!--                      <span class="badge badge-dot mr-4">-->
-<!--                        <i class="bg-warning"></i>928800333     -->
-<!--                      </span>-->
-<!--                    </td>-->
-<!--                    <td>-->
-<!--                      <div class="avatar-group">-->
-<!--                        Zagolovok-->
-<!--                      </div>-->
-<!--                    </td>-->
-<!--                    <td>-->
-<!--                      <div class="d-flex align-items-center">-->
-<!--                        <span class="mr-2">Matn</span>-->
-<!--                      -->
-<!--                      </div>-->
-<!--                    </td>-->
-<!---->
-<!--                    <td>-->
-<!--                      18.02.2020-->
-<!--                    </td>-->
-<!--                    <td class="text-right">-->
-<!--                      <div class="dropdown">-->
-<!--                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-<!--                          <i class="fas fa-ellipsis-v"></i>-->
-<!--                        </a>-->
-<!--                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">-->
-<!--                          <a class="dropdown-item" href="#">Подробнее</a>-->
-<!--                          <a class="dropdown-item" href="#">Удалить</a>-->
-<!--                        </div>-->
-<!--                      </div>-->
-<!--                    </td>-->
-<!--                  </tr>-->
-
-
+<!--                editViewRequest-->
 
                  
                 </tbody>

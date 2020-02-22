@@ -466,13 +466,19 @@ WHERE l.`name`='tj' AND a.`status`=1 AND cn.`name`='answer' and q.id = '$id_ques
     public function getRequest()
     {
         $com = new DbConnect();
-        $sql = "SELECT `id`, `last_name`, `first_name`, `email`, `phone`, `title`, `text`, `date` FROM `request` WHERE  `status`=1  ORDER BY `id` DESC";
+        $sql = "SELECT `id`, `last_name`, `first_name`, `email`, `phone`, `title`, `text`, `date`, `is_view` FROM `request` WHERE  `status`=1  ORDER BY `id` DESC";
         return mysqli_query($com->getDb(), $sql);
     }
     public function deleteRequest($id){
         $com = new DbConnect();
         $sql = "UPDATE request SET status=0 Where id=$id";
         return mysqli_query($com->getDb(), $sql);
-    }
+    }//
 
+    public function editViewRequest($id)
+    {
+        $com = new DbConnect();
+        $sql = "UPDATE `request` SET  `is_view`=1 WHERE `id`='$id'";
+        return mysqli_query($com->getDb(), $sql);
+    }
 }
