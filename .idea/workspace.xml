@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="341e9ed8-de95-433c-a892-f2a9d7bc7ebe" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1XvctW3NSEHoBAZpwBIEGASUSkW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/gallery" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\gallery" />
+      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\slider" />
+      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\news" />
+      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\category" />
+      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\request" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\news" />
+      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\who_is" />
+      <recent name="C:\OpenServer\OSPanel\domains\isfara.loc\category" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="341e9ed8-de95-433c-a892-f2a9d7bc7ebe" name="Default Changelist" comment="" />
+      <created>1581930224616</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581930224616</updated>
+      <workItem from="1581930229417" duration="13831000" />
+      <workItem from="1582099392124" duration="895000" />
+      <workItem from="1582185881859" duration="13869000" />
+      <workItem from="1582213228503" duration="7682000" />
+      <workItem from="1582252364798" duration="21798000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="75" key="#SQL_Dialects" timestamp="1581931230480">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="75" key="#SQL_Dialects/0.0.1536.834@0.0.1536.834" timestamp="1581931230480" />
+    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1582013411996">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1582013411996" />
+    <state x="604" y="340" key="NewPhpFileDialog" timestamp="1582101238313">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="604" y="340" key="NewPhpFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1582101238313" />
+    <state x="277" y="59" key="SettingsEditor" timestamp="1582013660785">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="277" y="59" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1582013660785" />
+    <state x="93" y="93" width="1350" height="648" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1582277009145">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="93" y="93" width="1350" height="648" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1582277009145" />
+    <state x="414" y="212" key="com.intellij.ide.util.TipDialog" timestamp="1582252467110">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="414" y="212" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1582252467110" />
+    <state x="465" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1582099394434" />
+    <state x="339" y="165" key="run.anything.popup" timestamp="1582186900630">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1582186900630" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1582281613620">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1582281613620" />
+  </component>
+</project>
