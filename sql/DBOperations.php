@@ -484,25 +484,25 @@ WHERE l.`name`='tj' AND q.`status`=1 AND cn.`name` = 'question'";
         $sql = "    INSERT INTO texts(id_content, id_menu, title, description, body, locale) VALUES((SELECT id FROM content WHERE `name`='answer'),
     										(SELECT MAX(id) FROM answer),
     										'$answer1',
-    										'',
+    										'1',
     										'',
     										(SELECT id FROM locale WHERE `name`='$locale')),
     										((SELECT id FROM content WHERE `name`='answer'),
     										(SELECT MAX(id) FROM answer),
     										'$answer2',
-    										'',
+    										'2',
     										'',
     										(SELECT id FROM locale WHERE `name`='$locale')),
     										((SELECT id FROM content WHERE `name`='answer'),
     										(SELECT MAX(id) FROM answer),
     										'$answer3',
-    										'',
+    										'3',
     										'',
     										(SELECT id FROM locale WHERE `name`='$locale')),
     										((SELECT id FROM content WHERE `name`='answer'),
     										(SELECT MAX(id) FROM answer),
     										'$answer4',
-    										'',
+    										'4',
     										'',
     										(SELECT id FROM locale WHERE `name`='$locale'))";
         mysqli_query($com->getDb(), $sql);
@@ -524,9 +524,9 @@ WHERE l.`name`='tj' AND a.`status`=1 AND cn.`name`='answer' and q.id = '$id_ques
         return mysqli_query($com->getDb(), $sql);
     }
 
-    public function editAnswerText($id, $title,  $locale){
+    public function editAnswerText($id, $title,  $locale, $number){
         $com = new DbConnect();
-        $sql = "UPDATE texts SET title = '$title'  WHERE id_menu = (SELECT id FROM answer WHERE id_questions= $id) AND locale=(SELECT id FROM locale WHERE `name`='$locale') AND id_content=(SELECT id FROM content WHERE `name`='answer')";
+        $sql = "UPDATE texts SET title = '$title'  WHERE id_menu = (SELECT id FROM answer WHERE id_questions= $id) AND locale=(SELECT id FROM locale WHERE `name`='$locale') AND id_content=(SELECT id FROM content WHERE `name`='answer') AND description='$number'";
         return mysqli_query($com->getDb(), $sql);
     }
 
@@ -545,6 +545,12 @@ WHERE l.`name`='tj' AND a.`status`=1 AND cn.`name`='answer' and q.id = '$id_ques
         JOIN locale l ON l.`id`=t.`locale` 
         JOIN content cn ON cn.`id`=t.`id_content` 
         WHERE l.`name`='$locale' AND a.`status`=1 AND cn.`name`='answer' AND  id_menu = (SELECT id FROM answer WHERE id_questions= $id)";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function deleteQuestion($id){
+        $com = new DbConnect();
+        $sql = "UPDATE questions SET status=0 Where id=$id";
         return mysqli_query($com->getDb(), $sql);
     }
 
