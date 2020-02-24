@@ -54,13 +54,13 @@ include("../include/navbar.php");
 
                   <?php
                   $result = $dbOperation->getQuestions();
-                  if(mysqli_num_rows($result)>0) {
+                  if($result) {
                   while ($questions = mysqli_fetch_array($result)) {
                   ?>
             <div class="col-md-4">
               <h2><?=$questions[1]?></h2>
-                  <a href="edit_questions.php=<?=$questions[0]?>" class="btn btn-sm btn-success">Изменить</a>
-                  <a href="delete_questions.php=<?=$questions[0]?>" class="btn btn-sm btn-danger">Удалить</a>
+                  <a href="edit_questions.php?id=<?=$questions[0]?>" class="btn btn-sm btn-success">Изменить</a>
+                  <a href="delete_questions.php?id=<?=$questions[0]?>" class="btn btn-sm btn-danger">Удалить</a>
             </div>
                       <?php
                   }

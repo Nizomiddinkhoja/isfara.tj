@@ -456,8 +456,56 @@ JOIN content cn ON cn.`id`=t.`id_content`
         $sql = "SELECT q.`id`, t.`title` FROM  questions q JOIN texts t ON t.`id_menu` = q.`id`
 JOIN locale l ON l.`id`=t.locale
 JOIN content cn ON cn.`id`=t.`id_content`
-WHERE l.`name`='tj' AND q.`status`=1 AND cn.`name` = 'questions'";
+WHERE l.`name`='tj' AND q.`status`=1 AND cn.`name` = 'question'";
         return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function addQuestion(){
+        $com = new DbConnect();
+        $sql = "INSERT INTO questions(`count`, `status`) VALUES (0, 1)";
+        mysqli_query($com->getDb(), $sql);
+    }
+
+    public  function addAnswer(){
+        $com = new DbConnect();
+        $sql = "INSERT INTO answer(`id_questions`,`count`, `status`) VALUES ((SELECT MAX(id) FROM questions), 0, 1)";
+        mysqli_query($com->getDb(), $sql);
+    }
+
+    public function addQuestionText($question, $answer1, $answer2, $answer3, $answer4, $locale){
+        $com = new DbConnect();
+        $sql = "    INSERT INTO texts(id_content, id_menu, title, description, body, locale) VALUES((SELECT id FROM content WHERE `name`='question'),
+    										(SELECT MAX(id) FROM questions),
+    										'$question',
+    										'',
+    										'',
+    										(SELECT id FROM locale WHERE `name`='$locale'))";
+        mysqli_query($com->getDb(), $sql);
+        $sql = "    INSERT INTO texts(id_content, id_menu, title, description, body, locale) VALUES((SELECT id FROM content WHERE `name`='answer'),
+    										(SELECT MAX(id) FROM answer),
+    										'$answer1',
+    										'',
+    										'',
+    										(SELECT id FROM locale WHERE `name`='$locale')),
+    										((SELECT id FROM content WHERE `name`='answer'),
+    										(SELECT MAX(id) FROM answer),
+    										'$answer2',
+    										'',
+    										'',
+    										(SELECT id FROM locale WHERE `name`='$locale')),
+    										((SELECT id FROM content WHERE `name`='answer'),
+    										(SELECT MAX(id) FROM answer),
+    										'$answer3',
+    										'',
+    										'',
+    										(SELECT id FROM locale WHERE `name`='$locale')),
+    										((SELECT id FROM content WHERE `name`='answer'),
+    										(SELECT MAX(id) FROM answer),
+    										'$answer4',
+    										'',
+    										'',
+    										(SELECT id FROM locale WHERE `name`='$locale'))";
+        mysqli_query($com->getDb(), $sql);
     }
 
     public function getAnswer($id_questions){
@@ -467,6 +515,36 @@ JOIN questions q ON q.id = a.id_questions
 JOIN locale l ON l.`id`=t.locale
 JOIN content cn ON cn.`id`=t.`id_content`
 WHERE l.`name`='tj' AND a.`status`=1 AND cn.`name`='answer' and q.id = '$id_questions'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function editQuestionText($id, $title,  $locale){
+        $com = new DbConnect();
+        $sql = "UPDATE texts SET title = '$title'  WHERE id_menu = $id AND locale=(SELECT id FROM locale WHERE `name`='$locale') AND id_content=(SELECT id FROM content WHERE `name`='question')";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function editAnswerText($id, $title,  $locale){
+        $com = new DbConnect();
+        $sql = "UPDATE texts SET title = '$title'  WHERE id_menu = (SELECT id FROM answer WHERE id_questions= $id) AND locale=(SELECT id FROM locale WHERE `name`='$locale') AND id_content=(SELECT id FROM content WHERE `name`='answer')";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function getQuestionByID($id, $locale){
+        $com = new DbConnect();
+        $sql = "SELECT t.`title` FROM  questions q JOIN texts t ON t.`id_menu` = q.`id` 
+        JOIN locale l ON l.`id`=t.`locale` 
+        JOIN content cn ON cn.`id`=t.`id_content` 
+        WHERE l.`name`='$locale' AND q.`status`=1 AND cn.`name`='question' AND q.id=$id";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function getAnswerById($id, $locale){
+        $com = new DbConnect();
+        $sql = "SELECT t.`title` FROM  answer a JOIN texts t ON t.`id_menu` = a.`id` 
+        JOIN locale l ON l.`id`=t.`locale` 
+        JOIN content cn ON cn.`id`=t.`id_content` 
+        WHERE l.`name`='$locale' AND a.`status`=1 AND cn.`name`='answer' AND  id_menu = (SELECT id FROM answer WHERE id_questions= $id)";
         return mysqli_query($com->getDb(), $sql);
     }
 

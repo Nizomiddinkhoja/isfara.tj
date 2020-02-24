@@ -3,6 +3,7 @@ session_start();
 include("../sql/DBOperations.php");
 if ($_SESSION["is_auth"]) {
 $dbOperation = new DBOperations();
+$id = $_GET["id"];
 if(isset($_POST['submit'])){
     $question_tj = $_POST["question_tj"];
     $question_ru = $_POST["question_ru"];
@@ -13,18 +14,44 @@ if(isset($_POST['submit'])){
     $answer1_ru = $_POST["answer1_ru"]; $answer2_ru = $_POST["answer2_ru"]; $answer3_ru = $_POST["answer3_ru"]; $answer4_ru = $_POST["answer4_ru"];
 
     try {
-        $dbOperation->addQuestion();
-        $dbOperation->addAnswer();
-        $dbOperation->addQuestionText($question_en, $answer1_en, $answer2_en, $answer3_en, $answer4_en, 'en');
-        $dbOperation->addQuestionText($question_tj, $answer1_tj, $answer2_tj, $answer3_tj, $answer4_tj, 'tj');
-        $dbOperation->addQuestionText($question_en, $answer1_ru, $answer2_ru, $answer3_ru, $answer4_ru, 'ru');
+        $dbOperation->editQuestionText($id, $question_en, 'en');
+        $dbOperation->editQuestionText($id, $question_tj, 'tj');
+        $dbOperation->editQuestionText($id, $question_ru, 'ru');
+
+        $dbOperation->editAnswerText($id, $answer1_en, 'en');
+        $dbOperation->editAnswerText($id, $answer1_tj, 'tj');
+        $dbOperation->editAnswerText($id, $answer1_ru, 'ru');
+
+        $dbOperation->editAnswerText($id, $answer2_en, 'en');
+        $dbOperation->editAnswerText($id, $answer2_tj, 'tj');
+        $dbOperation->editAnswerText($id, $answer2_ru, 'ru');
+
+        $dbOperation->editAnswerText($id, $answer3_en, 'en');
+        $dbOperation->editAnswerText($id, $answer3_tj, 'tj');
+        $dbOperation->editAnswerText($id, $answer3_ru, 'ru');
+
+        $dbOperation->editAnswerText($id, $answer4_en, 'en');
+        $dbOperation->editAnswerText($id, $answer4_tj, 'tj');
+        $dbOperation->editAnswerText($id, $answer4_ru, 'ru');
+
         $message = "<h4 class='text-success'>Успешно сохранено!</h4>";
     }catch (Exception $exception){
         $message = "<h4 class='text-danger'>Ошибка: " . $exception->getMessage() . "</h4>";
     }
 }
 
-?>
+    $question_tj = $dbOperation->getQuestionByID($id, 'tj');
+    $question_ru = $dbOperation->getQuestionByID($id, 'ru');
+    $question_en = $dbOperation->getQuestionByID($id, 'en');
+
+    $answer_tj = mysqli_fetch_array($dbOperation->getAnswerById($id, 'tj'));
+    $answer_ru = mysqli_fetch_array($dbOperation->getAnswerById($id, 'ru'));
+    $answer_en = mysqli_fetch_array($dbOperation->getAnswerById($id, 'en'));
+
+
+
+
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,7 +111,7 @@ include("../include/navbar.php");
                               <div class="input-group-prepend">
                                   <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                               </div>
-                              <input class="form-control" name="question_tj" placeholder="Савол" type="text">
+                              <input class="form-control" value="<?=$question_tj?>" name="question_tj" placeholder="Савол" type="text">
                           </div>
                       </div>
                       <div class="form-group mb-3">
@@ -92,7 +119,7 @@ include("../include/navbar.php");
                               <div class="input-group-prepend">
                                   <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                               </div>
-                              <input class="form-control" name="answer1_tj" placeholder="Чавоб" type="text">
+                              <input class="form-control" name="answer1_tj"  value="<?=$answer_tj[0]?>"  placeholder="Чавоб" type="text">
                           </div>
                       </div>
                       <div class="form-group mb-3">
@@ -100,7 +127,7 @@ include("../include/navbar.php");
                               <div class="input-group-prepend">
                                   <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                               </div>
-                              <input class="form-control" name="answer2_tj" placeholder="Чавоб" type="text">
+                              <input class="form-control" name="answer2_tj"  value="<?=$answer_tj[1]?>"   placeholder="Чавоб" type="text">
                           </div>
                       </div>
                       <div class="form-group mb-3">
@@ -108,7 +135,7 @@ include("../include/navbar.php");
                               <div class="input-group-prepend">
                                   <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                               </div>
-                              <input class="form-control" name="answer3_tj" placeholder="Чавоб" type="text">
+                              <input class="form-control" name="answer3_tj"  value="<?=$answer_tj[2]?>"   placeholder="Чавоб" type="text">
                           </div>
                       </div>
                       <div class="form-group mb-3">
@@ -116,7 +143,7 @@ include("../include/navbar.php");
                               <div class="input-group-prepend">
                                   <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                               </div>
-                              <input class="form-control" name="answer4_tj" placeholder="Чавоб" type="text">
+                              <input class="form-control" name="answer4_tj"   value="<?=$answer_tj[3]?>"  placeholder="Чавоб" type="text">
                           </div>
                       </div>
                   </div>
@@ -143,7 +170,7 @@ include("../include/navbar.php");
                               <div class="input-group-prepend">
                                   <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                               </div>
-                              <input class="form-control"  name="question_ru" placeholder="Вопрос" type="text">
+                              <input class="form-control"  value="<?=$question_ru?>"  name="question_ru" placeholder="Вопрос" type="text">
                           </div>
                       </div>
                       <div class="form-group mb-3">
@@ -151,7 +178,7 @@ include("../include/navbar.php");
                               <div class="input-group-prepend">
                                   <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                               </div>
-                              <input class="form-control" name="answer1_ru" placeholder="Чавоб" type="text">
+                              <input class="form-control" name="answer1_ru"  value="<?=$answer_ru[0]?>"   placeholder="Чавоб" type="text">
                           </div>
                       </div>
                       <div class="form-group mb-3">
@@ -159,7 +186,7 @@ include("../include/navbar.php");
                               <div class="input-group-prepend">
                                   <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                               </div>
-                              <input class="form-control" name="answer2_ru" placeholder="Чавоб" type="text">
+                              <input class="form-control" name="answer2_ru"  value="<?=$answer_ru[1]?>" placeholder="Чавоб" type="text">
                           </div>
                       </div>
                       <div class="form-group mb-3">
@@ -167,7 +194,7 @@ include("../include/navbar.php");
                               <div class="input-group-prepend">
                                   <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                               </div>
-                              <input class="form-control" name="answer3_ru" placeholder="Чавоб" type="text">
+                              <input class="form-control" name="answer3_ru"  value="<?=$answer_ru[2]?>" placeholder="Чавоб" type="text">
                           </div>
                       </div>
                       <div class="form-group mb-3">
@@ -175,7 +202,7 @@ include("../include/navbar.php");
                               <div class="input-group-prepend">
                                   <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                               </div>
-                              <input class="form-control" name="answer4_ru" placeholder="Чавоб" type="text">
+                              <input class="form-control" name="answer4_ru" value="<?=$answer_ru[3]?>"  placeholder="Чавоб" type="text">
                           </div>
                       </div>
                   </div>
@@ -202,7 +229,7 @@ include("../include/navbar.php");
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <input class="form-control" name="question_en" placeholder="Question" type="text">
+                        <input class="form-control" name="question_en"  value="<?=$question_en?>" placeholder="Question" type="text">
                       </div>
                     </div>
                       <div class="form-group mb-3">
@@ -210,7 +237,7 @@ include("../include/navbar.php");
                               <div class="input-group-prepend">
                                   <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                               </div>
-                              <input class="form-control" name="answer1_en" placeholder="Answer" type="text">
+                              <input class="form-control" name="answer1_en" value="<?=$answer_en[0]?>"  placeholder="Answer" type="text">
                           </div>
                       </div>
                       <div class="form-group mb-3">
@@ -218,7 +245,7 @@ include("../include/navbar.php");
                               <div class="input-group-prepend">
                                   <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                               </div>
-                              <input class="form-control" name="answer2_en" placeholder="Answer" type="text">
+                              <input class="form-control" name="answer2_en"  value="<?=$answer_en[1]?>" placeholder="Answer" type="text">
                           </div>
                       </div>
                       <div class="form-group mb-3">
@@ -226,7 +253,7 @@ include("../include/navbar.php");
                               <div class="input-group-prepend">
                                   <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                               </div>
-                              <input class="form-control" name="answer3_en" placeholder="Answer" type="text">
+                              <input class="form-control" name="answer3_en" value="<?=$answer_en[2]?>" placeholder="Answer" type="text">
                           </div>
                       </div>
                       <div class="form-group mb-3">
@@ -234,7 +261,7 @@ include("../include/navbar.php");
                               <div class="input-group-prepend">
                                   <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                               </div>
-                              <input class="form-control" name="answer4_en" placeholder="Answer" type="text">
+                              <input class="form-control" name="answer4_en" value="<?=$answer_en[3]?>" placeholder="Answer" type="text">
                           </div>
                       </div>
                   </div>
