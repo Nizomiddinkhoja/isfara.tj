@@ -179,12 +179,12 @@
 
         .sp-page-builder .page-content #section-id-1574157062618 {
             padding-top: 20px;
-            padding-right: 20px;
+            /* padding-right: 20px;*/
             padding-bottom: 0px;
-            padding-left: 20px;
+            /*padding-left: 20px;*/
             margin-top: 0px;
             margin-right: 0px;
-            margin-bottom: 0px;
+            margin-bottom: 10px;
             margin-left: 0px;
             background-color: #ffffff;
         }
@@ -1249,16 +1249,16 @@
         }
     </style>
     <script type="application/json" class="joomla-script-options new">{
-        "csrf.token": "617709c9ab31b88b48030ca5bd751ad5",
-        "system.paths": {
-            "root": "\/2019\/newsberg",
-            "base": "\/2019\/newsberg"
-        },
-        "system.keepalive": {
-            "interval": 3600000,
-            "uri": "\/2019\/newsberg\/index.php\/component\/ajax\/?format=json"
-        }
-    }</script>
+            "csrf.token": "617709c9ab31b88b48030ca5bd751ad5",
+            "system.paths": {
+                "root": "\/2019\/newsberg",
+                "base": "\/2019\/newsberg"
+            },
+            "system.keepalive": {
+                "interval": 3600000,
+                "uri": "\/2019\/newsberg\/index.php\/component\/ajax\/?format=json"
+            }
+        }</script>
     <script src="media/jui/js/jquery.min4f50.js?0fe5eabe7d411626b85406bf464c07ff" type="text/javascript"></script>
     <script src="media/jui/js/jquery-noconflict4f50.js?0fe5eabe7d411626b85406bf464c07ff"
             type="text/javascript"></script>
@@ -1642,12 +1642,12 @@
                                     <div class="sp-module-content">
                                         <ul class="menu">
                                             <li class="item-101 menu-deeper menu-parent"><a
-                                                    href="index-2.html">Home<span class="menu-toggler"></span></a>
+                                                        href="index-2.html">Home<span class="menu-toggler"></span></a>
                                                 <ul class="menu-child">
                                                     <li class="item-219"><a href="index.php/home/news-bulletin.html">News
-                                                        Bulletin</a></li>
+                                                            Bulletin</a></li>
                                                     <li class="item-245"><a href="index-2.html">Business Insight
-                                                        (Default)</a></li>
+                                                            (Default)</a></li>
                                                 </ul>
                                             </li>
                                             <li class="item-115"><a href="index.php/business-blog.html">Business</a>
@@ -1655,16 +1655,16 @@
                                             <li class="item-222"><a href="index.php/food.html">Food</a></li>
                                             <li class="item-223"><a href="index.php/sports.html">Sports</a></li>
                                             <li class="item-224"><a
-                                                    href="index.php/entertainment.html">Entertainment</a></li>
+                                                        href="index.php/entertainment.html">Entertainment</a></li>
                                             <li class="item-217"><a href="index.php/authors.html">Authors</a></li>
                                             <li class="item-121"><a href="#">Mega</a></li>
                                             <li class="item-108 menu-deeper menu-parent"><a href="#">Pages<span
-                                                    class="menu-toggler"></span></a>
+                                                            class="menu-toggler"></span></a>
                                                 <ul class="menu-child">
                                                     <li class="item-218"><a href="index.php/pages/bookmarks.html">Bookmarks</a>
                                                     </li>
                                                     <li class="item-113"><a
-                                                            href="index.php/pages/contact.html">Contact</a></li>
+                                                                href="index.php/pages/contact.html">Contact</a></li>
                                                     <li class="item-109"><a href="index.php/pages/login.html">Login</a>
                                                     </li>
                                                     <li class="item-110"><a href="index.php/pages/login.html">Registration</a>
@@ -1672,7 +1672,7 @@
                                                     <li class="item-111"><a href="indexf2ce.html?Itemid=404">404</a>
                                                     </li>
                                                     <li class="item-112"><a href="index114a.html?tmpl=comingsoon">Coming
-                                                        Soon</a></li>
+                                                            Soon</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -1699,11 +1699,11 @@
                                                                 <div class="top-search-wrapper">
                                                                     <div class="sp_search_input"><i class="fa fa-search"
                                                                                                     aria-hidden="true"></i><input
-                                                                            name="searchword" maxlength="200"
-                                                                            class="mod-search-searchword inputboxtop-search"
-                                                                            type="text" size="0" value="Search ..."
-                                                                            onblur="if (this.value=='') this.value='Search ...';"
-                                                                            onfocus="if (this.value=='Search ...') this.value='';"/>
+                                                                                name="searchword" maxlength="200"
+                                                                                class="mod-search-searchword inputboxtop-search"
+                                                                                type="text" size="0" value="Search ..."
+                                                                                onblur="if (this.value=='') this.value='Search ...';"
+                                                                                onfocus="if (this.value=='Search ...') this.value='';"/>
                                                                     </div>
                                                                 </div>
                                                                 <input type="hidden" name="task" value="search"/>
@@ -1761,7 +1761,7 @@
                         <div id="sp-logo" class="col-6 col-sm-6 col-md-6 col-lg-2 ">
                             <div class="sp-column "><a id="offcanvas-toggler" aria-label="Navigation"
                                                        class="offcanvas-toggler-left d-block d-lg-none" href="#"><span
-                                    class="fa fa-bars" aria-hidden="true" title="Navigation"></span></a>
+                                            class="fa fa-bars" aria-hidden="true" title="Navigation"></span></a>
                                 <div class="logo"><a href="index.html"><img class="logo-image"
                                                                             src="templates/newsberg/images/presets/preset1/logo.svg"
                                                                             alt="Newsberg"></a></div>
@@ -1820,24 +1820,24 @@
                                                                                  class="clearfix ">
                                                                                 <div class="sppb-addon sppb-addon-button-group sppb-text-right">
                                                                                     <div class="sppb-addon-content"><a
-                                                                                            href="index.php/pages/contact.html"
-                                                                                            id="btn-1574226143487"
-                                                                                            class="sppb-btn  sppb-btn-primary sppb-btn-sm sppb-btn-round sppb-btn-outline">Subscribe</a>
+                                                                                                href="index.php/pages/contact.html"
+                                                                                                id="btn-1574226143487"
+                                                                                                class="sppb-btn  sppb-btn-primary sppb-btn-sm sppb-btn-round sppb-btn-outline">Subscribe</a>
                                                                                     </div>
                                                                                 </div>
                                                                                 <style type="text/css">#sppb-addon-1574226143487 {
-                                                                                    box-shadow: 0 0 0 0 #ffffff;
-                                                                                }
-
-                                                                                @media (min-width: 768px) and (max-width: 991px) {
-                                                                                    #sppb-addon-1574226143487 {
+                                                                                        box-shadow: 0 0 0 0 #ffffff;
                                                                                     }
-                                                                                }
 
-                                                                                @media (max-width: 767px) {
-                                                                                    #sppb-addon-1574226143487 {
+                                                                                    @media (min-width: 768px) and (max-width: 991px) {
+                                                                                        #sppb-addon-1574226143487 {
+                                                                                        }
                                                                                     }
-                                                                                }</style>
+
+                                                                                    @media (max-width: 767px) {
+                                                                                        #sppb-addon-1574226143487 {
+                                                                                        }
+                                                                                    }</style>
                                                                                 <style type="text/css"></style>
                                                                             </div>
                                                                         </div>
@@ -1848,123 +1848,123 @@
                                                     </div>
                                                 </div>
                                                 <style type="text/css">.sp-page-builder .page-content #section-id-1574411095389 {
-                                                    padding-top: 0px;
-                                                    padding-right: 0px;
-                                                    padding-bottom: 0px;
-                                                    padding-left: 0px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                }
-
-                                                @media (max-width: 767px) {
-                                                    .sp-page-builder .page-content #section-id-1574411095389 {
-                                                        padding-top: 17px;
+                                                        padding-top: 0px;
                                                         padding-right: 0px;
                                                         padding-bottom: 0px;
                                                         padding-left: 0px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
                                                     }
-                                                }
 
-                                                #column-id-1574411095391 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
+                                                    @media (max-width: 767px) {
+                                                        .sp-page-builder .page-content #section-id-1574411095389 {
+                                                            padding-top: 17px;
+                                                            padding-right: 0px;
+                                                            padding-bottom: 0px;
+                                                            padding-left: 0px;
+                                                        }
+                                                    }
 
-                                                .sp-page-builder .page-content #section-id-1574411095392 {
-                                                    padding-top: 20px;
-                                                    padding-right: 20px;
-                                                    padding-bottom: 10px;
-                                                    padding-left: 20px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                    background-color: #fff;
-                                                }
+                                                    #column-id-1574411095391 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }
 
-                                                #column-id-1574411095393 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
+                                                    .sp-page-builder .page-content #section-id-1574411095392 {
+                                                        padding-top: 20px;
+                                                        padding-right: 20px;
+                                                        padding-bottom: 10px;
+                                                        padding-left: 20px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
+                                                        background-color: #fff;
+                                                    }
 
-                                                .sp-page-builder .page-content #section-id-1573733783983 {
-                                                    padding-top: 0px;
-                                                    padding-right: 0px;
-                                                    padding-bottom: 0px;
-                                                    padding-left: 0px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                }
+                                                    #column-id-1574411095393 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }
 
-                                                #column-id-1573733783982 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
+                                                    .sp-page-builder .page-content #section-id-1573733783983 {
+                                                        padding-top: 0px;
+                                                        padding-right: 0px;
+                                                        padding-bottom: 0px;
+                                                        padding-left: 0px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
+                                                    }
 
-                                                .sp-page-builder .page-content #section-id-1573726863166 {
-                                                    padding-top: 0px;
-                                                    padding-right: 0px;
-                                                    padding-bottom: 0px;
-                                                    padding-left: 0px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                }
+                                                    #column-id-1573733783982 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }
 
-                                                #column-id-1573726863165 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
+                                                    .sp-page-builder .page-content #section-id-1573726863166 {
+                                                        padding-top: 0px;
+                                                        padding-right: 0px;
+                                                        padding-bottom: 0px;
+                                                        padding-left: 0px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
+                                                    }
 
-                                                #column-id-1573641608317 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
+                                                    #column-id-1573726863165 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }
 
-                                                .sp-page-builder .page-content #section-id-1573639284224 {
-                                                    padding-top: 0px;
-                                                    padding-right: 0px;
-                                                    padding-bottom: 0px;
-                                                    padding-left: 0px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                }
+                                                    #column-id-1573641608317 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }
 
-                                                #column-id-1573639284223 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
+                                                    .sp-page-builder .page-content #section-id-1573639284224 {
+                                                        padding-top: 0px;
+                                                        padding-right: 0px;
+                                                        padding-bottom: 0px;
+                                                        padding-left: 0px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
+                                                    }
 
-                                                .sp-page-builder .page-content #section-id-1573641031810 {
-                                                    padding-top: 0px;
-                                                    padding-right: 0px;
-                                                    padding-bottom: 0px;
-                                                    padding-left: 0px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                }
+                                                    #column-id-1573639284223 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }
 
-                                                #column-id-1573641031809 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
+                                                    .sp-page-builder .page-content #section-id-1573641031810 {
+                                                        padding-top: 0px;
+                                                        padding-right: 0px;
+                                                        padding-bottom: 0px;
+                                                        padding-left: 0px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
+                                                    }
 
-                                                .sp-page-builder .page-content #section-id-1574145450184 {
-                                                    padding-top: 0px;
-                                                    padding-right: 0px;
-                                                    padding-bottom: 0px;
-                                                    padding-left: 0px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                }
+                                                    #column-id-1573641031809 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }
 
-                                                #column-id-1574145450183 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }</style>
+                                                    .sp-page-builder .page-content #section-id-1574145450184 {
+                                                        padding-top: 0px;
+                                                        padding-right: 0px;
+                                                        padding-bottom: 0px;
+                                                        padding-left: 0px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
+                                                    }
+
+                                                    #column-id-1574145450183 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }</style>
                                             </div>
                                         </div>
                                     </div>
@@ -1983,7 +1983,7 @@
                                                         <div class="col-sm-7 col-md-6 login-info-col">
                                                             <div class="login-info-wrapper">
                                                                 <button type="button" class="close"><span
-                                                                        class="close-icon"></span></button>
+                                                                            class="close-icon"></span></button>
                                                                 <h2>Sign In</h2>
                                                                 <form action="http://demo2.joomshaper.com/2019/newsberg/index.php"
                                                                       method="post" id="login-form">
@@ -2050,14 +2050,14 @@
                                 <ul class="social-icons">
                                     <li class="social-icon-facebook"><a target="_blank" href="#"
                                                                         aria-label="facebook"><span
-                                            class="fa fa-facebook" aria-hidden="true"></span></a></li>
+                                                    class="fa fa-facebook" aria-hidden="true"></span></a></li>
                                     <li class="social-icon-twitter"><a target="_blank" href="#"
                                                                        aria-label="twitter"><span class="fa fa-twitter"
                                                                                                   aria-hidden="true"></span></a>
                                     </li>
                                     <li class="social-icon-instagram"><a target="_blank" href="#"
                                                                          aria-label="Instagram"><span
-                                            class="fa fa-instagram" aria-hidden="true"></span></a></li>
+                                                    class="fa fa-instagram" aria-hidden="true"></span></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -2079,10 +2079,10 @@
                                                 <div class="sp-dropdown-inner">
                                                     <ul class="sp-dropdown-items">
                                                         <li class="sp-menu-item"><a
-                                                                href="index.php/home/news-bulletin.html">News
-                                                            Bulletin</a></li>
+                                                                    href="index.php/home/news-bulletin.html">News
+                                                                Bulletin</a></li>
                                                         <li class="sp-menu-item"><a href="index-2.html">Business Insight
-                                                            (Default)</a></li>
+                                                                (Default)</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -2092,7 +2092,7 @@
                                         <li class="sp-menu-item"><a href="index.php/food.html">Food</a></li>
                                         <li class="sp-menu-item"><a href="index.php/sports.html">Sports</a></li>
                                         <li class="sp-menu-item"><a
-                                                href="index.php/entertainment.html">Entertainment</a></li>
+                                                    href="index.php/entertainment.html">Entertainment</a></li>
                                         <li class="sp-menu-item"><a href="index.php/authors.html">Authors</a></li>
                                         <li class="sp-menu-item sp-has-child"><a href="#">Mega</a>
                                             <div class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-full container"
@@ -2109,22 +2109,22 @@
                                                                                     <div class="col-sm-3 sp-tab-btns-wrap">
                                                                                         <ul class="sp-tab-btns">
                                                                                             <li class="active"><a
-                                                                                                    href="index.php/business-blog.html">Business</a>
+                                                                                                        href="index.php/business-blog.html">Business</a>
                                                                                             </li>
                                                                                             <li class=""><a
-                                                                                                    href="index.php/entertainment.html">Entertainment</a>
+                                                                                                        href="index.php/entertainment.html">Entertainment</a>
                                                                                             </li>
                                                                                             <li class=""><a
-                                                                                                    href="index.php/food.html">Food</a>
+                                                                                                        href="index.php/food.html">Food</a>
                                                                                             </li>
                                                                                             <li class=""><a
-                                                                                                    href="index.php/categories/newsberg/politics.html">Politics</a>
+                                                                                                        href="index.php/categories/newsberg/politics.html">Politics</a>
                                                                                             </li>
                                                                                             <li class=""><a
-                                                                                                    href="index.php/sports.html">Sports</a>
+                                                                                                        href="index.php/sports.html">Sports</a>
                                                                                             </li>
                                                                                             <li class=""><a
-                                                                                                    href="index.php/categories/newsberg/technology.html">Technology</a>
+                                                                                                        href="index.php/categories/newsberg/technology.html">Technology</a>
                                                                                             </li>
                                                                                         </ul>
                                                                                     </div>
@@ -3092,7 +3092,7 @@
                                                 <div class="sp-dropdown-inner">
                                                     <ul class="sp-dropdown-items">
                                                         <li class="sp-menu-item"><a
-                                                                href="index.php/pages/bookmarks.html">Bookmarks</a></li>
+                                                                    href="index.php/pages/bookmarks.html">Bookmarks</a></li>
                                                         <li class="sp-menu-item"><a href="index.php/pages/contact.html">Contact</a>
                                                         </li>
                                                         <li class="sp-menu-item"><a href="index.php/pages/login.html">Login</a>
@@ -3100,9 +3100,9 @@
                                                         <li class="sp-menu-item"><a href="index.php/pages/login.html">Registration</a>
                                                         </li>
                                                         <li class="sp-menu-item"><a
-                                                                href="indexf2ce.html?Itemid=404">404</a></li>
+                                                                    href="indexf2ce.html?Itemid=404">404</a></li>
                                                         <li class="sp-menu-item"><a
-                                                                href="index114a.html?tmpl=comingsoon">Coming Soon</a>
+                                                                    href="index114a.html?tmpl=comingsoon">Coming Soon</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -3147,6 +3147,9 @@ Mon, Feb 24, 2020 </span>
                         </div>
                         <div id="sp-page-builder" class="sp-page-builder  page-1">
                             <div class="page-content">
+
+
+                                <!--                                Slider -->
                                 <div id="section-id-1573624776029" class="sppb-section">
                                     <div class="sppb-container-inner">
                                         <div class="sppb-row">
@@ -3162,17 +3165,10 @@ Mon, Feb 24, 2020 </span>
                                                                         <div class="swiper-container articles-slider">
                                                                             <div class="swiper-wrapper">
 
-
-
                                                                                 <div class="swiper-slide"
                                                                                      style="background-image: url(images/2019/12/11/politics31.jpg);">
                                                                                     <div class="container">
                                                                                         <div class="sppb-article-info-wrap">
-                                                                                            <!--<div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-category"><a
-                                                                                                        href="index.php/categories/newsberg/politics.html"
-                                                                                                        itemprop="genre">Politics</a></span>
-                                                                                            </div>-->
                                                                                             <h3>
                                                                                                 <a href="index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make.html"
                                                                                                    itemprop="url">Sondland
@@ -3181,65 +3177,14 @@ Mon, Feb 24, 2020 </span>
                                                                                                     Ukraine probes
                                                                                                     sought by Trump</a>
                                                                                             </h3>
-                                                                                            <!-- <div class="slider-spbookmark-wrap d-flex">
-                                                                                                 <div class="article-spbookmark">
-                                                                                                      <form class="sp-bookmark-form"
-                                                                                                            name="add-to-bookmark-133">
-                                                                                                          <a class="btn-spbookmark-action "
-                                                                                                             href="javascript:void(0);"
-                                                                                                             data-content-id="133">
-                                                                                                              <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                          </a>
-                                                                                                          <input type="hidden"
-                                                                                                                 name="cid"
-                                                                                                                 value="133">
-                                                                                                          <input type="hidden"
-                                                                                                                 name="curl"
-                                                                                                                 value="index.html">
-                                                                                                     </form>
-                                                                                                 </div>--><!--
-                                                                                                <span class="bookmark-text">Bookmark<br>Now</span>
-                                                                                                <div class="sppb-post-share-social">
-                                                                                                    <div class="sppb-post-share-social-others">
-                                                                                                        <a class="fa fa-facebook"
-                                                                                                           data-toggle="tooltip"
-                                                                                                           data-placement="bottom"
-                                                                                                           title="Share On Facebook"
-                                                                                                           onClick="window.open('http://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                                                           href="https://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make"></a><a
-                                                                                                            class="fa fa-twitter"
-                                                                                                            data-toggle="tooltip"
-                                                                                                            data-placement="bottom"
-                                                                                                            title="Share On Twitter"
-                                                                                                            onClick="window.open('http://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make&amp;text=Sondland%20adds%20tos%20testimony%20linking%20aid%20to%20Ukraine%20probes%20sought%20by%20Trump','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                                                            href="https://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make&amp;text=Sondland%20adds%20tos%20testimony%20linking%20aid%20to%20Ukraine%20probes%20sought%20by%20Trump"></a><a
-                                                                                                            class="fa fa-linkedin"
-                                                                                                            data-toggle="tooltip"
-                                                                                                            data-placement="bottom"
-                                                                                                            title="Share On LInkedin"
-                                                                                                            onClick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;"
-                                                                                                            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make"></a><a
-                                                                                                            class="fa fa-share"></a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>-->
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-
-
-
-
 
                                                                                 <div class="swiper-slide"
                                                                                      style="background-image: url(images/2019/12/11/politics31.jpg);">
                                                                                     <div class="container">
                                                                                         <div class="sppb-article-info-wrap">
-                                                                                            <!--<div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-category"><a
-                                                                                                        href="index.php/categories/newsberg/politics.html"
-                                                                                                        itemprop="genre">Politics</a></span>
-                                                                                            </div>-->
                                                                                             <h3>
                                                                                                 <a href="index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make.html"
                                                                                                    itemprop="url">Sondland
@@ -3248,65 +3193,14 @@ Mon, Feb 24, 2020 </span>
                                                                                                     Ukraine probes
                                                                                                     sought by Trump</a>
                                                                                             </h3>
-                                                                                            <!-- <div class="slider-spbookmark-wrap d-flex">
-                                                                                                 <div class="article-spbookmark">
-                                                                                                      <form class="sp-bookmark-form"
-                                                                                                            name="add-to-bookmark-133">
-                                                                                                          <a class="btn-spbookmark-action "
-                                                                                                             href="javascript:void(0);"
-                                                                                                             data-content-id="133">
-                                                                                                              <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                          </a>
-                                                                                                          <input type="hidden"
-                                                                                                                 name="cid"
-                                                                                                                 value="133">
-                                                                                                          <input type="hidden"
-                                                                                                                 name="curl"
-                                                                                                                 value="index.html">
-                                                                                                     </form>
-                                                                                                 </div>--><!--
-                                                                                                <span class="bookmark-text">Bookmark<br>Now</span>
-                                                                                                <div class="sppb-post-share-social">
-                                                                                                    <div class="sppb-post-share-social-others">
-                                                                                                        <a class="fa fa-facebook"
-                                                                                                           data-toggle="tooltip"
-                                                                                                           data-placement="bottom"
-                                                                                                           title="Share On Facebook"
-                                                                                                           onClick="window.open('http://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                                                           href="https://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make"></a><a
-                                                                                                            class="fa fa-twitter"
-                                                                                                            data-toggle="tooltip"
-                                                                                                            data-placement="bottom"
-                                                                                                            title="Share On Twitter"
-                                                                                                            onClick="window.open('http://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make&amp;text=Sondland%20adds%20tos%20testimony%20linking%20aid%20to%20Ukraine%20probes%20sought%20by%20Trump','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                                                            href="https://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make&amp;text=Sondland%20adds%20tos%20testimony%20linking%20aid%20to%20Ukraine%20probes%20sought%20by%20Trump"></a><a
-                                                                                                            class="fa fa-linkedin"
-                                                                                                            data-toggle="tooltip"
-                                                                                                            data-placement="bottom"
-                                                                                                            title="Share On LInkedin"
-                                                                                                            onClick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;"
-                                                                                                            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make"></a><a
-                                                                                                            class="fa fa-share"></a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>-->
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-
-
-
-
 
                                                                                 <div class="swiper-slide"
                                                                                      style="background-image: url(images/2019/12/11/politics31.jpg);">
                                                                                     <div class="container">
                                                                                         <div class="sppb-article-info-wrap">
-                                                                                            <!--<div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-category"><a
-                                                                                                        href="index.php/categories/newsberg/politics.html"
-                                                                                                        itemprop="genre">Politics</a></span>
-                                                                                            </div>-->
                                                                                             <h3>
                                                                                                 <a href="index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make.html"
                                                                                                    itemprop="url">Sondland
@@ -3315,65 +3209,14 @@ Mon, Feb 24, 2020 </span>
                                                                                                     Ukraine probes
                                                                                                     sought by Trump</a>
                                                                                             </h3>
-                                                                                            <!-- <div class="slider-spbookmark-wrap d-flex">
-                                                                                                 <div class="article-spbookmark">
-                                                                                                      <form class="sp-bookmark-form"
-                                                                                                            name="add-to-bookmark-133">
-                                                                                                          <a class="btn-spbookmark-action "
-                                                                                                             href="javascript:void(0);"
-                                                                                                             data-content-id="133">
-                                                                                                              <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                          </a>
-                                                                                                          <input type="hidden"
-                                                                                                                 name="cid"
-                                                                                                                 value="133">
-                                                                                                          <input type="hidden"
-                                                                                                                 name="curl"
-                                                                                                                 value="index.html">
-                                                                                                     </form>
-                                                                                                 </div>--><!--
-                                                                                                <span class="bookmark-text">Bookmark<br>Now</span>
-                                                                                                <div class="sppb-post-share-social">
-                                                                                                    <div class="sppb-post-share-social-others">
-                                                                                                        <a class="fa fa-facebook"
-                                                                                                           data-toggle="tooltip"
-                                                                                                           data-placement="bottom"
-                                                                                                           title="Share On Facebook"
-                                                                                                           onClick="window.open('http://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                                                           href="https://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make"></a><a
-                                                                                                            class="fa fa-twitter"
-                                                                                                            data-toggle="tooltip"
-                                                                                                            data-placement="bottom"
-                                                                                                            title="Share On Twitter"
-                                                                                                            onClick="window.open('http://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make&amp;text=Sondland%20adds%20tos%20testimony%20linking%20aid%20to%20Ukraine%20probes%20sought%20by%20Trump','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                                                            href="https://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make&amp;text=Sondland%20adds%20tos%20testimony%20linking%20aid%20to%20Ukraine%20probes%20sought%20by%20Trump"></a><a
-                                                                                                            class="fa fa-linkedin"
-                                                                                                            data-toggle="tooltip"
-                                                                                                            data-placement="bottom"
-                                                                                                            title="Share On LInkedin"
-                                                                                                            onClick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;"
-                                                                                                            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make"></a><a
-                                                                                                            class="fa fa-share"></a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>-->
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-
-
-
-
 
                                                                                 <div class="swiper-slide"
                                                                                      style="background-image: url(images/2019/12/11/politics31.jpg);">
                                                                                     <div class="container">
                                                                                         <div class="sppb-article-info-wrap">
-                                                                                            <!--<div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-category"><a
-                                                                                                        href="index.php/categories/newsberg/politics.html"
-                                                                                                        itemprop="genre">Politics</a></span>
-                                                                                            </div>-->
                                                                                             <h3>
                                                                                                 <a href="index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make.html"
                                                                                                    itemprop="url">Sondland
@@ -3382,65 +3225,14 @@ Mon, Feb 24, 2020 </span>
                                                                                                     Ukraine probes
                                                                                                     sought by Trump</a>
                                                                                             </h3>
-                                                                                            <!-- <div class="slider-spbookmark-wrap d-flex">
-                                                                                                 <div class="article-spbookmark">
-                                                                                                      <form class="sp-bookmark-form"
-                                                                                                            name="add-to-bookmark-133">
-                                                                                                          <a class="btn-spbookmark-action "
-                                                                                                             href="javascript:void(0);"
-                                                                                                             data-content-id="133">
-                                                                                                              <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                          </a>
-                                                                                                          <input type="hidden"
-                                                                                                                 name="cid"
-                                                                                                                 value="133">
-                                                                                                          <input type="hidden"
-                                                                                                                 name="curl"
-                                                                                                                 value="index.html">
-                                                                                                     </form>
-                                                                                                 </div>--><!--
-                                                                                                <span class="bookmark-text">Bookmark<br>Now</span>
-                                                                                                <div class="sppb-post-share-social">
-                                                                                                    <div class="sppb-post-share-social-others">
-                                                                                                        <a class="fa fa-facebook"
-                                                                                                           data-toggle="tooltip"
-                                                                                                           data-placement="bottom"
-                                                                                                           title="Share On Facebook"
-                                                                                                           onClick="window.open('http://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                                                           href="https://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make"></a><a
-                                                                                                            class="fa fa-twitter"
-                                                                                                            data-toggle="tooltip"
-                                                                                                            data-placement="bottom"
-                                                                                                            title="Share On Twitter"
-                                                                                                            onClick="window.open('http://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make&amp;text=Sondland%20adds%20tos%20testimony%20linking%20aid%20to%20Ukraine%20probes%20sought%20by%20Trump','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                                                            href="https://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make&amp;text=Sondland%20adds%20tos%20testimony%20linking%20aid%20to%20Ukraine%20probes%20sought%20by%20Trump"></a><a
-                                                                                                            class="fa fa-linkedin"
-                                                                                                            data-toggle="tooltip"
-                                                                                                            data-placement="bottom"
-                                                                                                            title="Share On LInkedin"
-                                                                                                            onClick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;"
-                                                                                                            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make"></a><a
-                                                                                                            class="fa fa-share"></a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>-->
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-
-
-
-
 
                                                                                 <div class="swiper-slide"
                                                                                      style="background-image: url(images/2019/12/11/politics31.jpg);">
                                                                                     <div class="container">
                                                                                         <div class="sppb-article-info-wrap">
-                                                                                            <!--<div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-category"><a
-                                                                                                        href="index.php/categories/newsberg/politics.html"
-                                                                                                        itemprop="genre">Politics</a></span>
-                                                                                            </div>-->
                                                                                             <h3>
                                                                                                 <a href="index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make.html"
                                                                                                    itemprop="url">Sondland
@@ -3449,65 +3241,14 @@ Mon, Feb 24, 2020 </span>
                                                                                                     Ukraine probes
                                                                                                     sought by Trump</a>
                                                                                             </h3>
-                                                                                            <!-- <div class="slider-spbookmark-wrap d-flex">
-                                                                                                 <div class="article-spbookmark">
-                                                                                                      <form class="sp-bookmark-form"
-                                                                                                            name="add-to-bookmark-133">
-                                                                                                          <a class="btn-spbookmark-action "
-                                                                                                             href="javascript:void(0);"
-                                                                                                             data-content-id="133">
-                                                                                                              <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                          </a>
-                                                                                                          <input type="hidden"
-                                                                                                                 name="cid"
-                                                                                                                 value="133">
-                                                                                                          <input type="hidden"
-                                                                                                                 name="curl"
-                                                                                                                 value="index.html">
-                                                                                                     </form>
-                                                                                                 </div>--><!--
-                                                                                                <span class="bookmark-text">Bookmark<br>Now</span>
-                                                                                                <div class="sppb-post-share-social">
-                                                                                                    <div class="sppb-post-share-social-others">
-                                                                                                        <a class="fa fa-facebook"
-                                                                                                           data-toggle="tooltip"
-                                                                                                           data-placement="bottom"
-                                                                                                           title="Share On Facebook"
-                                                                                                           onClick="window.open('http://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                                                           href="https://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make"></a><a
-                                                                                                            class="fa fa-twitter"
-                                                                                                            data-toggle="tooltip"
-                                                                                                            data-placement="bottom"
-                                                                                                            title="Share On Twitter"
-                                                                                                            onClick="window.open('http://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make&amp;text=Sondland%20adds%20tos%20testimony%20linking%20aid%20to%20Ukraine%20probes%20sought%20by%20Trump','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                                                            href="https://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make&amp;text=Sondland%20adds%20tos%20testimony%20linking%20aid%20to%20Ukraine%20probes%20sought%20by%20Trump"></a><a
-                                                                                                            class="fa fa-linkedin"
-                                                                                                            data-toggle="tooltip"
-                                                                                                            data-placement="bottom"
-                                                                                                            title="Share On LInkedin"
-                                                                                                            onClick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;"
-                                                                                                            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make"></a><a
-                                                                                                            class="fa fa-share"></a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>-->
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-
-
-
-
 
                                                                                 <div class="swiper-slide"
                                                                                      style="background-image: url(images/2019/12/11/politics31.jpg);">
                                                                                     <div class="container">
                                                                                         <div class="sppb-article-info-wrap">
-                                                                                            <!--<div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-category"><a
-                                                                                                        href="index.php/categories/newsberg/politics.html"
-                                                                                                        itemprop="genre">Politics</a></span>
-                                                                                            </div>-->
                                                                                             <h3>
                                                                                                 <a href="index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make.html"
                                                                                                    itemprop="url">Sondland
@@ -3516,356 +3257,11 @@ Mon, Feb 24, 2020 </span>
                                                                                                     Ukraine probes
                                                                                                     sought by Trump</a>
                                                                                             </h3>
-                                                                                            <!-- <div class="slider-spbookmark-wrap d-flex">
-                                                                                                 <div class="article-spbookmark">
-                                                                                                      <form class="sp-bookmark-form"
-                                                                                                            name="add-to-bookmark-133">
-                                                                                                          <a class="btn-spbookmark-action "
-                                                                                                             href="javascript:void(0);"
-                                                                                                             data-content-id="133">
-                                                                                                              <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                          </a>
-                                                                                                          <input type="hidden"
-                                                                                                                 name="cid"
-                                                                                                                 value="133">
-                                                                                                          <input type="hidden"
-                                                                                                                 name="curl"
-                                                                                                                 value="index.html">
-                                                                                                     </form>
-                                                                                                 </div>--><!--
-                                                                                                <span class="bookmark-text">Bookmark<br>Now</span>
-                                                                                                <div class="sppb-post-share-social">
-                                                                                                    <div class="sppb-post-share-social-others">
-                                                                                                        <a class="fa fa-facebook"
-                                                                                                           data-toggle="tooltip"
-                                                                                                           data-placement="bottom"
-                                                                                                           title="Share On Facebook"
-                                                                                                           onClick="window.open('http://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                                                           href="https://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make"></a><a
-                                                                                                            class="fa fa-twitter"
-                                                                                                            data-toggle="tooltip"
-                                                                                                            data-placement="bottom"
-                                                                                                            title="Share On Twitter"
-                                                                                                            onClick="window.open('http://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make&amp;text=Sondland%20adds%20tos%20testimony%20linking%20aid%20to%20Ukraine%20probes%20sought%20by%20Trump','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                                                            href="https://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make&amp;text=Sondland%20adds%20tos%20testimony%20linking%20aid%20to%20Ukraine%20probes%20sought%20by%20Trump"></a><a
-                                                                                                            class="fa fa-linkedin"
-                                                                                                            data-toggle="tooltip"
-                                                                                                            data-placement="bottom"
-                                                                                                            title="Share On LInkedin"
-                                                                                                            onClick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;"
-                                                                                                            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make"></a><a
-                                                                                                            class="fa fa-share"></a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>-->
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
 
 
-
-
-                                                                                <!--
-                                                                                        <div class="swiper-slide"
-                                                                                             style="background-image: url(images/2019/12/11/politics5.jpg);">
-                                                                                            <div class="container">
-                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                    <div class="sppb-article-meta">
-                                                                                                        <span class="sppb-meta-category"><a
-                                                                                                                href="index.php/categories/newsberg/politics.html"
-                                                                                                                itemprop="genre">Politics</a></span>
-                                                                                                    </div>
-                                                                                                    <h3>
-                                                                                                        <a href="index.php/categories/newsberg/politics/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                           itemprop="url">What
-                                                                                                            sick desperation in
-                                                                                                            your laugh? We
-                                                                                                            have</a></h3>
-                                                                                                    <div class="slider-spbookmark-wrap d-flex">
-                                                                                                        <div class="article-spbookmark">
-                                                                                                            <form class="sp-bookmark-form"
-                                                                                                                  name="add-to-bookmark-134">
-                                                                                                                <a class="btn-spbookmark-action "
-                                                                                                                   href="javascript:void(0);"
-                                                                                                                   data-content-id="134">
-                                                                                                                    <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                </a>
-                                                                                                                <input type="hidden"
-                                                                                                                       name="cid"
-                                                                                                                       value="134">
-                                                                                                                <input type="hidden"
-                                                                                                                       name="curl"
-                                                                                                                       value="index.html">
-                                                                                                            </form>
-                                                                                                        </div>
-                                                                                                        <span class="bookmark-text">Bookmark<br>Now</span>
-                                                                                                        <div class="sppb-post-share-social">
-                                                                                                            <div class="sppb-post-share-social-others">
-                                                                                                                <a class="fa fa-facebook"
-                                                                                                                   data-toggle="tooltip"
-                                                                                                                   data-placement="bottom"
-                                                                                                                   title="Share On Facebook"
-                                                                                                                   onClick="window.open('http://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/what-sick-desperation-in-your-laugh-we-have','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                                                                   href="https://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/what-sick-desperation-in-your-laugh-we-have"></a><a
-                                                                                                                    class="fa fa-twitter"
-                                                                                                                    data-toggle="tooltip"
-                                                                                                                    data-placement="bottom"
-                                                                                                                    title="Share On Twitter"
-                                                                                                                    onClick="window.open('http://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/what-sick-desperation-in-your-laugh-we-have&amp;text=What%20sick%20desperation%20in%20your%20laugh?%20We%20have','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                                                                    href="https://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/what-sick-desperation-in-your-laugh-we-have&amp;text=What%20sick%20desperation%20in%20your%20laugh?%20We%20have"></a><a
-                                                                                                                    class="fa fa-linkedin"
-                                                                                                                    data-toggle="tooltip"
-                                                                                                                    data-placement="bottom"
-                                                                                                                    title="Share On LInkedin"
-                                                                                                                    onClick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/what-sick-desperation-in-your-laugh-we-have','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;"
-                                                                                                                    href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/what-sick-desperation-in-your-laugh-we-have"></a><a
-                                                                                                                    class="fa fa-share"></a>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="swiper-slide"
-                                                                                             style="background-image: url(images/2019/12/11/politics4.jpg);">
-                                                                                            <div class="container">
-                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                    <div class="sppb-article-meta">
-                                                                                                        <span class="sppb-meta-category"><a
-                                                                                                                href="index.php/categories/newsberg/politics.html"
-                                                                                                                itemprop="genre">Politics</a></span>
-                                                                                                    </div>
-                                                                                                    <h3>
-                                                                                                        <a href="index.php/categories/newsberg/politics/what-mixed-equal-parts-of-gasoline-and-frozen.html"
-                                                                                                           itemprop="url">What
-                                                                                                            mixed equal parts of
-                                                                                                            gasoline and
-                                                                                                            frozen</a></h3>
-                                                                                                    <div class="slider-spbookmark-wrap d-flex">
-                                                                                                        <div class="article-spbookmark">
-                                                                                                            <form class="sp-bookmark-form"
-                                                                                                                  name="add-to-bookmark-137">
-                                                                                                                <a class="btn-spbookmark-action "
-                                                                                                                   href="javascript:void(0);"
-                                                                                                                   data-content-id="137">
-                                                                                                                    <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                </a>
-                                                                                                                <input type="hidden"
-                                                                                                                       name="cid"
-                                                                                                                       value="137">
-                                                                                                                <input type="hidden"
-                                                                                                                       name="curl"
-                                                                                                                       value="index.html">
-                                                                                                            </form>
-                                                                                                        </div>
-                                                                                                        <span class="bookmark-text">Bookmark<br>Now</span>
-                                                                                                        <div class="sppb-post-share-social">
-                                                                                                            <div class="sppb-post-share-social-others">
-                                                                                                                <a class="fa fa-facebook"
-                                                                                                                   data-toggle="tooltip"
-                                                                                                                   data-placement="bottom"
-                                                                                                                   title="Share On Facebook"
-                                                                                                                   onClick="window.open('http://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/what-mixed-equal-parts-of-gasoline-and-frozen','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                                                                   href="https://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/what-mixed-equal-parts-of-gasoline-and-frozen"></a><a
-                                                                                                                    class="fa fa-twitter"
-                                                                                                                    data-toggle="tooltip"
-                                                                                                                    data-placement="bottom"
-                                                                                                                    title="Share On Twitter"
-                                                                                                                    onClick="window.open('http://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/what-mixed-equal-parts-of-gasoline-and-frozen&amp;text=What%20mixed%20equal%20parts%20of%20gasoline%20and%20frozen','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                                                                    href="https://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/what-mixed-equal-parts-of-gasoline-and-frozen&amp;text=What%20mixed%20equal%20parts%20of%20gasoline%20and%20frozen"></a><a
-                                                                                                                    class="fa fa-linkedin"
-                                                                                                                    data-toggle="tooltip"
-                                                                                                                    data-placement="bottom"
-                                                                                                                    title="Share On LInkedin"
-                                                                                                                    onClick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/what-mixed-equal-parts-of-gasoline-and-frozen','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;"
-                                                                                                                    href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics/what-mixed-equal-parts-of-gasoline-and-frozen"></a><a
-                                                                                                                    class="fa fa-share"></a>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="swiper-slide"
-                                                                                             style="background-image: url(images/2019/12/11/politics7.jpg);">
-                                                                                            <div class="container">
-                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                    <div class="sppb-article-meta">
-                                                                                                        <span class="sppb-meta-category"><a
-                                                                                                                href="index.php/sports.html"
-                                                                                                                itemprop="genre">Sports</a></span>
-                                                                                                    </div>
-                                                                                                    <h3>
-                                                                                                        <a href="index.php/sports/what-do-you-do-what-do-you-mean-what.html"
-                                                                                                           itemprop="url">What
-                                                                                                            do you do? What do
-                                                                                                            you mean what?</a>
-                                                                                                    </h3>
-                                                                                                    <div class="slider-spbookmark-wrap d-flex">
-                                                                                                        <div class="article-spbookmark">
-                                                                                                            <form class="sp-bookmark-form"
-                                                                                                                  name="add-to-bookmark-114">
-                                                                                                                <a class="btn-spbookmark-action "
-                                                                                                                   href="javascript:void(0);"
-                                                                                                                   data-content-id="114">
-                                                                                                                    <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                </a>
-                                                                                                                <input type="hidden"
-                                                                                                                       name="cid"
-                                                                                                                       value="114">
-                                                                                                                <input type="hidden"
-                                                                                                                       name="curl"
-                                                                                                                       value="index.html">
-                                                                                                            </form>
-                                                                                                        </div>
-                                                                                                        <span class="bookmark-text">Bookmark<br>Now</span>
-                                                                                                        <div class="sppb-post-share-social">
-                                                                                                            <div class="sppb-post-share-social-others">
-                                                                                                                <a class="fa fa-facebook"
-                                                                                                                   data-toggle="tooltip"
-                                                                                                                   data-placement="bottom"
-                                                                                                                   title="Share On Facebook"
-                                                                                                                   onClick="window.open('http://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/sports/what-do-you-do-what-do-you-mean-what','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                                                                   href="https://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/sports/what-do-you-do-what-do-you-mean-what"></a><a
-                                                                                                                    class="fa fa-twitter"
-                                                                                                                    data-toggle="tooltip"
-                                                                                                                    data-placement="bottom"
-                                                                                                                    title="Share On Twitter"
-                                                                                                                    onClick="window.open('http://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/sports/what-do-you-do-what-do-you-mean-what&amp;text=What%20do%20you%20do?%20What%20do%20you%20mean%20what?','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                                                                    href="https://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/sports/what-do-you-do-what-do-you-mean-what&amp;text=What%20do%20you%20do?%20What%20do%20you%20mean%20what?"></a><a
-                                                                                                                    class="fa fa-linkedin"
-                                                                                                                    data-toggle="tooltip"
-                                                                                                                    data-placement="bottom"
-                                                                                                                    title="Share On LInkedin"
-                                                                                                                    onClick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/sports/what-do-you-do-what-do-you-mean-what','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;"
-                                                                                                                    href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/sports/what-do-you-do-what-do-you-mean-what"></a><a
-                                                                                                                    class="fa fa-share"></a>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="swiper-slide"
-                                                                                             style="background-image: url(images/2019/12/11/politics11.jpg);">
-                                                                                            <div class="container">
-                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                    <div class="sppb-article-meta">
-                                                                                                        <span class="sppb-meta-category"><a
-                                                                                                                href="index.php/sports.html"
-                                                                                                                itemprop="genre">Sports</a></span>
-                                                                                                    </div>
-                                                                                                    <h3>
-                                                                                                        <a href="index.php/sports/an-exclusive-look-into-diplo-s-2019-vma.html"
-                                                                                                           itemprop="url">An
-                                                                                                            Exclusive Look Into
-                                                                                                            Diplo’s 2019 VMA</a>
-                                                                                                    </h3>
-                                                                                                    <div class="slider-spbookmark-wrap d-flex">
-                                                                                                        <div class="article-spbookmark">
-                                                                                                            <form class="sp-bookmark-form"
-                                                                                                                  name="add-to-bookmark-118">
-                                                                                                                <a class="btn-spbookmark-action "
-                                                                                                                   href="javascript:void(0);"
-                                                                                                                   data-content-id="118">
-                                                                                                                    <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                </a>
-                                                                                                                <input type="hidden"
-                                                                                                                       name="cid"
-                                                                                                                       value="118">
-                                                                                                                <input type="hidden"
-                                                                                                                       name="curl"
-                                                                                                                       value="index.html">
-                                                                                                            </form>
-                                                                                                        </div>
-                                                                                                        <span class="bookmark-text">Bookmark<br>Now</span>
-                                                                                                        <div class="sppb-post-share-social">
-                                                                                                            <div class="sppb-post-share-social-others">
-                                                                                                                <a class="fa fa-facebook"
-                                                                                                                   data-toggle="tooltip"
-                                                                                                                   data-placement="bottom"
-                                                                                                                   title="Share On Facebook"
-                                                                                                                   onClick="window.open('http://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/sports/an-exclusive-look-into-diplo-s-2019-vma','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                                                                   href="https://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/sports/an-exclusive-look-into-diplo-s-2019-vma"></a><a
-                                                                                                                    class="fa fa-twitter"
-                                                                                                                    data-toggle="tooltip"
-                                                                                                                    data-placement="bottom"
-                                                                                                                    title="Share On Twitter"
-                                                                                                                    onClick="window.open('http://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/sports/an-exclusive-look-into-diplo-s-2019-vma&amp;text=An%20Exclusive%20Look%20Into%20Diplo%e2%80%99s%202019%20VMA','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                                                                    href="https://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/sports/an-exclusive-look-into-diplo-s-2019-vma&amp;text=An%20Exclusive%20Look%20Into%20Diplo%e2%80%99s%202019%20VMA"></a><a
-                                                                                                                    class="fa fa-linkedin"
-                                                                                                                    data-toggle="tooltip"
-                                                                                                                    data-placement="bottom"
-                                                                                                                    title="Share On LInkedin"
-                                                                                                                    onClick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/sports/an-exclusive-look-into-diplo-s-2019-vma','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;"
-                                                                                                                    href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/sports/an-exclusive-look-into-diplo-s-2019-vma"></a><a
-                                                                                                                    class="fa fa-share"></a>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="swiper-slide"
-                                                                                             style="background-image: url(images/2019/12/11/politics6.jpg);">
-                                                                                            <div class="container">
-                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                    <div class="sppb-article-meta">
-                                                                                                        <span class="sppb-meta-category"><a
-                                                                                                                href="index.php/sports.html"
-                                                                                                                itemprop="genre">Sports</a></span>
-                                                                                                    </div>
-                                                                                                    <h3>
-                                                                                                        <a href="index.php/sports/sixty-eight-minutes-in-biarritz-a-glimpse.html"
-                                                                                                           itemprop="url">Sixty-eight
-                                                                                                            minutes in Biarritz:
-                                                                                                            A glimpse</a></h3>
-                                                                                                    <div class="slider-spbookmark-wrap d-flex">
-                                                                                                        <div class="article-spbookmark">
-                                                                                                            <form class="sp-bookmark-form"
-                                                                                                                  name="add-to-bookmark-119">
-                                                                                                                <a class="btn-spbookmark-action "
-                                                                                                                   href="javascript:void(0);"
-                                                                                                                   data-content-id="119">
-                                                                                                                    <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                </a>
-                                                                                                                <input type="hidden"
-                                                                                                                       name="cid"
-                                                                                                                       value="119">
-                                                                                                                <input type="hidden"
-                                                                                                                       name="curl"
-                                                                                                                       value="index.html">
-                                                                                                            </form>
-                                                                                                        </div>
-                                                                                                        <span class="bookmark-text">Bookmark<br>Now</span>
-                                                                                                        <div class="sppb-post-share-social">
-                                                                                                            <div class="sppb-post-share-social-others">
-                                                                                                                <a class="fa fa-facebook"
-                                                                                                                   data-toggle="tooltip"
-                                                                                                                   data-placement="bottom"
-                                                                                                                   title="Share On Facebook"
-                                                                                                                   onClick="window.open('http://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/sports/sixty-eight-minutes-in-biarritz-a-glimpse','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                                                                   href="https://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/sports/sixty-eight-minutes-in-biarritz-a-glimpse"></a><a
-                                                                                                                    class="fa fa-twitter"
-                                                                                                                    data-toggle="tooltip"
-                                                                                                                    data-placement="bottom"
-                                                                                                                    title="Share On Twitter"
-                                                                                                                    onClick="window.open('http://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/sports/sixty-eight-minutes-in-biarritz-a-glimpse&amp;text=Sixty-eight%20minutes%20in%20Biarritz:%20A%20glimpse','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                                                                    href="https://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/sports/sixty-eight-minutes-in-biarritz-a-glimpse&amp;text=Sixty-eight%20minutes%20in%20Biarritz:%20A%20glimpse"></a><a
-                                                                                                                    class="fa fa-linkedin"
-                                                                                                                    data-toggle="tooltip"
-                                                                                                                    data-placement="bottom"
-                                                                                                                    title="Share On LInkedin"
-                                                                                                                    onClick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/sports/sixty-eight-minutes-in-biarritz-a-glimpse','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;"
-                                                                                                                    href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/sports/sixty-eight-minutes-in-biarritz-a-glimpse"></a><a
-                                                                                                                    class="fa fa-share"></a>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        -->
 
 
                                                                             </div>
@@ -3880,24 +3276,20 @@ Mon, Feb 24, 2020 </span>
                                                                                     <div class="sppb-article-info-wrap">
                                                                                         <span class="article-counter">01</span>
                                                                                         <div class="sppb-article-content">
-                                                                                            <div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-category">Politics</span>
-                                                                                            </div>
-                                                                                            <h3>Sondland adds tos
-                                                                                                testimony linking aid to
-                                                                                                Ukraine probes sought by
-                                                                                                Trump</h3></div>
+                                                                                            <!--                                                                                            <div class="sppb-article-meta">-->
+                                                                                            <!--                                                                                                <span class="sppb-meta-category">Politics</span>-->
+                                                                                            <!--                                                                                            </div>-->
+                                                                                            <h3>Слайдер  edeeetr ey54 yrey etry etry etry rety ert yteryret yetry etry rte yre1</h3></div>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="swiper-slide">
                                                                                     <div class="sppb-article-info-wrap">
                                                                                         <span class="article-counter">02</span>
                                                                                         <div class="sppb-article-content">
-                                                                                            <div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-category">Politics</span>
-                                                                                            </div>
-                                                                                            <h3>What sick desperation in
-                                                                                                your laugh? We have</h3>
+                                                                                            <!--                                                                                            <div class="sppb-article-meta">-->
+                                                                                            <!--                                                                                                <span class="sppb-meta-category">Politics</span>-->
+                                                                                            <!--                                                                                            </div>-->
+                                                                                            <h3>Слайдер 2</h3>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -3905,23 +3297,20 @@ Mon, Feb 24, 2020 </span>
                                                                                     <div class="sppb-article-info-wrap">
                                                                                         <span class="article-counter">03</span>
                                                                                         <div class="sppb-article-content">
-                                                                                            <div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-category">Politics</span>
-                                                                                            </div>
-                                                                                            <h3>What mixed equal parts
-                                                                                                of gasoline and
-                                                                                                frozen</h3></div>
+                                                                                            <!--                                                                                            <div class="sppb-article-meta">-->
+                                                                                            <!--                                                                                                <span class="sppb-meta-category">Politics</span>-->
+                                                                                            <!--                                                                                            </div>-->
+                                                                                            <h3>Слайдер 3</h3></div>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="swiper-slide">
                                                                                     <div class="sppb-article-info-wrap">
                                                                                         <span class="article-counter">04</span>
                                                                                         <div class="sppb-article-content">
-                                                                                            <div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-category">Sports</span>
-                                                                                            </div>
-                                                                                            <h3>What do you do? What do
-                                                                                                you mean what?</h3>
+                                                                                            <!--                                                                                            <div class="sppb-article-meta">-->
+                                                                                            <!--                                                                                                <span class="sppb-meta-category">Sports</span>-->
+                                                                                            <!--                                                                                            </div>-->
+                                                                                            <h3>Слайдер 4</h3>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -3929,11 +3318,10 @@ Mon, Feb 24, 2020 </span>
                                                                                     <div class="sppb-article-info-wrap">
                                                                                         <span class="article-counter">05</span>
                                                                                         <div class="sppb-article-content">
-                                                                                            <div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-category">Sports</span>
-                                                                                            </div>
-                                                                                            <h3>An Exclusive Look Into
-                                                                                                Diplo’s 2019 VMA</h3>
+                                                                                            <!--                                                                                            <div class="sppb-article-meta">-->
+                                                                                            <!--                                                                                                <span class="sppb-meta-category">Sports</span>-->
+                                                                                            <!--                                                                                            </div>-->
+                                                                                            <h3>Слайдер 5</h3>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -3941,11 +3329,10 @@ Mon, Feb 24, 2020 </span>
                                                                                     <div class="sppb-article-info-wrap">
                                                                                         <span class="article-counter">06</span>
                                                                                         <div class="sppb-article-content">
-                                                                                            <div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-category">Sports</span>
-                                                                                            </div>
-                                                                                            <h3>Sixty-eight minutes in
-                                                                                                Biarritz: A glimpse</h3>
+                                                                                            <!--                                                                                            <div class="sppb-article-meta">-->
+                                                                                            <!--                                                                                                <span class="sppb-meta-category">Sports</span>-->
+                                                                                            <!--                                                                                            </div>-->
+                                                                                            <h3>Слайдер 6</h3>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -3961,6 +3348,10 @@ Mon, Feb 24, 2020 </span>
                                         </div>
                                     </div>
                                 </div>
+                                <!--                                End slider-->
+
+
+
                                 <section id="section-id-1573711718214" class="sppb-section">
                                     <div class="sppb-row-container">
                                         <div class="sppb-row">
@@ -3971,7 +3362,7 @@ Mon, Feb 24, 2020 </span>
                                                              class="sppb-addon-wrapper">
                                                             <div id="sppb-addon-1574765723526" class="clearfix ">
                                                                 <div class="sppb-addon sppb-addon-header heading-arrow sppb-text-left">
-                                                                    <h2 class="sppb-addon-title">Top Stories</h2></div>
+                                                                    <h2 class="sppb-addon-title">Хабархои нав</h2></div>
                                                             </div>
                                                         </div>
                                                         <div id="sppb-addon-wrapper-1574763938320"
@@ -3986,14 +3377,14 @@ Mon, Feb 24, 2020 </span>
                                                                                     <a class="sppb-article-img-wrap"
                                                                                        href="index.php/business-blog/the-exact-same-briefcase-soap-sorry-i-make.html"
                                                                                        itemprop="url"><img
-                                                                                            class="sppb-img-responsive"
-                                                                                            src="images/2019/12/11/politics24_small.jpg"
-                                                                                            alt="Sondland adds to testimony linking aid to Ukraine probes sought by Trump"
-                                                                                            itemprop="thumbnailUrl"></a>
+                                                                                                class="sppb-img-responsive"
+                                                                                                src="images/2019/12/11/politics24_small.jpg"
+                                                                                                alt="Sondland adds to testimony linking aid to Ukraine probes sought by Trump"
+                                                                                                itemprop="thumbnailUrl"></a>
                                                                                     <div class="sppb-article-info-wrap">
                                                                                         <p class="sppb-meta-category"><a
-                                                                                                href="index.php/business-blog.html"
-                                                                                                itemprop="genre">Business</a>
+                                                                                                    href="index.php/business-blog.html"
+                                                                                                    itemprop="genre">Категория 1</a>
                                                                                         </p>
                                                                                         <h3>
                                                                                             <a href="index.php/business-blog/the-exact-same-briefcase-soap-sorry-i-make.html"
@@ -4002,31 +3393,10 @@ Mon, Feb 24, 2020 </span>
                                                                                                 linking aid to Ukraine
                                                                                                 probes sought by
                                                                                                 Trump</a></h3>
-                                                                                        <div class="sppb-article-introtext">
-                                                                                            Politics is a set of
-                                                                                            activities associated with
-                                                                                            the gov...
-                                                                                        </div>
                                                                                         <div class="sppb-article-spbookmark-wrap d-flex">
                                                                                             <div class="sppb-article-meta">
                                                                                                 <span class="sppb-meta-date"
                                                                                                       itemprop="datePublished">Nov 21, 2019</span>
-                                                                                            </div>
-                                                                                            <div class="article-spbookmark">
-                                                                                                <form class="sp-bookmark-form"
-                                                                                                      name="add-to-bookmark-48">
-                                                                                                    <a class="btn-spbookmark-action "
-                                                                                                       href="javascript:void(0);"
-                                                                                                       data-content-id="48">
-                                                                                                        <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                    </a>
-                                                                                                    <input type="hidden"
-                                                                                                           name="cid"
-                                                                                                           value="48">
-                                                                                                    <input type="hidden"
-                                                                                                           name="curl"
-                                                                                                           value="index.html">
-                                                                                                </form>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -4038,14 +3408,14 @@ Mon, Feb 24, 2020 </span>
                                                                                     <a class="sppb-article-img-wrap"
                                                                                        href="index.php/entertainment/the-exact-same-briefcase-soap-sorry-i-make.html"
                                                                                        itemprop="url"><img
-                                                                                            class="sppb-img-responsive"
-                                                                                            src="images/2019/12/10/entertainment1_small.jpg"
-                                                                                            alt="Sondland adds to testimony linking aid to Ukraine probes sought by Trump"
-                                                                                            itemprop="thumbnailUrl"></a>
+                                                                                                class="sppb-img-responsive"
+                                                                                                src="images/2019/12/10/entertainment1_small.jpg"
+                                                                                                alt="Sondland adds to testimony linking aid to Ukraine probes sought by Trump"
+                                                                                                itemprop="thumbnailUrl"></a>
                                                                                     <div class="sppb-article-info-wrap">
                                                                                         <p class="sppb-meta-category"><a
-                                                                                                href="index.php/entertainment.html"
-                                                                                                itemprop="genre">Entertainment</a>
+                                                                                                    href="index.php/entertainment.html"
+                                                                                                    itemprop="genre">Категория 2</a>
                                                                                         </p>
                                                                                         <h3>
                                                                                             <a href="index.php/entertainment/the-exact-same-briefcase-soap-sorry-i-make.html"
@@ -4054,36 +3424,16 @@ Mon, Feb 24, 2020 </span>
                                                                                                 linking aid to Ukraine
                                                                                                 probes sought by
                                                                                                 Trump</a></h3>
-                                                                                        <div class="sppb-article-introtext">
-                                                                                            Politics is a set of
-                                                                                            activities associated with
-                                                                                            the gov...
-                                                                                        </div>
                                                                                         <div class="sppb-article-spbookmark-wrap d-flex">
                                                                                             <div class="sppb-article-meta">
                                                                                                 <span class="sppb-meta-date"
                                                                                                       itemprop="datePublished">Nov 21, 2019</span>
                                                                                             </div>
-                                                                                            <div class="article-spbookmark">
-                                                                                                <form class="sp-bookmark-form"
-                                                                                                      name="add-to-bookmark-62">
-                                                                                                    <a class="btn-spbookmark-action "
-                                                                                                       href="javascript:void(0);"
-                                                                                                       data-content-id="62">
-                                                                                                        <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                    </a>
-                                                                                                    <input type="hidden"
-                                                                                                           name="cid"
-                                                                                                           value="62">
-                                                                                                    <input type="hidden"
-                                                                                                           name="curl"
-                                                                                                           value="index.html">
-                                                                                                </form>
-                                                                                            </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
+
                                                                             <div class="sppb-col-sm-12">
                                                                                 <div class="swiper-container intro-items-slider">
                                                                                     <div class="swiper-wrapper">
@@ -4093,7 +3443,7 @@ Mon, Feb 24, 2020 </span>
                                                                                                 <div class="sppb-article-info-wrap">
                                                                                                     <p class="sppb-meta-category">
                                                                                                         <a href="index.php/food.html"
-                                                                                                           itemprop="genre">Food</a>
+                                                                                                           itemprop="genre">Категория 3</a>
                                                                                                     </p>
                                                                                                     <h3>
                                                                                                         <a href="index.php/food/the-exact-same-briefcase-soap-sorry-i-make.html"
@@ -4122,31 +3472,15 @@ Mon, Feb 24, 2020 </span>
                                                                                                                     <span class="sppb-meta-date"
                                                                                                                           itemprop="datePublished">Nov 21, 2019</span>
                                                                                                                 </div>
-                                                                                                                <div class="article-spbookmark">
-                                                                                                                    <form class="sp-bookmark-form"
-                                                                                                                          name="add-to-bookmark-101">
-                                                                                                                        <a class="btn-spbookmark-action "
-                                                                                                                           href="javascript:void(0);"
-                                                                                                                           data-content-id="101">
-                                                                                                                            <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                        </a>
-                                                                                                                        <input type="hidden"
-                                                                                                                               name="cid"
-                                                                                                                               value="101">
-                                                                                                                        <input type="hidden"
-                                                                                                                               name="curl"
-                                                                                                                               value="index.html">
-                                                                                                                    </form>
-                                                                                                                </div>
                                                                                                             </div>
                                                                                                         </div>
                                                                                                         <a class="sppb-article-img-wrap"
                                                                                                            href="index.php/food/the-exact-same-briefcase-soap-sorry-i-make.html"
                                                                                                            itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="images/2019/12/10/food-2_small.jpg"
-                                                                                                                alt="Sondland adds tos testimony linking aid to Ukraine probes sought by Trump"
-                                                                                                                itemprop="thumbnailUrl"></a>
+                                                                                                                    class="sppb-img-responsive"
+                                                                                                                    src="images/2019/12/10/food-2_small.jpg"
+                                                                                                                    alt="Sondland adds tos testimony linking aid to Ukraine probes sought by Trump"
+                                                                                                                    itemprop="thumbnailUrl"></a>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
@@ -4157,7 +3491,7 @@ Mon, Feb 24, 2020 </span>
                                                                                                 <div class="sppb-article-info-wrap">
                                                                                                     <p class="sppb-meta-category">
                                                                                                         <a href="index.php/sports.html"
-                                                                                                           itemprop="genre">Sports</a>
+                                                                                                           itemprop="genre">Категория 4</a>
                                                                                                     </p>
                                                                                                     <h3>
                                                                                                         <a href="index.php/sports/the-exact-same-briefcase-soap-sorry-i-make.html"
@@ -4186,31 +3520,15 @@ Mon, Feb 24, 2020 </span>
                                                                                                                     <span class="sppb-meta-date"
                                                                                                                           itemprop="datePublished">Nov 21, 2019</span>
                                                                                                                 </div>
-                                                                                                                <div class="article-spbookmark">
-                                                                                                                    <form class="sp-bookmark-form"
-                                                                                                                          name="add-to-bookmark-102">
-                                                                                                                        <a class="btn-spbookmark-action "
-                                                                                                                           href="javascript:void(0);"
-                                                                                                                           data-content-id="102">
-                                                                                                                            <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                        </a>
-                                                                                                                        <input type="hidden"
-                                                                                                                               name="cid"
-                                                                                                                               value="102">
-                                                                                                                        <input type="hidden"
-                                                                                                                               name="curl"
-                                                                                                                               value="index.html">
-                                                                                                                    </form>
-                                                                                                                </div>
                                                                                                             </div>
                                                                                                         </div>
                                                                                                         <a class="sppb-article-img-wrap"
                                                                                                            href="index.php/sports/the-exact-same-briefcase-soap-sorry-i-make.html"
                                                                                                            itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="images/2019/12/04/sport_small.jpg"
-                                                                                                                alt="Sondland adds to testimony linking aid to Ukraine probes sought by Trump"
-                                                                                                                itemprop="thumbnailUrl"></a>
+                                                                                                                    class="sppb-img-responsive"
+                                                                                                                    src="images/2019/12/04/sport_small.jpg"
+                                                                                                                    alt="Sondland adds to testimony linking aid to Ukraine probes sought by Trump"
+                                                                                                                    itemprop="thumbnailUrl"></a>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
@@ -4221,7 +3539,7 @@ Mon, Feb 24, 2020 </span>
                                                                                                 <div class="sppb-article-info-wrap">
                                                                                                     <p class="sppb-meta-category">
                                                                                                         <a href="index.php/categories/newsberg/politics.html"
-                                                                                                           itemprop="genre">Politics</a>
+                                                                                                           itemprop="genre">Категория 4</a>
                                                                                                     </p>
                                                                                                     <h3>
                                                                                                         <a href="index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make.html"
@@ -4250,31 +3568,15 @@ Mon, Feb 24, 2020 </span>
                                                                                                                     <span class="sppb-meta-date"
                                                                                                                           itemprop="datePublished">Nov 21, 2019</span>
                                                                                                                 </div>
-                                                                                                                <div class="article-spbookmark">
-                                                                                                                    <form class="sp-bookmark-form"
-                                                                                                                          name="add-to-bookmark-133">
-                                                                                                                        <a class="btn-spbookmark-action "
-                                                                                                                           href="javascript:void(0);"
-                                                                                                                           data-content-id="133">
-                                                                                                                            <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                        </a>
-                                                                                                                        <input type="hidden"
-                                                                                                                               name="cid"
-                                                                                                                               value="133">
-                                                                                                                        <input type="hidden"
-                                                                                                                               name="curl"
-                                                                                                                               value="index.html">
-                                                                                                                    </form>
-                                                                                                                </div>
                                                                                                             </div>
                                                                                                         </div>
                                                                                                         <a class="sppb-article-img-wrap"
                                                                                                            href="index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make.html"
                                                                                                            itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="images/2019/12/11/politics31_small.jpg"
-                                                                                                                alt="Sondland adds tos testimony linking aid to Ukraine probes sought by Trump"
-                                                                                                                itemprop="thumbnailUrl"></a>
+                                                                                                                    class="sppb-img-responsive"
+                                                                                                                    src="images/2019/12/11/politics31_small.jpg"
+                                                                                                                    alt="Sondland adds tos testimony linking aid to Ukraine probes sought by Trump"
+                                                                                                                    itemprop="thumbnailUrl"></a>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
@@ -4286,8 +3588,8 @@ Mon, Feb 24, 2020 </span>
                                                                                                     <p class="sppb-meta-category">
                                                                                                         <a href="index.php/categories/newsberg/technology.html"
                                                                                                            itemprop="genre">Technology</a><span
-                                                                                                            class="video-symbol fa fa-play-circle"></span><span
-                                                                                                            class="video-duration">01 : 35</span>
+                                                                                                                class="video-symbol fa fa-play-circle"></span><span
+                                                                                                                class="video-duration">01 : 35</span>
                                                                                                     </p>
                                                                                                     <h3>
                                                                                                         <a href="index.php/categories/newsberg/technology/the-exact-same-briefcase-soap-sorry-i-make.html"
@@ -4315,22 +3617,6 @@ Mon, Feb 24, 2020 </span>
                                                                                                                 <div class="sppb-article-meta">
                                                                                                                     <span class="sppb-meta-date"
                                                                                                                           itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                </div>
-                                                                                                                <div class="article-spbookmark">
-                                                                                                                    <form class="sp-bookmark-form"
-                                                                                                                          name="add-to-bookmark-172">
-                                                                                                                        <a class="btn-spbookmark-action "
-                                                                                                                           href="javascript:void(0);"
-                                                                                                                           data-content-id="172">
-                                                                                                                            <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                        </a>
-                                                                                                                        <input type="hidden"
-                                                                                                                               name="cid"
-                                                                                                                               value="172">
-                                                                                                                        <input type="hidden"
-                                                                                                                               name="curl"
-                                                                                                                               value="index.html">
-                                                                                                                    </form>
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -4396,10 +3682,10 @@ Mon, Feb 24, 2020 </span>
                                                                                                         <a class="sppb-article-img-wrap"
                                                                                                            href="index.php/business-blog/what-sick-desperation-in-your-laugh-we-have.html"
                                                                                                            itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="images/2019/12/10/business-3_small.jpg"
-                                                                                                                alt="What sick desperation in your laugh? We have"
-                                                                                                                itemprop="thumbnailUrl"></a>
+                                                                                                                    class="sppb-img-responsive"
+                                                                                                                    src="images/2019/12/10/business-3_small.jpg"
+                                                                                                                    alt="What sick desperation in your laugh? We have"
+                                                                                                                    itemprop="thumbnailUrl"></a>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
@@ -4458,10 +3744,10 @@ Mon, Feb 24, 2020 </span>
                                                                                                         <a class="sppb-article-img-wrap"
                                                                                                            href="index.php/entertainment/what-sick-desperation-in-your-laugh-we-have.html"
                                                                                                            itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="images/2019/12/10/entertainment-20_small.jpg"
-                                                                                                                alt="What sick desperation in your laugh? We have"
-                                                                                                                itemprop="thumbnailUrl"></a>
+                                                                                                                    class="sppb-img-responsive"
+                                                                                                                    src="images/2019/12/10/entertainment-20_small.jpg"
+                                                                                                                    alt="What sick desperation in your laugh? We have"
+                                                                                                                    itemprop="thumbnailUrl"></a>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
@@ -4520,10 +3806,10 @@ Mon, Feb 24, 2020 </span>
                                                                                                         <a class="sppb-article-img-wrap"
                                                                                                            href="index.php/food/what-sick-desperation-in-your-laugh-we-have.html"
                                                                                                            itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="images/2019/12/10/food-3_small.jpg"
-                                                                                                                alt="What sick desperation in your laugh? We have"
-                                                                                                                itemprop="thumbnailUrl"></a>
+                                                                                                                    class="sppb-img-responsive"
+                                                                                                                    src="images/2019/12/10/food-3_small.jpg"
+                                                                                                                    alt="What sick desperation in your laugh? We have"
+                                                                                                                    itemprop="thumbnailUrl"></a>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
@@ -4582,10 +3868,10 @@ Mon, Feb 24, 2020 </span>
                                                                                                         <a class="sppb-article-img-wrap"
                                                                                                            href="index.php/sports/what-sick-desperation-in-your-laugh-we-have.html"
                                                                                                            itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="images/2019/12/10/sport_small.jpg"
-                                                                                                                alt="What sick desperation in your laugh? We have"
-                                                                                                                itemprop="thumbnailUrl"></a>
+                                                                                                                    class="sppb-img-responsive"
+                                                                                                                    src="images/2019/12/10/sport_small.jpg"
+                                                                                                                    alt="What sick desperation in your laugh? We have"
+                                                                                                                    itemprop="thumbnailUrl"></a>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
@@ -4621,510 +3907,24 @@ Mon, Feb 24, 2020 </span>
                                                                                          class="clearfix ">
                                                                                         <div class="sppb-addon sppb-addon-header sppb-text-left">
                                                                                             <h2 class="sppb-addon-title">
-                                                                                                Just In</h2></div>
+                                                                                                Президенти Чумхурии Точикистон</h2></div>
                                                                                     </div>
                                                                                 </div>
-                                                                                <div id="sppb-addon-wrapper-1574763948201"
+                                                                                <div id="sppb-addon-wrapper-1574765554041"
                                                                                      class="sppb-addon-wrapper">
-                                                                                    <div id="sppb-addon-1574763948201"
-                                                                                         class="clearfix ">
-                                                                                        <div class="sppb-addon sppb-addon-articles-layout layout-geisha  ">
+                                                                                    <div id="sppb-addon-1574765554041" class="clearfix ">
+                                                                                        <div class="sppb-addon sppb-addon-module home-ad-banner">
                                                                                             <div class="sppb-addon-content">
-                                                                                                <div class="sppb-row">
-                                                                                                    <div class="all-items-wrap"
-                                                                                                         has-scrollbar>
-                                                                                                        <div class="item  sppb-col-sm-12">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <a class="sppb-article-img-wrap"
-                                                                                                                   href="index.php/business-blog/sondland-adds-to-testimony-linking-aid-to.html"
-                                                                                                                   itemprop="url"><img
-                                                                                                                        class="sppb-img-responsive"
-                                                                                                                        src="images/2019/12/10/business_small.jpg"
-                                                                                                                        alt="Sondland adds to testimony linking aid to"
-                                                                                                                        itemprop="thumbnailUrl"></a>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <p class="sppb-meta-category">
-                                                                                                                        <a href="index.php/business-blog.html"
-                                                                                                                           itemprop="genre">Business</a>
-                                                                                                                    </p>
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/business-blog/sondland-adds-to-testimony-linking-aid-to.html"
-                                                                                                                           itemprop="url">Sondland
-                                                                                                                            adds
-                                                                                                                            to
-                                                                                                                            testimony
-                                                                                                                            linking
-                                                                                                                            aid
-                                                                                                                            to</a>
-                                                                                                                    </h3>
-                                                                                                                    <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                        <div class="sppb-article-meta">
-                                                                                                                            <span class="sppb-meta-date"
-                                                                                                                                  itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                        </div>
-                                                                                                                        <div class="article-spbookmark">
-                                                                                                                            <form class="sp-bookmark-form"
-                                                                                                                                  name="add-to-bookmark-29">
-                                                                                                                                <a class="btn-spbookmark-action "
-                                                                                                                                   href="javascript:void(0);"
-                                                                                                                                   data-content-id="29">
-                                                                                                                                    <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                </a>
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="cid"
-                                                                                                                                       value="29">
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="curl"
-                                                                                                                                       value="index.html">
-                                                                                                                            </form>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="item  sppb-col-sm-12">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <a class="sppb-article-img-wrap"
-                                                                                                                   href="index.php/entertainment/sondland-adds-to-testimony-linking-aid-to.html"
-                                                                                                                   itemprop="url"><img
-                                                                                                                        class="sppb-img-responsive"
-                                                                                                                        src="images/2019/12/10/entertainment-2_small.jpg"
-                                                                                                                        alt="Sondland adds to testimony linking aid to"
-                                                                                                                        itemprop="thumbnailUrl"></a>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <p class="sppb-meta-category">
-                                                                                                                        <a href="index.php/entertainment.html"
-                                                                                                                           itemprop="genre">Entertainment</a>
-                                                                                                                    </p>
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/entertainment/sondland-adds-to-testimony-linking-aid-to.html"
-                                                                                                                           itemprop="url">Sondland
-                                                                                                                            adds
-                                                                                                                            to
-                                                                                                                            testimony
-                                                                                                                            linking
-                                                                                                                            aid
-                                                                                                                            to</a>
-                                                                                                                    </h3>
-                                                                                                                    <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                        <div class="sppb-article-meta">
-                                                                                                                            <span class="sppb-meta-date"
-                                                                                                                                  itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                        </div>
-                                                                                                                        <div class="article-spbookmark">
-                                                                                                                            <form class="sp-bookmark-form"
-                                                                                                                                  name="add-to-bookmark-81">
-                                                                                                                                <a class="btn-spbookmark-action "
-                                                                                                                                   href="javascript:void(0);"
-                                                                                                                                   data-content-id="81">
-                                                                                                                                    <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                </a>
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="cid"
-                                                                                                                                       value="81">
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="curl"
-                                                                                                                                       value="index.html">
-                                                                                                                            </form>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="item  sppb-col-sm-12">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <a class="sppb-article-img-wrap"
-                                                                                                                   href="index.php/food/sondland-adds-to-testimony-linking-aid-to.html"
-                                                                                                                   itemprop="url"><img
-                                                                                                                        class="sppb-img-responsive"
-                                                                                                                        src="images/2019/12/04/food-21_small.jpg"
-                                                                                                                        alt="Sondland adds to testimony linking aid to"
-                                                                                                                        itemprop="thumbnailUrl"></a>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <p class="sppb-meta-category">
-                                                                                                                        <a href="index.php/food.html"
-                                                                                                                           itemprop="genre">Food</a>
-                                                                                                                    </p>
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/food/sondland-adds-to-testimony-linking-aid-to.html"
-                                                                                                                           itemprop="url">Sondland
-                                                                                                                            adds
-                                                                                                                            to
-                                                                                                                            testimony
-                                                                                                                            linking
-                                                                                                                            aid
-                                                                                                                            to</a>
-                                                                                                                    </h3>
-                                                                                                                    <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                        <div class="sppb-article-meta">
-                                                                                                                            <span class="sppb-meta-date"
-                                                                                                                                  itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                        </div>
-                                                                                                                        <div class="article-spbookmark">
-                                                                                                                            <form class="sp-bookmark-form"
-                                                                                                                                  name="add-to-bookmark-82">
-                                                                                                                                <a class="btn-spbookmark-action "
-                                                                                                                                   href="javascript:void(0);"
-                                                                                                                                   data-content-id="82">
-                                                                                                                                    <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                </a>
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="cid"
-                                                                                                                                       value="82">
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="curl"
-                                                                                                                                       value="index.html">
-                                                                                                                            </form>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="item  sppb-col-sm-12">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <a class="sppb-article-img-wrap"
-                                                                                                                   href="index.php/sports/sondland-adds-to-testimony-linking-aid-to.html"
-                                                                                                                   itemprop="url"><img
-                                                                                                                        class="sppb-img-responsive"
-                                                                                                                        src="images/2019/12/10/sport-2_small.jpg"
-                                                                                                                        alt="Sondland adds to testimony linking aid to"
-                                                                                                                        itemprop="thumbnailUrl"></a>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <p class="sppb-meta-category">
-                                                                                                                        <a href="index.php/sports.html"
-                                                                                                                           itemprop="genre">Sports</a>
-                                                                                                                    </p>
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/sports/sondland-adds-to-testimony-linking-aid-to.html"
-                                                                                                                           itemprop="url">Sondland
-                                                                                                                            adds
-                                                                                                                            to
-                                                                                                                            testimony
-                                                                                                                            linking
-                                                                                                                            aid
-                                                                                                                            to</a>
-                                                                                                                    </h3>
-                                                                                                                    <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                        <div class="sppb-article-meta">
-                                                                                                                            <span class="sppb-meta-date"
-                                                                                                                                  itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                        </div>
-                                                                                                                        <div class="article-spbookmark">
-                                                                                                                            <form class="sp-bookmark-form"
-                                                                                                                                  name="add-to-bookmark-121">
-                                                                                                                                <a class="btn-spbookmark-action "
-                                                                                                                                   href="javascript:void(0);"
-                                                                                                                                   data-content-id="121">
-                                                                                                                                    <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                </a>
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="cid"
-                                                                                                                                       value="121">
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="curl"
-                                                                                                                                       value="index.html">
-                                                                                                                            </form>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="item  sppb-col-sm-12">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <a class="sppb-article-img-wrap"
-                                                                                                                   href="index.php/categories/newsberg/politics/sondland-adds-to-testimony-linking-aid-to.html"
-                                                                                                                   itemprop="url"><img
-                                                                                                                        class="sppb-img-responsive"
-                                                                                                                        src="images/2019/12/10/news-21_small.jpg"
-                                                                                                                        alt="Sondland adds to testimony linking aid to"
-                                                                                                                        itemprop="thumbnailUrl"></a>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <p class="sppb-meta-category">
-                                                                                                                        <a href="index.php/categories/newsberg/politics.html"
-                                                                                                                           itemprop="genre">Politics</a>
-                                                                                                                    </p>
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/categories/newsberg/politics/sondland-adds-to-testimony-linking-aid-to.html"
-                                                                                                                           itemprop="url">Sondland
-                                                                                                                            adds
-                                                                                                                            to
-                                                                                                                            testimony
-                                                                                                                            linking
-                                                                                                                            aid
-                                                                                                                            to</a>
-                                                                                                                    </h3>
-                                                                                                                    <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                        <div class="sppb-article-meta">
-                                                                                                                            <span class="sppb-meta-date"
-                                                                                                                                  itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                        </div>
-                                                                                                                        <div class="article-spbookmark">
-                                                                                                                            <form class="sp-bookmark-form"
-                                                                                                                                  name="add-to-bookmark-152">
-                                                                                                                                <a class="btn-spbookmark-action "
-                                                                                                                                   href="javascript:void(0);"
-                                                                                                                                   data-content-id="152">
-                                                                                                                                    <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                </a>
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="cid"
-                                                                                                                                       value="152">
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="curl"
-                                                                                                                                       value="index.html">
-                                                                                                                            </form>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="item  sppb-col-sm-12">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <a class="sppb-article-img-wrap"
-                                                                                                                   href="index.php/categories/newsberg/technology/sondland-adds-to-testimony-linking-aid-to.html"
-                                                                                                                   itemprop="url"><img
-                                                                                                                        class="sppb-img-responsive"
-                                                                                                                        src="images/2019/12/10/tech21_small.jpg"
-                                                                                                                        alt="Sondland adds to testimony linking aid to"
-                                                                                                                        itemprop="thumbnailUrl"></a>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <p class="sppb-meta-category">
-                                                                                                                        <a href="index.php/categories/newsberg/technology.html"
-                                                                                                                           itemprop="genre">Technology</a>
-                                                                                                                    </p>
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/categories/newsberg/technology/sondland-adds-to-testimony-linking-aid-to.html"
-                                                                                                                           itemprop="url">Sondland
-                                                                                                                            adds
-                                                                                                                            to
-                                                                                                                            testimony
-                                                                                                                            linking
-                                                                                                                            aid
-                                                                                                                            to</a>
-                                                                                                                    </h3>
-                                                                                                                    <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                        <div class="sppb-article-meta">
-                                                                                                                            <span class="sppb-meta-date"
-                                                                                                                                  itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                        </div>
-                                                                                                                        <div class="article-spbookmark">
-                                                                                                                            <form class="sp-bookmark-form"
-                                                                                                                                  name="add-to-bookmark-153">
-                                                                                                                                <a class="btn-spbookmark-action "
-                                                                                                                                   href="javascript:void(0);"
-                                                                                                                                   data-content-id="153">
-                                                                                                                                    <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                </a>
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="cid"
-                                                                                                                                       value="153">
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="curl"
-                                                                                                                                       value="index.html">
-                                                                                                                            </form>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="item  sppb-col-sm-12">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <a class="sppb-article-img-wrap"
-                                                                                                                   href="index.php/business-blog/inspector-general-report-rebukes-comey.html"
-                                                                                                                   itemprop="url"><img
-                                                                                                                        class="sppb-img-responsive"
-                                                                                                                        src="images/2019/12/10/business-22_small.jpg"
-                                                                                                                        alt="Inspector general report rebukes Comey"
-                                                                                                                        itemprop="thumbnailUrl"></a>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <p class="sppb-meta-category">
-                                                                                                                        <a href="index.php/business-blog.html"
-                                                                                                                           itemprop="genre">Business</a>
-                                                                                                                    </p>
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/business-blog/inspector-general-report-rebukes-comey.html"
-                                                                                                                           itemprop="url">Inspector
-                                                                                                                            general
-                                                                                                                            report
-                                                                                                                            rebukes
-                                                                                                                            Comey</a>
-                                                                                                                    </h3>
-                                                                                                                    <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                        <div class="sppb-article-meta">
-                                                                                                                            <span class="sppb-meta-date"
-                                                                                                                                  itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                        </div>
-                                                                                                                        <div class="article-spbookmark">
-                                                                                                                            <form class="sp-bookmark-form"
-                                                                                                                                  name="add-to-bookmark-30">
-                                                                                                                                <a class="btn-spbookmark-action "
-                                                                                                                                   href="javascript:void(0);"
-                                                                                                                                   data-content-id="30">
-                                                                                                                                    <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                </a>
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="cid"
-                                                                                                                                       value="30">
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="curl"
-                                                                                                                                       value="index.html">
-                                                                                                                            </form>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="item  sppb-col-sm-12">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <a class="sppb-article-img-wrap"
-                                                                                                                   href="index.php/entertainment/inspector-general-report-rebukes-comey.html"
-                                                                                                                   itemprop="url"><img
-                                                                                                                        class="sppb-img-responsive"
-                                                                                                                        src="images/2019/12/10/entertainment-3_small.jpg"
-                                                                                                                        alt="Inspector general report rebukes Comey"
-                                                                                                                        itemprop="thumbnailUrl"></a>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <p class="sppb-meta-category">
-                                                                                                                        <a href="index.php/entertainment.html"
-                                                                                                                           itemprop="genre">Entertainment</a>
-                                                                                                                    </p>
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/entertainment/inspector-general-report-rebukes-comey.html"
-                                                                                                                           itemprop="url">Inspector
-                                                                                                                            general
-                                                                                                                            report
-                                                                                                                            rebukes
-                                                                                                                            Comey</a>
-                                                                                                                    </h3>
-                                                                                                                    <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                        <div class="sppb-article-meta">
-                                                                                                                            <span class="sppb-meta-date"
-                                                                                                                                  itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                        </div>
-                                                                                                                        <div class="article-spbookmark">
-                                                                                                                            <form class="sp-bookmark-form"
-                                                                                                                                  name="add-to-bookmark-80">
-                                                                                                                                <a class="btn-spbookmark-action "
-                                                                                                                                   href="javascript:void(0);"
-                                                                                                                                   data-content-id="80">
-                                                                                                                                    <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                </a>
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="cid"
-                                                                                                                                       value="80">
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="curl"
-                                                                                                                                       value="index.html">
-                                                                                                                            </form>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="item  sppb-col-sm-12">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <a class="sppb-article-img-wrap"
-                                                                                                                   href="index.php/food/inspector-general-report-rebukes-comey.html"
-                                                                                                                   itemprop="url"><img
-                                                                                                                        class="sppb-img-responsive"
-                                                                                                                        src="images/2019/12/04/food-20_small.jpg"
-                                                                                                                        alt="Inspector general report rebukes Comey"
-                                                                                                                        itemprop="thumbnailUrl"></a>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <p class="sppb-meta-category">
-                                                                                                                        <a href="index.php/food.html"
-                                                                                                                           itemprop="genre">Food</a>
-                                                                                                                    </p>
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/food/inspector-general-report-rebukes-comey.html"
-                                                                                                                           itemprop="url">Inspector
-                                                                                                                            general
-                                                                                                                            report
-                                                                                                                            rebukes
-                                                                                                                            Comey</a>
-                                                                                                                    </h3>
-                                                                                                                    <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                        <div class="sppb-article-meta">
-                                                                                                                            <span class="sppb-meta-date"
-                                                                                                                                  itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                        </div>
-                                                                                                                        <div class="article-spbookmark">
-                                                                                                                            <form class="sp-bookmark-form"
-                                                                                                                                  name="add-to-bookmark-83">
-                                                                                                                                <a class="btn-spbookmark-action "
-                                                                                                                                   href="javascript:void(0);"
-                                                                                                                                   data-content-id="83">
-                                                                                                                                    <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                </a>
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="cid"
-                                                                                                                                       value="83">
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="curl"
-                                                                                                                                       value="index.html">
-                                                                                                                            </form>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="item  sppb-col-sm-12">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <a class="sppb-article-img-wrap"
-                                                                                                                   href="index.php/sports/inspector-general-report-rebukes-comey.html"
-                                                                                                                   itemprop="url"><img
-                                                                                                                        class="sppb-img-responsive"
-                                                                                                                        src="images/2019/12/10/sport-3_small.jpg"
-                                                                                                                        alt="Inspector general report rebukes Comey"
-                                                                                                                        itemprop="thumbnailUrl"></a>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <p class="sppb-meta-category">
-                                                                                                                        <a href="index.php/sports.html"
-                                                                                                                           itemprop="genre">Sports</a>
-                                                                                                                    </p>
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/sports/inspector-general-report-rebukes-comey.html"
-                                                                                                                           itemprop="url">Inspector
-                                                                                                                            general
-                                                                                                                            report
-                                                                                                                            rebukes
-                                                                                                                            Comey</a>
-                                                                                                                    </h3>
-                                                                                                                    <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                        <div class="sppb-article-meta">
-                                                                                                                            <span class="sppb-meta-date"
-                                                                                                                                  itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                        </div>
-                                                                                                                        <div class="article-spbookmark">
-                                                                                                                            <form class="sp-bookmark-form"
-                                                                                                                                  name="add-to-bookmark-120">
-                                                                                                                                <a class="btn-spbookmark-action "
-                                                                                                                                   href="javascript:void(0);"
-                                                                                                                                   data-content-id="120">
-                                                                                                                                    <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                </a>
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="cid"
-                                                                                                                                       value="120">
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="curl"
-                                                                                                                                       value="index.html">
-                                                                                                                            </form>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
+                                                                                                <div class="bannergroup">
+                                                                                                    <div class="banneritem">
+                                                                                                        <a href="https://joomshaper.com/"
+                                                                                                           target="_blank"
+                                                                                                           rel="noopener noreferrer"
+                                                                                                           title="Home Ad 6">
+                                                                                                            <img src="images/demo/product_ad1.png"
+                                                                                                                 alt="JoomShaper" style="border: none;"/>
+                                                                                                        </a>
+                                                                                                        <div class="clr"></div>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
@@ -5137,68 +3937,57 @@ Mon, Feb 24, 2020 </span>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                                <section id="section-id-1574763938341" class="sppb-section">
-                                    <div class="sppb-row-container">
-                                        <div class="sppb-row">
-                                            <div class="sppb-col-md-9" id="column-wrap-id-1574763938340">
-                                                <div id="column-id-1574763938340" class="sppb-column">
-                                                    <div class="sppb-column-addons">
-                                                        <div id="sppb-addon-wrapper-1574765477678"
-                                                             class="sppb-addon-wrapper">
-                                                            <div id="sppb-addon-1574765477678" class="clearfix ">
-                                                                <div class="sppb-addon sppb-addon-module home-ad-banner">
-                                                                    <div class="sppb-addon-content">
-                                                                        <div class="bannergroup">
-                                                                            <div class="banneritem">
-                                                                                <a href="https://joomshaper.com/"
-                                                                                   target="_blank"
-                                                                                   rel="noopener noreferrer"
-                                                                                   title="Blog list ad">
-                                                                                    <img src="images/demo/blog-list-ad-01.png"
-                                                                                         alt="JoomShaper"/>
-                                                                                </a>
-                                                                                <div class="clr"></div>
+
+                                                        <div id="section-id-1574157062618"
+                                                             class="sppb-section newsberg-card">
+                                                            <div class="sppb-container-inner">
+                                                                <div class="sppb-row">
+                                                                    <div class="sppb-col-md-12"
+                                                                         id="column-wrap-id-1574157062619">
+                                                                        <div id="column-id-1574157062619"
+                                                                             class="sppb-column">
+                                                                            <div class="sppb-column-addons">
+                                                                                <div id="sppb-addon-wrapper-1573712171080"
+                                                                                     class="sppb-addon-wrapper">
+                                                                                    <div id="sppb-addon-1573712171080"
+                                                                                         class="clearfix ">
+                                                                                        <div class="sppb-addon sppb-addon-header sppb-text-left">
+                                                                                            <h2 class="sppb-addon-title">
+                                                                                                Кисту Чист?</h2></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div id="sppb-addon-wrapper-1574765554041"
+                                                                                     class="sppb-addon-wrapper">
+                                                                                    <div id="sppb-addon-1574765554041" class="clearfix ">
+                                                                                        <div class="sppb-addon sppb-addon-module home-ad-banner">
+                                                                                            <div class="sppb-addon-content">
+                                                                                                <div class="bannergroup">
+                                                                                                    <div class="banneritem">
+                                                                                                        <a href="https://joomshaper.com/"
+                                                                                                           target="_blank"
+                                                                                                           rel="noopener noreferrer"
+                                                                                                           title="Home Ad 6">
+                                                                                                            <img src="images/demo/product_ad1.png"
+                                                                                                                 alt="JoomShaper" style="border: none;"/>
+                                                                                                        </a>
+                                                                                                        <div class="clr"></div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
+
+
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="sppb-col-md-3" id="column-wrap-id-1574764831938">
-                                                <div id="column-id-1574764831938" class="sppb-column">
-                                                    <div class="sppb-column-addons">
-                                                        <div id="sppb-addon-wrapper-1574849761825"
-                                                             class="sppb-addon-wrapper">
-                                                            <div id="sppb-addon-1574849761825" class="clearfix ">
-                                                                <div class="sppb-addon sppb-addon-module home-ad-banner">
-                                                                    <div class="sppb-addon-content">
-                                                                        <div class="bannergroup">
-                                                                            <div class="banneritem">
-                                                                                <a href="https://joomshaper.com/"
-                                                                                   target="_blank"
-                                                                                   rel="noopener noreferrer"
-                                                                                   title="Home Ad 4">
-                                                                                    <img src="images/demo/product_ad3.png"
-                                                                                         alt="JoomShaper"/>
-                                                                                </a>
-                                                                                <div class="clr"></div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -5229,8 +4018,8 @@ Mon, Feb 24, 2020 </span>
                                                                                          style="background-image: url(images/2019/12/10/business-3.jpg);"></div>
                                                                                     <div class="sppb-article-info-wrap">
                                                                                         <p class="sppb-meta-category"><a
-                                                                                                href="index.php/business-blog.html"
-                                                                                                itemprop="genre">Business</a>
+                                                                                                    href="index.php/business-blog.html"
+                                                                                                    itemprop="genre">Business</a>
                                                                                         </p>
                                                                                         <h3>
                                                                                             <a href="index.php/business-blog/what-sick-desperation-in-your-laugh-we-have.html"
@@ -5278,13 +4067,13 @@ Mon, Feb 24, 2020 </span>
                                                                                         <div class="subleading-item  sppb-col-sm-12">
                                                                                             <div class="sppb-addon-article "
                                                                                                  style=""><a
-                                                                                                    class="sppb-article-img-wrap"
-                                                                                                    href="index.php/entertainment/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                    itemprop="url"><img
-                                                                                                    class="sppb-img-responsive"
-                                                                                                    src="images/2019/12/10/entertainment-20_medium.jpg"
-                                                                                                    alt="What sick desperation in your laugh? We have"
-                                                                                                    itemprop="thumbnailUrl"></a>
+                                                                                                        class="sppb-article-img-wrap"
+                                                                                                        href="index.php/entertainment/what-sick-desperation-in-your-laugh-we-have.html"
+                                                                                                        itemprop="url"><img
+                                                                                                            class="sppb-img-responsive"
+                                                                                                            src="images/2019/12/10/entertainment-20_medium.jpg"
+                                                                                                            alt="What sick desperation in your laugh? We have"
+                                                                                                            itemprop="thumbnailUrl"></a>
                                                                                                 <div class="sppb-article-info-wrap">
                                                                                                     <p class="sppb-meta-category">
                                                                                                         <a href="index.php/entertainment.html"
@@ -5344,13 +4133,13 @@ Mon, Feb 24, 2020 </span>
                                                                                         <div class="subleading-item  sppb-col-sm-12">
                                                                                             <div class="sppb-addon-article "
                                                                                                  style=""><a
-                                                                                                    class="sppb-article-img-wrap"
-                                                                                                    href="index.php/food/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                    itemprop="url"><img
-                                                                                                    class="sppb-img-responsive"
-                                                                                                    src="images/2019/12/10/food-3_medium.jpg"
-                                                                                                    alt="What sick desperation in your laugh? We have"
-                                                                                                    itemprop="thumbnailUrl"></a>
+                                                                                                        class="sppb-article-img-wrap"
+                                                                                                        href="index.php/food/what-sick-desperation-in-your-laugh-we-have.html"
+                                                                                                        itemprop="url"><img
+                                                                                                            class="sppb-img-responsive"
+                                                                                                            src="images/2019/12/10/food-3_medium.jpg"
+                                                                                                            alt="What sick desperation in your laugh? We have"
+                                                                                                            itemprop="thumbnailUrl"></a>
                                                                                                 <div class="sppb-article-info-wrap">
                                                                                                     <p class="sppb-meta-category">
                                                                                                         <a href="index.php/food.html"
@@ -5414,13 +4203,13 @@ Mon, Feb 24, 2020 </span>
                                                                                     <div class="intro-item  sppb-col-sm-12">
                                                                                         <div class="sppb-addon-article "
                                                                                              style=""><a
-                                                                                                class="sppb-article-img-wrap"
-                                                                                                href="index.php/sports/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                itemprop="url"><img
-                                                                                                class="sppb-img-responsive"
-                                                                                                src="images/2019/12/10/sport_medium.jpg"
-                                                                                                alt="What sick desperation in your laugh? We have"
-                                                                                                itemprop="thumbnailUrl"></a>
+                                                                                                    class="sppb-article-img-wrap"
+                                                                                                    href="index.php/sports/what-sick-desperation-in-your-laugh-we-have.html"
+                                                                                                    itemprop="url"><img
+                                                                                                        class="sppb-img-responsive"
+                                                                                                        src="images/2019/12/10/sport_medium.jpg"
+                                                                                                        alt="What sick desperation in your laugh? We have"
+                                                                                                        itemprop="thumbnailUrl"></a>
                                                                                             <div class="sppb-article-info-wrap">
                                                                                                 <p class="sppb-meta-category">
                                                                                                     <a href="index.php/sports.html"
@@ -5474,13 +4263,13 @@ Mon, Feb 24, 2020 </span>
                                                                                     <div class="intro-item  sppb-col-sm-12">
                                                                                         <div class="sppb-addon-article "
                                                                                              style=""><a
-                                                                                                class="sppb-article-img-wrap"
-                                                                                                href="index.php/categories/newsberg/politics/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                itemprop="url"><img
-                                                                                                class="sppb-img-responsive"
-                                                                                                src="images/2019/12/11/politics5_medium.jpg"
-                                                                                                alt="What sick desperation in your laugh? We have"
-                                                                                                itemprop="thumbnailUrl"></a>
+                                                                                                    class="sppb-article-img-wrap"
+                                                                                                    href="index.php/categories/newsberg/politics/what-sick-desperation-in-your-laugh-we-have.html"
+                                                                                                    itemprop="url"><img
+                                                                                                        class="sppb-img-responsive"
+                                                                                                        src="images/2019/12/11/politics5_medium.jpg"
+                                                                                                        alt="What sick desperation in your laugh? We have"
+                                                                                                        itemprop="thumbnailUrl"></a>
                                                                                             <div class="sppb-article-info-wrap">
                                                                                                 <p class="sppb-meta-category">
                                                                                                     <a href="index.php/categories/newsberg/politics.html"
@@ -5534,13 +4323,13 @@ Mon, Feb 24, 2020 </span>
                                                                                     <div class="intro-item  sppb-col-sm-12">
                                                                                         <div class="sppb-addon-article "
                                                                                              style=""><a
-                                                                                                class="sppb-article-img-wrap"
-                                                                                                href="index.php/categories/newsberg/technology/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                itemprop="url"><img
-                                                                                                class="sppb-img-responsive"
-                                                                                                src="images/2019/12/10/tech-41_medium.jpg"
-                                                                                                alt="What sick desperation in your laugh? We have"
-                                                                                                itemprop="thumbnailUrl"></a>
+                                                                                                    class="sppb-article-img-wrap"
+                                                                                                    href="index.php/categories/newsberg/technology/what-sick-desperation-in-your-laugh-we-have.html"
+                                                                                                    itemprop="url"><img
+                                                                                                        class="sppb-img-responsive"
+                                                                                                        src="images/2019/12/10/tech-41_medium.jpg"
+                                                                                                        alt="What sick desperation in your laugh? We have"
+                                                                                                        itemprop="thumbnailUrl"></a>
                                                                                             <div class="sppb-article-info-wrap">
                                                                                                 <p class="sppb-meta-category">
                                                                                                     <a href="index.php/categories/newsberg/technology.html"
@@ -5599,18 +4388,18 @@ Mon, Feb 24, 2020 </span>
                                                                                                 <a class="full-link"
                                                                                                    href="index.php/business-blog/what-mixed-equal-parts-of-gasoline-and-frozen.html"
                                                                                                    itemprop="url"></a><i
-                                                                                                    class="fa fa-play-circle"></i>
+                                                                                                        class="fa fa-play-circle"></i>
                                                                                                 <div class="video-caption-info">
                                                                                                     <span class="video-caption">What mixed equal parts </span><span
-                                                                                                        class="video-duration">01 : 36</span>
+                                                                                                            class="video-duration">01 : 36</span>
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div class="sppb-article-info-wrap">
                                                                                                 <p class="sppb-meta-category">
                                                                                                     <a href="index.php/business-blog.html"
                                                                                                        itemprop="genre">Business</a><span
-                                                                                                        class="video-symbol fa fa-play-circle"></span><span
-                                                                                                        class="video-duration">01 : 36</span>
+                                                                                                            class="video-symbol fa fa-play-circle"></span><span
+                                                                                                            class="video-duration">01 : 36</span>
                                                                                                 </p>
                                                                                                 <h3>
                                                                                                     <a href="index.php/business-blog/what-mixed-equal-parts-of-gasoline-and-frozen.html"
@@ -5661,13 +4450,13 @@ Mon, Feb 24, 2020 </span>
                                                                                     <div class="intro-item  sppb-col-sm-12">
                                                                                         <div class="sppb-addon-article "
                                                                                              style=""><a
-                                                                                                class="sppb-article-img-wrap"
-                                                                                                href="index.php/entertainment/what-mixed-equal-parts-of-gasoline-and-frozen.html"
-                                                                                                itemprop="url"><img
-                                                                                                class="sppb-img-responsive"
-                                                                                                src="images/2019/12/10/entertainment-17_medium.jpg"
-                                                                                                alt="What mixed equal parts of gasoline and frozen"
-                                                                                                itemprop="thumbnailUrl"></a>
+                                                                                                    class="sppb-article-img-wrap"
+                                                                                                    href="index.php/entertainment/what-mixed-equal-parts-of-gasoline-and-frozen.html"
+                                                                                                    itemprop="url"><img
+                                                                                                        class="sppb-img-responsive"
+                                                                                                        src="images/2019/12/10/entertainment-17_medium.jpg"
+                                                                                                        alt="What mixed equal parts of gasoline and frozen"
+                                                                                                        itemprop="thumbnailUrl"></a>
                                                                                             <div class="sppb-article-info-wrap">
                                                                                                 <p class="sppb-meta-category">
                                                                                                     <a href="index.php/entertainment.html"
@@ -5722,13 +4511,13 @@ Mon, Feb 24, 2020 </span>
                                                                                     <div class="intro-item  sppb-col-sm-12">
                                                                                         <div class="sppb-addon-article "
                                                                                              style=""><a
-                                                                                                class="sppb-article-img-wrap"
-                                                                                                href="index.php/food/what-mixed-equal-parts-of-gasoline-and-frozen.html"
-                                                                                                itemprop="url"><img
-                                                                                                class="sppb-img-responsive"
-                                                                                                src="images/2019/12/10/food-6_medium.jpg"
-                                                                                                alt="What mixed equal parts of gasoline and frozen"
-                                                                                                itemprop="thumbnailUrl"></a>
+                                                                                                    class="sppb-article-img-wrap"
+                                                                                                    href="index.php/food/what-mixed-equal-parts-of-gasoline-and-frozen.html"
+                                                                                                    itemprop="url"><img
+                                                                                                        class="sppb-img-responsive"
+                                                                                                        src="images/2019/12/10/food-6_medium.jpg"
+                                                                                                        alt="What mixed equal parts of gasoline and frozen"
+                                                                                                        itemprop="thumbnailUrl"></a>
                                                                                             <div class="sppb-article-info-wrap">
                                                                                                 <p class="sppb-meta-category">
                                                                                                     <a href="index.php/food.html"
@@ -5783,13 +4572,13 @@ Mon, Feb 24, 2020 </span>
                                                                                     <div class="intro-item  sppb-col-sm-12">
                                                                                         <div class="sppb-addon-article "
                                                                                              style=""><a
-                                                                                                class="sppb-article-img-wrap"
-                                                                                                href="index.php/sports/what-mixed-equal-parts-of-gasoline-and-frozen.html"
-                                                                                                itemprop="url"><img
-                                                                                                class="sppb-img-responsive"
-                                                                                                src="images/2019/12/10/sport-18_medium.jpg"
-                                                                                                alt="What mixed equal parts of gasoline and frozen"
-                                                                                                itemprop="thumbnailUrl"></a>
+                                                                                                    class="sppb-article-img-wrap"
+                                                                                                    href="index.php/sports/what-mixed-equal-parts-of-gasoline-and-frozen.html"
+                                                                                                    itemprop="url"><img
+                                                                                                        class="sppb-img-responsive"
+                                                                                                        src="images/2019/12/10/sport-18_medium.jpg"
+                                                                                                        alt="What mixed equal parts of gasoline and frozen"
+                                                                                                        itemprop="thumbnailUrl"></a>
                                                                                             <div class="sppb-article-info-wrap">
                                                                                                 <p class="sppb-meta-category">
                                                                                                     <a href="index.php/sports.html"
@@ -5851,294 +4640,115 @@ Mon, Feb 24, 2020 </span>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="sppb-col-md-3" id="column-wrap-id-1574064817277">
-                                                <div id="column-id-1574064817277" class="sppb-column">
+
+                                            <div class="sppb-col-md-3" id="column-wrap-id-1573711718215">
+                                                <div id="column-id-1573711718215" class="sppb-column">
                                                     <div class="sppb-column-addons">
-                                                        <div id="sppb-addon-wrapper-1573813271043"
-                                                             class="sppb-addon-wrapper">
-                                                            <div id="sppb-addon-1573813271043" class="clearfix ">
-                                                                <div class="sppb-addon sppb-addon-module newsberg-card">
-                                                                    <div class="sppb-addon-content"><h3
-                                                                            class="sppb-addon-title">Twitter Feed</h3>
-                                                                        <div id="sp-tweet-id113">
-                                                                            <div class="sp-tweet" has-scrollbar>
-                                                                                <div class="sp-tweet-item sp-tweet-odd sp-tweet-first">
-                                                                                    <a target="_blank"
-                                                                                       href="https://twitter.com/joomshaper">
-                                                                                        <img class="tweet-avatar"
-                                                                                             src="../../../pbs.twimg.com/profile_images/459669888194207745/E5t0tiUL_normal.png"
-                                                                                             alt="JoomShaper"
-                                                                                             title="JoomShaper"
-                                                                                             width="50" height="50"/>
-                                                                                    </a>
-                                                                                    <div class="date"><a target="_blank"
-                                                                                                         href="https://twitter.com/joomshaper/status/1230160115069665280">About&nbsp;5
-                                                                                        days&nbsp;ago</a></div>
-                                                                                    <br/>
-                                                                                    <div class="content">
-                                                                                        How do you make your website
-                                                                                        faster without compromising user
-                                                                                        experience? That’s what lazy
-                                                                                        loading does for you! In… <a
-                                                                                            target="_blank"
-                                                                                            class="tweet_url"
-                                                                                            href="https://t.co/XjLaRplbCe">https://t.co/XjLaRplbCe</a>
+                                                        <div id="section-id-1574157062618"
+                                                             class="sppb-section newsberg-card">
+                                                            <div class="sppb-container-inner">
+                                                                <div class="sppb-row">
+                                                                    <div class="sppb-col-md-12"
+                                                                         id="column-wrap-id-1574157062619">
+                                                                        <div id="column-id-1574157062619"
+                                                                             class="sppb-column">
+                                                                            <div class="sppb-column-addons">
+                                                                                <div id="sppb-addon-wrapper-1573712171080"
+                                                                                     class="sppb-addon-wrapper">
+                                                                                    <div id="sppb-addon-1573712171080"
+                                                                                         class="clearfix ">
+                                                                                        <div class="sppb-addon sppb-addon-header sppb-text-left">
+                                                                                            <h2 class="sppb-addon-title">
+                                                                                                Курби асъор</h2></div>
                                                                                     </div>
-                                                                                    <div class="sp-tweet-clr"></div>
                                                                                 </div>
-                                                                                <div class="sp-tweet-item sp-tweet-even">
-                                                                                    <a target="_blank"
-                                                                                       href="https://twitter.com/joomshaper">
-                                                                                        <img class="tweet-avatar"
-                                                                                             src="../../../pbs.twimg.com/profile_images/459669888194207745/E5t0tiUL_normal.png"
-                                                                                             alt="JoomShaper"
-                                                                                             title="JoomShaper"
-                                                                                             width="50" height="50"/>
-                                                                                    </a>
-                                                                                    <div class="date"><a target="_blank"
-                                                                                                         href="https://twitter.com/joomshaper/status/1229468614429855744">About&nbsp;7
-                                                                                        days&nbsp;ago</a></div>
-                                                                                    <br/>
-                                                                                    <div class="content">
-                                                                                        Whether you are an Event
-                                                                                        Organizer or a Band, Hosting
-                                                                                        Business Conferences or Tech
-                                                                                        Conference, Keynote will be a
-                                                                                        gr… <a target="_blank"
-                                                                                               class="tweet_url"
-                                                                                               href="https://t.co/O3YA8U4FLC">https://t.co/O3YA8U4FLC</a>
+                                                                                <div id="sppb-addon-wrapper-1574765554041"
+                                                                                     class="sppb-addon-wrapper">
+                                                                                    <div id="sppb-addon-1574765554041" class="clearfix ">
+                                                                                        <div class="sppb-addon sppb-addon-module home-ad-banner">
+                                                                                            <div class="sppb-addon-content">
+                                                                                                <div class="bannergroup">
+                                                                                                    <div class="banneritem">
+                                                                                                        <a href="https://joomshaper.com/"
+                                                                                                           target="_blank"
+                                                                                                           rel="noopener noreferrer"
+                                                                                                           title="Home Ad 6">
+                                                                                                            <img src="images/demo/product_ad1.png"
+                                                                                                                 alt="JoomShaper" style="border: none;"/>
+                                                                                                        </a>
+                                                                                                        <div class="clr"></div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
                                                                                     </div>
-                                                                                    <div class="sp-tweet-clr"></div>
                                                                                 </div>
-                                                                                <div class="sp-tweet-item sp-tweet-odd">
-                                                                                    <a target="_blank"
-                                                                                       href="https://twitter.com/joomshaper">
-                                                                                        <img class="tweet-avatar"
-                                                                                             src="../../../pbs.twimg.com/profile_images/459669888194207745/E5t0tiUL_normal.png"
-                                                                                             alt="JoomShaper"
-                                                                                             title="JoomShaper"
-                                                                                             width="50" height="50"/>
-                                                                                    </a>
-                                                                                    <div class="date"><a target="_blank"
-                                                                                                         href="https://twitter.com/joomshaper/status/1228363274523033602">About&nbsp;10
-                                                                                        days&nbsp;ago</a></div>
-                                                                                    <br/>
-                                                                                    <div class="content">
-                                                                                        Crafted To Build A Website For
-                                                                                        Any Dietary Consultation. Get
-                                                                                        This Free Nutritionist Layout
-                                                                                        Bundle For Sp Page Build… <a
-                                                                                            target="_blank"
-                                                                                            class="tweet_url"
-                                                                                            href="https://t.co/KTUFWUroOD">https://t.co/KTUFWUroOD</a>
-                                                                                    </div>
-                                                                                    <div class="sp-tweet-clr"></div>
-                                                                                </div>
-                                                                                <div class="sp-tweet-item sp-tweet-even">
-                                                                                    <a target="_blank"
-                                                                                       href="https://twitter.com/joomshaper">
-                                                                                        <img class="tweet-avatar"
-                                                                                             src="../../../pbs.twimg.com/profile_images/459669888194207745/E5t0tiUL_normal.png"
-                                                                                             alt="JoomShaper"
-                                                                                             title="JoomShaper"
-                                                                                             width="50" height="50"/>
-                                                                                    </a>
-                                                                                    <div class="date"><a target="_blank"
-                                                                                                         href="https://twitter.com/joomshaper/status/1227985784625602560">About&nbsp;11
-                                                                                        days&nbsp;ago</a></div>
-                                                                                    <br/>
-                                                                                    <div class="content">
-                                                                                        Creating your custom preloader
-                                                                                        should not be a hassle anymore.
-                                                                                        If you didn’t know how to add
-                                                                                        custom preloader for y… <a
-                                                                                            target="_blank"
-                                                                                            class="tweet_url"
-                                                                                            href="https://t.co/lqJkElaMVm">https://t.co/lqJkElaMVm</a>
-                                                                                    </div>
-                                                                                    <div class="sp-tweet-clr"></div>
-                                                                                </div>
-                                                                                <div class="sp-tweet-item sp-tweet-odd">
-                                                                                    <a target="_blank"
-                                                                                       href="https://twitter.com/joomshaper">
-                                                                                        <img class="tweet-avatar"
-                                                                                             src="../../../pbs.twimg.com/profile_images/459669888194207745/E5t0tiUL_normal.png"
-                                                                                             alt="JoomShaper"
-                                                                                             title="JoomShaper"
-                                                                                             width="50" height="50"/>
-                                                                                    </a>
-                                                                                    <div class="date"><a target="_blank"
-                                                                                                         href="https://twitter.com/joomshaper/status/1226898619413872640">About&nbsp;14
-                                                                                        days&nbsp;ago</a></div>
-                                                                                    <br/>
-                                                                                    <div class="content">
-                                                                                        [NEW] Let’s get introduced to
-                                                                                        Spa, a beautifully crafted free
-                                                                                        layout bundle for SP Page
-                                                                                        Builder Pro. Spa offers a c… <a
-                                                                                            target="_blank"
-                                                                                            class="tweet_url"
-                                                                                            href="https://t.co/ihS0Mg0IDO">https://t.co/ihS0Mg0IDO</a>
-                                                                                    </div>
-                                                                                    <div class="sp-tweet-clr"></div>
-                                                                                </div>
-                                                                                <div class="sp-tweet-item sp-tweet-even">
-                                                                                    <a target="_blank"
-                                                                                       href="https://twitter.com/joomshaper">
-                                                                                        <img class="tweet-avatar"
-                                                                                             src="../../../pbs.twimg.com/profile_images/459669888194207745/E5t0tiUL_normal.png"
-                                                                                             alt="JoomShaper"
-                                                                                             title="JoomShaper"
-                                                                                             width="50" height="50"/>
-                                                                                    </a>
-                                                                                    <div class="date"><a target="_blank"
-                                                                                                         href="https://twitter.com/joomshaper/status/1225811456572219392">About&nbsp;17
-                                                                                        days&nbsp;ago</a></div>
-                                                                                    <br/>
-                                                                                    <div class="content">
-                                                                                        Worried about having a lot of
-                                                                                        404 errors on your Joomla site?
-                                                                                        Don't know how to fix broken
-                                                                                        links or redirect URLs o… <a
-                                                                                            target="_blank"
-                                                                                            class="tweet_url"
-                                                                                            href="https://t.co/7ThoRz3eTc">https://t.co/7ThoRz3eTc</a>
-                                                                                    </div>
-                                                                                    <div class="sp-tweet-clr"></div>
-                                                                                </div>
-                                                                                <div class="sp-tweet-item sp-tweet-odd">
-                                                                                    <a target="_blank"
-                                                                                       href="https://twitter.com/joomshaper">
-                                                                                        <img class="tweet-avatar"
-                                                                                             src="../../../pbs.twimg.com/profile_images/459669888194207745/E5t0tiUL_normal.png"
-                                                                                             alt="JoomShaper"
-                                                                                             title="JoomShaper"
-                                                                                             width="50" height="50"/>
-                                                                                    </a>
-                                                                                    <div class="date"><a target="_blank"
-                                                                                                         href="https://twitter.com/joomshaper/status/1224726809369030656">About&nbsp;20
-                                                                                        days&nbsp;ago</a></div>
-                                                                                    <br/>
-                                                                                    <div class="content">
-                                                                                        [Detailed Guideline] Do you want
-                                                                                        to know what it takes to build a
-                                                                                        full-fledged portfolio website
-                                                                                        on Joomla? Read th… <a
-                                                                                            target="_blank"
-                                                                                            class="tweet_url"
-                                                                                            href="https://t.co/XRdlBauhxM">https://t.co/XRdlBauhxM</a>
-                                                                                    </div>
-                                                                                    <div class="sp-tweet-clr"></div>
-                                                                                </div>
-                                                                                <div class="sp-tweet-item sp-tweet-even">
-                                                                                    <a target="_blank"
-                                                                                       href="https://twitter.com/joomshaper">
-                                                                                        <img class="tweet-avatar"
-                                                                                             src="../../../pbs.twimg.com/profile_images/459669888194207745/E5t0tiUL_normal.png"
-                                                                                             alt="JoomShaper"
-                                                                                             title="JoomShaper"
-                                                                                             width="50" height="50"/>
-                                                                                    </a>
-                                                                                    <div class="date"><a target="_blank"
-                                                                                                         href="https://twitter.com/joomshaper/status/1224377003903635464">About&nbsp;21
-                                                                                        days&nbsp;ago</a></div>
-                                                                                    <br/>
-                                                                                    <div class="content">
-                                                                                        Do you know what is Joomla smart
-                                                                                        search? Or, how Joomla search
-                                                                                        actually works? What’s going on
-                                                                                        underneath? Or, how… <a
-                                                                                            target="_blank"
-                                                                                            class="tweet_url"
-                                                                                            href="https://t.co/yuP2swTYh3">https://t.co/yuP2swTYh3</a>
-                                                                                    </div>
-                                                                                    <div class="sp-tweet-clr"></div>
-                                                                                </div>
-                                                                                <div class="sp-tweet-item sp-tweet-odd">
-                                                                                    <a target="_blank"
-                                                                                       href="https://twitter.com/joomshaper">
-                                                                                        <img class="tweet-avatar"
-                                                                                             src="../../../pbs.twimg.com/profile_images/459669888194207745/E5t0tiUL_normal.png"
-                                                                                             alt="JoomShaper"
-                                                                                             title="JoomShaper"
-                                                                                             width="50" height="50"/>
-                                                                                    </a>
-                                                                                    <div class="date"><a target="_blank"
-                                                                                                         href="https://twitter.com/joomshaper/status/1223481911101624321">About&nbsp;23
-                                                                                        days&nbsp;ago</a></div>
-                                                                                    <br/>
-                                                                                    <div class="content">
-                                                                                        One of the Highest Numbers of
-                                                                                        Templates Being Updated in a
-                                                                                        Single Batch.
-                                                                                        <a target="_blank"
-                                                                                           class="tweet_url"
-                                                                                           href="https://t.co/EW1khwkqlH">https://t.co/EW1khwkqlH</a>
-                                                                                        <a target="_blank"
-                                                                                           class="tweet_search"
-                                                                                           href="https://search.twitter.com/search?q=joomla">#joomla</a>…
-                                                                                        <a target="_blank"
-                                                                                           class="tweet_url"
-                                                                                           href="https://t.co/ijGrHYKc8g">https://t.co/ijGrHYKc8g</a>
-                                                                                    </div>
-                                                                                    <div class="sp-tweet-clr"></div>
-                                                                                </div>
-                                                                                <div class="sp-tweet-item sp-tweet-even">
-                                                                                    <a target="_blank"
-                                                                                       href="https://twitter.com/joomshaper">
-                                                                                        <img class="tweet-avatar"
-                                                                                             src="../../../pbs.twimg.com/profile_images/459669888194207745/E5t0tiUL_normal.png"
-                                                                                             alt="JoomShaper"
-                                                                                             title="JoomShaper"
-                                                                                             width="50" height="50"/>
-                                                                                    </a>
-                                                                                    <div class="date"><a target="_blank"
-                                                                                                         href="https://twitter.com/joomshaper/status/1222187577421258752">About&nbsp;27
-                                                                                        days&nbsp;ago</a></div>
-                                                                                    <br/>
-                                                                                    <div class="content">
-                                                                                        [Update] Have you ever thought
-                                                                                        of displaying your team members
-                                                                                        in stylish slides? If so, this
-                                                                                        is what SP Page Build… <a
-                                                                                            target="_blank"
-                                                                                            class="tweet_url"
-                                                                                            href="https://t.co/aoGXfKVh9P">https://t.co/aoGXfKVh9P</a>
-                                                                                    </div>
-                                                                                    <div class="sp-tweet-clr"></div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="sp-tweet-clr"></div>
-                                                                            <div class="sp-tweet-clr"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div id="sppb-addon-wrapper-1574765554041"
-                                                             class="sppb-addon-wrapper">
-                                                            <div id="sppb-addon-1574765554041" class="clearfix ">
-                                                                <div class="sppb-addon sppb-addon-module home-ad-banner">
-                                                                    <div class="sppb-addon-content">
-                                                                        <div class="bannergroup">
-                                                                            <div class="banneritem">
-                                                                                <a href="https://joomshaper.com/"
-                                                                                   target="_blank"
-                                                                                   rel="noopener noreferrer"
-                                                                                   title="Home Ad 6">
-                                                                                    <img src="images/demo/product_ad1.png"
-                                                                                         alt="JoomShaper"/>
-                                                                                </a>
-                                                                                <div class="clr"></div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
+
+                                                        <div id="section-id-1574157062618"
+                                                             class="sppb-section newsberg-card">
+                                                            <div class="sppb-container-inner">
+                                                                <div class="sppb-row">
+                                                                    <div class="sppb-col-md-12"
+                                                                         id="column-wrap-id-1574157062619">
+                                                                        <div id="column-id-1574157062619"
+                                                                             class="sppb-column">
+                                                                            <div class="sppb-column-addons">
+                                                                                <div id="sppb-addon-wrapper-1573712171080"
+                                                                                     class="sppb-addon-wrapper">
+                                                                                    <div id="sppb-addon-1573712171080"
+                                                                                         class="clearfix ">
+                                                                                        <div class="sppb-addon sppb-addon-header sppb-text-left">
+                                                                                            <h2 class="sppb-addon-title">
+                                                                                                Ташрифкунандагон</h2></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div id="sppb-addon-wrapper-1574765554041"
+                                                                                     class="sppb-addon-wrapper">
+                                                                                    <div id="sppb-addon-1574765554041" class="clearfix ">
+                                                                                        <div class="sppb-addon sppb-addon-module home-ad-banner">
+                                                                                            <div class="sppb-addon-content">
+                                                                                                <div class="bannergroup">
+                                                                                                    <div class="banneritem">
+                                                                                                        <a href="https://joomshaper.com/"
+                                                                                                           target="_blank"
+                                                                                                           rel="noopener noreferrer"
+                                                                                                           title="Home Ad 6">
+                                                                                                            <img src="images/demo/product_ad1.png"
+                                                                                                                 alt="JoomShaper" style="border: none;"/>
+                                                                                                        </a>
+                                                                                                        <div class="clr"></div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
                                                     </div>
                                                 </div>
+
                                             </div>
+
+
+
+
+
+
+
+
                                         </div>
                                     </div>
                                 </section>
@@ -6153,8 +4763,8 @@ Mon, Feb 24, 2020 </span>
                                                             <div id="sppb-addon-1573810048723" class="clearfix ">
                                                                 <div class="sppb-addon sppb-addon-module newsberg-card">
                                                                     <div class="sppb-addon-content"><h3
-                                                                            class="sppb-addon-title">Today’s
-                                                                        Question</h3>
+                                                                                class="sppb-addon-title">Today’s
+                                                                            Question</h3>
                                                                         <div class="mod-sppoll ">
                                                                             <strong>Billionaire’s Folly Becomes Bankers’
                                                                                 Nightmare?</strong>
@@ -6224,8 +4834,8 @@ Mon, Feb 24, 2020 </span>
                                                                                         <div class="sppb-article-info-wrap">
                                                                                             <div class="sppb-article-meta">
                                                                                                 <span class="sppb-meta-category"><a
-                                                                                                        href="index.php/categories/newsberg/technology.html"
-                                                                                                        itemprop="genre">Technology</a></span>
+                                                                                                            href="index.php/categories/newsberg/technology.html"
+                                                                                                            itemprop="genre">Technology</a></span>
                                                                                             </div>
                                                                                             <h3>
                                                                                                 <a href="index.php/categories/newsberg/technology/the-exact-same-briefcase-soap-sorry-i-make.html"
@@ -6239,7 +4849,7 @@ Mon, Feb 24, 2020 </span>
                                                                                                 <i class="fa fa-play-circle"></i>
                                                                                                 <div class="video-caption-info">
                                                                                                     <span class="video-caption">Best London Corporate</span><span
-                                                                                                        class="video-duration">01 : 35</span>
+                                                                                                            class="video-duration">01 : 35</span>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
@@ -6254,8 +4864,8 @@ Mon, Feb 24, 2020 </span>
                                                                                         <div class="sppb-article-info-wrap">
                                                                                             <div class="sppb-article-meta">
                                                                                                 <span class="sppb-meta-category"><a
-                                                                                                        href="index.php/business-blog.html"
-                                                                                                        itemprop="genre">Business</a></span>
+                                                                                                            href="index.php/business-blog.html"
+                                                                                                            itemprop="genre">Business</a></span>
                                                                                             </div>
                                                                                             <h3>
                                                                                                 <a href="index.php/business-blog/what-mixed-equal-parts-of-gasoline-and-frozen.html"
@@ -6267,7 +4877,7 @@ Mon, Feb 24, 2020 </span>
                                                                                                 <i class="fa fa-play-circle"></i>
                                                                                                 <div class="video-caption-info">
                                                                                                     <span class="video-caption">What mixed equal parts </span><span
-                                                                                                        class="video-duration">01 : 36</span>
+                                                                                                            class="video-duration">01 : 36</span>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
@@ -6282,8 +4892,8 @@ Mon, Feb 24, 2020 </span>
                                                                                         <div class="sppb-article-info-wrap">
                                                                                             <div class="sppb-article-meta">
                                                                                                 <span class="sppb-meta-category"><a
-                                                                                                        href="index.php/categories/newsberg/politics.html"
-                                                                                                        itemprop="genre">Politics</a></span>
+                                                                                                            href="index.php/categories/newsberg/politics.html"
+                                                                                                            itemprop="genre">Politics</a></span>
                                                                                             </div>
                                                                                             <h3>
                                                                                                 <a href="index.php/categories/newsberg/politics/what-household-items-really-if-one-were.html"
@@ -6295,7 +4905,7 @@ Mon, Feb 24, 2020 </span>
                                                                                                 <i class="fa fa-play-circle"></i>
                                                                                                 <div class="video-caption-info">
                                                                                                     <span class="video-caption">What household items</span><span
-                                                                                                        class="video-duration">08 : 36</span>
+                                                                                                            class="video-duration">08 : 36</span>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
@@ -6310,8 +4920,8 @@ Mon, Feb 24, 2020 </span>
                                                                                         <div class="sppb-article-info-wrap">
                                                                                             <div class="sppb-article-meta">
                                                                                                 <span class="sppb-meta-category"><a
-                                                                                                        href="index.php/entertainment.html"
-                                                                                                        itemprop="genre">Entertainment</a></span>
+                                                                                                            href="index.php/entertainment.html"
+                                                                                                            itemprop="genre">Entertainment</a></span>
                                                                                             </div>
                                                                                             <h3>
                                                                                                 <a href="index.php/entertainment/for-you-what-being-clever-great-keep-it-up.html"
@@ -6323,7 +4933,7 @@ Mon, Feb 24, 2020 </span>
                                                                                                 <i class="fa fa-play-circle"></i>
                                                                                                 <div class="video-caption-info">
                                                                                                     <span class="video-caption">Video With Fashion and Glitches</span><span
-                                                                                                        class="video-duration">00 : 10</span>
+                                                                                                            class="video-duration">00 : 10</span>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
@@ -6338,8 +4948,8 @@ Mon, Feb 24, 2020 </span>
                                                                                         <div class="sppb-article-info-wrap">
                                                                                             <div class="sppb-article-meta">
                                                                                                 <span class="sppb-meta-category"><a
-                                                                                                        href="index.php/food.html"
-                                                                                                        itemprop="genre">Food</a></span>
+                                                                                                            href="index.php/food.html"
+                                                                                                            itemprop="genre">Food</a></span>
                                                                                             </div>
                                                                                             <h3>
                                                                                                 <a href="index.php/food/what-do-you-do-what-do-you-mean-what.html"
@@ -6351,7 +4961,7 @@ Mon, Feb 24, 2020 </span>
                                                                                                 <i class="fa fa-play-circle"></i>
                                                                                                 <div class="video-caption-info">
                                                                                                     <span class="video-caption">What do you mean what</span><span
-                                                                                                        class="video-duration">00 : 30</span>
+                                                                                                            class="video-duration">00 : 30</span>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
@@ -6366,8 +4976,8 @@ Mon, Feb 24, 2020 </span>
                                                                                         <div class="sppb-article-info-wrap">
                                                                                             <div class="sppb-article-meta">
                                                                                                 <span class="sppb-meta-category"><a
-                                                                                                        href="index.php/sports.html"
-                                                                                                        itemprop="genre">Sports</a></span>
+                                                                                                            href="index.php/sports.html"
+                                                                                                            itemprop="genre">Sports</a></span>
                                                                                             </div>
                                                                                             <h3>
                                                                                                 <a href="index.php/sports/what-do-you-do-what-do-you-mean-what.html"
@@ -6379,7 +4989,7 @@ Mon, Feb 24, 2020 </span>
                                                                                                 <i class="fa fa-play-circle"></i>
                                                                                                 <div class="video-caption-info">
                                                                                                     <span class="video-caption">Spring Sports</span><span
-                                                                                                        class="video-duration">02 : 10</span>
+                                                                                                            class="video-duration">02 : 10</span>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
@@ -6398,9 +5008,9 @@ Mon, Feb 24, 2020 </span>
                                                                                         <div class="sppb-article-content">
                                                                                             <div class="sppb-article-meta">
                                                                                                 <span class="sppb-meta-category">Technology</span><span
-                                                                                                    class="video-icon fa fa-play"></span><span
-                                                                                                    class="video-caption-info"><span
-                                                                                                    class="video-duration">01 : 35</span></span>
+                                                                                                        class="video-icon fa fa-play"></span><span
+                                                                                                        class="video-caption-info"><span
+                                                                                                            class="video-duration">01 : 35</span></span>
                                                                                             </div>
                                                                                             <h3>Sondland adds to
                                                                                                 testimony linking aid to
@@ -6413,9 +5023,9 @@ Mon, Feb 24, 2020 </span>
                                                                                         <div class="sppb-article-content">
                                                                                             <div class="sppb-article-meta">
                                                                                                 <span class="sppb-meta-category">Business</span><span
-                                                                                                    class="video-icon fa fa-play"></span><span
-                                                                                                    class="video-caption-info"><span
-                                                                                                    class="video-duration">01 : 36</span></span>
+                                                                                                        class="video-icon fa fa-play"></span><span
+                                                                                                        class="video-caption-info"><span
+                                                                                                            class="video-duration">01 : 36</span></span>
                                                                                             </div>
                                                                                             <h3>What mixed equal parts
                                                                                                 of gasoline and
@@ -6427,9 +5037,9 @@ Mon, Feb 24, 2020 </span>
                                                                                         <div class="sppb-article-content">
                                                                                             <div class="sppb-article-meta">
                                                                                                 <span class="sppb-meta-category">Politics</span><span
-                                                                                                    class="video-icon fa fa-play"></span><span
-                                                                                                    class="video-caption-info"><span
-                                                                                                    class="video-duration">08 : 36</span></span>
+                                                                                                        class="video-icon fa fa-play"></span><span
+                                                                                                        class="video-caption-info"><span
+                                                                                                            class="video-duration">08 : 36</span></span>
                                                                                             </div>
                                                                                             <h3>What household items.
                                                                                                 Really? If one were</h3>
@@ -6441,9 +5051,9 @@ Mon, Feb 24, 2020 </span>
                                                                                         <div class="sppb-article-content">
                                                                                             <div class="sppb-article-meta">
                                                                                                 <span class="sppb-meta-category">Entertainment</span><span
-                                                                                                    class="video-icon fa fa-play"></span><span
-                                                                                                    class="video-caption-info"><span
-                                                                                                    class="video-duration">00 : 10</span></span>
+                                                                                                        class="video-icon fa fa-play"></span><span
+                                                                                                        class="video-caption-info"><span
+                                                                                                            class="video-duration">00 : 10</span></span>
                                                                                             </div>
                                                                                             <h3>For you? What? Being
                                                                                                 clever. Great. Keep it
@@ -6455,9 +5065,9 @@ Mon, Feb 24, 2020 </span>
                                                                                         <div class="sppb-article-content">
                                                                                             <div class="sppb-article-meta">
                                                                                                 <span class="sppb-meta-category">Food</span><span
-                                                                                                    class="video-icon fa fa-play"></span><span
-                                                                                                    class="video-caption-info"><span
-                                                                                                    class="video-duration">00 : 30</span></span>
+                                                                                                        class="video-icon fa fa-play"></span><span
+                                                                                                        class="video-caption-info"><span
+                                                                                                            class="video-duration">00 : 30</span></span>
                                                                                             </div>
                                                                                             <h3>What do you do? What do
                                                                                                 you mean what?</h3>
@@ -6469,2079 +5079,13 @@ Mon, Feb 24, 2020 </span>
                                                                                         <div class="sppb-article-content">
                                                                                             <div class="sppb-article-meta">
                                                                                                 <span class="sppb-meta-category">Sports</span><span
-                                                                                                    class="video-icon fa fa-play"></span><span
-                                                                                                    class="video-caption-info"><span
-                                                                                                    class="video-duration">02 : 10</span></span>
+                                                                                                        class="video-icon fa fa-play"></span><span
+                                                                                                        class="video-caption-info"><span
+                                                                                                            class="video-duration">02 : 10</span></span>
                                                                                             </div>
                                                                                             <h3>What do you do? What do
                                                                                                 you mean what?</h3>
                                                                                         </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                                <section id="section-id-1575553238550" class="sppb-section">
-                                    <div class="sppb-row-container">
-                                        <div class="sppb-row">
-                                            <div class="sppb-col-md-12" id="column-wrap-id-1575553238549">
-                                                <div id="column-id-1575553238549" class="sppb-column">
-                                                    <div class="sppb-column-addons">
-                                                        <div id="sppb-addon-wrapper-1575553238554"
-                                                             class="sppb-addon-wrapper">
-                                                            <div id="sppb-addon-1575553238554" class="clearfix ">
-                                                                <div class="sppb-addon sppb-addon-module home-ad-banner">
-                                                                    <div class="sppb-addon-content">
-                                                                        <div class="bannergroup">
-                                                                            <div class="banneritem">
-                                                                                <a href="https://joomshaper.com/"
-                                                                                   target="_blank"
-                                                                                   rel="noopener noreferrer"
-                                                                                   title="Home Ad 3">
-                                                                                    <img src="images/demo/product_ad6.png"
-                                                                                         alt="JoomShaper"/>
-                                                                                </a>
-                                                                                <div class="clr"></div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                                <section id="section-id-1574146524914" class="sppb-section">
-                                    <div class="sppb-row-container">
-                                        <div class="sppb-row">
-                                            <div class="sppb-col-md-9" id="column-wrap-id-1574146524913">
-                                                <div id="column-id-1574146524913" class="sppb-column">
-                                                    <div class="sppb-column-addons">
-                                                        <div id="sppb-addon-wrapper-1574765921685"
-                                                             class="sppb-addon-wrapper">
-                                                            <div id="sppb-addon-1574765921685" class="clearfix ">
-                                                                <div class="sppb-addon sppb-addon-header heading-arrow sppb-text-left">
-                                                                    <h2 class="sppb-addon-title">All News</h2></div>
-                                                            </div>
-                                                        </div>
-                                                        <div id="sppb-addon-wrapper-1575532278055"
-                                                             class="sppb-addon-wrapper">
-                                                            <div id="sppb-addon-1575532278055" class="clearfix ">
-                                                                <div class="sppb-addon sppb-addon-tab newsberg-news-tab">
-                                                                    <div class="sppb-addon-content sppb-tab tabs-tab">
-                                                                        <ul class="sppb-nav sppb-nav-tabs"
-                                                                            role="tablist">
-                                                                            <li class="active"><a data-toggle="sppb-tab"
-                                                                                                  id="sppb-content-1575532278055"
-                                                                                                  class="left "
-                                                                                                  href="#sppb-tab-1575532278055"
-                                                                                                  role="tab"
-                                                                                                  aria-controls="sppb-tab-1575532278055"
-                                                                                                  aria-selected="true">
-                                                                                Food </a></li>
-                                                                            <li class=""><a data-toggle="sppb-tab"
-                                                                                            id="sppb-content-1575532278056"
-                                                                                            class="left "
-                                                                                            href="#sppb-tab-1575532278056"
-                                                                                            role="tab"
-                                                                                            aria-controls="sppb-tab-1575532278056"
-                                                                                            aria-selected="false">
-                                                                                Entertainment </a></li>
-                                                                            <li class=""><a data-toggle="sppb-tab"
-                                                                                            id="sppb-content-1575532278057"
-                                                                                            class="left "
-                                                                                            href="#sppb-tab-1575532278057"
-                                                                                            role="tab"
-                                                                                            aria-controls="sppb-tab-1575532278057"
-                                                                                            aria-selected="false">
-                                                                                Business </a></li>
-                                                                            <li class=""><a data-toggle="sppb-tab"
-                                                                                            id="sppb-content-1575532278058"
-                                                                                            class="left "
-                                                                                            href="#sppb-tab-1575532278058"
-                                                                                            role="tab"
-                                                                                            aria-controls="sppb-tab-1575532278058"
-                                                                                            aria-selected="false">
-                                                                                Politics </a></li>
-                                                                        </ul>
-                                                                        <div class="sppb-tab-content sppb-tab-tabs-content">
-                                                                            <div id="sppb-tab-1575532278055"
-                                                                                 class="sppb-tab-pane sppb-fade active in"
-                                                                                 role="tabpanel"
-                                                                                 aria-labelledby="sppb-content-1575532278055">
-                                                                                <div id="sppb-addon-wrapper-1575898734794"
-                                                                                     class="sppb-addon-wrapper">
-                                                                                    <div id="sppb-addon-1575898734794"
-                                                                                         class="clearfix ">
-                                                                                        <div class="sppb-addon sppb-addon-articles-layout layout-robusta robusta-classic ">
-                                                                                            <div class="sppb-addon-content">
-                                                                                                <div class="sppb-row leading-items-row">
-                                                                                                    <div class="sppb-col-sm-6 sppb-col-md-8 leading-item">
-                                                                                                        <div class="  sppb-col-sm-0">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <div class="bg-img-wrapper"
-                                                                                                                     style="background-image: url(images/2019/12/10/food-2.jpg);"></div>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <p class="sppb-meta-category">
-                                                                                                                        <a href="index.php/food.html"
-                                                                                                                           itemprop="genre">Food</a>
-                                                                                                                    </p>
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/food/the-exact-same-briefcase-soap-sorry-i-make.html"
-                                                                                                                           itemprop="url">Sondland
-                                                                                                                            adds
-                                                                                                                            tos
-                                                                                                                            testimony
-                                                                                                                            linking
-                                                                                                                            aid
-                                                                                                                            to
-                                                                                                                            Ukraine
-                                                                                                                            probes
-                                                                                                                            sought
-                                                                                                                            by
-                                                                                                                            Trump</a>
-                                                                                                                    </h3>
-                                                                                                                    <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                        <div class="sppb-article-meta">
-                                                                                                                            <span class="sppb-meta-date"
-                                                                                                                                  itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                        </div>
-                                                                                                                        <div class="article-spbookmark">
-                                                                                                                            <form class="sp-bookmark-form"
-                                                                                                                                  name="add-to-bookmark-101">
-                                                                                                                                <a class="btn-spbookmark-action "
-                                                                                                                                   href="javascript:void(0);"
-                                                                                                                                   data-content-id="101">
-                                                                                                                                    <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                </a>
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="cid"
-                                                                                                                                       value="101">
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="curl"
-                                                                                                                                       value="index.html">
-                                                                                                                            </form>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <div class="sppb-col-sm-6 sppb-col-md-4">
-                                                                                                        <div class="intro-items">
-                                                                                                            <div class="  sppb-col-sm-0">
-                                                                                                                <div class="sppb-addon-article "
-                                                                                                                     style="">
-                                                                                                                    <a class="sppb-article-img-wrap"
-                                                                                                                       href="index.php/food/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                                       itemprop="url"><img
-                                                                                                                            class="sppb-img-responsive"
-                                                                                                                            src="images/2019/12/10/food-3_small.jpg"
-                                                                                                                            alt="What sick desperation in your laugh? We have"
-                                                                                                                            itemprop="thumbnailUrl"></a>
-                                                                                                                    <div class="sppb-article-info-wrap">
-                                                                                                                        <p class="sppb-meta-category">
-                                                                                                                            <a href="index.php/food.html"
-                                                                                                                               itemprop="genre">Food</a>
-                                                                                                                        </p>
-                                                                                                                        <h3>
-                                                                                                                            <a href="index.php/food/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                                               itemprop="url">What
-                                                                                                                                sick
-                                                                                                                                desperation
-                                                                                                                                in
-                                                                                                                                your
-                                                                                                                                laugh?
-                                                                                                                                We
-                                                                                                                                have</a>
-                                                                                                                        </h3>
-                                                                                                                        <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                            <div class="sppb-article-meta">
-                                                                                                                                <span class="sppb-meta-date"
-                                                                                                                                      itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                            </div>
-                                                                                                                            <div class="article-spbookmark">
-                                                                                                                                <form class="sp-bookmark-form"
-                                                                                                                                      name="add-to-bookmark-100">
-                                                                                                                                    <a class="btn-spbookmark-action "
-                                                                                                                                       href="javascript:void(0);"
-                                                                                                                                       data-content-id="100">
-                                                                                                                                        <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                    </a>
-                                                                                                                                    <input type="hidden"
-                                                                                                                                           name="cid"
-                                                                                                                                           value="100">
-                                                                                                                                    <input type="hidden"
-                                                                                                                                           name="curl"
-                                                                                                                                           value="index.html">
-                                                                                                                                </form>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div class="  sppb-col-sm-0">
-                                                                                                                <div class="sppb-addon-article "
-                                                                                                                     style="">
-                                                                                                                    <a class="sppb-article-img-wrap"
-                                                                                                                       href="index.php/food/or-angejuice-concentrate-you-can-make-napalm.html"
-                                                                                                                       itemprop="url"><img
-                                                                                                                            class="sppb-img-responsive"
-                                                                                                                            src="images/2019/12/10/food-4_small.jpg"
-                                                                                                                            alt="or angejuice concentrate, you can make napalm?"
-                                                                                                                            itemprop="thumbnailUrl"></a>
-                                                                                                                    <div class="sppb-article-info-wrap">
-                                                                                                                        <p class="sppb-meta-category">
-                                                                                                                            <a href="index.php/food.html"
-                                                                                                                               itemprop="genre">Food</a>
-                                                                                                                        </p>
-                                                                                                                        <h3>
-                                                                                                                            <a href="index.php/food/or-angejuice-concentrate-you-can-make-napalm.html"
-                                                                                                                               itemprop="url">or
-                                                                                                                                angejuice
-                                                                                                                                concentrate,
-                                                                                                                                you
-                                                                                                                                can
-                                                                                                                                make
-                                                                                                                                napalm?</a>
-                                                                                                                        </h3>
-                                                                                                                        <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                            <div class="sppb-article-meta">
-                                                                                                                                <span class="sppb-meta-date"
-                                                                                                                                      itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                            </div>
-                                                                                                                            <div class="article-spbookmark">
-                                                                                                                                <form class="sp-bookmark-form"
-                                                                                                                                      name="add-to-bookmark-99">
-                                                                                                                                    <a class="btn-spbookmark-action "
-                                                                                                                                       href="javascript:void(0);"
-                                                                                                                                       data-content-id="99">
-                                                                                                                                        <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                    </a>
-                                                                                                                                    <input type="hidden"
-                                                                                                                                           name="cid"
-                                                                                                                                           value="99">
-                                                                                                                                    <input type="hidden"
-                                                                                                                                           name="curl"
-                                                                                                                                           value="index.html">
-                                                                                                                                </form>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div class="  sppb-col-sm-0">
-                                                                                                                <div class="sppb-addon-article "
-                                                                                                                     style="">
-                                                                                                                    <a class="sppb-article-img-wrap"
-                                                                                                                       href="index.php/food/of-etiquette-as-i-pass-do-i-give-you-the-ass.html"
-                                                                                                                       itemprop="url"><img
-                                                                                                                            class="sppb-img-responsive"
-                                                                                                                            src="images/2019/12/10/food-5_small.jpg"
-                                                                                                                            alt="Of etiquette. As I pass, do I give you the ass"
-                                                                                                                            itemprop="thumbnailUrl"></a>
-                                                                                                                    <div class="sppb-article-info-wrap">
-                                                                                                                        <p class="sppb-meta-category">
-                                                                                                                            <a href="index.php/food.html"
-                                                                                                                               itemprop="genre">Food</a>
-                                                                                                                        </p>
-                                                                                                                        <h3>
-                                                                                                                            <a href="index.php/food/of-etiquette-as-i-pass-do-i-give-you-the-ass.html"
-                                                                                                                               itemprop="url">Of
-                                                                                                                                etiquette.
-                                                                                                                                As
-                                                                                                                                I
-                                                                                                                                pass,
-                                                                                                                                do
-                                                                                                                                I
-                                                                                                                                give
-                                                                                                                                you
-                                                                                                                                the
-                                                                                                                                ass</a>
-                                                                                                                        </h3>
-                                                                                                                        <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                            <div class="sppb-article-meta">
-                                                                                                                                <span class="sppb-meta-date"
-                                                                                                                                      itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                            </div>
-                                                                                                                            <div class="article-spbookmark">
-                                                                                                                                <form class="sp-bookmark-form"
-                                                                                                                                      name="add-to-bookmark-98">
-                                                                                                                                    <a class="btn-spbookmark-action "
-                                                                                                                                       href="javascript:void(0);"
-                                                                                                                                       data-content-id="98">
-                                                                                                                                        <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                    </a>
-                                                                                                                                    <input type="hidden"
-                                                                                                                                           name="cid"
-                                                                                                                                           value="98">
-                                                                                                                                    <input type="hidden"
-                                                                                                                                           name="curl"
-                                                                                                                                           value="index.html">
-                                                                                                                                </form>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="sppb-row bottom-items">
-                                                                                                    <div class="bottom-item  sppb-col-sm-4">
-                                                                                                        <div class="sppb-addon-article "
-                                                                                                             style=""><a
-                                                                                                                class="sppb-article-img-wrap"
-                                                                                                                href="index.php/food/what-mixed-equal-parts-of-gasoline-and-frozen.html"
-                                                                                                                itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="images/2019/12/10/food-6_small.jpg"
-                                                                                                                alt="What mixed equal parts of gasoline and frozen"
-                                                                                                                itemprop="thumbnailUrl"></a>
-                                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                                <p class="sppb-meta-category">
-                                                                                                                    <a href="index.php/food.html"
-                                                                                                                       itemprop="genre">Food</a>
-                                                                                                                </p>
-                                                                                                                <h3>
-                                                                                                                    <a href="index.php/food/what-mixed-equal-parts-of-gasoline-and-frozen.html"
-                                                                                                                       itemprop="url">What
-                                                                                                                        mixed
-                                                                                                                        equal
-                                                                                                                        parts
-                                                                                                                        of
-                                                                                                                        gasoline
-                                                                                                                        and
-                                                                                                                        frozen</a>
-                                                                                                                </h3>
-                                                                                                                <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                    <div class="sppb-article-meta">
-                                                                                                                        <span class="sppb-meta-date"
-                                                                                                                              itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                    </div>
-                                                                                                                    <div class="article-spbookmark">
-                                                                                                                        <form class="sp-bookmark-form"
-                                                                                                                              name="add-to-bookmark-97">
-                                                                                                                            <a class="btn-spbookmark-action "
-                                                                                                                               href="javascript:void(0);"
-                                                                                                                               data-content-id="97">
-                                                                                                                                <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                            </a>
-                                                                                                                            <input type="hidden"
-                                                                                                                                   name="cid"
-                                                                                                                                   value="97">
-                                                                                                                            <input type="hidden"
-                                                                                                                                   name="curl"
-                                                                                                                                   value="index.html">
-                                                                                                                        </form>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <div class="bottom-item  sppb-col-sm-4">
-                                                                                                        <div class="sppb-addon-article "
-                                                                                                             style=""><a
-                                                                                                                class="sppb-article-img-wrap"
-                                                                                                                href="index.php/food/like-you-re-interested-ok-you-have-a-kind-of.html"
-                                                                                                                itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="images/2019/12/10/food-7_small.jpg"
-                                                                                                                alt="like you're interested? OK. You have a kind of"
-                                                                                                                itemprop="thumbnailUrl"></a>
-                                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                                <p class="sppb-meta-category">
-                                                                                                                    <a href="index.php/food.html"
-                                                                                                                       itemprop="genre">Food</a>
-                                                                                                                </p>
-                                                                                                                <h3>
-                                                                                                                    <a href="index.php/food/like-you-re-interested-ok-you-have-a-kind-of.html"
-                                                                                                                       itemprop="url">like
-                                                                                                                        you're
-                                                                                                                        interested?
-                                                                                                                        OK.
-                                                                                                                        You
-                                                                                                                        have
-                                                                                                                        a
-                                                                                                                        kind
-                                                                                                                        of</a>
-                                                                                                                </h3>
-                                                                                                                <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                    <div class="sppb-article-meta">
-                                                                                                                        <span class="sppb-meta-date"
-                                                                                                                              itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                    </div>
-                                                                                                                    <div class="article-spbookmark">
-                                                                                                                        <form class="sp-bookmark-form"
-                                                                                                                              name="add-to-bookmark-96">
-                                                                                                                            <a class="btn-spbookmark-action "
-                                                                                                                               href="javascript:void(0);"
-                                                                                                                               data-content-id="96">
-                                                                                                                                <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                            </a>
-                                                                                                                            <input type="hidden"
-                                                                                                                                   name="cid"
-                                                                                                                                   value="96">
-                                                                                                                            <input type="hidden"
-                                                                                                                                   name="curl"
-                                                                                                                                   value="index.html">
-                                                                                                                        </form>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <div class="bottom-item  sppb-col-sm-4">
-                                                                                                        <div class="sppb-addon-article "
-                                                                                                             style=""><a
-                                                                                                                class="sppb-article-img-wrap"
-                                                                                                                href="index.php/food/what-1s-single-serving-even-oh-now-i-get-it.html"
-                                                                                                                itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="images/2019/12/04/food-8_small.jpg"
-                                                                                                                alt="What 1s single-serving, even-- Oh, now i get it."
-                                                                                                                itemprop="thumbnailUrl"></a>
-                                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                                <p class="sppb-meta-category">
-                                                                                                                    <a href="index.php/food.html"
-                                                                                                                       itemprop="genre">Food</a>
-                                                                                                                </p>
-                                                                                                                <h3>
-                                                                                                                    <a href="index.php/food/what-1s-single-serving-even-oh-now-i-get-it.html"
-                                                                                                                       itemprop="url">What
-                                                                                                                        1s
-                                                                                                                        single-serving,
-                                                                                                                        even--
-                                                                                                                        Oh,
-                                                                                                                        now
-                                                                                                                        i
-                                                                                                                        get
-                                                                                                                        it.</a>
-                                                                                                                </h3>
-                                                                                                                <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                    <div class="sppb-article-meta">
-                                                                                                                        <span class="sppb-meta-date"
-                                                                                                                              itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                    </div>
-                                                                                                                    <div class="article-spbookmark">
-                                                                                                                        <form class="sp-bookmark-form"
-                                                                                                                              name="add-to-bookmark-95">
-                                                                                                                            <a class="btn-spbookmark-action "
-                                                                                                                               href="javascript:void(0);"
-                                                                                                                               data-content-id="95">
-                                                                                                                                <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                            </a>
-                                                                                                                            <input type="hidden"
-                                                                                                                                   name="cid"
-                                                                                                                                   value="95">
-                                                                                                                            <input type="hidden"
-                                                                                                                                   name="curl"
-                                                                                                                                   value="index.html">
-                                                                                                                        </form>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div id="sppb-tab-1575532278056"
-                                                                                 class="sppb-tab-pane sppb-fade"
-                                                                                 role="tabpanel"
-                                                                                 aria-labelledby="sppb-content-1575532278056">
-                                                                                <div id="sppb-addon-wrapper-1575898734624"
-                                                                                     class="sppb-addon-wrapper">
-                                                                                    <div id="sppb-addon-1575898734624"
-                                                                                         class="clearfix ">
-                                                                                        <div class="sppb-addon sppb-addon-articles-layout layout-robusta robusta-classic ">
-                                                                                            <div class="sppb-addon-content">
-                                                                                                <div class="sppb-row leading-items-row">
-                                                                                                    <div class="sppb-col-sm-6 sppb-col-md-8 leading-item">
-                                                                                                        <div class="  sppb-col-sm-0">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <div class="bg-img-wrapper"
-                                                                                                                     style="background-image: url(images/2019/12/10/entertainment1.jpg);"></div>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <p class="sppb-meta-category">
-                                                                                                                        <a href="index.php/entertainment.html"
-                                                                                                                           itemprop="genre">Entertainment</a>
-                                                                                                                    </p>
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/entertainment/the-exact-same-briefcase-soap-sorry-i-make.html"
-                                                                                                                           itemprop="url">Sondland
-                                                                                                                            adds
-                                                                                                                            to
-                                                                                                                            testimony
-                                                                                                                            linking
-                                                                                                                            aid
-                                                                                                                            to
-                                                                                                                            Ukraine
-                                                                                                                            probes
-                                                                                                                            sought
-                                                                                                                            by
-                                                                                                                            Trump</a>
-                                                                                                                    </h3>
-                                                                                                                    <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                        <div class="sppb-article-meta">
-                                                                                                                            <span class="sppb-meta-date"
-                                                                                                                                  itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                        </div>
-                                                                                                                        <div class="article-spbookmark">
-                                                                                                                            <form class="sp-bookmark-form"
-                                                                                                                                  name="add-to-bookmark-62">
-                                                                                                                                <a class="btn-spbookmark-action "
-                                                                                                                                   href="javascript:void(0);"
-                                                                                                                                   data-content-id="62">
-                                                                                                                                    <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                </a>
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="cid"
-                                                                                                                                       value="62">
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="curl"
-                                                                                                                                       value="index.html">
-                                                                                                                            </form>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <div class="sppb-col-sm-6 sppb-col-md-4">
-                                                                                                        <div class="intro-items">
-                                                                                                            <div class="  sppb-col-sm-0">
-                                                                                                                <div class="sppb-addon-article "
-                                                                                                                     style="">
-                                                                                                                    <a class="sppb-article-img-wrap"
-                                                                                                                       href="index.php/entertainment/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                                       itemprop="url"><img
-                                                                                                                            class="sppb-img-responsive"
-                                                                                                                            src="images/2019/12/10/entertainment-20_small.jpg"
-                                                                                                                            alt="What sick desperation in your laugh? We have"
-                                                                                                                            itemprop="thumbnailUrl"></a>
-                                                                                                                    <div class="sppb-article-info-wrap">
-                                                                                                                        <p class="sppb-meta-category">
-                                                                                                                            <a href="index.php/entertainment.html"
-                                                                                                                               itemprop="genre">Entertainment</a>
-                                                                                                                        </p>
-                                                                                                                        <h3>
-                                                                                                                            <a href="index.php/entertainment/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                                               itemprop="url">What
-                                                                                                                                sick
-                                                                                                                                desperation
-                                                                                                                                in
-                                                                                                                                your
-                                                                                                                                laugh?
-                                                                                                                                We
-                                                                                                                                have</a>
-                                                                                                                        </h3>
-                                                                                                                        <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                            <div class="sppb-article-meta">
-                                                                                                                                <span class="sppb-meta-date"
-                                                                                                                                      itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                            </div>
-                                                                                                                            <div class="article-spbookmark">
-                                                                                                                                <form class="sp-bookmark-form"
-                                                                                                                                      name="add-to-bookmark-63">
-                                                                                                                                    <a class="btn-spbookmark-action "
-                                                                                                                                       href="javascript:void(0);"
-                                                                                                                                       data-content-id="63">
-                                                                                                                                        <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                    </a>
-                                                                                                                                    <input type="hidden"
-                                                                                                                                           name="cid"
-                                                                                                                                           value="63">
-                                                                                                                                    <input type="hidden"
-                                                                                                                                           name="curl"
-                                                                                                                                           value="index.html">
-                                                                                                                                </form>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div class="  sppb-col-sm-0">
-                                                                                                                <div class="sppb-addon-article "
-                                                                                                                     style="">
-                                                                                                                    <a class="sppb-article-img-wrap"
-                                                                                                                       href="index.php/entertainment/or-angejuice-concentrate-you-can-make-napalm.html"
-                                                                                                                       itemprop="url"><img
-                                                                                                                            class="sppb-img-responsive"
-                                                                                                                            src="images/2019/12/10/entertainment-19_small.jpg"
-                                                                                                                            alt="or angejuice concentrate, you can make napalm?"
-                                                                                                                            itemprop="thumbnailUrl"></a>
-                                                                                                                    <div class="sppb-article-info-wrap">
-                                                                                                                        <p class="sppb-meta-category">
-                                                                                                                            <a href="index.php/entertainment.html"
-                                                                                                                               itemprop="genre">Entertainment</a>
-                                                                                                                        </p>
-                                                                                                                        <h3>
-                                                                                                                            <a href="index.php/entertainment/or-angejuice-concentrate-you-can-make-napalm.html"
-                                                                                                                               itemprop="url">or
-                                                                                                                                angejuice
-                                                                                                                                concentrate,
-                                                                                                                                you
-                                                                                                                                can
-                                                                                                                                make
-                                                                                                                                napalm?</a>
-                                                                                                                        </h3>
-                                                                                                                        <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                            <div class="sppb-article-meta">
-                                                                                                                                <span class="sppb-meta-date"
-                                                                                                                                      itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                            </div>
-                                                                                                                            <div class="article-spbookmark">
-                                                                                                                                <form class="sp-bookmark-form"
-                                                                                                                                      name="add-to-bookmark-64">
-                                                                                                                                    <a class="btn-spbookmark-action "
-                                                                                                                                       href="javascript:void(0);"
-                                                                                                                                       data-content-id="64">
-                                                                                                                                        <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                    </a>
-                                                                                                                                    <input type="hidden"
-                                                                                                                                           name="cid"
-                                                                                                                                           value="64">
-                                                                                                                                    <input type="hidden"
-                                                                                                                                           name="curl"
-                                                                                                                                           value="index.html">
-                                                                                                                                </form>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div class="  sppb-col-sm-0">
-                                                                                                                <div class="sppb-addon-article "
-                                                                                                                     style="">
-                                                                                                                    <a class="sppb-article-img-wrap"
-                                                                                                                       href="index.php/entertainment/of-etiquette-as-i-pass-do-i-give-you-the-ass.html"
-                                                                                                                       itemprop="url"><img
-                                                                                                                            class="sppb-img-responsive"
-                                                                                                                            src="images/2019/12/10/entertainment-18_small.jpg"
-                                                                                                                            alt="Of etiquette. As I pass, do I give you the ass"
-                                                                                                                            itemprop="thumbnailUrl"></a>
-                                                                                                                    <div class="sppb-article-info-wrap">
-                                                                                                                        <p class="sppb-meta-category">
-                                                                                                                            <a href="index.php/entertainment.html"
-                                                                                                                               itemprop="genre">Entertainment</a>
-                                                                                                                        </p>
-                                                                                                                        <h3>
-                                                                                                                            <a href="index.php/entertainment/of-etiquette-as-i-pass-do-i-give-you-the-ass.html"
-                                                                                                                               itemprop="url">Of
-                                                                                                                                etiquette.
-                                                                                                                                As
-                                                                                                                                I
-                                                                                                                                pass,
-                                                                                                                                do
-                                                                                                                                I
-                                                                                                                                give
-                                                                                                                                you
-                                                                                                                                the
-                                                                                                                                ass</a>
-                                                                                                                        </h3>
-                                                                                                                        <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                            <div class="sppb-article-meta">
-                                                                                                                                <span class="sppb-meta-date"
-                                                                                                                                      itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                            </div>
-                                                                                                                            <div class="article-spbookmark">
-                                                                                                                                <form class="sp-bookmark-form"
-                                                                                                                                      name="add-to-bookmark-65">
-                                                                                                                                    <a class="btn-spbookmark-action "
-                                                                                                                                       href="javascript:void(0);"
-                                                                                                                                       data-content-id="65">
-                                                                                                                                        <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                    </a>
-                                                                                                                                    <input type="hidden"
-                                                                                                                                           name="cid"
-                                                                                                                                           value="65">
-                                                                                                                                    <input type="hidden"
-                                                                                                                                           name="curl"
-                                                                                                                                           value="index.html">
-                                                                                                                                </form>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="sppb-row bottom-items">
-                                                                                                    <div class="bottom-item  sppb-col-sm-4">
-                                                                                                        <div class="sppb-addon-article "
-                                                                                                             style=""><a
-                                                                                                                class="sppb-article-img-wrap"
-                                                                                                                href="index.php/entertainment/what-mixed-equal-parts-of-gasoline-and-frozen.html"
-                                                                                                                itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="images/2019/12/10/entertainment-17_small.jpg"
-                                                                                                                alt="What mixed equal parts of gasoline and frozen"
-                                                                                                                itemprop="thumbnailUrl"></a>
-                                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                                <p class="sppb-meta-category">
-                                                                                                                    <a href="index.php/entertainment.html"
-                                                                                                                       itemprop="genre">Entertainment</a>
-                                                                                                                </p>
-                                                                                                                <h3>
-                                                                                                                    <a href="index.php/entertainment/what-mixed-equal-parts-of-gasoline-and-frozen.html"
-                                                                                                                       itemprop="url">What
-                                                                                                                        mixed
-                                                                                                                        equal
-                                                                                                                        parts
-                                                                                                                        of
-                                                                                                                        gasoline
-                                                                                                                        and
-                                                                                                                        frozen</a>
-                                                                                                                </h3>
-                                                                                                                <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                    <div class="sppb-article-meta">
-                                                                                                                        <span class="sppb-meta-date"
-                                                                                                                              itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                    </div>
-                                                                                                                    <div class="article-spbookmark">
-                                                                                                                        <form class="sp-bookmark-form"
-                                                                                                                              name="add-to-bookmark-66">
-                                                                                                                            <a class="btn-spbookmark-action "
-                                                                                                                               href="javascript:void(0);"
-                                                                                                                               data-content-id="66">
-                                                                                                                                <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                            </a>
-                                                                                                                            <input type="hidden"
-                                                                                                                                   name="cid"
-                                                                                                                                   value="66">
-                                                                                                                            <input type="hidden"
-                                                                                                                                   name="curl"
-                                                                                                                                   value="index.html">
-                                                                                                                        </form>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <div class="bottom-item  sppb-col-sm-4">
-                                                                                                        <div class="sppb-addon-article "
-                                                                                                             style=""><a
-                                                                                                                class="sppb-article-img-wrap"
-                                                                                                                href="index.php/entertainment/like-you-re-interested-ok-you-have-a-kind-of.html"
-                                                                                                                itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="images/2019/12/10/entertainment-16_small.jpg"
-                                                                                                                alt="like you're interested? OK. You have a kind of"
-                                                                                                                itemprop="thumbnailUrl"></a>
-                                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                                <p class="sppb-meta-category">
-                                                                                                                    <a href="index.php/entertainment.html"
-                                                                                                                       itemprop="genre">Entertainment</a>
-                                                                                                                </p>
-                                                                                                                <h3>
-                                                                                                                    <a href="index.php/entertainment/like-you-re-interested-ok-you-have-a-kind-of.html"
-                                                                                                                       itemprop="url">like
-                                                                                                                        you're
-                                                                                                                        interested?
-                                                                                                                        OK.
-                                                                                                                        You
-                                                                                                                        have
-                                                                                                                        a
-                                                                                                                        kind
-                                                                                                                        of</a>
-                                                                                                                </h3>
-                                                                                                                <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                    <div class="sppb-article-meta">
-                                                                                                                        <span class="sppb-meta-date"
-                                                                                                                              itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                    </div>
-                                                                                                                    <div class="article-spbookmark">
-                                                                                                                        <form class="sp-bookmark-form"
-                                                                                                                              name="add-to-bookmark-67">
-                                                                                                                            <a class="btn-spbookmark-action "
-                                                                                                                               href="javascript:void(0);"
-                                                                                                                               data-content-id="67">
-                                                                                                                                <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                            </a>
-                                                                                                                            <input type="hidden"
-                                                                                                                                   name="cid"
-                                                                                                                                   value="67">
-                                                                                                                            <input type="hidden"
-                                                                                                                                   name="curl"
-                                                                                                                                   value="index.html">
-                                                                                                                        </form>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <div class="bottom-item  sppb-col-sm-4">
-                                                                                                        <div class="sppb-addon-article "
-                                                                                                             style=""><a
-                                                                                                                class="sppb-article-img-wrap"
-                                                                                                                href="index.php/entertainment/what-1s-single-serving-even-oh-now-i-get-it.html"
-                                                                                                                itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="images/2019/12/10/entertainment-15_small.jpg"
-                                                                                                                alt="What 1s single-serving, even-- Oh, now i get it."
-                                                                                                                itemprop="thumbnailUrl"></a>
-                                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                                <p class="sppb-meta-category">
-                                                                                                                    <a href="index.php/entertainment.html"
-                                                                                                                       itemprop="genre">Entertainment</a>
-                                                                                                                </p>
-                                                                                                                <h3>
-                                                                                                                    <a href="index.php/entertainment/what-1s-single-serving-even-oh-now-i-get-it.html"
-                                                                                                                       itemprop="url">What
-                                                                                                                        1s
-                                                                                                                        single-serving,
-                                                                                                                        even--
-                                                                                                                        Oh,
-                                                                                                                        now
-                                                                                                                        i
-                                                                                                                        get
-                                                                                                                        it.</a>
-                                                                                                                </h3>
-                                                                                                                <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                    <div class="sppb-article-meta">
-                                                                                                                        <span class="sppb-meta-date"
-                                                                                                                              itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                    </div>
-                                                                                                                    <div class="article-spbookmark">
-                                                                                                                        <form class="sp-bookmark-form"
-                                                                                                                              name="add-to-bookmark-68">
-                                                                                                                            <a class="btn-spbookmark-action "
-                                                                                                                               href="javascript:void(0);"
-                                                                                                                               data-content-id="68">
-                                                                                                                                <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                            </a>
-                                                                                                                            <input type="hidden"
-                                                                                                                                   name="cid"
-                                                                                                                                   value="68">
-                                                                                                                            <input type="hidden"
-                                                                                                                                   name="curl"
-                                                                                                                                   value="index.html">
-                                                                                                                        </form>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div id="sppb-tab-1575532278057"
-                                                                                 class="sppb-tab-pane sppb-fade"
-                                                                                 role="tabpanel"
-                                                                                 aria-labelledby="sppb-content-1575532278057">
-                                                                                <div id="sppb-addon-wrapper-1575532191238"
-                                                                                     class="sppb-addon-wrapper">
-                                                                                    <div id="sppb-addon-1575532191238"
-                                                                                         class="clearfix ">
-                                                                                        <div class="sppb-addon sppb-addon-articles-layout layout-robusta robusta-classic ">
-                                                                                            <div class="sppb-addon-content">
-                                                                                                <div class="sppb-row leading-items-row">
-                                                                                                    <div class="sppb-col-sm-6 sppb-col-md-8 leading-item">
-                                                                                                        <div class="  sppb-col-sm-0">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <div class="bg-img-wrapper"
-                                                                                                                     style="background-image: url(images/2019/12/11/politics24.jpg);"></div>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <p class="sppb-meta-category">
-                                                                                                                        <a href="index.php/business-blog.html"
-                                                                                                                           itemprop="genre">Business</a>
-                                                                                                                    </p>
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/business-blog/the-exact-same-briefcase-soap-sorry-i-make.html"
-                                                                                                                           itemprop="url">Sondland
-                                                                                                                            adds
-                                                                                                                            to
-                                                                                                                            testimony
-                                                                                                                            linking
-                                                                                                                            aid
-                                                                                                                            to
-                                                                                                                            Ukraine
-                                                                                                                            probes
-                                                                                                                            sought
-                                                                                                                            by
-                                                                                                                            Trump</a>
-                                                                                                                    </h3>
-                                                                                                                    <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                        <div class="sppb-article-meta">
-                                                                                                                            <span class="sppb-meta-date"
-                                                                                                                                  itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                        </div>
-                                                                                                                        <div class="article-spbookmark">
-                                                                                                                            <form class="sp-bookmark-form"
-                                                                                                                                  name="add-to-bookmark-48">
-                                                                                                                                <a class="btn-spbookmark-action "
-                                                                                                                                   href="javascript:void(0);"
-                                                                                                                                   data-content-id="48">
-                                                                                                                                    <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                </a>
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="cid"
-                                                                                                                                       value="48">
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="curl"
-                                                                                                                                       value="index.html">
-                                                                                                                            </form>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <div class="sppb-col-sm-6 sppb-col-md-4">
-                                                                                                        <div class="intro-items">
-                                                                                                            <div class="  sppb-col-sm-0">
-                                                                                                                <div class="sppb-addon-article "
-                                                                                                                     style="">
-                                                                                                                    <a class="sppb-article-img-wrap"
-                                                                                                                       href="index.php/business-blog/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                                       itemprop="url"><img
-                                                                                                                            class="sppb-img-responsive"
-                                                                                                                            src="images/2019/12/10/business-3_small.jpg"
-                                                                                                                            alt="What sick desperation in your laugh? We have"
-                                                                                                                            itemprop="thumbnailUrl"></a>
-                                                                                                                    <div class="sppb-article-info-wrap">
-                                                                                                                        <p class="sppb-meta-category">
-                                                                                                                            <a href="index.php/business-blog.html"
-                                                                                                                               itemprop="genre">Business</a>
-                                                                                                                        </p>
-                                                                                                                        <h3>
-                                                                                                                            <a href="index.php/business-blog/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                                               itemprop="url">What
-                                                                                                                                sick
-                                                                                                                                desperation
-                                                                                                                                in
-                                                                                                                                your
-                                                                                                                                laugh?
-                                                                                                                                We
-                                                                                                                                have</a>
-                                                                                                                        </h3>
-                                                                                                                        <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                            <div class="sppb-article-meta">
-                                                                                                                                <span class="sppb-meta-date"
-                                                                                                                                      itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                            </div>
-                                                                                                                            <div class="article-spbookmark">
-                                                                                                                                <form class="sp-bookmark-form"
-                                                                                                                                      name="add-to-bookmark-47">
-                                                                                                                                    <a class="btn-spbookmark-action "
-                                                                                                                                       href="javascript:void(0);"
-                                                                                                                                       data-content-id="47">
-                                                                                                                                        <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                    </a>
-                                                                                                                                    <input type="hidden"
-                                                                                                                                           name="cid"
-                                                                                                                                           value="47">
-                                                                                                                                    <input type="hidden"
-                                                                                                                                           name="curl"
-                                                                                                                                           value="index.html">
-                                                                                                                                </form>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div class="  sppb-col-sm-0">
-                                                                                                                <div class="sppb-addon-article "
-                                                                                                                     style="">
-                                                                                                                    <a class="sppb-article-img-wrap"
-                                                                                                                       href="index.php/business-blog/or-angejuice-concentrate-you-can-make-napalm.html"
-                                                                                                                       itemprop="url"><img
-                                                                                                                            class="sppb-img-responsive"
-                                                                                                                            src="images/2019/12/10/business-4_small.jpg"
-                                                                                                                            alt="or angejuice concentrate, you can make napalm?"
-                                                                                                                            itemprop="thumbnailUrl"></a>
-                                                                                                                    <div class="sppb-article-info-wrap">
-                                                                                                                        <p class="sppb-meta-category">
-                                                                                                                            <a href="index.php/business-blog.html"
-                                                                                                                               itemprop="genre">Business</a>
-                                                                                                                        </p>
-                                                                                                                        <h3>
-                                                                                                                            <a href="index.php/business-blog/or-angejuice-concentrate-you-can-make-napalm.html"
-                                                                                                                               itemprop="url">or
-                                                                                                                                angejuice
-                                                                                                                                concentrate,
-                                                                                                                                you
-                                                                                                                                can
-                                                                                                                                make
-                                                                                                                                napalm?</a>
-                                                                                                                        </h3>
-                                                                                                                        <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                            <div class="sppb-article-meta">
-                                                                                                                                <span class="sppb-meta-date"
-                                                                                                                                      itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                            </div>
-                                                                                                                            <div class="article-spbookmark">
-                                                                                                                                <form class="sp-bookmark-form"
-                                                                                                                                      name="add-to-bookmark-46">
-                                                                                                                                    <a class="btn-spbookmark-action "
-                                                                                                                                       href="javascript:void(0);"
-                                                                                                                                       data-content-id="46">
-                                                                                                                                        <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                    </a>
-                                                                                                                                    <input type="hidden"
-                                                                                                                                           name="cid"
-                                                                                                                                           value="46">
-                                                                                                                                    <input type="hidden"
-                                                                                                                                           name="curl"
-                                                                                                                                           value="index.html">
-                                                                                                                                </form>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div class="  sppb-col-sm-0">
-                                                                                                                <div class="sppb-addon-article "
-                                                                                                                     style="">
-                                                                                                                    <a class="sppb-article-img-wrap"
-                                                                                                                       href="index.php/business-blog/of-etiquette-as-i-pass-do-i-give-you-the-ass.html"
-                                                                                                                       itemprop="url"><img
-                                                                                                                            class="sppb-img-responsive"
-                                                                                                                            src="images/2019/12/10/business-5_small.jpg"
-                                                                                                                            alt="Of etiquette. As I pass, do I give you the ass"
-                                                                                                                            itemprop="thumbnailUrl"></a>
-                                                                                                                    <div class="sppb-article-info-wrap">
-                                                                                                                        <p class="sppb-meta-category">
-                                                                                                                            <a href="index.php/business-blog.html"
-                                                                                                                               itemprop="genre">Business</a>
-                                                                                                                        </p>
-                                                                                                                        <h3>
-                                                                                                                            <a href="index.php/business-blog/of-etiquette-as-i-pass-do-i-give-you-the-ass.html"
-                                                                                                                               itemprop="url">Of
-                                                                                                                                etiquette.
-                                                                                                                                As
-                                                                                                                                I
-                                                                                                                                pass,
-                                                                                                                                do
-                                                                                                                                I
-                                                                                                                                give
-                                                                                                                                you
-                                                                                                                                the
-                                                                                                                                ass</a>
-                                                                                                                        </h3>
-                                                                                                                        <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                            <div class="sppb-article-meta">
-                                                                                                                                <span class="sppb-meta-date"
-                                                                                                                                      itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                            </div>
-                                                                                                                            <div class="article-spbookmark">
-                                                                                                                                <form class="sp-bookmark-form"
-                                                                                                                                      name="add-to-bookmark-45">
-                                                                                                                                    <a class="btn-spbookmark-action "
-                                                                                                                                       href="javascript:void(0);"
-                                                                                                                                       data-content-id="45">
-                                                                                                                                        <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                    </a>
-                                                                                                                                    <input type="hidden"
-                                                                                                                                           name="cid"
-                                                                                                                                           value="45">
-                                                                                                                                    <input type="hidden"
-                                                                                                                                           name="curl"
-                                                                                                                                           value="index.html">
-                                                                                                                                </form>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="sppb-row bottom-items">
-                                                                                                    <div class="bottom-item  sppb-col-sm-4">
-                                                                                                        <div class="sppb-addon-article "
-                                                                                                             style="">
-                                                                                                            <div class="video-caption-wrapper d-flex align-items-center"
-                                                                                                                 style="background-image: url(images/2019/12/10/business-6.jpg);">
-                                                                                                                <a class="full-link"
-                                                                                                                   href="index.php/business-blog/what-mixed-equal-parts-of-gasoline-and-frozen.html"
-                                                                                                                   itemprop="url"></a><i
-                                                                                                                    class="fa fa-play-circle"></i>
-                                                                                                                <div class="video-caption-info">
-                                                                                                                    <span class="video-caption">What mixed equal parts </span><span
-                                                                                                                        class="video-duration">01 : 36</span>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                                <p class="sppb-meta-category">
-                                                                                                                    <a href="index.php/business-blog.html"
-                                                                                                                       itemprop="genre">Business</a><span
-                                                                                                                        class="video-symbol fa fa-play-circle"></span><span
-                                                                                                                        class="video-duration">01 : 36</span>
-                                                                                                                </p>
-                                                                                                                <h3>
-                                                                                                                    <a href="index.php/business-blog/what-mixed-equal-parts-of-gasoline-and-frozen.html"
-                                                                                                                       itemprop="url">What
-                                                                                                                        mixed
-                                                                                                                        equal
-                                                                                                                        parts
-                                                                                                                        of
-                                                                                                                        gasoline
-                                                                                                                        and
-                                                                                                                        frozen</a>
-                                                                                                                </h3>
-                                                                                                                <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                    <div class="sppb-article-meta">
-                                                                                                                        <span class="sppb-meta-date"
-                                                                                                                              itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                    </div>
-                                                                                                                    <div class="article-spbookmark">
-                                                                                                                        <form class="sp-bookmark-form"
-                                                                                                                              name="add-to-bookmark-44">
-                                                                                                                            <a class="btn-spbookmark-action "
-                                                                                                                               href="javascript:void(0);"
-                                                                                                                               data-content-id="44">
-                                                                                                                                <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                            </a>
-                                                                                                                            <input type="hidden"
-                                                                                                                                   name="cid"
-                                                                                                                                   value="44">
-                                                                                                                            <input type="hidden"
-                                                                                                                                   name="curl"
-                                                                                                                                   value="index.html">
-                                                                                                                        </form>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <div class="bottom-item  sppb-col-sm-4">
-                                                                                                        <div class="sppb-addon-article "
-                                                                                                             style=""><a
-                                                                                                                class="sppb-article-img-wrap"
-                                                                                                                href="index.php/business-blog/like-you-re-interested-ok-you-have-a-kind-of.html"
-                                                                                                                itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="images/2019/12/10/business-7_small.jpg"
-                                                                                                                alt="like you're interested? OK. You have a kind of"
-                                                                                                                itemprop="thumbnailUrl"></a>
-                                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                                <p class="sppb-meta-category">
-                                                                                                                    <a href="index.php/business-blog.html"
-                                                                                                                       itemprop="genre">Business</a>
-                                                                                                                </p>
-                                                                                                                <h3>
-                                                                                                                    <a href="index.php/business-blog/like-you-re-interested-ok-you-have-a-kind-of.html"
-                                                                                                                       itemprop="url">like
-                                                                                                                        you're
-                                                                                                                        interested?
-                                                                                                                        OK.
-                                                                                                                        You
-                                                                                                                        have
-                                                                                                                        a
-                                                                                                                        kind
-                                                                                                                        of</a>
-                                                                                                                </h3>
-                                                                                                                <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                    <div class="sppb-article-meta">
-                                                                                                                        <span class="sppb-meta-date"
-                                                                                                                              itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                    </div>
-                                                                                                                    <div class="article-spbookmark">
-                                                                                                                        <form class="sp-bookmark-form"
-                                                                                                                              name="add-to-bookmark-43">
-                                                                                                                            <a class="btn-spbookmark-action "
-                                                                                                                               href="javascript:void(0);"
-                                                                                                                               data-content-id="43">
-                                                                                                                                <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                            </a>
-                                                                                                                            <input type="hidden"
-                                                                                                                                   name="cid"
-                                                                                                                                   value="43">
-                                                                                                                            <input type="hidden"
-                                                                                                                                   name="curl"
-                                                                                                                                   value="index.html">
-                                                                                                                        </form>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <div class="bottom-item  sppb-col-sm-4">
-                                                                                                        <div class="sppb-addon-article "
-                                                                                                             style=""><a
-                                                                                                                class="sppb-article-img-wrap"
-                                                                                                                href="index.php/business-blog/what-1s-single-serving-even-oh-now-i-get-it.html"
-                                                                                                                itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="images/2019/12/10/business-8_small.jpg"
-                                                                                                                alt="What 1s single-serving, even-- Oh, now i get it."
-                                                                                                                itemprop="thumbnailUrl"></a>
-                                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                                <p class="sppb-meta-category">
-                                                                                                                    <a href="index.php/business-blog.html"
-                                                                                                                       itemprop="genre">Business</a>
-                                                                                                                </p>
-                                                                                                                <h3>
-                                                                                                                    <a href="index.php/business-blog/what-1s-single-serving-even-oh-now-i-get-it.html"
-                                                                                                                       itemprop="url">What
-                                                                                                                        1s
-                                                                                                                        single-serving,
-                                                                                                                        even--
-                                                                                                                        Oh,
-                                                                                                                        now
-                                                                                                                        i
-                                                                                                                        get
-                                                                                                                        it.</a>
-                                                                                                                </h3>
-                                                                                                                <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                    <div class="sppb-article-meta">
-                                                                                                                        <span class="sppb-meta-date"
-                                                                                                                              itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                    </div>
-                                                                                                                    <div class="article-spbookmark">
-                                                                                                                        <form class="sp-bookmark-form"
-                                                                                                                              name="add-to-bookmark-42">
-                                                                                                                            <a class="btn-spbookmark-action "
-                                                                                                                               href="javascript:void(0);"
-                                                                                                                               data-content-id="42">
-                                                                                                                                <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                            </a>
-                                                                                                                            <input type="hidden"
-                                                                                                                                   name="cid"
-                                                                                                                                   value="42">
-                                                                                                                            <input type="hidden"
-                                                                                                                                   name="curl"
-                                                                                                                                   value="index.html">
-                                                                                                                        </form>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div id="sppb-tab-1575532278058"
-                                                                                 class="sppb-tab-pane sppb-fade"
-                                                                                 role="tabpanel"
-                                                                                 aria-labelledby="sppb-content-1575532278058">
-                                                                                <div id="sppb-addon-wrapper-1575898734991"
-                                                                                     class="sppb-addon-wrapper">
-                                                                                    <div id="sppb-addon-1575898734991"
-                                                                                         class="clearfix ">
-                                                                                        <div class="sppb-addon sppb-addon-articles-layout layout-robusta robusta-classic ">
-                                                                                            <div class="sppb-addon-content">
-                                                                                                <div class="sppb-row leading-items-row">
-                                                                                                    <div class="sppb-col-sm-6 sppb-col-md-8 leading-item">
-                                                                                                        <div class="  sppb-col-sm-0">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <div class="bg-img-wrapper"
-                                                                                                                     style="background-image: url(images/2019/12/11/politics31.jpg);"></div>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <p class="sppb-meta-category">
-                                                                                                                        <a href="index.php/categories/newsberg/politics.html"
-                                                                                                                           itemprop="genre">Politics</a>
-                                                                                                                    </p>
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make.html"
-                                                                                                                           itemprop="url">Sondland
-                                                                                                                            adds
-                                                                                                                            tos
-                                                                                                                            testimony
-                                                                                                                            linking
-                                                                                                                            aid
-                                                                                                                            to
-                                                                                                                            Ukraine
-                                                                                                                            probes
-                                                                                                                            sought
-                                                                                                                            by
-                                                                                                                            Trump</a>
-                                                                                                                    </h3>
-                                                                                                                    <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                        <div class="sppb-article-meta">
-                                                                                                                            <span class="sppb-meta-date"
-                                                                                                                                  itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                        </div>
-                                                                                                                        <div class="article-spbookmark">
-                                                                                                                            <form class="sp-bookmark-form"
-                                                                                                                                  name="add-to-bookmark-133">
-                                                                                                                                <a class="btn-spbookmark-action "
-                                                                                                                                   href="javascript:void(0);"
-                                                                                                                                   data-content-id="133">
-                                                                                                                                    <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                </a>
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="cid"
-                                                                                                                                       value="133">
-                                                                                                                                <input type="hidden"
-                                                                                                                                       name="curl"
-                                                                                                                                       value="index.html">
-                                                                                                                            </form>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <div class="sppb-col-sm-6 sppb-col-md-4">
-                                                                                                        <div class="intro-items">
-                                                                                                            <div class="  sppb-col-sm-0">
-                                                                                                                <div class="sppb-addon-article "
-                                                                                                                     style="">
-                                                                                                                    <a class="sppb-article-img-wrap"
-                                                                                                                       href="index.php/categories/newsberg/politics/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                                       itemprop="url"><img
-                                                                                                                            class="sppb-img-responsive"
-                                                                                                                            src="images/2019/12/11/politics5_small.jpg"
-                                                                                                                            alt="What sick desperation in your laugh? We have"
-                                                                                                                            itemprop="thumbnailUrl"></a>
-                                                                                                                    <div class="sppb-article-info-wrap">
-                                                                                                                        <p class="sppb-meta-category">
-                                                                                                                            <a href="index.php/categories/newsberg/politics.html"
-                                                                                                                               itemprop="genre">Politics</a>
-                                                                                                                        </p>
-                                                                                                                        <h3>
-                                                                                                                            <a href="index.php/categories/newsberg/politics/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                                               itemprop="url">What
-                                                                                                                                sick
-                                                                                                                                desperation
-                                                                                                                                in
-                                                                                                                                your
-                                                                                                                                laugh?
-                                                                                                                                We
-                                                                                                                                have</a>
-                                                                                                                        </h3>
-                                                                                                                        <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                            <div class="sppb-article-meta">
-                                                                                                                                <span class="sppb-meta-date"
-                                                                                                                                      itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                            </div>
-                                                                                                                            <div class="article-spbookmark">
-                                                                                                                                <form class="sp-bookmark-form"
-                                                                                                                                      name="add-to-bookmark-134">
-                                                                                                                                    <a class="btn-spbookmark-action "
-                                                                                                                                       href="javascript:void(0);"
-                                                                                                                                       data-content-id="134">
-                                                                                                                                        <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                    </a>
-                                                                                                                                    <input type="hidden"
-                                                                                                                                           name="cid"
-                                                                                                                                           value="134">
-                                                                                                                                    <input type="hidden"
-                                                                                                                                           name="curl"
-                                                                                                                                           value="index.html">
-                                                                                                                                </form>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div class="  sppb-col-sm-0">
-                                                                                                                <div class="sppb-addon-article "
-                                                                                                                     style="">
-                                                                                                                    <a class="sppb-article-img-wrap"
-                                                                                                                       href="index.php/categories/newsberg/politics/or-angejuice-concentrate-you-can-make-napalm.html"
-                                                                                                                       itemprop="url"><img
-                                                                                                                            class="sppb-img-responsive"
-                                                                                                                            src="images/2019/12/10/politics-172_small.jpg"
-                                                                                                                            alt="or angejuice concentrate, you can make napalm?"
-                                                                                                                            itemprop="thumbnailUrl"></a>
-                                                                                                                    <div class="sppb-article-info-wrap">
-                                                                                                                        <p class="sppb-meta-category">
-                                                                                                                            <a href="index.php/categories/newsberg/politics.html"
-                                                                                                                               itemprop="genre">Politics</a>
-                                                                                                                        </p>
-                                                                                                                        <h3>
-                                                                                                                            <a href="index.php/categories/newsberg/politics/or-angejuice-concentrate-you-can-make-napalm.html"
-                                                                                                                               itemprop="url">or
-                                                                                                                                angejuice
-                                                                                                                                concentrate,
-                                                                                                                                you
-                                                                                                                                can
-                                                                                                                                make
-                                                                                                                                napalm?</a>
-                                                                                                                        </h3>
-                                                                                                                        <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                            <div class="sppb-article-meta">
-                                                                                                                                <span class="sppb-meta-date"
-                                                                                                                                      itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                            </div>
-                                                                                                                            <div class="article-spbookmark">
-                                                                                                                                <form class="sp-bookmark-form"
-                                                                                                                                      name="add-to-bookmark-135">
-                                                                                                                                    <a class="btn-spbookmark-action "
-                                                                                                                                       href="javascript:void(0);"
-                                                                                                                                       data-content-id="135">
-                                                                                                                                        <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                    </a>
-                                                                                                                                    <input type="hidden"
-                                                                                                                                           name="cid"
-                                                                                                                                           value="135">
-                                                                                                                                    <input type="hidden"
-                                                                                                                                           name="curl"
-                                                                                                                                           value="index.html">
-                                                                                                                                </form>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div class="  sppb-col-sm-0">
-                                                                                                                <div class="sppb-addon-article "
-                                                                                                                     style="">
-                                                                                                                    <a class="sppb-article-img-wrap"
-                                                                                                                       href="index.php/categories/newsberg/politics/of-etiquette-as-i-pass-do-i-give-you-the-ass.html"
-                                                                                                                       itemprop="url"><img
-                                                                                                                            class="sppb-img-responsive"
-                                                                                                                            src="images/2019/12/11/politics1_small.jpg"
-                                                                                                                            alt="Of etiquette. As I pass, do I give you the ass"
-                                                                                                                            itemprop="thumbnailUrl"></a>
-                                                                                                                    <div class="sppb-article-info-wrap">
-                                                                                                                        <p class="sppb-meta-category">
-                                                                                                                            <a href="index.php/categories/newsberg/politics.html"
-                                                                                                                               itemprop="genre">Politics</a>
-                                                                                                                        </p>
-                                                                                                                        <h3>
-                                                                                                                            <a href="index.php/categories/newsberg/politics/of-etiquette-as-i-pass-do-i-give-you-the-ass.html"
-                                                                                                                               itemprop="url">Of
-                                                                                                                                etiquette.
-                                                                                                                                As
-                                                                                                                                I
-                                                                                                                                pass,
-                                                                                                                                do
-                                                                                                                                I
-                                                                                                                                give
-                                                                                                                                you
-                                                                                                                                the
-                                                                                                                                ass</a>
-                                                                                                                        </h3>
-                                                                                                                        <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                            <div class="sppb-article-meta">
-                                                                                                                                <span class="sppb-meta-date"
-                                                                                                                                      itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                            </div>
-                                                                                                                            <div class="article-spbookmark">
-                                                                                                                                <form class="sp-bookmark-form"
-                                                                                                                                      name="add-to-bookmark-136">
-                                                                                                                                    <a class="btn-spbookmark-action "
-                                                                                                                                       href="javascript:void(0);"
-                                                                                                                                       data-content-id="136">
-                                                                                                                                        <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                                    </a>
-                                                                                                                                    <input type="hidden"
-                                                                                                                                           name="cid"
-                                                                                                                                           value="136">
-                                                                                                                                    <input type="hidden"
-                                                                                                                                           name="curl"
-                                                                                                                                           value="index.html">
-                                                                                                                                </form>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="sppb-row bottom-items">
-                                                                                                    <div class="bottom-item  sppb-col-sm-4">
-                                                                                                        <div class="sppb-addon-article "
-                                                                                                             style=""><a
-                                                                                                                class="sppb-article-img-wrap"
-                                                                                                                href="index.php/categories/newsberg/politics/what-mixed-equal-parts-of-gasoline-and-frozen.html"
-                                                                                                                itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="images/2019/12/11/politics4_small.jpg"
-                                                                                                                alt="What mixed equal parts of gasoline and frozen"
-                                                                                                                itemprop="thumbnailUrl"></a>
-                                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                                <p class="sppb-meta-category">
-                                                                                                                    <a href="index.php/categories/newsberg/politics.html"
-                                                                                                                       itemprop="genre">Politics</a>
-                                                                                                                </p>
-                                                                                                                <h3>
-                                                                                                                    <a href="index.php/categories/newsberg/politics/what-mixed-equal-parts-of-gasoline-and-frozen.html"
-                                                                                                                       itemprop="url">What
-                                                                                                                        mixed
-                                                                                                                        equal
-                                                                                                                        parts
-                                                                                                                        of
-                                                                                                                        gasoline
-                                                                                                                        and
-                                                                                                                        frozen</a>
-                                                                                                                </h3>
-                                                                                                                <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                    <div class="sppb-article-meta">
-                                                                                                                        <span class="sppb-meta-date"
-                                                                                                                              itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                    </div>
-                                                                                                                    <div class="article-spbookmark">
-                                                                                                                        <form class="sp-bookmark-form"
-                                                                                                                              name="add-to-bookmark-137">
-                                                                                                                            <a class="btn-spbookmark-action "
-                                                                                                                               href="javascript:void(0);"
-                                                                                                                               data-content-id="137">
-                                                                                                                                <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                            </a>
-                                                                                                                            <input type="hidden"
-                                                                                                                                   name="cid"
-                                                                                                                                   value="137">
-                                                                                                                            <input type="hidden"
-                                                                                                                                   name="curl"
-                                                                                                                                   value="index.html">
-                                                                                                                        </form>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <div class="bottom-item  sppb-col-sm-4">
-                                                                                                        <div class="sppb-addon-article "
-                                                                                                             style=""><a
-                                                                                                                class="sppb-article-img-wrap"
-                                                                                                                href="index.php/categories/newsberg/politics/like-you-re-interested-ok-you-have-a-kind-of.html"
-                                                                                                                itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="images/2019/12/10/politics-15_small.jpg"
-                                                                                                                alt="like you're interested? OK. You have a kind of"
-                                                                                                                itemprop="thumbnailUrl"></a>
-                                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                                <p class="sppb-meta-category">
-                                                                                                                    <a href="index.php/categories/newsberg/politics.html"
-                                                                                                                       itemprop="genre">Politics</a>
-                                                                                                                </p>
-                                                                                                                <h3>
-                                                                                                                    <a href="index.php/categories/newsberg/politics/like-you-re-interested-ok-you-have-a-kind-of.html"
-                                                                                                                       itemprop="url">like
-                                                                                                                        you're
-                                                                                                                        interested?
-                                                                                                                        OK.
-                                                                                                                        You
-                                                                                                                        have
-                                                                                                                        a
-                                                                                                                        kind
-                                                                                                                        of</a>
-                                                                                                                </h3>
-                                                                                                                <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                    <div class="sppb-article-meta">
-                                                                                                                        <span class="sppb-meta-date"
-                                                                                                                              itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                    </div>
-                                                                                                                    <div class="article-spbookmark">
-                                                                                                                        <form class="sp-bookmark-form"
-                                                                                                                              name="add-to-bookmark-138">
-                                                                                                                            <a class="btn-spbookmark-action "
-                                                                                                                               href="javascript:void(0);"
-                                                                                                                               data-content-id="138">
-                                                                                                                                <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                            </a>
-                                                                                                                            <input type="hidden"
-                                                                                                                                   name="cid"
-                                                                                                                                   value="138">
-                                                                                                                            <input type="hidden"
-                                                                                                                                   name="curl"
-                                                                                                                                   value="index.html">
-                                                                                                                        </form>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <div class="bottom-item  sppb-col-sm-4">
-                                                                                                        <div class="sppb-addon-article "
-                                                                                                             style=""><a
-                                                                                                                class="sppb-article-img-wrap"
-                                                                                                                href="index.php/categories/newsberg/politics/what-1s-single-serving-even-oh-now-i-get-it.html"
-                                                                                                                itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="images/2019/12/10/politics-131_small.jpg"
-                                                                                                                alt="What 1s single-serving, even-- Oh, now i get it."
-                                                                                                                itemprop="thumbnailUrl"></a>
-                                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                                <p class="sppb-meta-category">
-                                                                                                                    <a href="index.php/categories/newsberg/politics.html"
-                                                                                                                       itemprop="genre">Politics</a>
-                                                                                                                </p>
-                                                                                                                <h3>
-                                                                                                                    <a href="index.php/categories/newsberg/politics/what-1s-single-serving-even-oh-now-i-get-it.html"
-                                                                                                                       itemprop="url">What
-                                                                                                                        1s
-                                                                                                                        single-serving,
-                                                                                                                        even--
-                                                                                                                        Oh,
-                                                                                                                        now
-                                                                                                                        i
-                                                                                                                        get
-                                                                                                                        it.</a>
-                                                                                                                </h3>
-                                                                                                                <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                    <div class="sppb-article-meta">
-                                                                                                                        <span class="sppb-meta-date"
-                                                                                                                              itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                    </div>
-                                                                                                                    <div class="article-spbookmark">
-                                                                                                                        <form class="sp-bookmark-form"
-                                                                                                                              name="add-to-bookmark-139">
-                                                                                                                            <a class="btn-spbookmark-action "
-                                                                                                                               href="javascript:void(0);"
-                                                                                                                               data-content-id="139">
-                                                                                                                                <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                            </a>
-                                                                                                                            <input type="hidden"
-                                                                                                                                   name="cid"
-                                                                                                                                   value="139">
-                                                                                                                            <input type="hidden"
-                                                                                                                                   name="curl"
-                                                                                                                                   value="index.html">
-                                                                                                                        </form>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="sppb-col-md-3" id="column-wrap-id-1574146524915">
-                                                <div id="column-id-1574146524915" class="sppb-column">
-                                                    <div class="sppb-column-addons">
-                                                        <div id="section-id-1574849226283"
-                                                             class="sppb-section newsberg-card">
-                                                            <div class="sppb-container-inner">
-                                                                <div class="sppb-row">
-                                                                    <div class="sppb-col-md-12"
-                                                                         id="column-wrap-id-1574849226297">
-                                                                        <div id="column-id-1574849226297"
-                                                                             class="sppb-column">
-                                                                            <div class="sppb-column-addons">
-                                                                                <div id="sppb-addon-wrapper-1574849226298"
-                                                                                     class="sppb-addon-wrapper">
-                                                                                    <div id="sppb-addon-1574849226298"
-                                                                                         class="clearfix ">
-                                                                                        <div class="sppb-addon sppb-addon-header sppb-text-left">
-                                                                                            <h2 class="sppb-addon-title">
-                                                                                                Must Reads</h2></div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div id="sppb-addon-wrapper-1574849226299"
-                                                                                     class="sppb-addon-wrapper">
-                                                                                    <div id="sppb-addon-1574849226299"
-                                                                                         class="clearfix ">
-                                                                                        <div class="sppb-addon sppb-addon-articles-layout layout-casipea  single-column">
-                                                                                            <div class="sppb-addon-content">
-                                                                                                <div class="sppb-row">
-                                                                                                    <div class="all-items-wrap has-scrollbar"
-                                                                                                         has-scrollbar>
-                                                                                                        <div class="item  sppb-col-sm-6 sppb-col-md-4">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <span class="article-count">1</span><a
-                                                                                                                    class="sppb-article-img-wrap"
-                                                                                                                    href="index.php/sports/what-for-a-living-why-so-you-can-pretend.html"
-                                                                                                                    itemprop="url"><img
-                                                                                                                    class="sppb-img-responsive"
-                                                                                                                    src="images/2019/12/10/sport-12_small.jpg"
-                                                                                                                    alt="What for a living? Why? So you can pretend"
-                                                                                                                    itemprop="thumbnailUrl"></a>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/sports/what-for-a-living-why-so-you-can-pretend.html"
-                                                                                                                           itemprop="url">What
-                                                                                                                            for
-                                                                                                                            a
-                                                                                                                            living?
-                                                                                                                            Why?
-                                                                                                                            So
-                                                                                                                            you
-                                                                                                                            can
-                                                                                                                            pretend</a>
-                                                                                                                    </h3>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="item  sppb-col-sm-6 sppb-col-md-4">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <span class="article-count">2</span><a
-                                                                                                                    class="sppb-article-img-wrap"
-                                                                                                                    href="index.php/categories/newsberg/technology/how-i-met-tyler-durden-did-you-know-if-you.html"
-                                                                                                                    itemprop="url"><img
-                                                                                                                    class="sppb-img-responsive"
-                                                                                                                    src="images/2019/12/10/tech-101_small.jpg"
-                                                                                                                    alt="how I met... "
-                                                                                                                    Tyler
-                                                                                                                    Durden."
-                                                                                                                Did you
-                                                                                                                know, if
-                                                                                                                you"
-                                                                                                                itemprop="thumbnailUrl"></a>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/categories/newsberg/technology/how-i-met-tyler-durden-did-you-know-if-you.html"
-                                                                                                                           itemprop="url">how
-                                                                                                                            I
-                                                                                                                            met...
-                                                                                                                            "Tyler
-                                                                                                                            Durden."
-                                                                                                                            Did
-                                                                                                                            you
-                                                                                                                            know,
-                                                                                                                            if
-                                                                                                                            you</a>
-                                                                                                                    </h3>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="item  sppb-col-sm-6 sppb-col-md-4">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <span class="article-count">3</span><a
-                                                                                                                    class="sppb-article-img-wrap"
-                                                                                                                    href="index.php/sports/inspector-general-report-rebukes-comey.html"
-                                                                                                                    itemprop="url"><img
-                                                                                                                    class="sppb-img-responsive"
-                                                                                                                    src="images/2019/12/10/sport-3_small.jpg"
-                                                                                                                    alt="Inspector general report rebukes Comey"
-                                                                                                                    itemprop="thumbnailUrl"></a>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/sports/inspector-general-report-rebukes-comey.html"
-                                                                                                                           itemprop="url">Inspector
-                                                                                                                            general
-                                                                                                                            report
-                                                                                                                            rebukes
-                                                                                                                            Comey</a>
-                                                                                                                    </h3>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="item  sppb-col-sm-6 sppb-col-md-4">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <span class="article-count">4</span><a
-                                                                                                                    class="sppb-article-img-wrap"
-                                                                                                                    href="index.php/entertainment/i-ve-ever-met-see-obviously-everything-on.html"
-                                                                                                                    itemprop="url"><img
-                                                                                                                    class="sppb-img-responsive"
-                                                                                                                    src="images/2019/12/10/entertainment-6_small.jpg"
-                                                                                                                    alt="I've ever met. See, obviously, everything on"
-                                                                                                                    itemprop="thumbnailUrl"></a>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/entertainment/i-ve-ever-met-see-obviously-everything-on.html"
-                                                                                                                           itemprop="url">I've
-                                                                                                                            ever
-                                                                                                                            met.
-                                                                                                                            See,
-                                                                                                                            obviously,
-                                                                                                                            everything
-                                                                                                                            on</a>
-                                                                                                                    </h3>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="item  sppb-col-sm-6 sppb-col-md-4">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <span class="article-count">5</span><a
-                                                                                                                    class="sppb-article-img-wrap"
-                                                                                                                    href="index.php/categories/newsberg/technology/is-that-true-that-s-right-one-can-make-all.html"
-                                                                                                                    itemprop="url"><img
-                                                                                                                    class="sppb-img-responsive"
-                                                                                                                    src="images/2019/12/10/tech-171_small.jpg"
-                                                                                                                    alt="Is that true? That's right. One can make all"
-                                                                                                                    itemprop="thumbnailUrl"></a>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/categories/newsberg/technology/is-that-true-that-s-right-one-can-make-all.html"
-                                                                                                                           itemprop="url">Is
-                                                                                                                            that
-                                                                                                                            true?
-                                                                                                                            That's
-                                                                                                                            right.
-                                                                                                                            One
-                                                                                                                            can
-                                                                                                                            make
-                                                                                                                            all</a>
-                                                                                                                    </h3>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="item  sppb-col-sm-6 sppb-col-md-4">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <span class="article-count">6</span><a
-                                                                                                                    class="sppb-article-img-wrap"
-                                                                                                                    href="index.php/business-blog/what-do-you-do-what-do-you-mean-what.html"
-                                                                                                                    itemprop="url"><img
-                                                                                                                    class="sppb-img-responsive"
-                                                                                                                    src="images/2019/12/10/business-16_small.jpg"
-                                                                                                                    alt="What do you do? What do you mean what?"
-                                                                                                                    itemprop="thumbnailUrl"></a>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/business-blog/what-do-you-do-what-do-you-mean-what.html"
-                                                                                                                           itemprop="url">What
-                                                                                                                            do
-                                                                                                                            you
-                                                                                                                            do?
-                                                                                                                            What
-                                                                                                                            do
-                                                                                                                            you
-                                                                                                                            mean
-                                                                                                                            what?</a>
-                                                                                                                    </h3>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="item  sppb-col-sm-6 sppb-col-md-4">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <span class="article-count">7</span><a
-                                                                                                                    class="sppb-article-img-wrap"
-                                                                                                                    href="index.php/business-blog/it-s-very-clever-thank-you-how-s-that-working.html"
-                                                                                                                    itemprop="url"><img
-                                                                                                                    class="sppb-img-responsive"
-                                                                                                                    src="images/2019/12/10/business-17_small.jpg"
-                                                                                                                    alt="It's very clever. Thank you. How's that working"
-                                                                                                                    itemprop="thumbnailUrl"></a>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/business-blog/it-s-very-clever-thank-you-how-s-that-working.html"
-                                                                                                                           itemprop="url">It's
-                                                                                                                            very
-                                                                                                                            clever.
-                                                                                                                            Thank
-                                                                                                                            you.
-                                                                                                                            How's
-                                                                                                                            that
-                                                                                                                            working</a>
-                                                                                                                    </h3>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="item  sppb-col-sm-6 sppb-col-md-4">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <span class="article-count">8</span><a
-                                                                                                                    class="sppb-article-img-wrap"
-                                                                                                                    href="index.php/business-blog/for-you-what-being-clever-great-keep-it-up.html"
-                                                                                                                    itemprop="url"><img
-                                                                                                                    class="sppb-img-responsive"
-                                                                                                                    src="images/2019/12/10/business-13_small.jpg"
-                                                                                                                    alt="For you? What? Being clever. Great. Keep it up."
-                                                                                                                    itemprop="thumbnailUrl"></a>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/business-blog/for-you-what-being-clever-great-keep-it-up.html"
-                                                                                                                           itemprop="url">For
-                                                                                                                            you?
-                                                                                                                            What?
-                                                                                                                            Being
-                                                                                                                            clever.
-                                                                                                                            Great.
-                                                                                                                            Keep
-                                                                                                                            it
-                                                                                                                            up.</a>
-                                                                                                                    </h3>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="item  sppb-col-sm-6 sppb-col-md-4">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <span class="article-count">9</span><a
-                                                                                                                    class="sppb-article-img-wrap"
-                                                                                                                    href="index.php/sports/is-that-true-that-s-right-one-can-make-all.html"
-                                                                                                                    itemprop="url"><img
-                                                                                                                    class="sppb-img-responsive"
-                                                                                                                    src="images/2019/12/10/sport-8_small.jpg"
-                                                                                                                    alt="Is that true? That's right. One can make all"
-                                                                                                                    itemprop="thumbnailUrl"></a>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/sports/is-that-true-that-s-right-one-can-make-all.html"
-                                                                                                                           itemprop="url">Is
-                                                                                                                            that
-                                                                                                                            true?
-                                                                                                                            That's
-                                                                                                                            right.
-                                                                                                                            One
-                                                                                                                            can
-                                                                                                                            make
-                                                                                                                            all</a>
-                                                                                                                    </h3>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="item  sppb-col-sm-6 sppb-col-md-4">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <span class="article-count">10</span><a
-                                                                                                                    class="sppb-article-img-wrap"
-                                                                                                                    href="index.php/business-blog/is-that-true-that-s-right-one-can-make-all.html"
-                                                                                                                    itemprop="url"><img
-                                                                                                                    class="sppb-img-responsive"
-                                                                                                                    src="images/2019/12/10/business-18_small.jpg"
-                                                                                                                    alt="Is that true? That's right. One can make all"
-                                                                                                                    itemprop="thumbnailUrl"></a>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/business-blog/is-that-true-that-s-right-one-can-make-all.html"
-                                                                                                                           itemprop="url">Is
-                                                                                                                            that
-                                                                                                                            true?
-                                                                                                                            That's
-                                                                                                                            right.
-                                                                                                                            One
-                                                                                                                            can
-                                                                                                                            make
-                                                                                                                            all</a>
-                                                                                                                    </h3>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="item  sppb-col-sm-6 sppb-col-md-4">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <span class="article-count">11</span><a
-                                                                                                                    class="sppb-article-img-wrap"
-                                                                                                                    href="index.php/business-blog/what-do-you-do-and-i-sell-soap-the-yard-stick.html"
-                                                                                                                    itemprop="url"><img
-                                                                                                                    class="sppb-img-responsive"
-                                                                                                                    src="images/2019/12/10/business-15_small.jpg"
-                                                                                                                    alt="What do you do and I sell soap the yard stick"
-                                                                                                                    itemprop="thumbnailUrl"></a>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/business-blog/what-do-you-do-and-i-sell-soap-the-yard-stick.html"
-                                                                                                                           itemprop="url">What
-                                                                                                                            do
-                                                                                                                            you
-                                                                                                                            do
-                                                                                                                            and
-                                                                                                                            I
-                                                                                                                            sell
-                                                                                                                            soap
-                                                                                                                            the
-                                                                                                                            yard
-                                                                                                                            stick</a>
-                                                                                                                    </h3>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="item  sppb-col-sm-6 sppb-col-md-4">
-                                                                                                            <div class="sppb-addon-article "
-                                                                                                                 style="">
-                                                                                                                <span class="article-count">12</span><a
-                                                                                                                    class="sppb-article-img-wrap"
-                                                                                                                    href="index.php/business-blog/i-ve-ever-met-see-obviously-everything-on.html"
-                                                                                                                    itemprop="url"><img
-                                                                                                                    class="sppb-img-responsive"
-                                                                                                                    src="images/2019/12/10/business-19_small.jpg"
-                                                                                                                    alt="I've ever met. See, obviously, everything on"
-                                                                                                                    itemprop="thumbnailUrl"></a>
-                                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                                    <h3>
-                                                                                                                        <a href="index.php/business-blog/i-ve-ever-met-see-obviously-everything-on.html"
-                                                                                                                           itemprop="url">I've
-                                                                                                                            ever
-                                                                                                                            met.
-                                                                                                                            See,
-                                                                                                                            obviously,
-                                                                                                                            everything
-                                                                                                                            on</a>
-                                                                                                                    </h3>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                                <section id="section-id-1574146136147" class="sppb-section">
-                                    <div class="sppb-row-container">
-                                        <div class="sppb-row">
-                                            <div class="sppb-col-md-12" id="column-wrap-id-1574146136146">
-                                                <div id="column-id-1574146136146" class="sppb-column">
-                                                    <div class="sppb-column-addons">
-                                                        <div id="section-id-1574146524357"
-                                                             class="sppb-section section-border newsberg-gradient-bg">
-                                                            <div class="sppb-container-inner">
-                                                                <div class="sppb-row">
-                                                                    <div class="sppb-col-md-12"
-                                                                         id="column-wrap-id-1574146524358">
-                                                                        <div id="column-id-1574146524358"
-                                                                             class="sppb-column">
-                                                                            <div class="sppb-column-addons">
-                                                                                <div id="sppb-addon-wrapper-1574146220982"
-                                                                                     class="sppb-addon-wrapper">
-                                                                                    <div id="sppb-addon-1574146220982"
-                                                                                         class="clearfix ">
-                                                                                        <div class="sppb-addon sppb-addon-text-block sppb-text-center ">
-                                                                                            <h2 class="sppb-addon-title">
-                                                                                                Chance to tell a
-                                                                                                story</h2>
-                                                                                            <div class="sppb-addon-content">
-                                                                                                Register to now and
-                                                                                                share your story with
-                                                                                                the world
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div id="sppb-addon-wrapper-1574849226312"
-                                                                                     class="sppb-addon-wrapper">
-                                                                                    <div id="sppb-addon-1574849226312"
-                                                                                         class="clearfix ">
-                                                                                        <div class="sppb-text-center"><a
-                                                                                                href="index.php/pages/login.html"
-                                                                                                id="btn-1574849226312"
-                                                                                                class="sppb-btn  sppb-btn-secondary sppb-btn-xlg sppb-btn-round">Be
-                                                                                            an Author</a></div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -8623,7 +5167,7 @@ Mon, Feb 24, 2020 </span>
                                                                                             <a class="full-link"
                                                                                                href="index.php/categories/newsberg/technology/the-exact-same-briefcase-soap-sorry-i-make.html"
                                                                                                itemprop="url"></a><i
-                                                                                                class="fa fa-play-circle"></i>
+                                                                                                    class="fa fa-play-circle"></i>
                                                                                             <div class="video-caption-info">
                                                                                                 <span class="video-duration">01 : 35</span>
                                                                                             </div>
@@ -8811,27 +5355,6 @@ Mon, Feb 24, 2020 </span>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div id="sppb-addon-wrapper-1574849894517"
-                                                             class="sppb-addon-wrapper">
-                                                            <div id="sppb-addon-1574849894517" class="clearfix ">
-                                                                <div class="sppb-addon sppb-addon-module home-ad-banner">
-                                                                    <div class="sppb-addon-content">
-                                                                        <div class="bannergroup">
-                                                                            <div class="banneritem">
-                                                                                <a href="https://joomshaper.com/"
-                                                                                   target="_blank"
-                                                                                   rel="noopener noreferrer"
-                                                                                   title="Home Ad 1">
-                                                                                    <img src="images/demo/product_ad5.png"
-                                                                                         alt="JoomShaper"/>
-                                                                                </a>
-                                                                                <div class="clr"></div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -8873,40 +5396,40 @@ Mon, Feb 24, 2020 </span>
                                                                                                                                                 Explore</h2>
                                                                                                                                         </div>
                                                                                                                                         <style type="text/css">#sppb-addon-1574411095394 {
-                                                                                                                                            box-shadow: 0 0 0 0 #ffffff;
-                                                                                                                                        }
-
-                                                                                                                                        #sppb-addon-1574411095394 .sppb-addon-title {
-                                                                                                                                            font-size: 27px;
-                                                                                                                                            line-height: 27px;
-                                                                                                                                            line-height: 38px;
-                                                                                                                                        }
-
-                                                                                                                                        @media (min-width: 768px) and (max-width: 991px) {
-                                                                                                                                            #sppb-addon-1574411095394 {
-                                                                                                                                            }
-                                                                                                                                        }
-
-                                                                                                                                        @media (max-width: 767px) {
-                                                                                                                                            #sppb-addon-1574411095394 {
+                                                                                                                                                box-shadow: 0 0 0 0 #ffffff;
                                                                                                                                             }
 
                                                                                                                                             #sppb-addon-1574411095394 .sppb-addon-title {
-                                                                                                                                                font-size: 20px;
-                                                                                                                                                line-height: 20px;
-                                                                                                                                                line-height: 24px;
+                                                                                                                                                font-size: 27px;
+                                                                                                                                                line-height: 27px;
+                                                                                                                                                line-height: 38px;
                                                                                                                                             }
-                                                                                                                                        }</style>
-                                                                                                                                        <style type="text/css">#sppb-addon-1574411095394 h2.sppb-addon-title {
-                                                                                                                                            margin: 10px 0px 0px 0px;
-                                                                                                                                            text-transform: none;
-                                                                                                                                        }
 
-                                                                                                                                        @media (max-width: 767px) {
-                                                                                                                                            #sppb-addon-1574411095394 h2.sppb-addon-title {
-                                                                                                                                                margin: 0px 0px 5px 0px;
+                                                                                                                                            @media (min-width: 768px) and (max-width: 991px) {
+                                                                                                                                                #sppb-addon-1574411095394 {
+                                                                                                                                                }
                                                                                                                                             }
-                                                                                                                                        }</style>
+
+                                                                                                                                            @media (max-width: 767px) {
+                                                                                                                                                #sppb-addon-1574411095394 {
+                                                                                                                                                }
+
+                                                                                                                                                #sppb-addon-1574411095394 .sppb-addon-title {
+                                                                                                                                                    font-size: 20px;
+                                                                                                                                                    line-height: 20px;
+                                                                                                                                                    line-height: 24px;
+                                                                                                                                                }
+                                                                                                                                            }</style>
+                                                                                                                                        <style type="text/css">#sppb-addon-1574411095394 h2.sppb-addon-title {
+                                                                                                                                                margin: 10px 0px 0px 0px;
+                                                                                                                                                text-transform: none;
+                                                                                                                                            }
+
+                                                                                                                                            @media (max-width: 767px) {
+                                                                                                                                                #sppb-addon-1574411095394 h2.sppb-addon-title {
+                                                                                                                                                    margin: 0px 0px 5px 0px;
+                                                                                                                                                }
+                                                                                                                                            }</style>
                                                                                                                                     </div>
                                                                                                                                 </div>
                                                                                                                                 <div id="sppb-addon-wrapper-1574411095398"
@@ -8954,18 +5477,18 @@ Mon, Feb 24, 2020 </span>
                                                                                                                                             </div>
                                                                                                                                         </div>
                                                                                                                                         <style type="text/css">#sppb-addon-1574411095398 {
-                                                                                                                                            box-shadow: 0 0 0 0 #ffffff;
-                                                                                                                                        }
-
-                                                                                                                                        @media (min-width: 768px) and (max-width: 991px) {
-                                                                                                                                            #sppb-addon-1574411095398 {
+                                                                                                                                                box-shadow: 0 0 0 0 #ffffff;
                                                                                                                                             }
-                                                                                                                                        }
 
-                                                                                                                                        @media (max-width: 767px) {
-                                                                                                                                            #sppb-addon-1574411095398 {
+                                                                                                                                            @media (min-width: 768px) and (max-width: 991px) {
+                                                                                                                                                #sppb-addon-1574411095398 {
+                                                                                                                                                }
                                                                                                                                             }
-                                                                                                                                        }</style>
+
+                                                                                                                                            @media (max-width: 767px) {
+                                                                                                                                                #sppb-addon-1574411095398 {
+                                                                                                                                                }
+                                                                                                                                            }</style>
                                                                                                                                     </div>
                                                                                                                                 </div>
                                                                                                                             </div>
@@ -8975,44 +5498,44 @@ Mon, Feb 24, 2020 </span>
                                                                                                             </div>
                                                                                                         </div>
                                                                                                         <style type="text/css">.sp-page-builder .page-content #section-id-1574411095389 {
-                                                                                                            padding-top: 0px;
-                                                                                                            padding-right: 0px;
-                                                                                                            padding-bottom: 0px;
-                                                                                                            padding-left: 0px;
-                                                                                                            margin-top: 0px;
-                                                                                                            margin-right: 0px;
-                                                                                                            margin-bottom: 0px;
-                                                                                                            margin-left: 0px;
-                                                                                                        }
-
-                                                                                                        @media (max-width: 767px) {
-                                                                                                            .sp-page-builder .page-content #section-id-1574411095389 {
-                                                                                                                padding-top: 17px;
+                                                                                                                padding-top: 0px;
                                                                                                                 padding-right: 0px;
                                                                                                                 padding-bottom: 0px;
                                                                                                                 padding-left: 0px;
+                                                                                                                margin-top: 0px;
+                                                                                                                margin-right: 0px;
+                                                                                                                margin-bottom: 0px;
+                                                                                                                margin-left: 0px;
                                                                                                             }
-                                                                                                        }
 
-                                                                                                        #column-id-1574411095391 {
-                                                                                                            box-shadow: 0 0 0 0 #fff;
-                                                                                                        }
+                                                                                                            @media (max-width: 767px) {
+                                                                                                                .sp-page-builder .page-content #section-id-1574411095389 {
+                                                                                                                    padding-top: 17px;
+                                                                                                                    padding-right: 0px;
+                                                                                                                    padding-bottom: 0px;
+                                                                                                                    padding-left: 0px;
+                                                                                                                }
+                                                                                                            }
 
-                                                                                                        .sp-page-builder .page-content #section-id-1574411095392 {
-                                                                                                            padding-top: 20px;
-                                                                                                            padding-right: 20px;
-                                                                                                            padding-bottom: 10px;
-                                                                                                            padding-left: 20px;
-                                                                                                            margin-top: 0px;
-                                                                                                            margin-right: 0px;
-                                                                                                            margin-bottom: 0px;
-                                                                                                            margin-left: 0px;
-                                                                                                            background-color: #fff;
-                                                                                                        }
+                                                                                                            #column-id-1574411095391 {
+                                                                                                                box-shadow: 0 0 0 0 #fff;
+                                                                                                            }
 
-                                                                                                        #column-id-1574411095393 {
-                                                                                                            box-shadow: 0 0 0 0 #fff;
-                                                                                                        }</style>
+                                                                                                            .sp-page-builder .page-content #section-id-1574411095392 {
+                                                                                                                padding-top: 20px;
+                                                                                                                padding-right: 20px;
+                                                                                                                padding-bottom: 10px;
+                                                                                                                padding-left: 20px;
+                                                                                                                margin-top: 0px;
+                                                                                                                margin-right: 0px;
+                                                                                                                margin-bottom: 0px;
+                                                                                                                margin-left: 0px;
+                                                                                                                background-color: #fff;
+                                                                                                            }
+
+                                                                                                            #column-id-1574411095393 {
+                                                                                                                box-shadow: 0 0 0 0 #fff;
+                                                                                                            }</style>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
@@ -9020,65 +5543,44 @@ Mon, Feb 24, 2020 </span>
                                                                                     </div>
                                                                                 </div>
                                                                                 <style type="text/css">.sp-page-builder .page-content #section-id-1574411095389 {
-                                                                                    padding-top: 0px;
-                                                                                    padding-right: 0px;
-                                                                                    padding-bottom: 0px;
-                                                                                    padding-left: 0px;
-                                                                                    margin-top: 0px;
-                                                                                    margin-right: 0px;
-                                                                                    margin-bottom: 0px;
-                                                                                    margin-left: 0px;
-                                                                                }
-
-                                                                                @media (max-width: 767px) {
-                                                                                    .sp-page-builder .page-content #section-id-1574411095389 {
-                                                                                        padding-top: 17px;
+                                                                                        padding-top: 0px;
                                                                                         padding-right: 0px;
                                                                                         padding-bottom: 0px;
                                                                                         padding-left: 0px;
+                                                                                        margin-top: 0px;
+                                                                                        margin-right: 0px;
+                                                                                        margin-bottom: 0px;
+                                                                                        margin-left: 0px;
                                                                                     }
-                                                                                }
 
-                                                                                #column-id-1574411095391 {
-                                                                                    box-shadow: 0 0 0 0 #fff;
-                                                                                }
+                                                                                    @media (max-width: 767px) {
+                                                                                        .sp-page-builder .page-content #section-id-1574411095389 {
+                                                                                            padding-top: 17px;
+                                                                                            padding-right: 0px;
+                                                                                            padding-bottom: 0px;
+                                                                                            padding-left: 0px;
+                                                                                        }
+                                                                                    }
 
-                                                                                .sp-page-builder .page-content #section-id-1574411095392 {
-                                                                                    padding-top: 20px;
-                                                                                    padding-right: 20px;
-                                                                                    padding-bottom: 10px;
-                                                                                    padding-left: 20px;
-                                                                                    margin-top: 0px;
-                                                                                    margin-right: 0px;
-                                                                                    margin-bottom: 0px;
-                                                                                    margin-left: 0px;
-                                                                                    background-color: #fff;
-                                                                                }
+                                                                                    #column-id-1574411095391 {
+                                                                                        box-shadow: 0 0 0 0 #fff;
+                                                                                    }
 
-                                                                                #column-id-1574411095393 {
-                                                                                    box-shadow: 0 0 0 0 #fff;
-                                                                                }</style>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div id="sppb-addon-wrapper-1575012347307"
-                                                             class="sppb-addon-wrapper">
-                                                            <div id="sppb-addon-1575012347307" class="clearfix ">
-                                                                <div class="sppb-addon sppb-addon-module home-ad-banner">
-                                                                    <div class="sppb-addon-content">
-                                                                        <div class="bannergroup">
-                                                                            <div class="banneritem">
-                                                                                <a href="https://joomshaper.com/"
-                                                                                   target="_blank"
-                                                                                   rel="noopener noreferrer"
-                                                                                   title="Home Ad 2">
-                                                                                    <img src="images/demo/product_ad2.png"
-                                                                                         alt="JoomShaper"/>
-                                                                                </a>
-                                                                                <div class="clr"></div>
+                                                                                    .sp-page-builder .page-content #section-id-1574411095392 {
+                                                                                        padding-top: 20px;
+                                                                                        padding-right: 20px;
+                                                                                        padding-bottom: 10px;
+                                                                                        padding-left: 20px;
+                                                                                        margin-top: 0px;
+                                                                                        margin-right: 0px;
+                                                                                        margin-bottom: 0px;
+                                                                                        margin-left: 0px;
+                                                                                        background-color: #fff;
+                                                                                    }
+
+                                                                                    #column-id-1574411095393 {
+                                                                                        box-shadow: 0 0 0 0 #fff;
+                                                                                    }</style>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -9137,15 +5639,15 @@ Mon, Feb 24, 2020 </span>
                                                                                                 <input type="hidden"
                                                                                                        name="platform"
                                                                                                        value="mailchimp"><input
-                                                                                                    type="hidden"
-                                                                                                    name="hidename"
-                                                                                                    value="1"><input
-                                                                                                    type="hidden"
-                                                                                                    name="pageid"
-                                                                                                    value="1"><input
-                                                                                                    type="hidden"
-                                                                                                    name="addonId"
-                                                                                                    value="1573641031813">
+                                                                                                        type="hidden"
+                                                                                                        name="hidename"
+                                                                                                        value="1"><input
+                                                                                                        type="hidden"
+                                                                                                        name="pageid"
+                                                                                                        value="1"><input
+                                                                                                        type="hidden"
+                                                                                                        name="addonId"
+                                                                                                        value="1573641031813">
                                                                                                 <div class="button-wrap ">
                                                                                                     <button type="submit"
                                                                                                             id="btn-1573641031813"
@@ -9163,65 +5665,65 @@ Mon, Feb 24, 2020 </span>
                                                                                     </div>
                                                                                 </div>
                                                                                 <style type="text/css">#sppb-addon-1573641031813 {
-                                                                                    box-shadow: 0 0 0 0 #ffffff;
-                                                                                }
-
-                                                                                @media (min-width: 768px) and (max-width: 991px) {
-                                                                                    #sppb-addon-1573641031813 {
+                                                                                        box-shadow: 0 0 0 0 #ffffff;
                                                                                     }
 
-                                                                                    #sppb-addon-wrapper-1573641031813 {
-                                                                                        margin-top: 0px;
-                                                                                        margin-right: 0px;
-                                                                                        margin-bottom: 0px;
-                                                                                        margin-left: 0px;
-                                                                                    }
-                                                                                }
+                                                                                    @media (min-width: 768px) and (max-width: 991px) {
+                                                                                        #sppb-addon-1573641031813 {
+                                                                                        }
 
-                                                                                @media (max-width: 767px) {
-                                                                                    #sppb-addon-1573641031813 {
+                                                                                        #sppb-addon-wrapper-1573641031813 {
+                                                                                            margin-top: 0px;
+                                                                                            margin-right: 0px;
+                                                                                            margin-bottom: 0px;
+                                                                                            margin-left: 0px;
+                                                                                        }
                                                                                     }
 
-                                                                                    #sppb-addon-wrapper-1573641031813 {
-                                                                                        margin-top: 0px;
-                                                                                        margin-right: 0px;
-                                                                                        margin-bottom: 20px;
-                                                                                        margin-left: 0px;
-                                                                                    }
-                                                                                }</style>
+                                                                                    @media (max-width: 767px) {
+                                                                                        #sppb-addon-1573641031813 {
+                                                                                        }
+
+                                                                                        #sppb-addon-wrapper-1573641031813 {
+                                                                                            margin-top: 0px;
+                                                                                            margin-right: 0px;
+                                                                                            margin-bottom: 20px;
+                                                                                            margin-left: 0px;
+                                                                                        }
+                                                                                    }</style>
                                                                                 <style type="text/css">#sppb-addon-1573641031813 .sppb-optin-form-icon {
-                                                                                    font-size: 82px;
-                                                                                }
-
-                                                                                .sppb-optin-form-popup-wrap > #sppb-addon-1573641031813 {
-                                                                                    width: 600px;
-                                                                                }
-
-                                                                                #sppb-addon-1573641031813 .sppb-optin-form input {
-                                                                                    background-color: rgba(0, 0, 0, 0);
-                                                                                    color: rgba(255, 255, 255, 0.6);
-                                                                                    border: none;
-                                                                                    border-width: 1px;
-                                                                                    border-color: rgba(255, 255, 255, 0.6);
-                                                                                    border-style: solid;
-                                                                                    border-radius: 22px;
-                                                                                    padding: 9px 125px 9px 15px;
-                                                                                }
-
-                                                                                #sppb-addon-1573641031813 .sppb-optin-form input::placeholder {
-                                                                                    color: rgba(255, 255, 255, 0.6);
-                                                                                    opacity: 1;
-                                                                                }
-
-                                                                                #sppb-addon-1573641031813 .sppb-btn-custom {
-                                                                                    font-size: 16px;
-                                                                                }
-
-                                                                                @media (max-width: 767px) {
-                                                                                    #sppb-addon-1573641031813 .sppb-optin-form input {
-                                                                                        padding: 7px 108px 7px 15px;
+                                                                                        font-size: 82px;
                                                                                     }
-                                                                                }</style>
+
+                                                                                    .sppb-optin-form-popup-wrap > #sppb-addon-1573641031813 {
+                                                                                        width: 600px;
+                                                                                    }
+
+                                                                                    #sppb-addon-1573641031813 .sppb-optin-form input {
+                                                                                        background-color: rgba(0, 0, 0, 0);
+                                                                                        color: rgba(255, 255, 255, 0.6);
+                                                                                        border: none;
+                                                                                        border-width: 1px;
+                                                                                        border-color: rgba(255, 255, 255, 0.6);
+                                                                                        border-style: solid;
+                                                                                        border-radius: 22px;
+                                                                                        padding: 9px 125px 9px 15px;
+                                                                                    }
+
+                                                                                    #sppb-addon-1573641031813 .sppb-optin-form input::placeholder {
+                                                                                        color: rgba(255, 255, 255, 0.6);
+                                                                                        opacity: 1;
+                                                                                    }
+
+                                                                                    #sppb-addon-1573641031813 .sppb-btn-custom {
+                                                                                        font-size: 16px;
+                                                                                    }
+
+                                                                                    @media (max-width: 767px) {
+                                                                                        #sppb-addon-1573641031813 .sppb-optin-form input {
+                                                                                            padding: 7px 108px 7px 15px;
+                                                                                        }
+                                                                                    }</style>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -9231,108 +5733,108 @@ Mon, Feb 24, 2020 </span>
                                                     </div>
                                                 </div>
                                                 <style type="text/css">.sp-page-builder .page-content #section-id-1574411095389 {
-                                                    padding-top: 0px;
-                                                    padding-right: 0px;
-                                                    padding-bottom: 0px;
-                                                    padding-left: 0px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                }
-
-                                                @media (max-width: 767px) {
-                                                    .sp-page-builder .page-content #section-id-1574411095389 {
-                                                        padding-top: 17px;
+                                                        padding-top: 0px;
                                                         padding-right: 0px;
                                                         padding-bottom: 0px;
                                                         padding-left: 0px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
                                                     }
-                                                }
 
-                                                #column-id-1574411095391 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
+                                                    @media (max-width: 767px) {
+                                                        .sp-page-builder .page-content #section-id-1574411095389 {
+                                                            padding-top: 17px;
+                                                            padding-right: 0px;
+                                                            padding-bottom: 0px;
+                                                            padding-left: 0px;
+                                                        }
+                                                    }
 
-                                                .sp-page-builder .page-content #section-id-1574411095392 {
-                                                    padding-top: 20px;
-                                                    padding-right: 20px;
-                                                    padding-bottom: 10px;
-                                                    padding-left: 20px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                    background-color: #fff;
-                                                }
+                                                    #column-id-1574411095391 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }
 
-                                                #column-id-1574411095393 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
+                                                    .sp-page-builder .page-content #section-id-1574411095392 {
+                                                        padding-top: 20px;
+                                                        padding-right: 20px;
+                                                        padding-bottom: 10px;
+                                                        padding-left: 20px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
+                                                        background-color: #fff;
+                                                    }
 
-                                                .sp-page-builder .page-content #section-id-1573733783983 {
-                                                    padding-top: 0px;
-                                                    padding-right: 0px;
-                                                    padding-bottom: 0px;
-                                                    padding-left: 0px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                }
+                                                    #column-id-1574411095393 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }
 
-                                                #column-id-1573733783982 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
+                                                    .sp-page-builder .page-content #section-id-1573733783983 {
+                                                        padding-top: 0px;
+                                                        padding-right: 0px;
+                                                        padding-bottom: 0px;
+                                                        padding-left: 0px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
+                                                    }
 
-                                                .sp-page-builder .page-content #section-id-1573726863166 {
-                                                    padding-top: 0px;
-                                                    padding-right: 0px;
-                                                    padding-bottom: 0px;
-                                                    padding-left: 0px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                }
+                                                    #column-id-1573733783982 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }
 
-                                                #column-id-1573726863165 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
+                                                    .sp-page-builder .page-content #section-id-1573726863166 {
+                                                        padding-top: 0px;
+                                                        padding-right: 0px;
+                                                        padding-bottom: 0px;
+                                                        padding-left: 0px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
+                                                    }
 
-                                                #column-id-1573641608317 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
+                                                    #column-id-1573726863165 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }
 
-                                                .sp-page-builder .page-content #section-id-1573639284224 {
-                                                    padding-top: 0px;
-                                                    padding-right: 0px;
-                                                    padding-bottom: 0px;
-                                                    padding-left: 0px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                }
+                                                    #column-id-1573641608317 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }
 
-                                                #column-id-1573639284223 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
+                                                    .sp-page-builder .page-content #section-id-1573639284224 {
+                                                        padding-top: 0px;
+                                                        padding-right: 0px;
+                                                        padding-bottom: 0px;
+                                                        padding-left: 0px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
+                                                    }
 
-                                                .sp-page-builder .page-content #section-id-1573641031810 {
-                                                    padding-top: 0px;
-                                                    padding-right: 0px;
-                                                    padding-bottom: 0px;
-                                                    padding-left: 0px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                }
+                                                    #column-id-1573639284223 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }
 
-                                                #column-id-1573641031809 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }</style>
+                                                    .sp-page-builder .page-content #section-id-1573641031810 {
+                                                        padding-top: 0px;
+                                                        padding-right: 0px;
+                                                        padding-bottom: 0px;
+                                                        padding-left: 0px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
+                                                    }
+
+                                                    #column-id-1573641031809 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }</style>
                                             </div>
                                         </div>
                                     </div>
@@ -9366,38 +5868,38 @@ Mon, Feb 24, 2020 </span>
                                                                                     </div>
                                                                                 </div>
                                                                                 <style type="text/css">#sppb-addon-1573639284227 {
-                                                                                    box-shadow: 0 0 0 0 #ffffff;
-                                                                                }
-
-                                                                                @media (min-width: 768px) and (max-width: 991px) {
-                                                                                    #sppb-addon-1573639284227 {
+                                                                                        box-shadow: 0 0 0 0 #ffffff;
                                                                                     }
 
-                                                                                    #sppb-addon-wrapper-1573639284227 {
-                                                                                        margin-top: 0px;
-                                                                                        margin-right: 0px;
-                                                                                        margin-bottom: 0px;
-                                                                                        margin-left: 0px;
-                                                                                    }
-                                                                                }
+                                                                                    @media (min-width: 768px) and (max-width: 991px) {
+                                                                                        #sppb-addon-1573639284227 {
+                                                                                        }
 
-                                                                                @media (max-width: 767px) {
-                                                                                    #sppb-addon-1573639284227 {
+                                                                                        #sppb-addon-wrapper-1573639284227 {
+                                                                                            margin-top: 0px;
+                                                                                            margin-right: 0px;
+                                                                                            margin-bottom: 0px;
+                                                                                            margin-left: 0px;
+                                                                                        }
                                                                                     }
 
-                                                                                    #sppb-addon-wrapper-1573639284227 {
-                                                                                        margin-top: 0px;
-                                                                                        margin-right: 0px;
-                                                                                        margin-bottom: 10px;
-                                                                                        margin-left: 0px;
-                                                                                    }
-                                                                                }
+                                                                                    @media (max-width: 767px) {
+                                                                                        #sppb-addon-1573639284227 {
+                                                                                        }
 
-                                                                                #sppb-addon-1573639284227 img {
-                                                                                    height: 45px;
-                                                                                }</style>
+                                                                                        #sppb-addon-wrapper-1573639284227 {
+                                                                                            margin-top: 0px;
+                                                                                            margin-right: 0px;
+                                                                                            margin-bottom: 10px;
+                                                                                            margin-left: 0px;
+                                                                                        }
+                                                                                    }
+
+                                                                                    #sppb-addon-1573639284227 img {
+                                                                                        height: 45px;
+                                                                                    }</style>
                                                                                 <style type="text/css">#sppb-addon-1573639284227 img {
-                                                                                }</style>
+                                                                                    }</style>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -9407,93 +5909,93 @@ Mon, Feb 24, 2020 </span>
                                                     </div>
                                                 </div>
                                                 <style type="text/css">.sp-page-builder .page-content #section-id-1574411095389 {
-                                                    padding-top: 0px;
-                                                    padding-right: 0px;
-                                                    padding-bottom: 0px;
-                                                    padding-left: 0px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                }
-
-                                                @media (max-width: 767px) {
-                                                    .sp-page-builder .page-content #section-id-1574411095389 {
-                                                        padding-top: 17px;
+                                                        padding-top: 0px;
                                                         padding-right: 0px;
                                                         padding-bottom: 0px;
                                                         padding-left: 0px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
                                                     }
-                                                }
 
-                                                #column-id-1574411095391 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
+                                                    @media (max-width: 767px) {
+                                                        .sp-page-builder .page-content #section-id-1574411095389 {
+                                                            padding-top: 17px;
+                                                            padding-right: 0px;
+                                                            padding-bottom: 0px;
+                                                            padding-left: 0px;
+                                                        }
+                                                    }
 
-                                                .sp-page-builder .page-content #section-id-1574411095392 {
-                                                    padding-top: 20px;
-                                                    padding-right: 20px;
-                                                    padding-bottom: 10px;
-                                                    padding-left: 20px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                    background-color: #fff;
-                                                }
+                                                    #column-id-1574411095391 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }
 
-                                                #column-id-1574411095393 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
+                                                    .sp-page-builder .page-content #section-id-1574411095392 {
+                                                        padding-top: 20px;
+                                                        padding-right: 20px;
+                                                        padding-bottom: 10px;
+                                                        padding-left: 20px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
+                                                        background-color: #fff;
+                                                    }
 
-                                                .sp-page-builder .page-content #section-id-1573733783983 {
-                                                    padding-top: 0px;
-                                                    padding-right: 0px;
-                                                    padding-bottom: 0px;
-                                                    padding-left: 0px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                }
+                                                    #column-id-1574411095393 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }
 
-                                                #column-id-1573733783982 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
+                                                    .sp-page-builder .page-content #section-id-1573733783983 {
+                                                        padding-top: 0px;
+                                                        padding-right: 0px;
+                                                        padding-bottom: 0px;
+                                                        padding-left: 0px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
+                                                    }
 
-                                                .sp-page-builder .page-content #section-id-1573726863166 {
-                                                    padding-top: 0px;
-                                                    padding-right: 0px;
-                                                    padding-bottom: 0px;
-                                                    padding-left: 0px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                }
+                                                    #column-id-1573733783982 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }
 
-                                                #column-id-1573726863165 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
+                                                    .sp-page-builder .page-content #section-id-1573726863166 {
+                                                        padding-top: 0px;
+                                                        padding-right: 0px;
+                                                        padding-bottom: 0px;
+                                                        padding-left: 0px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
+                                                    }
 
-                                                #column-id-1573641608317 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
+                                                    #column-id-1573726863165 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }
 
-                                                .sp-page-builder .page-content #section-id-1573639284224 {
-                                                    padding-top: 0px;
-                                                    padding-right: 0px;
-                                                    padding-bottom: 0px;
-                                                    padding-left: 0px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                }
+                                                    #column-id-1573641608317 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }
 
-                                                #column-id-1573639284223 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }</style>
+                                                    .sp-page-builder .page-content #section-id-1573639284224 {
+                                                        padding-top: 0px;
+                                                        padding-right: 0px;
+                                                        padding-bottom: 0px;
+                                                        padding-left: 0px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
+                                                    }
+
+                                                    #column-id-1573639284223 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }</style>
                                             </div>
                                         </div>
                                     </div>
@@ -9521,221 +6023,221 @@ Mon, Feb 24, 2020 </span>
                                                                                     <ul class="sppb-icons-group-list">
                                                                                         <li id="icon-1573641608322"
                                                                                             class=" sppb-text-right"><a
-                                                                                                href="#"
-                                                                                                aria-label="Icon group item"
-                                                                                                rel="noopener noreferrer"
-                                                                                                target="_blank"><i
-                                                                                                class="fa fa-facebook "
-                                                                                                aria-hidden="true"
-                                                                                                title="Icon group item"></i></a>
+                                                                                                    href="#"
+                                                                                                    aria-label="Icon group item"
+                                                                                                    rel="noopener noreferrer"
+                                                                                                    target="_blank"><i
+                                                                                                        class="fa fa-facebook "
+                                                                                                        aria-hidden="true"
+                                                                                                        title="Icon group item"></i></a>
                                                                                         </li>
                                                                                         <li id="icon-1573641608323"
                                                                                             class=" sppb-text-right"><a
-                                                                                                href="#"
-                                                                                                aria-label="Icon group item"><i
-                                                                                                class="fa fa-twitter "
-                                                                                                aria-hidden="true"
-                                                                                                title="Icon group item"></i></a>
+                                                                                                    href="#"
+                                                                                                    aria-label="Icon group item"><i
+                                                                                                        class="fa fa-twitter "
+                                                                                                        aria-hidden="true"
+                                                                                                        title="Icon group item"></i></a>
                                                                                         </li>
                                                                                         <li id="icon-1573641608324"
                                                                                             class=" sppb-text-right"><a
-                                                                                                href="#"
-                                                                                                aria-label="Icon group item"><i
-                                                                                                class="fa fa-linkedin "
-                                                                                                aria-hidden="true"
-                                                                                                title="Icon group item"></i></a>
+                                                                                                    href="#"
+                                                                                                    aria-label="Icon group item"><i
+                                                                                                        class="fa fa-linkedin "
+                                                                                                        aria-hidden="true"
+                                                                                                        title="Icon group item"></i></a>
                                                                                         </li>
                                                                                         <li id="icon-1573641608325"
                                                                                             class=" sppb-text-right"><a
-                                                                                                href="#"
-                                                                                                aria-label="Icon group item"><i
-                                                                                                class="fa fa-share "
-                                                                                                aria-hidden="true"
-                                                                                                title="Icon group item"></i></a>
+                                                                                                    href="#"
+                                                                                                    aria-label="Icon group item"><i
+                                                                                                        class="fa fa-share "
+                                                                                                        aria-hidden="true"
+                                                                                                        title="Icon group item"></i></a>
                                                                                         </li>
                                                                                     </ul>
                                                                                 </div>
                                                                                 <style type="text/css">#sppb-addon-1573641608321 {
-                                                                                    box-shadow: 0 0 0 0 #ffffff;
-                                                                                }
-
-                                                                                @media (min-width: 768px) and (max-width: 991px) {
-                                                                                    #sppb-addon-1573641608321 {
+                                                                                        box-shadow: 0 0 0 0 #ffffff;
                                                                                     }
-                                                                                }
 
-                                                                                @media (max-width: 767px) {
-                                                                                    #sppb-addon-1573641608321 {
+                                                                                    @media (min-width: 768px) and (max-width: 991px) {
+                                                                                        #sppb-addon-1573641608321 {
+                                                                                        }
                                                                                     }
-                                                                                }</style>
+
+                                                                                    @media (max-width: 767px) {
+                                                                                        #sppb-addon-1573641608321 {
+                                                                                        }
+                                                                                    }</style>
                                                                                 <style type="text/css">#sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608322 a {
-                                                                                    margin: 11px;
-                                                                                    padding: ;
-                                                                                    color: #cccccc;
-                                                                                    font-size: 18px;
-                                                                                }
-
-                                                                                #sppb-addon-1573641608321 .sppb-icons-group-list {
-                                                                                    margin: -11px;
-                                                                                }
-
-                                                                                #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608322 .sppb-icons-label-text {
-                                                                                    font-size: 16px;
-                                                                                    letter-spacing: 0px;
-                                                                                }
-
-                                                                                #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608322 {
-                                                                                    display: inline-block;
-                                                                                }
-
-                                                                                #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608322 a:hover {
-                                                                                    color: #fff;
-                                                                                }
-
-                                                                                @media (min-width: 768px) and (max-width: 991px) {
-                                                                                    #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608322 a {
-                                                                                        margin: 4px;
+                                                                                        margin: 11px;
                                                                                         padding: ;
+                                                                                        color: #cccccc;
+                                                                                        font-size: 18px;
                                                                                     }
 
                                                                                     #sppb-addon-1573641608321 .sppb-icons-group-list {
-                                                                                        margin: -4px;
+                                                                                        margin: -11px;
                                                                                     }
-                                                                                }
 
-                                                                                @media (max-width: 767px) {
-                                                                                    #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608322 a {
-                                                                                        padding: ;
+                                                                                    #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608322 .sppb-icons-label-text {
+                                                                                        font-size: 16px;
+                                                                                        letter-spacing: 0px;
                                                                                     }
-                                                                                }
 
-                                                                                #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608323 a {
-                                                                                    margin: 11px;
-                                                                                    padding: ;
-                                                                                    color: #cccccc;
-                                                                                    font-size: 18px;
-                                                                                }
+                                                                                    #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608322 {
+                                                                                        display: inline-block;
+                                                                                    }
 
-                                                                                #sppb-addon-1573641608321 .sppb-icons-group-list {
-                                                                                    margin: -11px;
-                                                                                }
+                                                                                    #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608322 a:hover {
+                                                                                        color: #fff;
+                                                                                    }
 
-                                                                                #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608323 .sppb-icons-label-text {
-                                                                                    font-size: 16px;
-                                                                                    letter-spacing: 0px;
-                                                                                }
+                                                                                    @media (min-width: 768px) and (max-width: 991px) {
+                                                                                        #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608322 a {
+                                                                                            margin: 4px;
+                                                                                            padding: ;
+                                                                                        }
 
-                                                                                #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608323 {
-                                                                                    display: inline-block;
-                                                                                }
+                                                                                        #sppb-addon-1573641608321 .sppb-icons-group-list {
+                                                                                            margin: -4px;
+                                                                                        }
+                                                                                    }
 
-                                                                                #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608323 a:hover {
-                                                                                    color: #fff;
-                                                                                }
+                                                                                    @media (max-width: 767px) {
+                                                                                        #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608322 a {
+                                                                                            padding: ;
+                                                                                        }
+                                                                                    }
 
-                                                                                @media (min-width: 768px) and (max-width: 991px) {
                                                                                     #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608323 a {
-                                                                                        margin: 4px;
+                                                                                        margin: 11px;
                                                                                         padding: ;
+                                                                                        color: #cccccc;
+                                                                                        font-size: 18px;
                                                                                     }
 
                                                                                     #sppb-addon-1573641608321 .sppb-icons-group-list {
-                                                                                        margin: -4px;
+                                                                                        margin: -11px;
                                                                                     }
-                                                                                }
 
-                                                                                @media (max-width: 767px) {
-                                                                                    #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608323 a {
-                                                                                        padding: ;
+                                                                                    #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608323 .sppb-icons-label-text {
+                                                                                        font-size: 16px;
+                                                                                        letter-spacing: 0px;
                                                                                     }
-                                                                                }
 
-                                                                                #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608324 a {
-                                                                                    margin: 11px;
-                                                                                    padding: ;
-                                                                                    color: #cccccc;
-                                                                                    font-size: 18px;
-                                                                                }
+                                                                                    #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608323 {
+                                                                                        display: inline-block;
+                                                                                    }
 
-                                                                                #sppb-addon-1573641608321 .sppb-icons-group-list {
-                                                                                    margin: -11px;
-                                                                                }
+                                                                                    #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608323 a:hover {
+                                                                                        color: #fff;
+                                                                                    }
 
-                                                                                #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608324 .sppb-icons-label-text {
-                                                                                    font-size: 16px;
-                                                                                    letter-spacing: 0px;
-                                                                                }
+                                                                                    @media (min-width: 768px) and (max-width: 991px) {
+                                                                                        #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608323 a {
+                                                                                            margin: 4px;
+                                                                                            padding: ;
+                                                                                        }
 
-                                                                                #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608324 {
-                                                                                    display: inline-block;
-                                                                                }
+                                                                                        #sppb-addon-1573641608321 .sppb-icons-group-list {
+                                                                                            margin: -4px;
+                                                                                        }
+                                                                                    }
 
-                                                                                #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608324 a:hover {
-                                                                                    color: #fff;
-                                                                                }
+                                                                                    @media (max-width: 767px) {
+                                                                                        #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608323 a {
+                                                                                            padding: ;
+                                                                                        }
+                                                                                    }
 
-                                                                                @media (min-width: 768px) and (max-width: 991px) {
                                                                                     #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608324 a {
-                                                                                        margin: 4px;
+                                                                                        margin: 11px;
                                                                                         padding: ;
+                                                                                        color: #cccccc;
+                                                                                        font-size: 18px;
                                                                                     }
 
                                                                                     #sppb-addon-1573641608321 .sppb-icons-group-list {
-                                                                                        margin: -4px;
+                                                                                        margin: -11px;
                                                                                     }
-                                                                                }
 
-                                                                                @media (max-width: 767px) {
-                                                                                    #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608324 a {
-                                                                                        padding: ;
+                                                                                    #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608324 .sppb-icons-label-text {
+                                                                                        font-size: 16px;
+                                                                                        letter-spacing: 0px;
                                                                                     }
-                                                                                }
 
-                                                                                #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608325 a {
-                                                                                    margin: 11px;
-                                                                                    padding: ;
-                                                                                    color: #cccccc;
-                                                                                    font-size: 18px;
-                                                                                }
+                                                                                    #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608324 {
+                                                                                        display: inline-block;
+                                                                                    }
 
-                                                                                #sppb-addon-1573641608321 .sppb-icons-group-list {
-                                                                                    margin: -11px;
-                                                                                }
+                                                                                    #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608324 a:hover {
+                                                                                        color: #fff;
+                                                                                    }
 
-                                                                                #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608325 .sppb-icons-label-text {
-                                                                                    font-size: 16px;
-                                                                                    letter-spacing: 0px;
-                                                                                }
+                                                                                    @media (min-width: 768px) and (max-width: 991px) {
+                                                                                        #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608324 a {
+                                                                                            margin: 4px;
+                                                                                            padding: ;
+                                                                                        }
 
-                                                                                #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608325 {
-                                                                                    display: inline-block;
-                                                                                }
+                                                                                        #sppb-addon-1573641608321 .sppb-icons-group-list {
+                                                                                            margin: -4px;
+                                                                                        }
+                                                                                    }
 
-                                                                                #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608325 a:hover {
-                                                                                    color: #fff;
-                                                                                }
+                                                                                    @media (max-width: 767px) {
+                                                                                        #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608324 a {
+                                                                                            padding: ;
+                                                                                        }
+                                                                                    }
 
-                                                                                @media (min-width: 768px) and (max-width: 991px) {
                                                                                     #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608325 a {
-                                                                                        margin: 4px;
+                                                                                        margin: 11px;
                                                                                         padding: ;
+                                                                                        color: #cccccc;
+                                                                                        font-size: 18px;
                                                                                     }
 
                                                                                     #sppb-addon-1573641608321 .sppb-icons-group-list {
-                                                                                        margin: -4px;
+                                                                                        margin: -11px;
                                                                                     }
-                                                                                }
 
-                                                                                @media (max-width: 767px) {
-                                                                                    #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608325 a {
-                                                                                        padding: ;
+                                                                                    #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608325 .sppb-icons-label-text {
+                                                                                        font-size: 16px;
+                                                                                        letter-spacing: 0px;
                                                                                     }
-                                                                                }
 
-                                                                                #sppb-addon-1573641608321 .sppb-addon-title {
-                                                                                    margin: 0px 0px 0px 0px;
-                                                                                    padding: 0px 0px 0px 0px;
-                                                                                }</style>
+                                                                                    #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608325 {
+                                                                                        display: inline-block;
+                                                                                    }
+
+                                                                                    #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608325 a:hover {
+                                                                                        color: #fff;
+                                                                                    }
+
+                                                                                    @media (min-width: 768px) and (max-width: 991px) {
+                                                                                        #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608325 a {
+                                                                                            margin: 4px;
+                                                                                            padding: ;
+                                                                                        }
+
+                                                                                        #sppb-addon-1573641608321 .sppb-icons-group-list {
+                                                                                            margin: -4px;
+                                                                                        }
+                                                                                    }
+
+                                                                                    @media (max-width: 767px) {
+                                                                                        #sppb-addon-1573641608321 .sppb-icons-group-list li#icon-1573641608325 a {
+                                                                                            padding: ;
+                                                                                        }
+                                                                                    }
+
+                                                                                    #sppb-addon-1573641608321 .sppb-addon-title {
+                                                                                        margin: 0px 0px 0px 0px;
+                                                                                        padding: 0px 0px 0px 0px;
+                                                                                    }</style>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -9745,78 +6247,78 @@ Mon, Feb 24, 2020 </span>
                                                     </div>
                                                 </div>
                                                 <style type="text/css">.sp-page-builder .page-content #section-id-1574411095389 {
-                                                    padding-top: 0px;
-                                                    padding-right: 0px;
-                                                    padding-bottom: 0px;
-                                                    padding-left: 0px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                }
-
-                                                @media (max-width: 767px) {
-                                                    .sp-page-builder .page-content #section-id-1574411095389 {
-                                                        padding-top: 17px;
+                                                        padding-top: 0px;
                                                         padding-right: 0px;
                                                         padding-bottom: 0px;
                                                         padding-left: 0px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
                                                     }
-                                                }
 
-                                                #column-id-1574411095391 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
+                                                    @media (max-width: 767px) {
+                                                        .sp-page-builder .page-content #section-id-1574411095389 {
+                                                            padding-top: 17px;
+                                                            padding-right: 0px;
+                                                            padding-bottom: 0px;
+                                                            padding-left: 0px;
+                                                        }
+                                                    }
 
-                                                .sp-page-builder .page-content #section-id-1574411095392 {
-                                                    padding-top: 20px;
-                                                    padding-right: 20px;
-                                                    padding-bottom: 10px;
-                                                    padding-left: 20px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                    background-color: #fff;
-                                                }
+                                                    #column-id-1574411095391 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }
 
-                                                #column-id-1574411095393 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
+                                                    .sp-page-builder .page-content #section-id-1574411095392 {
+                                                        padding-top: 20px;
+                                                        padding-right: 20px;
+                                                        padding-bottom: 10px;
+                                                        padding-left: 20px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
+                                                        background-color: #fff;
+                                                    }
 
-                                                .sp-page-builder .page-content #section-id-1573733783983 {
-                                                    padding-top: 0px;
-                                                    padding-right: 0px;
-                                                    padding-bottom: 0px;
-                                                    padding-left: 0px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                }
+                                                    #column-id-1574411095393 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }
 
-                                                #column-id-1573733783982 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
+                                                    .sp-page-builder .page-content #section-id-1573733783983 {
+                                                        padding-top: 0px;
+                                                        padding-right: 0px;
+                                                        padding-bottom: 0px;
+                                                        padding-left: 0px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
+                                                    }
 
-                                                .sp-page-builder .page-content #section-id-1573726863166 {
-                                                    padding-top: 0px;
-                                                    padding-right: 0px;
-                                                    padding-bottom: 0px;
-                                                    padding-left: 0px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                }
+                                                    #column-id-1573733783982 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }
 
-                                                #column-id-1573726863165 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
+                                                    .sp-page-builder .page-content #section-id-1573726863166 {
+                                                        padding-top: 0px;
+                                                        padding-right: 0px;
+                                                        padding-bottom: 0px;
+                                                        padding-left: 0px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
+                                                    }
 
-                                                #column-id-1573641608317 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }</style>
+                                                    #column-id-1573726863165 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }
+
+                                                    #column-id-1573641608317 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }</style>
                                             </div>
                                         </div>
                                     </div>
@@ -9831,7 +6333,7 @@ Mon, Feb 24, 2020 </span>
             <div class="container">
                 <div class="container-inner">
                     <div class="row">
-                        <div id="sp-bottom1" class="col-6 col-sm-4 col-lg-2 ">
+                        <div id="sp-bottom1" class="col-3 col-sm-4 col-lg-4 ">
                             <div class="sp-column ">
                                 <div class="sp-module "><h3 class="sp-module-title">News</h3>
                                     <div class="sp-module-content">
@@ -9850,7 +6352,7 @@ Mon, Feb 24, 2020 </span>
                                 </div>
                             </div>
                         </div>
-                        <div id="sp-bottom2" class="col-6 col-sm-4 col-lg-2 ">
+                        <div id="sp-bottom2" class="col-3 col-sm-4 col-lg-4 ">
                             <div class="sp-column ">
                                 <div class="sp-module "><h3 class="sp-module-title">Food</h3>
                                     <div class="sp-module-content">
@@ -9869,7 +6371,7 @@ Mon, Feb 24, 2020 </span>
                                 </div>
                             </div>
                         </div>
-                        <div id="sp-bottom3" class="col-6 col-sm-4 col-lg-2 ">
+                        <div id="sp-bottom3" class="col-3 col-sm-4 col-lg-4 ">
                             <div class="sp-column ">
                                 <div class="sp-module "><h3 class="sp-module-title">Politics</h3>
                                     <div class="sp-module-content">
@@ -9884,238 +6386,6 @@ Mon, Feb 24, 2020 </span>
                                             <li class="item-197"><a href="#">Body Politic</a></li>
                                             <li class="item-198"><a href="#">Political Crisis</a></li>
                                         </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="sp-bottom4" class="col-6 col-sm-4 col-lg-2 ">
-                            <div class="sp-column ">
-                                <div class="sp-module "><h3 class="sp-module-title">Technology</h3>
-                                    <div class="sp-module-content">
-                                        <ul class="menu">
-                                            <li class="item-199"><a href="#">DailyTech</a></li>
-                                            <li class="item-200"><a href="#">Digital Review</a></li>
-                                            <li class="item-201"><a href="#">Digital Trends</a></li>
-                                            <li class="item-202"><a href="#">Hackaday</a></li>
-                                            <li class="item-203"><a href="#">NewsPlus</a></li>
-                                            <li class="item-204"><a href="#">TechTarget</a></li>
-                                            <li class="item-205"><a href="#">The Markup</a></li>
-                                            <li class="item-206"><a href="#">OpenCores</a></li>
-                                            <li class="item-207"><a href="#">Startup Monthly</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="sp-bottom5" class="col-6 col-sm-4 col-lg-2 ">
-                            <div class="sp-column ">
-                                <div class="sp-module "><h3 class="sp-module-title">About Us</h3>
-                                    <div class="sp-module-content">
-                                        <ul class="menu">
-                                            <li class="item-116"><a href="#">RSS Terms of Service</a></li>
-                                            <li class="item-117"><a href="#">Print Products Terms</a></li>
-                                            <li class="item-118"><a href="#">Terms of Service</a></li>
-                                            <li class="item-119"><a href="#">Digital Products Terms </a></li>
-                                            <li class="item-120"><a href="#">Policies and Standards</a></li>
-                                            <li class="item-208"><a href="#">Submissions </a></li>
-                                            <li class="item-209"><a href="#">Privacy Policy</a></li>
-                                            <li class="item-210"><a href="index.php/contact-us.html"
-                                                                    class="sp-bottom-title">Contact Us</a></li>
-                                            <li class="item-211"><a href="#" class="sp-bottom-title">Terms of Use</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="sp-bottom6" class="col-6 col-sm-4 col-lg-2 ">
-                            <div class="sp-column ">
-                                <div class="sp-module "><h3 class="sp-module-title">Download Our Mobile App</h3>
-                                    <div class="sp-module-content">
-                                        <div class="mod-sppagebuilder  sp-page-builder" data-module_id="109">
-                                            <div class="page-content">
-                                                <div id="section-id-1573726863166" class="sppb-section">
-                                                    <div class="sppb-container-inner">
-                                                        <div class="sppb-row">
-                                                            <div class="sppb-col-md-12"
-                                                                 id="column-wrap-id-1573726863165">
-                                                                <div id="column-id-1573726863165" class="sppb-column">
-                                                                    <div class="sppb-column-addons">
-                                                                        <div id="sppb-addon-wrapper-1573727206535"
-                                                                             class="sppb-addon-wrapper">
-                                                                            <div id="sppb-addon-1573727206535"
-                                                                                 class="clearfix ">
-                                                                                <div class="sppb-addon sppb-addon-single-image sppb-text-left ">
-                                                                                    <div class="sppb-addon-content">
-                                                                                        <div class="sppb-addon-single-image-container">
-                                                                                            <a href="#"><img
-                                                                                                    class="sppb-img-responsive"
-                                                                                                    src="images/2019/11/14/google-playstore-link.svg"
-                                                                                                    alt="Image"
-                                                                                                    title=""></a></div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <style type="text/css">#sppb-addon-wrapper-1573727206535 {
-                                                                                    margin: 0px 0px 18px 0px;
-                                                                                }
-
-                                                                                #sppb-addon-1573727206535 {
-                                                                                    box-shadow: 0 0 0 0 #ffffff;
-                                                                                }
-
-                                                                                @media (min-width: 768px) and (max-width: 991px) {
-                                                                                    #sppb-addon-1573727206535 {
-                                                                                    }
-
-                                                                                    #sppb-addon-wrapper-1573727206535 {
-                                                                                        margin-top: 0px;
-                                                                                        margin-right: 0px;
-                                                                                        margin-bottom: 10px;
-                                                                                        margin-left: 0px;
-                                                                                    }
-                                                                                }
-
-                                                                                @media (max-width: 767px) {
-                                                                                    #sppb-addon-1573727206535 {
-                                                                                    }
-
-                                                                                    #sppb-addon-wrapper-1573727206535 {
-                                                                                        margin-top: 0px;
-                                                                                        margin-right: 0px;
-                                                                                        margin-bottom: 10px;
-                                                                                        margin-left: 0px;
-                                                                                    }
-                                                                                }</style>
-                                                                                <style type="text/css">#sppb-addon-1573727206535 img {
-                                                                                }</style>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div id="sppb-addon-wrapper-1573727206532"
-                                                                             class="sppb-addon-wrapper">
-                                                                            <div id="sppb-addon-1573727206532"
-                                                                                 class="clearfix ">
-                                                                                <div class="sppb-addon sppb-addon-single-image sppb-text-left ">
-                                                                                    <div class="sppb-addon-content">
-                                                                                        <div class="sppb-addon-single-image-container">
-                                                                                            <a href="#"><img
-                                                                                                    class="sppb-img-responsive"
-                                                                                                    src="images/2019/11/14/apples-store-link.svg"
-                                                                                                    alt="Image"
-                                                                                                    title=""></a></div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <style type="text/css">#sppb-addon-wrapper-1573727206532 {
-                                                                                    margin: 0px 0px 0px 0px;
-                                                                                }
-
-                                                                                #sppb-addon-1573727206532 {
-                                                                                    box-shadow: 0 0 0 0 #ffffff;
-                                                                                }
-
-                                                                                @media (min-width: 768px) and (max-width: 991px) {
-                                                                                    #sppb-addon-1573727206532 {
-                                                                                    }
-
-                                                                                    #sppb-addon-wrapper-1573727206532 {
-                                                                                        margin-top: 0px;
-                                                                                        margin-right: 0px;
-                                                                                        margin-bottom: 0px;
-                                                                                        margin-left: 0px;
-                                                                                    }
-                                                                                }
-
-                                                                                @media (max-width: 767px) {
-                                                                                    #sppb-addon-1573727206532 {
-                                                                                    }
-
-                                                                                    #sppb-addon-wrapper-1573727206532 {
-                                                                                        margin-top: 0px;
-                                                                                        margin-right: 0px;
-                                                                                        margin-bottom: 0px;
-                                                                                        margin-left: 0px;
-                                                                                    }
-                                                                                }</style>
-                                                                                <style type="text/css">#sppb-addon-1573727206532 img {
-                                                                                }</style>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <style type="text/css">.sp-page-builder .page-content #section-id-1574411095389 {
-                                                    padding-top: 0px;
-                                                    padding-right: 0px;
-                                                    padding-bottom: 0px;
-                                                    padding-left: 0px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                }
-
-                                                @media (max-width: 767px) {
-                                                    .sp-page-builder .page-content #section-id-1574411095389 {
-                                                        padding-top: 17px;
-                                                        padding-right: 0px;
-                                                        padding-bottom: 0px;
-                                                        padding-left: 0px;
-                                                    }
-                                                }
-
-                                                #column-id-1574411095391 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
-
-                                                .sp-page-builder .page-content #section-id-1574411095392 {
-                                                    padding-top: 20px;
-                                                    padding-right: 20px;
-                                                    padding-bottom: 10px;
-                                                    padding-left: 20px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                    background-color: #fff;
-                                                }
-
-                                                #column-id-1574411095393 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
-
-                                                .sp-page-builder .page-content #section-id-1573733783983 {
-                                                    padding-top: 0px;
-                                                    padding-right: 0px;
-                                                    padding-bottom: 0px;
-                                                    padding-left: 0px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                }
-
-                                                #column-id-1573733783982 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
-
-                                                .sp-page-builder .page-content #section-id-1573726863166 {
-                                                    padding-top: 0px;
-                                                    padding-right: 0px;
-                                                    padding-bottom: 0px;
-                                                    padding-left: 0px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                }
-
-                                                #column-id-1573726863165 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }</style>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -10157,47 +6427,47 @@ Mon, Feb 24, 2020 </span>
                                                                                     </div>
                                                                                 </div>
                                                                                 <style type="text/css">#sppb-addon-wrapper-1573733783986 {
-                                                                                    margin: 0px 0px 0px 0px;
-                                                                                }
+                                                                                        margin: 0px 0px 0px 0px;
+                                                                                    }
 
-                                                                                #sppb-addon-1573733783986 {
-                                                                                    color: rgba(204, 204, 204, 0.7);
-                                                                                    box-shadow: 0 0 0 0 #ffffff;
-                                                                                }
-
-                                                                                @media (min-width: 768px) and (max-width: 991px) {
                                                                                     #sppb-addon-1573733783986 {
+                                                                                        color: rgba(204, 204, 204, 0.7);
+                                                                                        box-shadow: 0 0 0 0 #ffffff;
                                                                                     }
 
-                                                                                    #sppb-addon-wrapper-1573733783986 {
-                                                                                        margin-top: 0px;
-                                                                                        margin-right: 0px;
-                                                                                        margin-bottom: 0px;
-                                                                                        margin-left: 0px;
-                                                                                    }
-                                                                                }
+                                                                                    @media (min-width: 768px) and (max-width: 991px) {
+                                                                                        #sppb-addon-1573733783986 {
+                                                                                        }
 
-                                                                                @media (max-width: 767px) {
-                                                                                    #sppb-addon-1573733783986 {
+                                                                                        #sppb-addon-wrapper-1573733783986 {
+                                                                                            margin-top: 0px;
+                                                                                            margin-right: 0px;
+                                                                                            margin-bottom: 0px;
+                                                                                            margin-left: 0px;
+                                                                                        }
                                                                                     }
 
-                                                                                    #sppb-addon-wrapper-1573733783986 {
-                                                                                        margin-top: 10px;
-                                                                                        margin-right: 0px;
-                                                                                        margin-bottom: 0px;
-                                                                                        margin-left: 0px;
-                                                                                    }
-                                                                                }</style>
+                                                                                    @media (max-width: 767px) {
+                                                                                        #sppb-addon-1573733783986 {
+                                                                                        }
+
+                                                                                        #sppb-addon-wrapper-1573733783986 {
+                                                                                            margin-top: 10px;
+                                                                                            margin-right: 0px;
+                                                                                            margin-bottom: 0px;
+                                                                                            margin-left: 0px;
+                                                                                        }
+                                                                                    }</style>
                                                                                 <style type="text/css">#sppb-addon-1573733783986 {
-                                                                                    font-size: 14px;
-                                                                                    line-height: 21px;
-                                                                                }
+                                                                                        font-size: 14px;
+                                                                                        line-height: 21px;
+                                                                                    }
 
-                                                                                @media (min-width: 768px) and (max-width: 991px) {
-                                                                                }
+                                                                                    @media (min-width: 768px) and (max-width: 991px) {
+                                                                                    }
 
-                                                                                @media (max-width: 767px) {
-                                                                                }</style>
+                                                                                    @media (max-width: 767px) {
+                                                                                    }</style>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -10207,59 +6477,59 @@ Mon, Feb 24, 2020 </span>
                                                     </div>
                                                 </div>
                                                 <style type="text/css">.sp-page-builder .page-content #section-id-1574411095389 {
-                                                    padding-top: 0px;
-                                                    padding-right: 0px;
-                                                    padding-bottom: 0px;
-                                                    padding-left: 0px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                }
-
-                                                @media (max-width: 767px) {
-                                                    .sp-page-builder .page-content #section-id-1574411095389 {
-                                                        padding-top: 17px;
+                                                        padding-top: 0px;
                                                         padding-right: 0px;
                                                         padding-bottom: 0px;
                                                         padding-left: 0px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
                                                     }
-                                                }
 
-                                                #column-id-1574411095391 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
+                                                    @media (max-width: 767px) {
+                                                        .sp-page-builder .page-content #section-id-1574411095389 {
+                                                            padding-top: 17px;
+                                                            padding-right: 0px;
+                                                            padding-bottom: 0px;
+                                                            padding-left: 0px;
+                                                        }
+                                                    }
 
-                                                .sp-page-builder .page-content #section-id-1574411095392 {
-                                                    padding-top: 20px;
-                                                    padding-right: 20px;
-                                                    padding-bottom: 10px;
-                                                    padding-left: 20px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                    background-color: #fff;
-                                                }
+                                                    #column-id-1574411095391 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }
 
-                                                #column-id-1574411095393 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }
+                                                    .sp-page-builder .page-content #section-id-1574411095392 {
+                                                        padding-top: 20px;
+                                                        padding-right: 20px;
+                                                        padding-bottom: 10px;
+                                                        padding-left: 20px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
+                                                        background-color: #fff;
+                                                    }
 
-                                                .sp-page-builder .page-content #section-id-1573733783983 {
-                                                    padding-top: 0px;
-                                                    padding-right: 0px;
-                                                    padding-bottom: 0px;
-                                                    padding-left: 0px;
-                                                    margin-top: 0px;
-                                                    margin-right: 0px;
-                                                    margin-bottom: 0px;
-                                                    margin-left: 0px;
-                                                }
+                                                    #column-id-1574411095393 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }
 
-                                                #column-id-1573733783982 {
-                                                    box-shadow: 0 0 0 0 #fff;
-                                                }</style>
+                                                    .sp-page-builder .page-content #section-id-1573733783983 {
+                                                        padding-top: 0px;
+                                                        padding-right: 0px;
+                                                        padding-bottom: 0px;
+                                                        padding-left: 0px;
+                                                        margin-top: 0px;
+                                                        margin-right: 0px;
+                                                        margin-bottom: 0px;
+                                                        margin-left: 0px;
+                                                    }
+
+                                                    #column-id-1573733783982 {
+                                                        box-shadow: 0 0 0 0 #fff;
+                                                    }</style>
                                             </div>
                                         </div>
                                     </div>
@@ -10281,7 +6551,7 @@ Mon, Feb 24, 2020 </span>
             <div class="sp-module-content">
                 <ul class="menu">
                     <li class="item-101 menu-deeper menu-parent"><a href="index-2.html">Home<span
-                            class="menu-toggler"></span></a>
+                                    class="menu-toggler"></span></a>
                         <ul class="menu-child">
                             <li class="item-219"><a href="index.php/home/news-bulletin.html">News Bulletin</a></li>
                             <li class="item-245"><a href="index-2.html">Business Insight (Default)</a></li>
@@ -10308,30 +6578,7 @@ Mon, Feb 24, 2020 </span>
         </div>
     </div>
 </div>
-<div class="template-options">
-    <div class="options-inner">
-        <a href="#" class="helix3-toggler">
-            <i class="fa fa-cog fa-spin"></i>
-        </a>
-        <div class="option-section">
-            <h4>Presets Color</h4>
-            <ul class="helix3-presets clearfix">
-                <li class="helix3-preset1" data-preset="1">
-                    <a style="background-color: #1d55c1" href="#"></a>
-                </li>
-                <li class="helix3-preset2" data-preset="2">
-                    <a style="background-color: #e4084f" href="#"></a>
-                </li>
-                <li class="helix3-preset3" data-preset="3">
-                    <a style="background-color: #e3a819" href="#"></a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
 <a href="#" class="sp-scroll-up" aria-label="Scroll Up"><span class="fa fa-chevron-up" aria-hidden="true"></span></a>
 </body>
 
-<!-- Mirrored from demo2.joomshaper.com/2019/newsberg/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Feb 2020 09:07:52 GMT -->
 </html>
