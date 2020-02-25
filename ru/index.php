@@ -42,6 +42,8 @@
     <link href="media/mod_languages/css/template4f50.css?0fe5eabe7d411626b85406bf464c07ff" rel="stylesheet"
           type="text/css"/>
     <link href="modules/mod_sp_weather/assets/css/flat.css" rel="stylesheet" type="text/css"/>
+
+    <link href="templates/newsberg/css/main.css" rel="stylesheet" type="text/css"/>
     <style type="text/css">
         #column-id-1573624776028 {
             box-shadow: 0 0 0 0 #fff;
