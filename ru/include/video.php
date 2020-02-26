@@ -1,3 +1,11 @@
+<?php
+$result_question_ru = $dbOperation->getQuestionByID(1, 'ru');
+$question_ru = mysqli_fetch_array($result_question_ru);
+
+$result_answer_ru = $dbOperation->getAnswerById(1, 'ru');
+$answer_ru = mysqli_fetch_array($result_answer_ru);
+
+?>
 <section id="section-id-1573810024455" class="sppb-section">
                                     <div class="sppb-row-container">
                                         <div class="sppb-row">
@@ -9,35 +17,35 @@
                                                             <div id="sppb-addon-1573810048723" class="clearfix ">
                                                                 <div class="sppb-addon sppb-addon-module newsberg-card">
                                                                     <div class="sppb-addon-content"><h3
-                                                                                class="sppb-addon-title">Today’s
-                                                                            Question</h3>
+                                                                                class="sppb-addon-title">Вопросы?</h3>
                                                                         <div class="mod-sppoll ">
-                                                                            <strong>Billionaire’s Folly Becomes Bankers’
-                                                                                Nightmare?</strong>
+                                                                            <strong><?=$question_ru[0]?></strong>
                                                                             <form class="form-sppoll" data-id="1"
                                                                                   data-module_id="111">
                                                                                 <div class="radio">
                                                                                     <input type="radio" name="question"
-                                                                                           id="sppoll0" value="0"
+                                                                                           id="sppoll0" value="<?=$answer_ru[0]?>"
                                                                                            checked>
                                                                                     <label for="sppoll0">
-                                                                                        Scuba divers explore ma ssive
-                                                                                        sinkh at Australian
-                                                                                        beach </label>
+                                                                                        <?=$answer_ru[0]?> </label>
                                                                                 </div>
+                                                                                <?php
+                                                                                $answer_ru = mysqli_fetch_array($result_answer_ru);
+                                                                                ?>
                                                                                 <div class="radio">
                                                                                     <input type="radio" name="question"
-                                                                                           id="sppoll1" value="1">
+                                                                                           id="sppoll1" value="<?=$answer_ru[0]?>">
                                                                                     <label for="sppoll1">
-                                                                                        Feel the changing of sea sons in
-                                                                                        these September mess </label>
+                                                                                        <?=$answer_ru[0]?> </label>
                                                                                 </div>
+                                                                                <?php
+                                                                                $answer_ru = mysqli_fetch_array($result_answer_ru);
+                                                                                ?>
                                                                                 <div class="radio">
                                                                                     <input type="radio" name="question"
-                                                                                           id="sppoll2" value="2">
+                                                                                           id="sppoll2" value="<?=$answer_ru[0]?>">
                                                                                     <label for="sppoll2">
-                                                                                        Touch the changing of sea sons
-                                                                                        in these September mess </label>
+                                                                                        <?=$answer_ru[0]?> </label>
                                                                                 </div>
                                                                                 <input type="submit"
                                                                                        class="btn btn-default"
@@ -59,7 +67,7 @@
                                                              class="sppb-addon-wrapper">
                                                             <div id="sppb-addon-1574066045843" class="clearfix ">
                                                                 <div class="sppb-addon sppb-addon-header heading-arrow sppb-text-left">
-                                                                    <h2 class="sppb-addon-title">Featured Videos</h2>
+                                                                    <h2 class="sppb-addon-title">Наворхо</h2>
                                                                 </div>
                                                             </div>
                                                         </div>
