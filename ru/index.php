@@ -1,3 +1,11 @@
+<?php
+require_once('../management/sql/DBOperations.php');
+$dbOperation = new DBOperations();
+
+
+$result_news = $dbOperation->get_news();
+$news = mysqli_fetch_array($result_news);
+?>
 <!doctype html>
 <html lang="en-gb" dir="ltr">
 
@@ -1673,106 +1681,107 @@
                                                                 <div class="sppb-addon sppb-addon-articles-layout layout-arabica  ">
                                                                     <div class="sppb-addon-content">
                                                                         <div class="sppb-row">
+                                                                            <?php
+                                                                            $news = mysqli_fetch_array($result_news);
+                                                                            $category = $dbOperation->getCategoryByID($news[4],'ru');
+                                                                            $cat = mysqli_fetch_array($category);
+                                                                            echo '
                                                                             <div class="leading-item  sppb-col-sm-6">
                                                                                 <div class="sppb-addon-article "
-                                                                                     style="background-image: url(images/2019/12/11/politics24.jpg)">
+                                                                                     style="background-image: url(../img/'.$news[3].')">
                                                                                     <a class="sppb-article-img-wrap"
                                                                                        href="index.php/business-blog/the-exact-same-briefcase-soap-sorry-i-make.html"
                                                                                        itemprop="url"><img
-                                                                                                class="sppb-img-responsive"
-                                                                                                src="images/2019/12/11/politics24_small.jpg"
-                                                                                                alt="Sondland adds to testimony linking aid to Ukraine probes sought by Trump"
-                                                                                                itemprop="thumbnailUrl"></a>
+                                                                                            class="sppb-img-responsive"
+                                                                                            src="../img/'.$news[3].'"
+                                                                                            alt="Sondland adds to testimony linking aid to Ukraine probes sought by Trump"
+                                                                                            itemprop="thumbnailUrl"></a>
                                                                                     <div class="sppb-article-info-wrap">
-                                                                                        <p class="sppb-meta-category"><a
-                                                                                                    href="index.php/business-blog.html"
-                                                                                                    itemprop="genre">Категория 1</a>
+                                                                                        <p class="sppb-meta-category">
+                                                                                            <a
+                                                                                                href="index.php/business-blog.html"
+                                                                                                itemprop="genre">'. $cat[0] .'</a>
                                                                                         </p>
                                                                                         <h3>
                                                                                             <a href="index.php/business-blog/the-exact-same-briefcase-soap-sorry-i-make.html"
-                                                                                               itemprop="url">Sondland
-                                                                                                adds to testimony
-                                                                                                linking aid to Ukraine
-                                                                                                probes sought by
-                                                                                                Trump</a></h3>
+                                                                                               itemprop="url">'.$news[2].'</a></h3>
                                                                                         <div class="sppb-article-spbookmark-wrap d-flex">
                                                                                             <div class="sppb-article-meta">
                                                                                                 <span class="sppb-meta-date"
-                                                                                                      itemprop="datePublished">Nov 21, 2019</span>
+                                                                                                      itemprop="datePublished">'.$news[5].'</span>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
+                                                                            ';
+                                                                            ?>
+
+                                                                            <?php
+                                                                            $news = mysqli_fetch_array($result_news);
+                                                                            $category = $dbOperation->getCategoryByID($news[4],'ru');
+                                                                            $cat = mysqli_fetch_array($category);
+                                                                            ?>
                                                                             <div class="leading-item  sppb-col-sm-6">
                                                                                 <div class="sppb-addon-article "
-                                                                                     style="background-image: url(images/2019/12/10/entertainment1.jpg)">
+                                                                                     style="background-image: url(../img/<?=$news[3]?>)">
                                                                                     <a class="sppb-article-img-wrap"
-                                                                                       href="index.php/entertainment/the-exact-same-briefcase-soap-sorry-i-make.html"
+                                                                                       href="index.php/business-blog/the-exact-same-briefcase-soap-sorry-i-make.html"
                                                                                        itemprop="url"><img
-                                                                                                class="sppb-img-responsive"
-                                                                                                src="images/2019/12/10/entertainment1_small.jpg"
-                                                                                                alt="Sondland adds to testimony linking aid to Ukraine probes sought by Trump"
-                                                                                                itemprop="thumbnailUrl"></a>
+                                                                                            class="sppb-img-responsive"
+                                                                                            src="../img/<?=$news[3]?>"
+                                                                                            alt="Sondland adds to testimony linking aid to Ukraine probes sought by Trump"
+                                                                                            itemprop="thumbnailUrl"></a>
                                                                                     <div class="sppb-article-info-wrap">
-                                                                                        <p class="sppb-meta-category"><a
-                                                                                                    href="index.php/entertainment.html"
-                                                                                                    itemprop="genre">Категория 2</a>
+                                                                                        <p class="sppb-meta-category">
+                                                                                            <a
+                                                                                                href="index.php/business-blog.html"
+                                                                                                itemprop="genre"><?=$cat[0]?></a>
                                                                                         </p>
                                                                                         <h3>
-                                                                                            <a href="index.php/entertainment/the-exact-same-briefcase-soap-sorry-i-make.html"
-                                                                                               itemprop="url">Sondland
-                                                                                                adds to testimony
-                                                                                                linking aid to Ukraine
-                                                                                                probes sought by
-                                                                                                Trump</a></h3>
+                                                                                            <a href="index.php/business-blog/the-exact-same-briefcase-soap-sorry-i-make.html"
+                                                                                               itemprop="url"><?=$news[2]?></a></h3>
                                                                                         <div class="sppb-article-spbookmark-wrap d-flex">
                                                                                             <div class="sppb-article-meta">
                                                                                                 <span class="sppb-meta-date"
-                                                                                                      itemprop="datePublished">Nov 21, 2019</span>
+                                                                                                      itemprop="datePublished"><?=$news[5]?></span>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
 
+
+
                                                                             <div class="sppb-col-sm-12">
                                                                                 <div class="swiper-container intro-items-slider">
                                                                                     <div class="swiper-wrapper">
+                                                                                        <?php
+                                                                                        $news = mysqli_fetch_array($result_news);
+                                                                                        $category = $dbOperation->getCategoryByID($news[4],'ru');
+                                                                                        $cat = mysqli_fetch_array($category);
+                                                                                        ?>
                                                                                         <div class="swiper-slide  sppb-col-sm-0">
                                                                                             <div class="sppb-addon-article "
                                                                                                  style="">
                                                                                                 <div class="sppb-article-info-wrap">
                                                                                                     <p class="sppb-meta-category">
                                                                                                         <a href="index.php/food.html"
-                                                                                                           itemprop="genre">Категория 3</a>
+                                                                                                           itemprop="genre"><?=$cat[0]?></a>
                                                                                                     </p>
                                                                                                     <h3>
                                                                                                         <a href="index.php/food/the-exact-same-briefcase-soap-sorry-i-make.html"
-                                                                                                           itemprop="url">Sondland
-                                                                                                            adds tos
-                                                                                                            testimony
-                                                                                                            linking aid
-                                                                                                            to Ukraine
-                                                                                                            probes
-                                                                                                            sought by
-                                                                                                            Trump</a>
+                                                                                                           itemprop="url"><?=$news[1]?></a>
                                                                                                     </h3>
                                                                                                     <div class="sppb-article-info-intro-wrap d-flex align-items-center">
                                                                                                         <div>
                                                                                                             <div class="sppb-article-introtext">
-                                                                                                                Politics
-                                                                                                                is a set
-                                                                                                                of
-                                                                                                                activities
-                                                                                                                associated
-                                                                                                                with the
-                                                                                                                gov...
+                                                                                                                <?=$news[2]?>
                                                                                                             </div>
                                                                                                             <div class="sppb-article-spbookmark-wrap d-flex">
                                                                                                                 <div class="sppb-article-meta">
                                                                                                                     <span class="sppb-meta-date"
-                                                                                                                          itemprop="datePublished">Nov 21, 2019</span>
+                                                                                                                          itemprop="datePublished"><?=$news[5]?></span>
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -1780,400 +1789,289 @@
                                                                                                            href="index.php/food/the-exact-same-briefcase-soap-sorry-i-make.html"
                                                                                                            itemprop="url"><img
                                                                                                                     class="sppb-img-responsive"
-                                                                                                                    src="images/2019/12/10/food-2_small.jpg"
-                                                                                                                    alt="Sondland adds tos testimony linking aid to Ukraine probes sought by Trump"
+                                                                                                                    src="../img/<?=$news[3]?>"
+                                                                                                                    alt="<?=$news[1]?>"
                                                                                                                     itemprop="thumbnailUrl"></a>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
-                                                                                        <div class="swiper-slide  sppb-col-sm-0">
-                                                                                            <div class="sppb-addon-article "
-                                                                                                 style="">
-                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                    <p class="sppb-meta-category">
-                                                                                                        <a href="index.php/sports.html"
-                                                                                                           itemprop="genre">Категория 4</a>
-                                                                                                    </p>
-                                                                                                    <h3>
-                                                                                                        <a href="index.php/sports/the-exact-same-briefcase-soap-sorry-i-make.html"
-                                                                                                           itemprop="url">Sondland
-                                                                                                            adds to
-                                                                                                            testimony
-                                                                                                            linking aid
-                                                                                                            to Ukraine
-                                                                                                            probes
-                                                                                                            sought by
-                                                                                                            Trump</a>
-                                                                                                    </h3>
-                                                                                                    <div class="sppb-article-info-intro-wrap d-flex align-items-center">
-                                                                                                        <div>
-                                                                                                            <div class="sppb-article-introtext">
-                                                                                                                Politics
-                                                                                                                is a set
-                                                                                                                of
-                                                                                                                activities
-                                                                                                                associated
-                                                                                                                with the
-                                                                                                                gov...
-                                                                                                            </div>
-                                                                                                            <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                <div class="sppb-article-meta">
-                                                                                                                    <span class="sppb-meta-date"
-                                                                                                                          itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <a class="sppb-article-img-wrap"
-                                                                                                           href="index.php/sports/the-exact-same-briefcase-soap-sorry-i-make.html"
-                                                                                                           itemprop="url"><img
-                                                                                                                    class="sppb-img-responsive"
-                                                                                                                    src="images/2019/12/04/sport_small.jpg"
-                                                                                                                    alt="Sondland adds to testimony linking aid to Ukraine probes sought by Trump"
-                                                                                                                    itemprop="thumbnailUrl"></a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="swiper-slide  sppb-col-sm-0">
-                                                                                            <div class="sppb-addon-article "
-                                                                                                 style="">
-                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                    <p class="sppb-meta-category">
-                                                                                                        <a href="index.php/categories/newsberg/politics.html"
-                                                                                                           itemprop="genre">Категория 4</a>
-                                                                                                    </p>
-                                                                                                    <h3>
-                                                                                                        <a href="index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make.html"
-                                                                                                           itemprop="url">Sondland
-                                                                                                            adds tos
-                                                                                                            testimony
-                                                                                                            linking aid
-                                                                                                            to Ukraine
-                                                                                                            probes
-                                                                                                            sought by
-                                                                                                            Trump</a>
-                                                                                                    </h3>
-                                                                                                    <div class="sppb-article-info-intro-wrap d-flex align-items-center">
-                                                                                                        <div>
-                                                                                                            <div class="sppb-article-introtext">
-                                                                                                                Politics
-                                                                                                                is a set
-                                                                                                                of
-                                                                                                                activities
-                                                                                                                associated
-                                                                                                                with the
-                                                                                                                gov...
-                                                                                                            </div>
-                                                                                                            <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                <div class="sppb-article-meta">
-                                                                                                                    <span class="sppb-meta-date"
-                                                                                                                          itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <a class="sppb-article-img-wrap"
-                                                                                                           href="index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make.html"
-                                                                                                           itemprop="url"><img
-                                                                                                                    class="sppb-img-responsive"
-                                                                                                                    src="images/2019/12/11/politics31_small.jpg"
-                                                                                                                    alt="Sondland adds tos testimony linking aid to Ukraine probes sought by Trump"
-                                                                                                                    itemprop="thumbnailUrl"></a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="swiper-slide  sppb-col-sm-0">
-                                                                                            <div class="sppb-addon-article "
-                                                                                                 style="">
-                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                    <p class="sppb-meta-category">
-                                                                                                        <a href="index.php/categories/newsberg/technology.html"
-                                                                                                           itemprop="genre">Technology</a><span
-                                                                                                                class="video-symbol fa fa-play-circle"></span><span
-                                                                                                                class="video-duration">01 : 35</span>
-                                                                                                    </p>
-                                                                                                    <h3>
-                                                                                                        <a href="index.php/categories/newsberg/technology/the-exact-same-briefcase-soap-sorry-i-make.html"
-                                                                                                           itemprop="url">Sondland
-                                                                                                            adds to
-                                                                                                            testimony
-                                                                                                            linking aid
-                                                                                                            to Ukraine
-                                                                                                            probes
-                                                                                                            sought by
-                                                                                                            Trump</a>
-                                                                                                    </h3>
-                                                                                                    <div class="sppb-article-info-intro-wrap d-flex align-items-center">
-                                                                                                        <div>
-                                                                                                            <div class="sppb-article-introtext">
-                                                                                                                Politics
-                                                                                                                is a set
-                                                                                                                of
-                                                                                                                activities
-                                                                                                                associated
-                                                                                                                with the
-                                                                                                                gov...
-                                                                                                            </div>
-                                                                                                            <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                <div class="sppb-article-meta">
-                                                                                                                    <span class="sppb-meta-date"
-                                                                                                                          itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="video-caption-wrapper d-flex align-items-center"
-                                                                                                             style="background-image: url(images/2019/12/10/tech-31.jpg);">
-                                                                                                            <i class="fa fa-play-circle"></i>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="swiper-slide  sppb-col-sm-0">
-                                                                                            <div class="sppb-addon-article "
-                                                                                                 style="">
-                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                    <p class="sppb-meta-category">
-                                                                                                        <a href="index.php/business-blog.html"
-                                                                                                           itemprop="genre">Business</a>
-                                                                                                    </p>
-                                                                                                    <h3>
-                                                                                                        <a href="index.php/business-blog/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                           itemprop="url">What
-                                                                                                            sick
-                                                                                                            desperation
-                                                                                                            in your
-                                                                                                            laugh? We
-                                                                                                            have</a>
-                                                                                                    </h3>
-                                                                                                    <div class="sppb-article-info-intro-wrap d-flex align-items-center">
-                                                                                                        <div>
-                                                                                                            <div class="sppb-article-introtext">
-                                                                                                                Politics
-                                                                                                                is a set
-                                                                                                                of
-                                                                                                                activities
-                                                                                                                associated
-                                                                                                                with the
-                                                                                                                gov...
-                                                                                                            </div>
-                                                                                                            <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                <div class="sppb-article-meta">
-                                                                                                                    <span class="sppb-meta-date"
-                                                                                                                          itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                </div>
-                                                                                                                <div class="article-spbookmark">
-                                                                                                                    <form class="sp-bookmark-form"
-                                                                                                                          name="add-to-bookmark-47">
-                                                                                                                        <a class="btn-spbookmark-action "
-                                                                                                                           href="javascript:void(0);"
-                                                                                                                           data-content-id="47">
-                                                                                                                            <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                        </a>
-                                                                                                                        <input type="hidden"
-                                                                                                                               name="cid"
-                                                                                                                               value="47">
-                                                                                                                        <input type="hidden"
-                                                                                                                               name="curl"
-                                                                                                                               value="index.html">
-                                                                                                                    </form>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <a class="sppb-article-img-wrap"
-                                                                                                           href="index.php/business-blog/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                           itemprop="url"><img
-                                                                                                                    class="sppb-img-responsive"
-                                                                                                                    src="images/2019/12/10/business-3_small.jpg"
-                                                                                                                    alt="What sick desperation in your laugh? We have"
-                                                                                                                    itemprop="thumbnailUrl"></a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="swiper-slide  sppb-col-sm-0">
-                                                                                            <div class="sppb-addon-article "
-                                                                                                 style="">
-                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                    <p class="sppb-meta-category">
-                                                                                                        <a href="index.php/entertainment.html"
-                                                                                                           itemprop="genre">Entertainment</a>
-                                                                                                    </p>
-                                                                                                    <h3>
-                                                                                                        <a href="index.php/entertainment/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                           itemprop="url">What
-                                                                                                            sick
-                                                                                                            desperation
-                                                                                                            in your
-                                                                                                            laugh? We
-                                                                                                            have</a>
-                                                                                                    </h3>
-                                                                                                    <div class="sppb-article-info-intro-wrap d-flex align-items-center">
-                                                                                                        <div>
-                                                                                                            <div class="sppb-article-introtext">
-                                                                                                                Politics
-                                                                                                                is a set
-                                                                                                                of
-                                                                                                                activities
-                                                                                                                associated
-                                                                                                                with the
-                                                                                                                gov...
-                                                                                                            </div>
-                                                                                                            <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                <div class="sppb-article-meta">
-                                                                                                                    <span class="sppb-meta-date"
-                                                                                                                          itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                </div>
-                                                                                                                <div class="article-spbookmark">
-                                                                                                                    <form class="sp-bookmark-form"
-                                                                                                                          name="add-to-bookmark-63">
-                                                                                                                        <a class="btn-spbookmark-action "
-                                                                                                                           href="javascript:void(0);"
-                                                                                                                           data-content-id="63">
-                                                                                                                            <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                        </a>
-                                                                                                                        <input type="hidden"
-                                                                                                                               name="cid"
-                                                                                                                               value="63">
-                                                                                                                        <input type="hidden"
-                                                                                                                               name="curl"
-                                                                                                                               value="index.html">
-                                                                                                                    </form>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <a class="sppb-article-img-wrap"
-                                                                                                           href="index.php/entertainment/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                           itemprop="url"><img
-                                                                                                                    class="sppb-img-responsive"
-                                                                                                                    src="images/2019/12/10/entertainment-20_small.jpg"
-                                                                                                                    alt="What sick desperation in your laugh? We have"
-                                                                                                                    itemprop="thumbnailUrl"></a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
+                                                                                        <?php
+                                                                                        $news = mysqli_fetch_array($result_news);
+                                                                                        $category = $dbOperation->getCategoryByID($news[4],'ru');
+                                                                                        $cat = mysqli_fetch_array($category);
+                                                                                        ?>
                                                                                         <div class="swiper-slide  sppb-col-sm-0">
                                                                                             <div class="sppb-addon-article "
                                                                                                  style="">
                                                                                                 <div class="sppb-article-info-wrap">
                                                                                                     <p class="sppb-meta-category">
                                                                                                         <a href="index.php/food.html"
-                                                                                                           itemprop="genre">Food</a>
+                                                                                                           itemprop="genre"><?=$cat[0]?></a>
                                                                                                     </p>
                                                                                                     <h3>
-                                                                                                        <a href="index.php/food/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                           itemprop="url">What
-                                                                                                            sick
-                                                                                                            desperation
-                                                                                                            in your
-                                                                                                            laugh? We
-                                                                                                            have</a>
+                                                                                                        <a href="index.php/food/the-exact-same-briefcase-soap-sorry-i-make.html"
+                                                                                                           itemprop="url"><?=$news[1]?></a>
                                                                                                     </h3>
                                                                                                     <div class="sppb-article-info-intro-wrap d-flex align-items-center">
                                                                                                         <div>
                                                                                                             <div class="sppb-article-introtext">
-                                                                                                                Politics
-                                                                                                                is a set
-                                                                                                                of
-                                                                                                                activities
-                                                                                                                associated
-                                                                                                                with the
-                                                                                                                gov...
+                                                                                                                <?=$news[2]?>
                                                                                                             </div>
                                                                                                             <div class="sppb-article-spbookmark-wrap d-flex">
                                                                                                                 <div class="sppb-article-meta">
                                                                                                                     <span class="sppb-meta-date"
-                                                                                                                          itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                </div>
-                                                                                                                <div class="article-spbookmark">
-                                                                                                                    <form class="sp-bookmark-form"
-                                                                                                                          name="add-to-bookmark-100">
-                                                                                                                        <a class="btn-spbookmark-action "
-                                                                                                                           href="javascript:void(0);"
-                                                                                                                           data-content-id="100">
-                                                                                                                            <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                        </a>
-                                                                                                                        <input type="hidden"
-                                                                                                                               name="cid"
-                                                                                                                               value="100">
-                                                                                                                        <input type="hidden"
-                                                                                                                               name="curl"
-                                                                                                                               value="index.html">
-                                                                                                                    </form>
+                                                                                                                          itemprop="datePublished"><?=$news[5]?></span>
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
                                                                                                         <a class="sppb-article-img-wrap"
-                                                                                                           href="index.php/food/what-sick-desperation-in-your-laugh-we-have.html"
+                                                                                                           href="index.php/food/the-exact-same-briefcase-soap-sorry-i-make.html"
                                                                                                            itemprop="url"><img
-                                                                                                                    class="sppb-img-responsive"
-                                                                                                                    src="images/2019/12/10/food-3_small.jpg"
-                                                                                                                    alt="What sick desperation in your laugh? We have"
-                                                                                                                    itemprop="thumbnailUrl"></a>
+                                                                                                                class="sppb-img-responsive"
+                                                                                                                src="../img/<?=$news[3]?>"
+                                                                                                                alt="<?=$news[1]?>"
+                                                                                                                itemprop="thumbnailUrl"></a>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
+                                                                                        <?php
+                                                                                        $news = mysqli_fetch_array($result_news);
+                                                                                        $category = $dbOperation->getCategoryByID($news[4],'ru');
+                                                                                        $cat = mysqli_fetch_array($category);
+                                                                                        ?>
                                                                                         <div class="swiper-slide  sppb-col-sm-0">
                                                                                             <div class="sppb-addon-article "
                                                                                                  style="">
                                                                                                 <div class="sppb-article-info-wrap">
                                                                                                     <p class="sppb-meta-category">
-                                                                                                        <a href="index.php/sports.html"
-                                                                                                           itemprop="genre">Sports</a>
+                                                                                                        <a href="index.php/food.html"
+                                                                                                           itemprop="genre"><?=$cat[0]?></a>
                                                                                                     </p>
                                                                                                     <h3>
-                                                                                                        <a href="index.php/sports/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                           itemprop="url">What
-                                                                                                            sick
-                                                                                                            desperation
-                                                                                                            in your
-                                                                                                            laugh? We
-                                                                                                            have</a>
+                                                                                                        <a href="index.php/food/the-exact-same-briefcase-soap-sorry-i-make.html"
+                                                                                                           itemprop="url"><?=$news[1]?></a>
                                                                                                     </h3>
                                                                                                     <div class="sppb-article-info-intro-wrap d-flex align-items-center">
                                                                                                         <div>
                                                                                                             <div class="sppb-article-introtext">
-                                                                                                                Politics
-                                                                                                                is a set
-                                                                                                                of
-                                                                                                                activities
-                                                                                                                associated
-                                                                                                                with the
-                                                                                                                gov...
+                                                                                                                <?=$news[2]?>
                                                                                                             </div>
                                                                                                             <div class="sppb-article-spbookmark-wrap d-flex">
                                                                                                                 <div class="sppb-article-meta">
                                                                                                                     <span class="sppb-meta-date"
-                                                                                                                          itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                                </div>
-                                                                                                                <div class="article-spbookmark">
-                                                                                                                    <form class="sp-bookmark-form"
-                                                                                                                          name="add-to-bookmark-103">
-                                                                                                                        <a class="btn-spbookmark-action "
-                                                                                                                           href="javascript:void(0);"
-                                                                                                                           data-content-id="103">
-                                                                                                                            <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                        </a>
-                                                                                                                        <input type="hidden"
-                                                                                                                               name="cid"
-                                                                                                                               value="103">
-                                                                                                                        <input type="hidden"
-                                                                                                                               name="curl"
-                                                                                                                               value="index.html">
-                                                                                                                    </form>
+                                                                                                                          itemprop="datePublished"><?=$news[5]?></span>
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
                                                                                                         <a class="sppb-article-img-wrap"
-                                                                                                           href="index.php/sports/what-sick-desperation-in-your-laugh-we-have.html"
+                                                                                                           href="index.php/food/the-exact-same-briefcase-soap-sorry-i-make.html"
                                                                                                            itemprop="url"><img
-                                                                                                                    class="sppb-img-responsive"
-                                                                                                                    src="images/2019/12/10/sport_small.jpg"
-                                                                                                                    alt="What sick desperation in your laugh? We have"
-                                                                                                                    itemprop="thumbnailUrl"></a>
+                                                                                                                class="sppb-img-responsive"
+                                                                                                                src="../img/<?=$news[3]?>"
+                                                                                                                alt="<?=$news[1]?>"
+                                                                                                                itemprop="thumbnailUrl"></a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <?php
+                                                                                        $news = mysqli_fetch_array($result_news);
+                                                                                        $category = $dbOperation->getCategoryByID($news[4],'ru');
+                                                                                        $cat = mysqli_fetch_array($category);
+                                                                                        ?>
+                                                                                        <div class="swiper-slide  sppb-col-sm-0">
+                                                                                            <div class="sppb-addon-article "
+                                                                                                 style="">
+                                                                                                <div class="sppb-article-info-wrap">
+                                                                                                    <p class="sppb-meta-category">
+                                                                                                        <a href="index.php/food.html"
+                                                                                                           itemprop="genre"><?=$cat[0]?></a>
+                                                                                                    </p>
+                                                                                                    <h3>
+                                                                                                        <a href="index.php/food/the-exact-same-briefcase-soap-sorry-i-make.html"
+                                                                                                           itemprop="url"><?=$news[1]?></a>
+                                                                                                    </h3>
+                                                                                                    <div class="sppb-article-info-intro-wrap d-flex align-items-center">
+                                                                                                        <div>
+                                                                                                            <div class="sppb-article-introtext">
+                                                                                                                <?=$news[2]?>
+                                                                                                            </div>
+                                                                                                            <div class="sppb-article-spbookmark-wrap d-flex">
+                                                                                                                <div class="sppb-article-meta">
+                                                                                                                    <span class="sppb-meta-date"
+                                                                                                                          itemprop="datePublished"><?=$news[5]?></span>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <a class="sppb-article-img-wrap"
+                                                                                                           href="index.php/food/the-exact-same-briefcase-soap-sorry-i-make.html"
+                                                                                                           itemprop="url"><img
+                                                                                                                class="sppb-img-responsive"
+                                                                                                                src="../img/<?=$news[3]?>"
+                                                                                                                alt="<?=$news[1]?>"
+                                                                                                                itemprop="thumbnailUrl"></a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <?php
+                                                                                        $news = mysqli_fetch_array($result_news);
+                                                                                        $category = $dbOperation->getCategoryByID($news[4],'ru');
+                                                                                        $cat = mysqli_fetch_array($category);
+                                                                                        ?>
+                                                                                        <div class="swiper-slide  sppb-col-sm-0">
+                                                                                            <div class="sppb-addon-article "
+                                                                                                 style="">
+                                                                                                <div class="sppb-article-info-wrap">
+                                                                                                    <p class="sppb-meta-category">
+                                                                                                        <a href="index.php/food.html"
+                                                                                                           itemprop="genre"><?=$cat[0]?></a>
+                                                                                                    </p>
+                                                                                                    <h3>
+                                                                                                        <a href="index.php/food/the-exact-same-briefcase-soap-sorry-i-make.html"
+                                                                                                           itemprop="url"><?=$news[1]?></a>
+                                                                                                    </h3>
+                                                                                                    <div class="sppb-article-info-intro-wrap d-flex align-items-center">
+                                                                                                        <div>
+                                                                                                            <div class="sppb-article-introtext">
+                                                                                                                <?=$news[2]?>
+                                                                                                            </div>
+                                                                                                            <div class="sppb-article-spbookmark-wrap d-flex">
+                                                                                                                <div class="sppb-article-meta">
+                                                                                                                    <span class="sppb-meta-date"
+                                                                                                                          itemprop="datePublished"><?=$news[5]?></span>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <a class="sppb-article-img-wrap"
+                                                                                                           href="index.php/food/the-exact-same-briefcase-soap-sorry-i-make.html"
+                                                                                                           itemprop="url"><img
+                                                                                                                class="sppb-img-responsive"
+                                                                                                                src="../img/<?=$news[3]?>"
+                                                                                                                alt="<?=$news[1]?>"
+                                                                                                                itemprop="thumbnailUrl"></a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <?php
+                                                                                        $news = mysqli_fetch_array($result_news);
+                                                                                        $category = $dbOperation->getCategoryByID($news[4],'ru');
+                                                                                        $cat = mysqli_fetch_array($category);
+                                                                                        ?>
+                                                                                        <div class="swiper-slide  sppb-col-sm-0">
+                                                                                            <div class="sppb-addon-article "
+                                                                                                 style="">
+                                                                                                <div class="sppb-article-info-wrap">
+                                                                                                    <p class="sppb-meta-category">
+                                                                                                        <a href="index.php/food.html"
+                                                                                                           itemprop="genre"><?=$cat[0]?></a>
+                                                                                                    </p>
+                                                                                                    <h3>
+                                                                                                        <a href="index.php/food/the-exact-same-briefcase-soap-sorry-i-make.html"
+                                                                                                           itemprop="url"><?=$news[1]?></a>
+                                                                                                    </h3>
+                                                                                                    <div class="sppb-article-info-intro-wrap d-flex align-items-center">
+                                                                                                        <div>
+                                                                                                            <div class="sppb-article-introtext">
+                                                                                                                <?=$news[2]?>
+                                                                                                            </div>
+                                                                                                            <div class="sppb-article-spbookmark-wrap d-flex">
+                                                                                                                <div class="sppb-article-meta">
+                                                                                                                    <span class="sppb-meta-date"
+                                                                                                                          itemprop="datePublished"><?=$news[5]?></span>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <a class="sppb-article-img-wrap"
+                                                                                                           href="index.php/food/the-exact-same-briefcase-soap-sorry-i-make.html"
+                                                                                                           itemprop="url"><img
+                                                                                                                class="sppb-img-responsive"
+                                                                                                                src="../img/<?=$news[3]?>"
+                                                                                                                alt="<?=$news[1]?>"
+                                                                                                                itemprop="thumbnailUrl"></a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <?php
+                                                                                        $news = mysqli_fetch_array($result_news);
+                                                                                        $category = $dbOperation->getCategoryByID($news[4],'ru');
+                                                                                        $cat = mysqli_fetch_array($category);
+                                                                                        ?>
+                                                                                        <div class="swiper-slide  sppb-col-sm-0">
+                                                                                            <div class="sppb-addon-article "
+                                                                                                 style="">
+                                                                                                <div class="sppb-article-info-wrap">
+                                                                                                    <p class="sppb-meta-category">
+                                                                                                        <a href="index.php/food.html"
+                                                                                                           itemprop="genre"><?=$cat[0]?></a>
+                                                                                                    </p>
+                                                                                                    <h3>
+                                                                                                        <a href="index.php/food/the-exact-same-briefcase-soap-sorry-i-make.html"
+                                                                                                           itemprop="url"><?=$news[1]?></a>
+                                                                                                    </h3>
+                                                                                                    <div class="sppb-article-info-intro-wrap d-flex align-items-center">
+                                                                                                        <div>
+                                                                                                            <div class="sppb-article-introtext">
+                                                                                                                <?=$news[2]?>
+                                                                                                            </div>
+                                                                                                            <div class="sppb-article-spbookmark-wrap d-flex">
+                                                                                                                <div class="sppb-article-meta">
+                                                                                                                    <span class="sppb-meta-date"
+                                                                                                                          itemprop="datePublished"><?=$news[5]?></span>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <a class="sppb-article-img-wrap"
+                                                                                                           href="index.php/food/the-exact-same-briefcase-soap-sorry-i-make.html"
+                                                                                                           itemprop="url"><img
+                                                                                                                class="sppb-img-responsive"
+                                                                                                                src="../img/<?=$news[3]?>"
+                                                                                                                alt="<?=$news[1]?>"
+                                                                                                                itemprop="thumbnailUrl"></a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <?php
+                                                                                        $news = mysqli_fetch_array($result_news);
+                                                                                        $category = $dbOperation->getCategoryByID($news[4],'ru');
+                                                                                        $cat = mysqli_fetch_array($category);
+                                                                                        ?>
+                                                                                        <div class="swiper-slide  sppb-col-sm-0">
+                                                                                            <div class="sppb-addon-article "
+                                                                                                 style="">
+                                                                                                <div class="sppb-article-info-wrap">
+                                                                                                    <p class="sppb-meta-category">
+                                                                                                        <a href="index.php/food.html"
+                                                                                                           itemprop="genre"><?=$cat[0]?></a>
+                                                                                                    </p>
+                                                                                                    <h3>
+                                                                                                        <a href="index.php/food/the-exact-same-briefcase-soap-sorry-i-make.html"
+                                                                                                           itemprop="url"><?=$news[1]?></a>
+                                                                                                    </h3>
+                                                                                                    <div class="sppb-article-info-intro-wrap d-flex align-items-center">
+                                                                                                        <div>
+                                                                                                            <div class="sppb-article-introtext">
+                                                                                                                <?=$news[2]?>
+                                                                                                            </div>
+                                                                                                            <div class="sppb-article-spbookmark-wrap d-flex">
+                                                                                                                <div class="sppb-article-meta">
+                                                                                                                    <span class="sppb-meta-date"
+                                                                                                                          itemprop="datePublished"><?=$news[5]?></span>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <a class="sppb-article-img-wrap"
+                                                                                                           href="index.php/food/the-exact-same-briefcase-soap-sorry-i-make.html"
+                                                                                                           itemprop="url"><img
+                                                                                                                class="sppb-img-responsive"
+                                                                                                                src="../img/<?=$news[3]?>"
+                                                                                                                alt="<?=$news[1]?>"
+                                                                                                                itemprop="thumbnailUrl"></a>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
@@ -2219,12 +2117,12 @@
                                                                                             <div class="sppb-addon-content">
                                                                                                 <div class="bannergroup">
                                                                                                     <div class="banneritem">
-                                                                                                        <a href="https://joomshaper.com/"
+                                                                                                        <a href="http://www.president.tj/"
                                                                                                            target="_blank"
-                                                                                                           rel="noopener noreferrer"
-                                                                                                           title="Home Ad 6">
-                                                                                                            <img src="images/demo/product_ad1.png"
-                                                                                                                 alt="JoomShaper" style="border: none;"/>
+<!--                                                                                                           rel="noopener noreferrer"-->
+                                                                                                           <title="Президенти Чумхурии Точикистон">
+                                                                                                            <img src="../img/president.jpg"
+                                                                                                                 alt="president.jpg" style="border: none;"/>
                                                                                                         </a>
                                                                                                         <div class="clr"></div>
                                                                                                     </div>
@@ -2258,6 +2156,7 @@
                                                                                                 Кисту Чист?</h2></div>
                                                                                     </div>
                                                                                 </div>
+
                                                                                 <div id="sppb-addon-wrapper-1574765554041"
                                                                                      class="sppb-addon-wrapper">
                                                                                     <div id="sppb-addon-1574765554041" class="clearfix ">
@@ -2304,7 +2203,7 @@
                                                              class="sppb-addon-wrapper">
                                                             <div id="sppb-addon-1573711718259" class="clearfix ">
                                                                 <div class="sppb-addon sppb-addon-header heading-arrow sppb-text-left">
-                                                                    <h2 class="sppb-addon-title">More Stories</h2></div>
+                                                                    <h2 class="sppb-addon-title">Новости</h2></div>
                                                             </div>
                                                         </div>
                                                         <div id="sppb-addon-wrapper-1574765774388"
@@ -2314,50 +2213,31 @@
                                                                     <div class="sppb-addon-content">
                                                                         <div class="sppb-row">
                                                                             <div class="leading-item  sppb-col-sm-12">
+
+                                                                                <?php
+                                                                                $news = mysqli_fetch_array($result_news);
+                                                                                $category = $dbOperation->getCategoryByID($news[4],'ru');
+                                                                                $cat = mysqli_fetch_array($category);
+                                                                                ?>
                                                                                 <div class="sppb-addon-article "
                                                                                      style="">
                                                                                     <div class="bg-img-wrapper"
-                                                                                         style="background-image: url(images/2019/12/10/business-3.jpg);"></div>
+                                                                                         style="background-image: url(../img/<?=$news[3]?>);"></div>
                                                                                     <div class="sppb-article-info-wrap">
                                                                                         <p class="sppb-meta-category"><a
                                                                                                     href="index.php/business-blog.html"
-                                                                                                    itemprop="genre">Business</a>
+                                                                                                    itemprop="genre"><?=$cat[0]?></a>
                                                                                         </p>
                                                                                         <h3>
                                                                                             <a href="index.php/business-blog/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                               itemprop="url">What sick
-                                                                                                desperation in your
-                                                                                                laugh? We have</a></h3>
+                                                                                               itemprop="url"><?=$news[1]?></a></h3>
                                                                                         <div class="sppb-article-introtext">
-                                                                                            Politics is a set of
-                                                                                            activities associated with
-                                                                                            the governance of a country
-                                                                                            or an area. It involves
-                                                                                            making decisions that apply
-                                                                                            to group of members. I would
-                                                                                            have realized that
-                                                                                            technology is an accessi...
+                                                                                            <?=$news[2]?>
                                                                                         </div>
                                                                                         <div class="sppb-article-spbookmark-wrap d-flex">
                                                                                             <div class="sppb-article-meta">
                                                                                                 <span class="sppb-meta-date"
-                                                                                                      itemprop="datePublished">Nov 21, 2019</span>
-                                                                                            </div>
-                                                                                            <div class="article-spbookmark">
-                                                                                                <form class="sp-bookmark-form"
-                                                                                                      name="add-to-bookmark-47">
-                                                                                                    <a class="btn-spbookmark-action "
-                                                                                                       href="javascript:void(0);"
-                                                                                                       data-content-id="47">
-                                                                                                        <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                    </a>
-                                                                                                    <input type="hidden"
-                                                                                                           name="cid"
-                                                                                                           value="47">
-                                                                                                    <input type="hidden"
-                                                                                                           name="curl"
-                                                                                                           value="index.html">
-                                                                                                </form>
+                                                                                                      itemprop="datePublished"><?=$news[5]?></span>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -2366,6 +2246,11 @@
                                                                             <div class="sppb-row">
                                                                                 <div class="sppb-col-sm-8 subleading-items">
                                                                                     <div>
+                                                                                        <?php
+                                                                                        $news = mysqli_fetch_array($result_news);
+                                                                                        $category = $dbOperation->getCategoryByID($news[4],'ru');
+                                                                                        $cat = mysqli_fetch_array($category);
+                                                                                        ?>
                                                                                         <div class="subleading-item  sppb-col-sm-12">
                                                                                             <div class="sppb-addon-article "
                                                                                                  style=""><a
@@ -2373,126 +2258,61 @@
                                                                                                         href="index.php/entertainment/what-sick-desperation-in-your-laugh-we-have.html"
                                                                                                         itemprop="url"><img
                                                                                                             class="sppb-img-responsive"
-                                                                                                            src="images/2019/12/10/entertainment-20_medium.jpg"
+                                                                                                            src="../img/<?=$news[3]?>"
                                                                                                             alt="What sick desperation in your laugh? We have"
                                                                                                             itemprop="thumbnailUrl"></a>
                                                                                                 <div class="sppb-article-info-wrap">
                                                                                                     <p class="sppb-meta-category">
                                                                                                         <a href="index.php/entertainment.html"
-                                                                                                           itemprop="genre">Entertainment</a>
+                                                                                                           itemprop="genre"><?=$cat[0]?></a>
                                                                                                     </p>
                                                                                                     <h3>
                                                                                                         <a href="index.php/entertainment/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                           itemprop="url">What
-                                                                                                            sick
-                                                                                                            desperation
-                                                                                                            in your
-                                                                                                            laugh? We
-                                                                                                            have</a>
+                                                                                                           itemprop="url"><?=$news[1]?></a>
                                                                                                     </h3>
                                                                                                     <div class="sppb-article-introtext">
-                                                                                                        Politics is a
-                                                                                                        set of
-                                                                                                        activities
-                                                                                                        associated with
-                                                                                                        the governance
-                                                                                                        of a country or
-                                                                                                        an area. It
-                                                                                                        involves making
-                                                                                                        decisions that
-                                                                                                        apply to group
-                                                                                                        of members. I
-                                                                                                        would have
-                                                                                                        realized that
-                                                                                                        technology is an
-                                                                                                        accessi...
+                                                                                                        <?=$news[2]?>
                                                                                                     </div>
                                                                                                     <div class="sppb-article-spbookmark-wrap d-flex">
                                                                                                         <div class="sppb-article-meta">
                                                                                                             <span class="sppb-meta-date"
-                                                                                                                  itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                        </div>
-                                                                                                        <div class="article-spbookmark">
-                                                                                                            <form class="sp-bookmark-form"
-                                                                                                                  name="add-to-bookmark-63">
-                                                                                                                <a class="btn-spbookmark-action "
-                                                                                                                   href="javascript:void(0);"
-                                                                                                                   data-content-id="63">
-                                                                                                                    <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                </a>
-                                                                                                                <input type="hidden"
-                                                                                                                       name="cid"
-                                                                                                                       value="63">
-                                                                                                                <input type="hidden"
-                                                                                                                       name="curl"
-                                                                                                                       value="index.html">
-                                                                                                            </form>
+                                                                                                                  itemprop="datePublished"><?=$news[5]?></span>
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
+                                                                                        <?php
+                                                                                        $news = mysqli_fetch_array($result_news);
+                                                                                        $category = $dbOperation->getCategoryByID($news[4],'ru');
+                                                                                        $cat = mysqli_fetch_array($category);
+                                                                                        ?>
                                                                                         <div class="subleading-item  sppb-col-sm-12">
                                                                                             <div class="sppb-addon-article "
                                                                                                  style=""><a
                                                                                                         class="sppb-article-img-wrap"
-                                                                                                        href="index.php/food/what-sick-desperation-in-your-laugh-we-have.html"
+                                                                                                        href="index.php/entertainment/what-sick-desperation-in-your-laugh-we-have.html"
                                                                                                         itemprop="url"><img
                                                                                                             class="sppb-img-responsive"
-                                                                                                            src="images/2019/12/10/food-3_medium.jpg"
+                                                                                                            src="../img/<?=$news[3]?>"
                                                                                                             alt="What sick desperation in your laugh? We have"
                                                                                                             itemprop="thumbnailUrl"></a>
                                                                                                 <div class="sppb-article-info-wrap">
                                                                                                     <p class="sppb-meta-category">
-                                                                                                        <a href="index.php/food.html"
-                                                                                                           itemprop="genre">Food</a>
+                                                                                                        <a href="index.php/entertainment.html"
+                                                                                                           itemprop="genre"><?=$cat[0]?></a>
                                                                                                     </p>
                                                                                                     <h3>
-                                                                                                        <a href="index.php/food/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                           itemprop="url">What
-                                                                                                            sick
-                                                                                                            desperation
-                                                                                                            in your
-                                                                                                            laugh? We
-                                                                                                            have</a>
+                                                                                                        <a href="index.php/entertainment/what-sick-desperation-in-your-laugh-we-have.html"
+                                                                                                           itemprop="url"><?=$news[1]?></a>
                                                                                                     </h3>
                                                                                                     <div class="sppb-article-introtext">
-                                                                                                        Politics is a
-                                                                                                        set of
-                                                                                                        activities
-                                                                                                        associated with
-                                                                                                        the governance
-                                                                                                        of a country or
-                                                                                                        an area. It
-                                                                                                        involves making
-                                                                                                        decisions that
-                                                                                                        apply to group
-                                                                                                        of members. I
-                                                                                                        would have
-                                                                                                        realized that
-                                                                                                        technology is an
-                                                                                                        accessi...
+                                                                                                        <?=$news[2]?>
                                                                                                     </div>
                                                                                                     <div class="sppb-article-spbookmark-wrap d-flex">
                                                                                                         <div class="sppb-article-meta">
                                                                                                             <span class="sppb-meta-date"
-                                                                                                                  itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                        </div>
-                                                                                                        <div class="article-spbookmark">
-                                                                                                            <form class="sp-bookmark-form"
-                                                                                                                  name="add-to-bookmark-100">
-                                                                                                                <a class="btn-spbookmark-action "
-                                                                                                                   href="javascript:void(0);"
-                                                                                                                   data-content-id="100">
-                                                                                                                    <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                                </a>
-                                                                                                                <input type="hidden"
-                                                                                                                       name="cid"
-                                                                                                                       value="100">
-                                                                                                                <input type="hidden"
-                                                                                                                       name="curl"
-                                                                                                                       value="index.html">
-                                                                                                            </form>
+                                                                                                                  itemprop="datePublished"><?=$news[5]?></span>
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 </div>
@@ -2502,433 +2322,144 @@
                                                                                 </div>
                                                                                 <div class="sppb-col-sm-4 intro-items"
                                                                                      has-scrollbar>
+
+                                                                                    <?php
+                                                                                    $news = mysqli_fetch_array($result_news);
+                                                                                    $category = $dbOperation->getCategoryByID($news[4],'ru');
+                                                                                    $cat = mysqli_fetch_array($category);
+                                                                                    ?>
                                                                                     <div class="intro-item  sppb-col-sm-12">
-                                                                                        <div class="sppb-addon-article "
-                                                                                             style=""><a
-                                                                                                    class="sppb-article-img-wrap"
-                                                                                                    href="index.php/sports/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                    itemprop="url"><img
-                                                                                                        class="sppb-img-responsive"
-                                                                                                        src="images/2019/12/10/sport_medium.jpg"
-                                                                                                        alt="What sick desperation in your laugh? We have"
-                                                                                                        itemprop="thumbnailUrl"></a>
-                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                <p class="sppb-meta-category">
-                                                                                                    <a href="index.php/sports.html"
-                                                                                                       itemprop="genre">Sports</a>
-                                                                                                </p>
-                                                                                                <h3>
-                                                                                                    <a href="index.php/sports/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                       itemprop="url">What
-                                                                                                        sick desperation
-                                                                                                        in your laugh?
-                                                                                                        We have</a></h3>
-                                                                                                <div class="sppb-article-introtext">
-                                                                                                    Politics is a set of
-                                                                                                    activities
-                                                                                                    associated with the
-                                                                                                    governance of a
-                                                                                                    country or an area.
-                                                                                                    It involves making
-                                                                                                    decisions that apply
-                                                                                                    to group of members.
-                                                                                                    I would have
-                                                                                                    realized that
-                                                                                                    technology is an
-                                                                                                    accessi...
-                                                                                                </div>
-                                                                                                <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                    <div class="sppb-article-meta">
-                                                                                                        <span class="sppb-meta-date"
-                                                                                                              itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                    </div>
-                                                                                                    <div class="article-spbookmark">
-                                                                                                        <form class="sp-bookmark-form"
-                                                                                                              name="add-to-bookmark-103">
-                                                                                                            <a class="btn-spbookmark-action "
-                                                                                                               href="javascript:void(0);"
-                                                                                                               data-content-id="103">
-                                                                                                                <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                            </a>
-                                                                                                            <input type="hidden"
-                                                                                                                   name="cid"
-                                                                                                                   value="103">
-                                                                                                            <input type="hidden"
-                                                                                                                   name="curl"
-                                                                                                                   value="index.html">
-                                                                                                        </form>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="intro-item  sppb-col-sm-12">
-                                                                                        <div class="sppb-addon-article "
-                                                                                             style=""><a
-                                                                                                    class="sppb-article-img-wrap"
-                                                                                                    href="index.php/categories/newsberg/politics/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                    itemprop="url"><img
-                                                                                                        class="sppb-img-responsive"
-                                                                                                        src="images/2019/12/11/politics5_medium.jpg"
-                                                                                                        alt="What sick desperation in your laugh? We have"
-                                                                                                        itemprop="thumbnailUrl"></a>
-                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                <p class="sppb-meta-category">
-                                                                                                    <a href="index.php/categories/newsberg/politics.html"
-                                                                                                       itemprop="genre">Politics</a>
-                                                                                                </p>
-                                                                                                <h3>
-                                                                                                    <a href="index.php/categories/newsberg/politics/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                       itemprop="url">What
-                                                                                                        sick desperation
-                                                                                                        in your laugh?
-                                                                                                        We have</a></h3>
-                                                                                                <div class="sppb-article-introtext">
-                                                                                                    Politics is a set of
-                                                                                                    activities
-                                                                                                    associated with the
-                                                                                                    governance of a
-                                                                                                    country or an area.
-                                                                                                    It involves making
-                                                                                                    decisions that apply
-                                                                                                    to group of members.
-                                                                                                    I would have
-                                                                                                    realized that
-                                                                                                    technology is an
-                                                                                                    accessi...
-                                                                                                </div>
-                                                                                                <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                    <div class="sppb-article-meta">
-                                                                                                        <span class="sppb-meta-date"
-                                                                                                              itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                    </div>
-                                                                                                    <div class="article-spbookmark">
-                                                                                                        <form class="sp-bookmark-form"
-                                                                                                              name="add-to-bookmark-134">
-                                                                                                            <a class="btn-spbookmark-action "
-                                                                                                               href="javascript:void(0);"
-                                                                                                               data-content-id="134">
-                                                                                                                <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                            </a>
-                                                                                                            <input type="hidden"
-                                                                                                                   name="cid"
-                                                                                                                   value="134">
-                                                                                                            <input type="hidden"
-                                                                                                                   name="curl"
-                                                                                                                   value="index.html">
-                                                                                                        </form>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="intro-item  sppb-col-sm-12">
-                                                                                        <div class="sppb-addon-article "
-                                                                                             style=""><a
-                                                                                                    class="sppb-article-img-wrap"
-                                                                                                    href="index.php/categories/newsberg/technology/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                    itemprop="url"><img
-                                                                                                        class="sppb-img-responsive"
-                                                                                                        src="images/2019/12/10/tech-41_medium.jpg"
-                                                                                                        alt="What sick desperation in your laugh? We have"
-                                                                                                        itemprop="thumbnailUrl"></a>
-                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                <p class="sppb-meta-category">
-                                                                                                    <a href="index.php/categories/newsberg/technology.html"
-                                                                                                       itemprop="genre">Technology</a>
-                                                                                                </p>
-                                                                                                <h3>
-                                                                                                    <a href="index.php/categories/newsberg/technology/what-sick-desperation-in-your-laugh-we-have.html"
-                                                                                                       itemprop="url">What
-                                                                                                        sick desperation
-                                                                                                        in your laugh?
-                                                                                                        We have</a></h3>
-                                                                                                <div class="sppb-article-introtext">
-                                                                                                    Politics is a set of
-                                                                                                    activities
-                                                                                                    associated with the
-                                                                                                    governance of a
-                                                                                                    country or an area.
-                                                                                                    It involves making
-                                                                                                    decisions that apply
-                                                                                                    to group of members.
-                                                                                                    I would have
-                                                                                                    realized that
-                                                                                                    technology is an
-                                                                                                    accessi...
-                                                                                                </div>
-                                                                                                <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                    <div class="sppb-article-meta">
-                                                                                                        <span class="sppb-meta-date"
-                                                                                                              itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                    </div>
-                                                                                                    <div class="article-spbookmark">
-                                                                                                        <form class="sp-bookmark-form"
-                                                                                                              name="add-to-bookmark-171">
-                                                                                                            <a class="btn-spbookmark-action "
-                                                                                                               href="javascript:void(0);"
-                                                                                                               data-content-id="171">
-                                                                                                                <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                            </a>
-                                                                                                            <input type="hidden"
-                                                                                                                   name="cid"
-                                                                                                                   value="171">
-                                                                                                            <input type="hidden"
-                                                                                                                   name="curl"
-                                                                                                                   value="index.html">
-                                                                                                        </form>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="video-format intro-item  sppb-col-sm-12">
                                                                                         <div class="sppb-addon-article "
                                                                                              style="">
-                                                                                            <div class="video-caption-wrapper d-flex align-items-center"
-                                                                                                 style="background-image: url(images/2019/12/10/business-6.jpg);">
-                                                                                                <a class="full-link"
-                                                                                                   href="index.php/business-blog/what-mixed-equal-parts-of-gasoline-and-frozen.html"
-                                                                                                   itemprop="url"></a><i
-                                                                                                        class="fa fa-play-circle"></i>
-                                                                                                <div class="video-caption-info">
-                                                                                                    <span class="video-caption">What mixed equal parts </span><span
-                                                                                                            class="video-duration">01 : 36</span>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                <p class="sppb-meta-category">
-                                                                                                    <a href="index.php/business-blog.html"
-                                                                                                       itemprop="genre">Business</a><span
-                                                                                                            class="video-symbol fa fa-play-circle"></span><span
-                                                                                                            class="video-duration">01 : 36</span>
-                                                                                                </p>
-                                                                                                <h3>
-                                                                                                    <a href="index.php/business-blog/what-mixed-equal-parts-of-gasoline-and-frozen.html"
-                                                                                                       itemprop="url">What
-                                                                                                        mixed equal
-                                                                                                        parts of
-                                                                                                        gasoline and
-                                                                                                        frozen</a></h3>
-                                                                                                <div class="sppb-article-introtext">
-                                                                                                    Politics is a set of
-                                                                                                    activities
-                                                                                                    associated with the
-                                                                                                    governance of a
-                                                                                                    country or an area.
-                                                                                                    It involves making
-                                                                                                    decisions that apply
-                                                                                                    to group of members.
-                                                                                                    I would have
-                                                                                                    realized that
-                                                                                                    technology is an
-                                                                                                    accessi...
-                                                                                                </div>
-                                                                                                <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                    <div class="sppb-article-meta">
-                                                                                                        <span class="sppb-meta-date"
-                                                                                                              itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                    </div>
-                                                                                                    <div class="article-spbookmark">
-                                                                                                        <form class="sp-bookmark-form"
-                                                                                                              name="add-to-bookmark-44">
-                                                                                                            <a class="btn-spbookmark-action "
-                                                                                                               href="javascript:void(0);"
-                                                                                                               data-content-id="44">
-                                                                                                                <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                            </a>
-                                                                                                            <input type="hidden"
-                                                                                                                   name="cid"
-                                                                                                                   value="44">
-                                                                                                            <input type="hidden"
-                                                                                                                   name="curl"
-                                                                                                                   value="index.html">
-                                                                                                        </form>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="intro-item  sppb-col-sm-12">
-                                                                                        <div class="sppb-addon-article "
-                                                                                             style=""><a
-                                                                                                    class="sppb-article-img-wrap"
-                                                                                                    href="index.php/entertainment/what-mixed-equal-parts-of-gasoline-and-frozen.html"
-                                                                                                    itemprop="url"><img
-                                                                                                        class="sppb-img-responsive"
-                                                                                                        src="images/2019/12/10/entertainment-17_medium.jpg"
-                                                                                                        alt="What mixed equal parts of gasoline and frozen"
-                                                                                                        itemprop="thumbnailUrl"></a>
-                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                <p class="sppb-meta-category">
-                                                                                                    <a href="index.php/entertainment.html"
-                                                                                                       itemprop="genre">Entertainment</a>
-                                                                                                </p>
-                                                                                                <h3>
-                                                                                                    <a href="index.php/entertainment/what-mixed-equal-parts-of-gasoline-and-frozen.html"
-                                                                                                       itemprop="url">What
-                                                                                                        mixed equal
-                                                                                                        parts of
-                                                                                                        gasoline and
-                                                                                                        frozen</a></h3>
-                                                                                                <div class="sppb-article-introtext">
-                                                                                                    Politics is a set of
-                                                                                                    activities
-                                                                                                    associated with the
-                                                                                                    governance of a
-                                                                                                    country or an area.
-                                                                                                    It involves making
-                                                                                                    decisions that apply
-                                                                                                    to group of members.
-                                                                                                    I would have
-                                                                                                    realized that
-                                                                                                    technology is an
-                                                                                                    accessi...
-                                                                                                </div>
-                                                                                                <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                    <div class="sppb-article-meta">
-                                                                                                        <span class="sppb-meta-date"
-                                                                                                              itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                    </div>
-                                                                                                    <div class="article-spbookmark">
-                                                                                                        <form class="sp-bookmark-form"
-                                                                                                              name="add-to-bookmark-66">
-                                                                                                            <a class="btn-spbookmark-action "
-                                                                                                               href="javascript:void(0);"
-                                                                                                               data-content-id="66">
-                                                                                                                <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                            </a>
-                                                                                                            <input type="hidden"
-                                                                                                                   name="cid"
-                                                                                                                   value="66">
-                                                                                                            <input type="hidden"
-                                                                                                                   name="curl"
-                                                                                                                   value="index.html">
-                                                                                                        </form>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="intro-item  sppb-col-sm-12">
-                                                                                        <div class="sppb-addon-article "
-                                                                                             style=""><a
-                                                                                                    class="sppb-article-img-wrap"
-                                                                                                    href="index.php/food/what-mixed-equal-parts-of-gasoline-and-frozen.html"
-                                                                                                    itemprop="url"><img
-                                                                                                        class="sppb-img-responsive"
-                                                                                                        src="images/2019/12/10/food-6_medium.jpg"
-                                                                                                        alt="What mixed equal parts of gasoline and frozen"
-                                                                                                        itemprop="thumbnailUrl"></a>
-                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                <p class="sppb-meta-category">
-                                                                                                    <a href="index.php/food.html"
-                                                                                                       itemprop="genre">Food</a>
-                                                                                                </p>
-                                                                                                <h3>
-                                                                                                    <a href="index.php/food/what-mixed-equal-parts-of-gasoline-and-frozen.html"
-                                                                                                       itemprop="url">What
-                                                                                                        mixed equal
-                                                                                                        parts of
-                                                                                                        gasoline and
-                                                                                                        frozen</a></h3>
-                                                                                                <div class="sppb-article-introtext">
-                                                                                                    Politics is a set of
-                                                                                                    activities
-                                                                                                    associated with the
-                                                                                                    governance of a
-                                                                                                    country or an area.
-                                                                                                    It involves making
-                                                                                                    decisions that apply
-                                                                                                    to group of members.
-                                                                                                    I would have
-                                                                                                    realized that
-                                                                                                    technology is an
-                                                                                                    accessi...
-                                                                                                </div>
-                                                                                                <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                    <div class="sppb-article-meta">
-                                                                                                        <span class="sppb-meta-date"
-                                                                                                              itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                    </div>
-                                                                                                    <div class="article-spbookmark">
-                                                                                                        <form class="sp-bookmark-form"
-                                                                                                              name="add-to-bookmark-97">
-                                                                                                            <a class="btn-spbookmark-action "
-                                                                                                               href="javascript:void(0);"
-                                                                                                               data-content-id="97">
-                                                                                                                <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                            </a>
-                                                                                                            <input type="hidden"
-                                                                                                                   name="cid"
-                                                                                                                   value="97">
-                                                                                                            <input type="hidden"
-                                                                                                                   name="curl"
-                                                                                                                   value="index.html">
-                                                                                                        </form>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="intro-item  sppb-col-sm-12">
-                                                                                        <div class="sppb-addon-article "
-                                                                                             style=""><a
-                                                                                                    class="sppb-article-img-wrap"
-                                                                                                    href="index.php/sports/what-mixed-equal-parts-of-gasoline-and-frozen.html"
-                                                                                                    itemprop="url"><img
-                                                                                                        class="sppb-img-responsive"
-                                                                                                        src="images/2019/12/10/sport-18_medium.jpg"
-                                                                                                        alt="What mixed equal parts of gasoline and frozen"
-                                                                                                        itemprop="thumbnailUrl"></a>
                                                                                             <div class="sppb-article-info-wrap">
                                                                                                 <p class="sppb-meta-category">
                                                                                                     <a href="index.php/sports.html"
-                                                                                                       itemprop="genre">Sports</a>
+                                                                                                       itemprop="genre"><?=$cat[0]?></a>
                                                                                                 </p>
                                                                                                 <h3>
-                                                                                                    <a href="index.php/sports/what-mixed-equal-parts-of-gasoline-and-frozen.html"
-                                                                                                       itemprop="url">What
-                                                                                                        mixed equal
-                                                                                                        parts of
-                                                                                                        gasoline and
-                                                                                                        frozen</a></h3>
-                                                                                                <div class="sppb-article-introtext">
-                                                                                                    Politics is a set of
-                                                                                                    activities
-                                                                                                    associated with the
-                                                                                                    governance of a
-                                                                                                    country or an area.
-                                                                                                    It involves making
-                                                                                                    decisions that apply
-                                                                                                    to group of members.
-                                                                                                    I would have
-                                                                                                    realized that
-                                                                                                    technology is an
-                                                                                                    accessi...
-                                                                                                </div>
-                                                                                                <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                    <div class="sppb-article-meta">
-                                                                                                        <span class="sppb-meta-date"
-                                                                                                              itemprop="datePublished">Nov 21, 2019</span>
-                                                                                                    </div>
-                                                                                                    <div class="article-spbookmark">
-                                                                                                        <form class="sp-bookmark-form"
-                                                                                                              name="add-to-bookmark-106">
-                                                                                                            <a class="btn-spbookmark-action "
-                                                                                                               href="javascript:void(0);"
-                                                                                                               data-content-id="106">
-                                                                                                                <span class="spbookmark-icon fa fa-bookmark-o"></span>
-                                                                                                            </a>
-                                                                                                            <input type="hidden"
-                                                                                                                   name="cid"
-                                                                                                                   value="106">
-                                                                                                            <input type="hidden"
-                                                                                                                   name="curl"
-                                                                                                                   value="index.html">
-                                                                                                        </form>
-                                                                                                    </div>
-                                                                                                </div>
+                                                                                                    <a href="index.php/sports/what-sick-desperation-in-your-laugh-we-have.html">
+                                                                                                       <?=$news[1]?></a></h3>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+
+                                                                                    <?php
+                                                                                    $news = mysqli_fetch_array($result_news);
+                                                                                    $category = $dbOperation->getCategoryByID($news[4],'ru');
+                                                                                    $cat = mysqli_fetch_array($category);
+                                                                                    ?>
+                                                                                    <div class="intro-item  sppb-col-sm-12">
+                                                                                        <div class="sppb-addon-article "
+                                                                                             style="">
+                                                                                            <div class="sppb-article-info-wrap">
+                                                                                                <p class="sppb-meta-category">
+                                                                                                    <a href="index.php/sports.html"
+                                                                                                       itemprop="genre"><?=$cat[0]?></a>
+                                                                                                </p>
+                                                                                                <h3>
+                                                                                                    <a href="index.php/sports/what-sick-desperation-in-your-laugh-we-have.html">
+                                                                                                        <?=$news[1]?></a></h3>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <?php
+                                                                                    $news = mysqli_fetch_array($result_news);
+                                                                                    $category = $dbOperation->getCategoryByID($news[4],'ru');
+                                                                                    $cat = mysqli_fetch_array($category);
+                                                                                    ?>
+                                                                                    <div class="intro-item  sppb-col-sm-12">
+                                                                                        <div class="sppb-addon-article "
+                                                                                             style="">
+                                                                                            <div class="sppb-article-info-wrap">
+                                                                                                <p class="sppb-meta-category">
+                                                                                                    <a href="index.php/sports.html"
+                                                                                                       itemprop="genre"><?=$cat[0]?></a>
+                                                                                                </p>
+                                                                                                <h3>
+                                                                                                    <a href="index.php/sports/what-sick-desperation-in-your-laugh-we-have.html">
+                                                                                                        <?=$news[1]?></a></h3>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <?php
+                                                                                    $news = mysqli_fetch_array($result_news);
+                                                                                    $category = $dbOperation->getCategoryByID($news[4],'ru');
+                                                                                    $cat = mysqli_fetch_array($category);
+                                                                                    ?>
+                                                                                    <div class="intro-item  sppb-col-sm-12">
+                                                                                        <div class="sppb-addon-article "
+                                                                                             style="">
+                                                                                            <div class="sppb-article-info-wrap">
+                                                                                                <p class="sppb-meta-category">
+                                                                                                    <a href="index.php/sports.html"
+                                                                                                       itemprop="genre"><?=$cat[0]?></a>
+                                                                                                </p>
+                                                                                                <h3>
+                                                                                                    <a href="index.php/sports/what-sick-desperation-in-your-laugh-we-have.html">
+                                                                                                        <?=$news[1]?></a></h3>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <?php
+                                                                                    $news = mysqli_fetch_array($result_news);
+                                                                                    $category = $dbOperation->getCategoryByID($news[4],'ru');
+                                                                                    $cat = mysqli_fetch_array($category);
+                                                                                    ?>
+                                                                                    <div class="intro-item  sppb-col-sm-12">
+                                                                                        <div class="sppb-addon-article "
+                                                                                             style="">
+                                                                                            <div class="sppb-article-info-wrap">
+                                                                                                <p class="sppb-meta-category">
+                                                                                                    <a href="index.php/sports.html"
+                                                                                                       itemprop="genre"><?=$cat[0]?></a>
+                                                                                                </p>
+                                                                                                <h3>
+                                                                                                    <a href="index.php/sports/what-sick-desperation-in-your-laugh-we-have.html">
+                                                                                                        <?=$news[1]?></a></h3>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <?php
+                                                                                    $news = mysqli_fetch_array($result_news);
+                                                                                    $category = $dbOperation->getCategoryByID($news[4],'ru');
+                                                                                    $cat = mysqli_fetch_array($category);
+                                                                                    ?>
+                                                                                    <div class="intro-item  sppb-col-sm-12">
+                                                                                        <div class="sppb-addon-article "
+                                                                                             style="">
+                                                                                            <div class="sppb-article-info-wrap">
+                                                                                                <p class="sppb-meta-category">
+                                                                                                    <a href="index.php/sports.html"
+                                                                                                       itemprop="genre"><?=$cat[0]?></a>
+                                                                                                </p>
+                                                                                                <h3>
+                                                                                                    <a href="index.php/sports/what-sick-desperation-in-your-laugh-we-have.html">
+                                                                                                        <?=$news[1]?></a></h3>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <?php
+                                                                                    $news = mysqli_fetch_array($result_news);
+                                                                                    $category = $dbOperation->getCategoryByID($news[4],'ru');
+                                                                                    $cat = mysqli_fetch_array($category);
+                                                                                    Opinions        ?>
+                                                                                    <div class="intro-item  sppb-col-sm-12">
+                                                                                        <div class="sppb-addon-article "
+                                                                                             style="">
+                                                                                            <div class="sppb-article-info-wrap">
+                                                                                                <p class="sppb-meta-category">
+                                                                                                    <a href="index.php/sports.html"
+                                                                                                       itemprop="genre"><?=$cat[0]?></a>
+                                                                                                </p>
+                                                                                                <h3>
+                                                                                                    <a href="index.php/sports/what-sick-desperation-in-your-laugh-we-have.html">
+                                                                                                        <?=$news[1]?></a></h3>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -2971,13 +2502,11 @@
                                                                                             <div class="sppb-addon-content">
                                                                                                 <div class="bannergroup">
                                                                                                     <div class="banneritem">
-                                                                                                        <a href="https://joomshaper.com/"
-                                                                                                           target="_blank"
-                                                                                                           rel="noopener noreferrer"
-                                                                                                           title="Home Ad 6">
-                                                                                                            <img src="images/demo/product_ad1.png"
-                                                                                                                 alt="JoomShaper" style="border: none;"/>
-                                                                                                        </a>
+                                                                                                        <!--Currency Converter widget by FreeCurrencyRates.com -->
+
+                                                                                                        <div id='gcw_mainFa5IhQ87T' class='gcw_mainFa5IhQ87T'></div>
+                                                                                                        <script>function reloadFa5IhQ87T(){ var sc = document.getElementById('scFa5IhQ87T');if (sc) sc.parentNode.removeChild(sc);sc = document.createElement('script');sc.type = 'text/javascript';sc.charset = 'UTF-8';sc.async = true;sc.id='scFa5IhQ87T';sc.src = 'https://freecurrencyrates.com//widget-vertical-editable?iso=TJS-USD-RUB-EUR-UZS-GBP-CNY&df=1&p=Fa5IhQ87T&v=fits&source=fcr&width=225&width_title=0&firstrowvalue=1.00&thm=A6C9E2,FCFDFD,4297D7,5C9CCC,FFFFFF,C5DBEC,FCFDFD,2E6E9E,000000&title=%20&tzo=-300';var div = document.getElementById('gcw_mainFa5IhQ87T');div.parentNode.insertBefore(sc, div);} reloadFa5IhQ87T(); </script>
+
                                                                                                         <div class="clr"></div>
                                                                                                     </div>
                                                                                                 </div>
@@ -3098,7 +2627,7 @@
                                                                                                                                          class="clearfix ">
                                                                                                                                         <div class="sppb-addon sppb-addon-header sppb-text-left">
                                                                                                                                             <h2 class="sppb-addon-title">
-                                                                                                                                                Explore</h2>
+                                                                                                                                                Воҳидҳои сохторӣ</h2>
                                                                                                                                         </div>
                                                                                                                                         <style type="text/css">#sppb-addon-1574411095394 {
                                                                                                                                                 box-shadow: 0 0 0 0 #ffffff;
@@ -3143,39 +2672,35 @@
                                                                                                                                          class="clearfix ">
                                                                                                                                         <div class="sppb-addon sppb-addon-module ">
                                                                                                                                             <div class="sppb-addon-content">
-                                                                                                                                                <ul class="categories-module mod-list">
+                                                                                                                                                <ul class="categories-module mod-list" >
                                                                                                                                                     <li>
-                                                                                                                                                        <h4>
+                                                                                                                                                        <h4 style="font-size: 10pt;">
                                                                                                                                                             <a href="index.php/categories/explore/today-s-issue.html">
-                                                                                                                                                                Today’s
-                                                                                                                                                                Issue </a>
+                                                                                                                                                                Маҷлиси вакилони халқ </a>
                                                                                                                                                         </h4>
                                                                                                                                                     </li>
                                                                                                                                                     <li>
-                                                                                                                                                        <h4>
+                                                                                                                                                        <h4 style="font-size: 10pt;">
                                                                                                                                                             <a href="index.php/categories/explore/good-weekend.html">
-                                                                                                                                                                Good
-                                                                                                                                                                Weekend </a>
+                                                                                                                                                                Мақомоти иҷроия</a>
                                                                                                                                                         </h4>
                                                                                                                                                     </li>
                                                                                                                                                     <li>
-                                                                                                                                                        <h4>
+                                                                                                                                                        <h4 style="font-size: 10pt;">
                                                                                                                                                             <a href="index.php/categories/explore/editorial.html">
-                                                                                                                                                                Editorial </a>
+                                                                                                                                                                Сохторҳо </a>
                                                                                                                                                         </h4>
                                                                                                                                                     </li>
                                                                                                                                                     <li>
-                                                                                                                                                        <h4>
+                                                                                                                                                        <h4 style="font-size: 10pt;">
                                                                                                                                                             <a href="index.php/categories/explore/today-s-cartoon.html">
-                                                                                                                                                                Today’s
-                                                                                                                                                                Cartoon </a>
+                                                                                                                                                                Ҷамоатҳои шаҳраку деҳот </a>
                                                                                                                                                         </h4>
                                                                                                                                                     </li>
                                                                                                                                                     <li>
-                                                                                                                                                        <h4>
+                                                                                                                                                        <h4  style="font-size: 10pt;">
                                                                                                                                                             <a href="index.php/categories/explore/today-s-weather.html">
-                                                                                                                                                                Today’s
-                                                                                                                                                                Weather </a>
+                                                                                                                                                                Соҳаҳо </a>
                                                                                                                                                         </h4>
                                                                                                                                                     </li>
                                                                                                                                                 </ul>

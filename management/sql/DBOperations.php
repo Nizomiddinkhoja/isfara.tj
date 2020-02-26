@@ -123,10 +123,10 @@ WHERE l.`name`='$locale' AND w.`status`=1 AND cn.`name`='who_is' AND w.id=$id";
     public function  get_news(){
         $com = new DbConnect();
         $sql = "SELECT n.id, t.title, t.description, n.img, n.category_id, n.date  FROM  news n JOIN texts t ON t.id_menu = n.id 
-JOIN category c ON t.id_menu = c.id 
+
 JOIN locale l ON l.id=t.locale 
 JOIN content cn ON cn.id=t.id_content 
-WHERE l.name=\"ru\" AND n.status=1 AND cn.name=\"news\" ";
+WHERE l.name=\"ru\" AND n.status=1 AND cn.name=\"news\" order by n.id desc ";
         return mysqli_query($com->getDb(), $sql);
     }
 
@@ -573,4 +573,16 @@ WHERE l.`name`='tj' AND a.`status`=1 AND cn.`name`='answer' and q.id = '$id_ques
         $sql = "UPDATE `request` SET  `is_view`=1 WHERE `id`='$id'";
         return mysqli_query($com->getDb(), $sql);
     }
+
+    public function getSliderByLang($locale){
+        $com = new DbConnect();
+        $sql = "SELECT c.`id`, t.`title`, c.`img` FROM  slider c JOIN texts t ON t.`id_menu` = c.`id` 
+    JOIN locale l ON l.`id`=t.`locale` 
+    JOIN content cn ON cn.`id`=t.`id_content` 
+    WHERE l.`name`='$locale' AND c.`status`=1 AND cn.`name`='slider' LIMIT 6";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+
+
 }
