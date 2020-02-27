@@ -4,10 +4,10 @@
 <link href="../gallary/css/style.css" rel="stylesheet">
 
 
-<div class="sppb-col-md-12" id="column-wrap-id-1574849226296">
+<div class="sppb-col-md-9" id="column-wrap-id-1574849226296">
     <div id="sppb-addon-1574765723526" class="clearfix ">
         <div class="sppb-addon sppb-addon-header heading-arrow sppb-text-left">
-            <h2 class="sppb-addon-title">Галерея</h2></div>
+            <h2 class="sppb-addon-title"><a href="./gallery.php?ru">Галерая</a> </h2></div>
     </div>
 <section id="portfolio" style="padding: 20px;">
 
