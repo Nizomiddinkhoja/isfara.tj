@@ -53,7 +53,7 @@ include("../include/navbar.php");
               <div class="row" style="margin: unset;">
 
                   <?php
-                  $result = $dbOperation->getVideo();
+                  $result = $dbOperation->getVideo('tj');
                   if(mysqli_num_rows($result)>0) {
                       while ($video = mysqli_fetch_array($result)) {
                           ?>

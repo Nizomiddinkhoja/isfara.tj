@@ -58,12 +58,12 @@ WHERE l.`name`='$locale' AND c.`status`=1 AND cn.`name`='category' AND c.id=$id"
         return mysqli_query($com->getDb(), $sql);
     }
 
-    public function getWhoIs(){
+    public function getWhoIs($locale){
         $com = new DbConnect();
         $sql = "SELECT w.`id`, t.`title`, t.`description`, w.img FROM  who_is w JOIN texts t ON t.`id_menu` = w.`id` 
 JOIN locale l ON l.`id`=t.`locale` 
 JOIN content cn ON cn.`id`=t.`id_content` 
-WHERE l.`name`='ru' AND w.`status`=1 AND cn.`name`='who_is'";
+WHERE l.`name`='$locale' AND w.`status`=1 AND cn.`name`='who_is'";
         return mysqli_query($com->getDb(), $sql);
     }
 
@@ -131,10 +131,14 @@ WHERE l.name='ru' AND n.status=1 AND cn.name='news' AND n.category_id=$id";
     public function  get_news($locale = "ru"){
         $com = new DbConnect();
         $sql = "SELECT n.id, t.title, t.description, n.img, n.category_id, n.date  FROM  news n JOIN texts t ON t.id_menu = n.id 
-JOIN category c ON t.id_menu = c.id 
+
 JOIN locale l ON l.id=t.locale 
 JOIN content cn ON cn.id=t.id_content 
+<<<<<<< HEAD
 WHERE l.name='$locale' AND n.status=1 AND cn.name=\"news\" ORDER BY n.id DESC";
+=======
+WHERE l.name=\"ru\" AND n.status=1 AND cn.name=\"news\" order by n.id desc ";
+>>>>>>> 144c7310ed5c208b2d2ee17495876e0492206748
         return mysqli_query($com->getDb(), $sql);
     }
 
@@ -393,12 +397,12 @@ WHERE l.`name`='tj' AND g.`status`=1 AND cn.`name` = 'gallery'";
         return mysqli_query($com->getDb(), $sql);
     }
 
-    public function getVideo(){
+    public function getVideo($locale){
         $com = new DbConnect();
-        $sql = "SELECT v.`id`, t.`title`, v.source FROM  video v JOIN texts t ON t.`id_menu` = v.`id`
+        $sql = "SELECT v.`id`, t.`title`, v.source, v.is_youtube FROM  video v JOIN texts t ON t.`id_menu` = v.`id`
 JOIN locale l ON l.`id`=t.locale
 JOIN content cn ON cn.`id`=t.`id_content`
-WHERE l.`name`='tj' AND v.`status`=1 AND cn.`name` = 'video'";
+WHERE l.`name`='ru' AND v.`status`=1 AND cn.`name` = 'video'";
         return mysqli_query($com->getDb(), $sql);
     }
 
@@ -514,13 +518,13 @@ WHERE l.`name`='tj' AND q.`status`=1 AND cn.`name` = 'question'";
         mysqli_query($com->getDb(), $sql);
     }
 
-    public function getAnswer($id_questions){
+    public function getAnswer($id_questions,  $locale){
         $com = new DbConnect();
         $sql = "SELECT a.`id`, t.`title` FROM  answer a JOIN texts t ON t.`id_menu` = a.`id`
 JOIN questions q ON q.id = a.id_questions
 JOIN locale l ON l.`id`=t.locale
 JOIN content cn ON cn.`id`=t.`id_content`
-WHERE l.`name`='tj' AND a.`status`=1 AND cn.`name`='answer' and q.id = '$id_questions'";
+WHERE l.`name`='$locale' AND a.`status`=1 AND cn.`name`='answer' and q.id = '$id_questions'";
         return mysqli_query($com->getDb(), $sql);
     }
 
@@ -585,4 +589,32 @@ WHERE l.`name`='tj' AND a.`status`=1 AND cn.`name`='answer' and q.id = '$id_ques
         $sql = "UPDATE `request` SET  `is_view`=1 WHERE `id`='$id'";
         return mysqli_query($com->getDb(), $sql);
     }
+
+    public function getSliderByLang($locale){
+        $com = new DbConnect();
+        $sql = "SELECT c.`id`, t.`title`, c.`img` FROM  slider c JOIN texts t ON t.`id_menu` = c.`id` 
+    JOIN locale l ON l.`id`=t.`locale` 
+    JOIN content cn ON cn.`id`=t.`id_content` 
+    WHERE l.`name`='$locale' AND c.`status`=1 AND cn.`name`='slider' LIMIT 6";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+
+    public function pollAnswer($id)
+    {
+        $com = new DbConnect();
+        $sql = "UPDATE `answer` SET `count`=`count`+1 WHERE `id`='$id'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function pollQuestions($id)
+    {
+        $com = new DbConnect();
+        $sql = "UPDATE `questions` SET `count`=`count`+1  WHERE `id`='$id'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+
+
+
 }
