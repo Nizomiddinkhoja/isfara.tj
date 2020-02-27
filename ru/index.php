@@ -19,7 +19,7 @@ $news = mysqli_fetch_array($result_news);
     <base/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="generator" content="Joomla! - Open Source Content Management"/>
-    <title>Home - Newsberg</title>
+    <title>Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара — Сомонаи расмии МИҲД Исфара</title>
     <link href="index.php/fr/index.html" rel="alternate" hreflang="fr-FR"/>
     <link href="index.php/ar/index.html" rel="alternate" hreflang="ar-AA"/>
     <link href="index-2.html" rel="alternate" hreflang="en-GB"/>

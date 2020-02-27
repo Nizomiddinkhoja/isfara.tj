@@ -387,12 +387,12 @@ WHERE l.`name`='tj' AND g.`status`=1 AND cn.`name` = 'gallery'";
         return mysqli_query($com->getDb(), $sql);
     }
 
-    public function getVideo(){
+    public function getVideo($locale){
         $com = new DbConnect();
-        $sql = "SELECT v.`id`, t.`title`, v.source FROM  video v JOIN texts t ON t.`id_menu` = v.`id`
+        $sql = "SELECT v.`id`, t.`title`, v.source, v.is_youtube FROM  video v JOIN texts t ON t.`id_menu` = v.`id`
 JOIN locale l ON l.`id`=t.locale
 JOIN content cn ON cn.`id`=t.`id_content`
-WHERE l.`name`='tj' AND v.`status`=1 AND cn.`name` = 'video'";
+WHERE l.`name`='ru' AND v.`status`=1 AND cn.`name` = 'video'";
         return mysqli_query($com->getDb(), $sql);
     }
 
@@ -508,13 +508,13 @@ WHERE l.`name`='tj' AND q.`status`=1 AND cn.`name` = 'question'";
         mysqli_query($com->getDb(), $sql);
     }
 
-    public function getAnswer($id_questions){
+    public function getAnswer($id_questions,  $locale){
         $com = new DbConnect();
         $sql = "SELECT a.`id`, t.`title` FROM  answer a JOIN texts t ON t.`id_menu` = a.`id`
 JOIN questions q ON q.id = a.id_questions
 JOIN locale l ON l.`id`=t.locale
 JOIN content cn ON cn.`id`=t.`id_content`
-WHERE l.`name`='tj' AND a.`status`=1 AND cn.`name`='answer' and q.id = '$id_questions'";
+WHERE l.`name`='$locale' AND a.`status`=1 AND cn.`name`='answer' and q.id = '$id_questions'";
         return mysqli_query($com->getDb(), $sql);
     }
 
@@ -582,6 +582,22 @@ WHERE l.`name`='tj' AND a.`status`=1 AND cn.`name`='answer' and q.id = '$id_ques
     WHERE l.`name`='$locale' AND c.`status`=1 AND cn.`name`='slider' LIMIT 6";
         return mysqli_query($com->getDb(), $sql);
     }
+
+
+    public function pollAnswer($id)
+    {
+        $com = new DbConnect();
+        $sql = "UPDATE `answer` SET `count`=`count`+1 WHERE `id`='$id'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function pollQuestions($id)
+    {
+        $com = new DbConnect();
+        $sql = "UPDATE `questions` SET `count`=`count`+1  WHERE `id`='$id'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
 
 
 

@@ -1,10 +1,36 @@
 <?php
-$result_question_ru = $dbOperation->getQuestionByID(1, 'ru');
+$l=0;
+$resul = $dbOperation->getQuestions();
+if(mysqli_num_rows($resul)>0) {
+while ($quest = mysqli_fetch_array($resul)) {
+    $l++;
+}   }
+$id=rand(1, $l);
+
+$result_question_ru = $dbOperation->getQuestionByID($id, 'ru');
 $question_ru = mysqli_fetch_array($result_question_ru);
 
-$result_answer_ru = $dbOperation->getAnswerById(1, 'ru');
+$result_answer_ru = $dbOperation->getAnswer($id, 'ru');
 $answer_ru = mysqli_fetch_array($result_answer_ru);
 
+$result = $dbOperation->getVideo('ru');
+
+$message="";
+
+
+if(isset($_POST["submit"])) {
+  //  $answer_ru1 = $_POST["answer_ru"];
+
+    try{
+        $dbOperation->pollAnswer($_POST["answer_ru"]);
+        $dbOperation->pollQuestions($id);
+        $message = "<h4 class='text-success'>Спасибо за ответ!</h4>";
+        $_POST="";
+//        unset($_POST["submit"]);
+    }catch (Exception $exception){
+        $message = "<h4 class='text-danger'>Ошибка: ". $exception->getMessage()."</h4>";
+    }
+}
 ?>
 <section id="section-id-1573810024455" class="sppb-section">
                                     <div class="sppb-row-container">
@@ -19,39 +45,47 @@ $answer_ru = mysqli_fetch_array($result_answer_ru);
                                                                     <div class="sppb-addon-content"><h3
                                                                                 class="sppb-addon-title">Вопросы?</h3>
                                                                         <div class="mod-sppoll ">
-                                                                            <strong><?=$question_ru[0]?></strong>
-                                                                            <form class="form-sppoll" data-id="1"
-                                                                                  data-module_id="111">
+
+                                                                            <form method="post" method="post" >
+                                                                                <strong><?=$question_ru[0]?></strong>
                                                                                 <div class="radio">
-                                                                                    <input type="radio" name="question"
+                                                                                    <input type="radio" name="answer_ru"
                                                                                            id="sppoll0" value="<?=$answer_ru[0]?>"
                                                                                            checked>
                                                                                     <label for="sppoll0">
-                                                                                        <?=$answer_ru[0]?> </label>
+                                                                                        <?=$answer_ru[1]?> </label>
                                                                                 </div>
                                                                                 <?php
                                                                                 $answer_ru = mysqli_fetch_array($result_answer_ru);
                                                                                 ?>
                                                                                 <div class="radio">
-                                                                                    <input type="radio" name="question"
+                                                                                    <input type="radio" name="answer_ru"
                                                                                            id="sppoll1" value="<?=$answer_ru[0]?>">
                                                                                     <label for="sppoll1">
-                                                                                        <?=$answer_ru[0]?> </label>
+                                                                                        <?=$answer_ru[1]?> </label>
                                                                                 </div>
                                                                                 <?php
                                                                                 $answer_ru = mysqli_fetch_array($result_answer_ru);
                                                                                 ?>
                                                                                 <div class="radio">
-                                                                                    <input type="radio" name="question"
+                                                                                    <input type="radio" name="answer_ru"
                                                                                            id="sppoll2" value="<?=$answer_ru[0]?>">
                                                                                     <label for="sppoll2">
-                                                                                        <?=$answer_ru[0]?> </label>
+                                                                                        <?=$answer_ru[1]?> </label>
                                                                                 </div>
-                                                                                <input type="submit"
+                                                                                <input type="submit" name="submit"
                                                                                        class="btn btn-default"
-                                                                                       value="Submit">
+                                                                                       value="Ответить">
                                                                             </form>
-                                                                            <div class="sppoll-results"></div>
+                                                                            <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+                                                                                <?php if($message != ""){?>
+
+                                                                                        <?=$message?>
+
+                                                                                <?}?>
+                                                                            </div>
+<!--                                                                            <div class="sppoll-result">-->
+<!--                                                                                </div>-->
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -79,176 +113,35 @@ $answer_ru = mysqli_fetch_array($result_answer_ru);
                                                                     <div class="sppb-addon-content">
                                                                         <div class="swiper-container articles-slider">
                                                                             <div class="swiper-wrapper">
-                                                                                <div class="swiper-slide"
-                                                                                     style="background-image: url(images/2019/12/10/tech-31.jpg);">
-                                                                                    <a href="index.php/categories/newsberg/technology/the-exact-same-briefcase-soap-sorry-i-make.html"
-                                                                                       itemprop="url"
-                                                                                       class="full-link"></a>
-                                                                                    <div class="container">
-                                                                                        <div class="sppb-article-info-wrap">
-                                                                                            <div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-category"><a
-                                                                                                            href="index.php/categories/newsberg/technology.html"
-                                                                                                            itemprop="genre">Technology</a></span>
-                                                                                            </div>
-                                                                                            <h3>
-                                                                                                <a href="index.php/categories/newsberg/technology/the-exact-same-briefcase-soap-sorry-i-make.html"
-                                                                                                   itemprop="url">Sondland
-                                                                                                    adds to testimony
-                                                                                                    linking aid to
-                                                                                                    Ukraine probes
-                                                                                                    sought by Trump</a>
-                                                                                            </h3>
-                                                                                            <div class="video-caption-wrapper d-flex align-items-center">
-                                                                                                <i class="fa fa-play-circle"></i>
-                                                                                                <div class="video-caption-info">
-                                                                                                    <span class="video-caption">Best London Corporate</span><span
-                                                                                                            class="video-duration">01 : 35</span>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
+                                                                                <?php
+                                                                                while ($video = mysqli_fetch_array($result)) {
+                                                                                ?>
+                                                                                <div class="swiper-slide">
+                                                                                    <?php
+                                                                                    if ($video[3] == 0) {
+                                                                                        ?>
+                                                                                        <video controls height="100%"
+                                                                                               width=100%
+                                                                                               poster="../img/video.png">
+                                                                                            <source
+                                                                                                src="../../img/<?= $video[2] ?>"
+                                                                                                type="video/mp4"/>
+                                                                                        </video>
+                                                                                        <?php
+                                                                                    }else{
+                                                                                    ?>
+
+                                                                                    <iframe width="100%" height="100%"
+                                                                                            src="https://www.youtube.com/embed/<?= $video[2] ?>"
+                                                                                            frameborder="0"
+                                                                                            allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture"
+                                                                                            allowfullscreen></iframe>
+                                                                                    <?php
+                                                                                    }
+                                                                                    ?>
                                                                                 </div>
-                                                                                <div class="swiper-slide"
-                                                                                     style="background-image: url(images/2019/12/10/business-6.jpg);">
-                                                                                    <a href="index.php/business-blog/what-mixed-equal-parts-of-gasoline-and-frozen.html"
-                                                                                       itemprop="url"
-                                                                                       class="full-link"></a>
-                                                                                    <div class="container">
-                                                                                        <div class="sppb-article-info-wrap">
-                                                                                            <div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-category"><a
-                                                                                                            href="index.php/business-blog.html"
-                                                                                                            itemprop="genre">Business</a></span>
-                                                                                            </div>
-                                                                                            <h3>
-                                                                                                <a href="index.php/business-blog/what-mixed-equal-parts-of-gasoline-and-frozen.html"
-                                                                                                   itemprop="url">What
-                                                                                                    mixed equal parts of
-                                                                                                    gasoline and
-                                                                                                    frozen</a></h3>
-                                                                                            <div class="video-caption-wrapper d-flex align-items-center">
-                                                                                                <i class="fa fa-play-circle"></i>
-                                                                                                <div class="video-caption-info">
-                                                                                                    <span class="video-caption">What mixed equal parts </span><span
-                                                                                                            class="video-duration">01 : 36</span>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="swiper-slide"
-                                                                                     style="background-image: url(images/2019/12/10/politics-111.jpg);">
-                                                                                    <a href="index.php/categories/newsberg/politics/what-household-items-really-if-one-were.html"
-                                                                                       itemprop="url"
-                                                                                       class="full-link"></a>
-                                                                                    <div class="container">
-                                                                                        <div class="sppb-article-info-wrap">
-                                                                                            <div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-category"><a
-                                                                                                            href="index.php/categories/newsberg/politics.html"
-                                                                                                            itemprop="genre">Politics</a></span>
-                                                                                            </div>
-                                                                                            <h3>
-                                                                                                <a href="index.php/categories/newsberg/politics/what-household-items-really-if-one-were.html"
-                                                                                                   itemprop="url">What
-                                                                                                    household items.
-                                                                                                    Really? If one
-                                                                                                    were</a></h3>
-                                                                                            <div class="video-caption-wrapper d-flex align-items-center">
-                                                                                                <i class="fa fa-play-circle"></i>
-                                                                                                <div class="video-caption-info">
-                                                                                                    <span class="video-caption">What household items</span><span
-                                                                                                            class="video-duration">08 : 36</span>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="swiper-slide"
-                                                                                     style="background-image: url(images/2019/12/10/entertainment-12.jpg);">
-                                                                                    <a href="index.php/entertainment/for-you-what-being-clever-great-keep-it-up.html"
-                                                                                       itemprop="url"
-                                                                                       class="full-link"></a>
-                                                                                    <div class="container">
-                                                                                        <div class="sppb-article-info-wrap">
-                                                                                            <div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-category"><a
-                                                                                                            href="index.php/entertainment.html"
-                                                                                                            itemprop="genre">Entertainment</a></span>
-                                                                                            </div>
-                                                                                            <h3>
-                                                                                                <a href="index.php/entertainment/for-you-what-being-clever-great-keep-it-up.html"
-                                                                                                   itemprop="url">For
-                                                                                                    you? What? Being
-                                                                                                    clever. Great. Keep
-                                                                                                    it up.</a></h3>
-                                                                                            <div class="video-caption-wrapper d-flex align-items-center">
-                                                                                                <i class="fa fa-play-circle"></i>
-                                                                                                <div class="video-caption-info">
-                                                                                                    <span class="video-caption">Video With Fashion and Glitches</span><span
-                                                                                                            class="video-duration">00 : 10</span>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="swiper-slide"
-                                                                                     style="background-image: url(images/2019/12/04/food-14.jpg);">
-                                                                                    <a href="index.php/food/what-do-you-do-what-do-you-mean-what.html"
-                                                                                       itemprop="url"
-                                                                                       class="full-link"></a>
-                                                                                    <div class="container">
-                                                                                        <div class="sppb-article-info-wrap">
-                                                                                            <div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-category"><a
-                                                                                                            href="index.php/food.html"
-                                                                                                            itemprop="genre">Food</a></span>
-                                                                                            </div>
-                                                                                            <h3>
-                                                                                                <a href="index.php/food/what-do-you-do-what-do-you-mean-what.html"
-                                                                                                   itemprop="url">What
-                                                                                                    do you do? What do
-                                                                                                    you mean what?</a>
-                                                                                            </h3>
-                                                                                            <div class="video-caption-wrapper d-flex align-items-center">
-                                                                                                <i class="fa fa-play-circle"></i>
-                                                                                                <div class="video-caption-info">
-                                                                                                    <span class="video-caption">What do you mean what</span><span
-                                                                                                            class="video-duration">00 : 30</span>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="swiper-slide"
-                                                                                     style="background-image: url(images/2019/12/11/politics7.jpg);">
-                                                                                    <a href="index.php/sports/what-do-you-do-what-do-you-mean-what.html"
-                                                                                       itemprop="url"
-                                                                                       class="full-link"></a>
-                                                                                    <div class="container">
-                                                                                        <div class="sppb-article-info-wrap">
-                                                                                            <div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-category"><a
-                                                                                                            href="index.php/sports.html"
-                                                                                                            itemprop="genre">Sports</a></span>
-                                                                                            </div>
-                                                                                            <h3>
-                                                                                                <a href="index.php/sports/what-do-you-do-what-do-you-mean-what.html"
-                                                                                                   itemprop="url">What
-                                                                                                    do you do? What do
-                                                                                                    you mean what?</a>
-                                                                                            </h3>
-                                                                                            <div class="video-caption-wrapper d-flex align-items-center">
-                                                                                                <i class="fa fa-play-circle"></i>
-                                                                                                <div class="video-caption-info">
-                                                                                                    <span class="video-caption">Spring Sports</span><span
-                                                                                                            class="video-duration">02 : 10</span>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
+                                                                                <?php
+                                                                                }?>
                                                                             </div>
                                                                             <div class="thumb-slider-nav swiper-button-next d-none"></div>
                                                                             .
@@ -257,91 +150,19 @@ $answer_ru = mysqli_fetch_array($result_answer_ru);
                                                                         </div>
                                                                         <div class="swiper-container articles-thumb">
                                                                             <div class="swiper-wrapper">
+                                                                                <?php
+                                                                                $result = $dbOperation->getVideo('ru');
+                                                                                while ($video = mysqli_fetch_array($result)) {
+                                                                                ?>
                                                                                 <div class="swiper-slide">
                                                                                     <div class="sppb-article-info-wrap">
                                                                                         <div class="sppb-article-content">
-                                                                                            <div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-category">Technology</span><span
-                                                                                                        class="video-icon fa fa-play"></span><span
-                                                                                                        class="video-caption-info"><span
-                                                                                                            class="video-duration">01 : 35</span></span>
-                                                                                            </div>
-                                                                                            <h3>Sondland adds to
-                                                                                                testimony linking aid to
-                                                                                                Ukraine probes sought by
-                                                                                                Trump</h3></div>
+                                                                                            <h3><?=$video[1]?></h3></div>
                                                                                     </div>
                                                                                 </div>
-                                                                                <div class="swiper-slide">
-                                                                                    <div class="sppb-article-info-wrap">
-                                                                                        <div class="sppb-article-content">
-                                                                                            <div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-category">Business</span><span
-                                                                                                        class="video-icon fa fa-play"></span><span
-                                                                                                        class="video-caption-info"><span
-                                                                                                            class="video-duration">01 : 36</span></span>
-                                                                                            </div>
-                                                                                            <h3>What mixed equal parts
-                                                                                                of gasoline and
-                                                                                                frozen</h3></div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="swiper-slide">
-                                                                                    <div class="sppb-article-info-wrap">
-                                                                                        <div class="sppb-article-content">
-                                                                                            <div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-category">Politics</span><span
-                                                                                                        class="video-icon fa fa-play"></span><span
-                                                                                                        class="video-caption-info"><span
-                                                                                                            class="video-duration">08 : 36</span></span>
-                                                                                            </div>
-                                                                                            <h3>What household items.
-                                                                                                Really? If one were</h3>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="swiper-slide">
-                                                                                    <div class="sppb-article-info-wrap">
-                                                                                        <div class="sppb-article-content">
-                                                                                            <div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-category">Entertainment</span><span
-                                                                                                        class="video-icon fa fa-play"></span><span
-                                                                                                        class="video-caption-info"><span
-                                                                                                            class="video-duration">00 : 10</span></span>
-                                                                                            </div>
-                                                                                            <h3>For you? What? Being
-                                                                                                clever. Great. Keep it
-                                                                                                up.</h3></div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="swiper-slide">
-                                                                                    <div class="sppb-article-info-wrap">
-                                                                                        <div class="sppb-article-content">
-                                                                                            <div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-category">Food</span><span
-                                                                                                        class="video-icon fa fa-play"></span><span
-                                                                                                        class="video-caption-info"><span
-                                                                                                            class="video-duration">00 : 30</span></span>
-                                                                                            </div>
-                                                                                            <h3>What do you do? What do
-                                                                                                you mean what?</h3>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="swiper-slide">
-                                                                                    <div class="sppb-article-info-wrap">
-                                                                                        <div class="sppb-article-content">
-                                                                                            <div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-category">Sports</span><span
-                                                                                                        class="video-icon fa fa-play"></span><span
-                                                                                                        class="video-caption-info"><span
-                                                                                                            class="video-duration">02 : 10</span></span>
-                                                                                            </div>
-                                                                                            <h3>What do you do? What do
-                                                                                                you mean what?</h3>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
+                                                                                <?php
+                                                                                }
+                                                                                ?>
                                                                             </div>
                                                                         </div>
                                                                     </div>
