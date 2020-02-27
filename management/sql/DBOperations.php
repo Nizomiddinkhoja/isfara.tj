@@ -326,14 +326,31 @@ WHERE l.`name`='$locale' AND s.`status`=1 AND cn.`name`='slider' AND s.id=$id";
 
 
 
-    public function getGallery(){
+    public function getGallery($locale){
         $com = new DbConnect();
         $sql = "SELECT g.`id`, t.`title`, g.img, g.date FROM  gallery g JOIN texts t ON t.`id_menu` = g.`id`
 JOIN locale l ON l.`id`=t.locale
 JOIN content cn ON cn.`id`=t.`id_content`
-WHERE l.`name`='tj' AND g.`status`=1 AND cn.`name` = 'gallery'";
+WHERE l.`name`='$locale' AND g.`status`=1 AND cn.`name` = 'gallery' ORDER by id DESC";
         return mysqli_query($com->getDb(), $sql);
     }
+
+
+    public function getGalleryForPage($locale, $start,$limit){
+        $com = new DbConnect();
+        $sql = "SELECT g.`id`, t.`title`, g.img, g.date FROM  gallery g JOIN texts t ON t.`id_menu` = g.`id`
+JOIN locale l ON l.`id`=t.locale
+JOIN content cn ON cn.`id`=t.`id_content`
+WHERE l.`name`='$locale' AND g.`status`=1 AND cn.`name` = 'gallery' ORDER by id DESC LIMIT $start, $limit";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function getCountGallery(){
+        $com = new DbConnect();
+        $sql = "SELECT COUNT(*) FROM `gallery` WHERE `status`=1";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
     public function deleteGallery($id){
         $com = new DbConnect();
         $sql = "UPDATE gallery SET status=0 Where id=$id";

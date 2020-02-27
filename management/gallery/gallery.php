@@ -54,7 +54,7 @@ include("../include/navbar.php");
               <div class="row" style="margin: unset;">
 
                   <?php
-                  $result = $dbOperation->getGallery();
+                  $result = $dbOperation->getGallery('ru');
                   if(mysqli_num_rows($result)>0) {
                       while ($gallery = mysqli_fetch_array($result)) {
                           ?>
