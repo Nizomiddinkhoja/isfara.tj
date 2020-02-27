@@ -3,7 +3,7 @@ require_once('../management/sql/DBOperations.php');
 $dbOperation = new DBOperations();
 
 
-$result_news = $dbOperation->get_news();
+$result_news = $dbOperation->get_news('ru');
 $news = mysqli_fetch_array($result_news);
 ?>
 <!doctype html>
@@ -469,7 +469,7 @@ $news = mysqli_fetch_array($result_news);
             margin-right: 0px;
             margin-bottom: 0px;
             margin-left: 0px;
-            background-color: #1d1d1d;
+            background-color: #1d55c1;
         }
 
         #column-id-1573810024454 {

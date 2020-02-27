@@ -134,7 +134,6 @@ WHERE l.name='ru' AND n.status=1 AND cn.name='news' AND n.category_id=$id";
 
 JOIN locale l ON l.id=t.locale 
 JOIN content cn ON cn.id=t.id_content 
-<<<<<<< HEAD
 WHERE l.name='$locale' AND n.status=1 AND cn.name=\"news\" ORDER BY n.id DESC";
         return mysqli_query($com->getDb(), $sql);
     }
