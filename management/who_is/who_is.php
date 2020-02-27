@@ -53,7 +53,7 @@ include("../include/navbar.php");
               <div class="row" style="margin: unset;">
 
                   <?php
-                  $result = $dbOperation->getWhoIs();
+                  $result = $dbOperation->getWhoIs('tj');
                     if (mysqli_num_rows($result) > 0) {
                         while ($whoIs = mysqli_fetch_array($result)) {
                             ?>

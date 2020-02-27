@@ -52,6 +52,11 @@ $news = mysqli_fetch_array($result_news);
     <link href="modules/mod_sp_weather/assets/css/flat.css" rel="stylesheet" type="text/css"/>
 
     <link href="templates/newsberg/css/main.css" rel="stylesheet" type="text/css"/>
+
+
+
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+
     <style type="text/css">
         #column-id-1573624776028 {
             box-shadow: 0 0 0 0 #fff;
@@ -1269,6 +1274,8 @@ $news = mysqli_fetch_array($result_news);
                 "uri": "\/2019\/newsberg\/index.php\/component\/ajax\/?format=json"
             }
         }</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <script src="media/jui/js/jquery.min4f50.js?0fe5eabe7d411626b85406bf464c07ff" type="text/javascript"></script>
     <script src="media/jui/js/jquery-noconflict4f50.js?0fe5eabe7d411626b85406bf464c07ff"
             type="text/javascript"></script>
@@ -2158,27 +2165,54 @@ $news = mysqli_fetch_array($result_news);
                                                                                                 Кисту Чист?</h2></div>
                                                                                     </div>
                                                                                 </div>
+                                                                                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+                                                                                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                                                                                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-                                                                                <div id="sppb-addon-wrapper-1574765554041"
-                                                                                     class="sppb-addon-wrapper">
-                                                                                    <div id="sppb-addon-1574765554041" class="clearfix ">
-                                                                                        <div class="sppb-addon sppb-addon-module home-ad-banner">
-                                                                                            <div class="sppb-addon-content">
-                                                                                                <div class="bannergroup">
-                                                                                                    <div class="banneritem">
-                                                                                                        <a href="https://joomshaper.com/"
-                                                                                                           target="_blank"
-                                                                                                           rel="noopener noreferrer"
-                                                                                                           title="Home Ad 6">
-                                                                                                            <img src="images/demo/product_ad1.png"
-                                                                                                                 alt="JoomShaper" style="border: none;"/>
-                                                                                                        </a>
-                                                                                                        <div class="clr"></div>
-                                                                                                    </div>
-                                                                                                </div>
+                                                                                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                                                                    <div class="carousel-inner">
+                                                                                        <?php
+                                                                                        $result = $dbOperation->getWhoIs('ru');
+                                                                                        $who_is = mysqli_fetch_array($result)
+                                                                                        ?>
+                                                                                        <div class="item active">
+                                                                                            <img src="../img/<?=$who_is[3]?>" alt="<?=$who_is[1]?>" style="width:100%;">
+                                                                                            <div class="carousel-caption " style="margin-bottom:  0px; padding-bottom: 0px;">
+                                                                                                <h2 class="display-4" style="margin-bottom:  0px;font-size: 18px;"><?=$who_is[1]?></h2>
+                                                                                                <p class="lead" style="margin-bottom:  0px; font-size: 14px;"><?=$who_is[2]?></p>
                                                                                             </div>
                                                                                         </div>
+                                                                                        <?php if(mysqli_num_rows($result)>0) {
+                                                                                        while ($who_is = mysqli_fetch_array($result)) {
+                                                                                            ?>
+                                                                                            <div class="item">
+                                                                                                <img
+                                                                                                    src="../img/<?= $who_is[3] ?>"
+                                                                                                    alt="<?= $who_is[1] ?>"
+                                                                                                    style="width:100%;">
+                                                                                                <div
+                                                                                                    class="carousel-caption "
+                                                                                                    style="margin-bottom:  0px; padding-bottom: 0px;">
+                                                                                                    <h2 class="display-4"
+                                                                                                        style="margin-bottom:  0px;font-size: 18px;"><?= $who_is[1] ?></h2>
+                                                                                                    <p class="lead"
+                                                                                                       style="margin-bottom:  0px; font-size: 14px;"><?= $who_is[2] ?></p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <?php
+                                                                                        }}?>
+
                                                                                     </div>
+
+                                                                                    <!-- Left and right controls -->
+                                                                                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                                                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                                                                        <span class="sr-only">Назад</span>
+                                                                                    </a>
+                                                                                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                                                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                                                                        <span class="sr-only">Вперед</span>
+                                                                                    </a>
                                                                                 </div>
                                                                             </div>
                                                                         </div>

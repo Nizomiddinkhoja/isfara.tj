@@ -46,7 +46,7 @@ if(isset($_POST["submit"])) {
                                                                                 class="sppb-addon-title">Вопросы?</h3>
                                                                         <div class="mod-sppoll ">
 
-                                                                            <form method="post" method="post" >
+                                                                            <form method="post" method="post" style="margin-left: 40px;">
                                                                                 <strong><?=$question_ru[0]?></strong>
                                                                                 <div class="radio">
                                                                                     <input type="radio" name="answer_ru"

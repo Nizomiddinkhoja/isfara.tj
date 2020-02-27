@@ -58,12 +58,12 @@ WHERE l.`name`='$locale' AND c.`status`=1 AND cn.`name`='category' AND c.id=$id"
         return mysqli_query($com->getDb(), $sql);
     }
 
-    public function getWhoIs(){
+    public function getWhoIs($locale){
         $com = new DbConnect();
         $sql = "SELECT w.`id`, t.`title`, t.`description`, w.img FROM  who_is w JOIN texts t ON t.`id_menu` = w.`id` 
 JOIN locale l ON l.`id`=t.`locale` 
 JOIN content cn ON cn.`id`=t.`id_content` 
-WHERE l.`name`='ru' AND w.`status`=1 AND cn.`name`='who_is'";
+WHERE l.`name`='$locale' AND w.`status`=1 AND cn.`name`='who_is'";
         return mysqli_query($com->getDb(), $sql);
     }
 
