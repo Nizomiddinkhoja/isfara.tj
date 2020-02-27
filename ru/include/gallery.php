@@ -10,8 +10,6 @@
             <h2 class="sppb-addon-title">Галерея</h2></div>
     </div>
 <section id="portfolio" style="padding: 20px;">
-    <div class="container">
-
 
 
         <div class="row portfolio-container">
@@ -43,7 +41,6 @@ while (($gal = mysqli_fetch_array($gallery)) && $k!=9){
 
         </div>
 
-    </div>
 </section>
 </div>
 
