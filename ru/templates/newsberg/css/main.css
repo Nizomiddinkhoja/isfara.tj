@@ -23,3 +23,7 @@
 #sp-top1{
   margin-top: 5px;
 }
+#sp-bottom-top, #sp-bottom {
+  background: #1d55c1;
+  color: #fff;
+}

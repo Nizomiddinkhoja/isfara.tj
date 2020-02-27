@@ -80,79 +80,78 @@
                         <nav class="sp-megamenu-wrapper" role="navigation">
                             <ul class="sp-megamenu-parent menu-animation-fade-up d-none d-lg-block">
                                 <li class="sp-menu-item"><a href="/">Асосӣ</a></li>
-                                <li class="sp-menu-item sp-has-child"><a href="news.php?category=iqtisod">Иқтисод</a>
+                                <li class="sp-menu-item sp-has-child"><a href="category.php?id=1">Иқтисод</a>
                                     <div class="sp-dropdown sp-dropdown-main sp-menu-right"
                                          style="width: 240px;">
                                         <div class="sp-dropdown-inner">
                                             <ul class="sp-dropdown-items">
-                                                <li class="sp-menu-item"><a
-                                                        href="news.php?category=shugli_aholi">Шуғли аҳолӣ</a></li>
-                                                <li class="sp-menu-item"><a href="news.php?category=muhojirat">Муҳоҷират</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=2">Шуғли аҳолӣ</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=3">Муҳоҷират</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </li>
-                                <li class="sp-menu-item sp-has-child"><a href="news.php?category=sarmoya">Сармоягузори</a>
+                                <li class="sp-menu-item sp-has-child"><a href="category.php?id=4">Сармоягузори</a>
                                     <div class="sp-dropdown sp-dropdown-main sp-menu-right"
                                          style="width: 240px;">
                                         <div class="sp-dropdown-inner">
                                             <ul class="sp-dropdown-items">
-                                                <li class="sp-menu-item"><a href="news.php?category=robita">Бахши робитаҳои иқтисодии хориҷӣ</a></li>
-                                                <li class="sp-menu-item"><a href="news.php?category=muhojirat">Мухочират</a></li>
-                                                <li class="sp-menu-item"><a href="news.php?category=shuroi_mashvarati">Шӯрои машваратӣ</a></li>
-                                                <li class="sp-menu-item"><a href="news.php?category=isfara_guid">Исфара Гайд</a></li>
-                                                <li class="sp-menu-item"><a href="news.php?category=sarmoya">Сармоягузорон</a></li>
-                                                <li class="sp-menu-item"><a href="news.php?category=hamkoron">Ҳамкорони рушд</a></li>
-                                                <li class="sp-menu-item"><a href="news.php?category=sozishnoma">Созишномаҳо</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=5">Бахши робитаҳои иқтисодии хориҷӣ</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=6">Мухочират</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=7">Шӯрои машваратӣ</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=8">Исфара Гайд</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=9">Сармоягузорон</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=10">Ҳамкорони рушд</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=11">Созишномаҳо</a></li>
                                             </ul>
                                         </div>
                                     </div></li>
-                                <li class="sp-menu-item sp-has-child"><a href="news.php?category=kishovarzi">Кишоварзӣ</a>
+                                <li class="sp-menu-item sp-has-child"><a href="category.php?id=12">Кишоварзӣ</a>
                                     <div class="sp-dropdown sp-dropdown-main sp-menu-right"
                                          style="width: 240px;">
                                         <div class="sp-dropdown-inner">
                                             <ul class="sp-dropdown-items">
-                                                <li class="sp-menu-item"><a href="news.php?category=bogparvari">Боғпарварӣ</a></li>
-                                                <li class="sp-menu-item"><a href="news.php?category=rastaniparvari">Растанипарварӣ</a></li>
-                                                <li class="sp-menu-item"><a href="news.php?category=chorvodori">Чорводорӣ</a></li>
-                                                <li class="sp-menu-item"><a href="news.php?category=obyori">Обёрӣ</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=13">Боғпарварӣ</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=14">Растанипарварӣ</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=15">Чорводорӣ</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=16">Обёрӣ</a></li>
                                             </ul>
                                         </div>
                                     </div></li>
-                                <li class="sp-menu-item sp-has-child"><a href="news.php?category=ijtimoiyot">Иҷтимоиёт</a>
+                                <li class="sp-menu-item sp-has-child"><a href="category.php?id=17">Иҷтимоиёт</a>
                                     <div class="sp-dropdown sp-dropdown-main sp-menu-right"
                                          style="width: 240px;">
                                         <div class="sp-dropdown-inner">
                                             <ul class="sp-dropdown-items">
-                                                <li class="sp-menu-item"><a href="news.php?category=maorif">Маориф</a></li>
-                                                <li class="sp-menu-item"><a href="news.php?category=tandurusti">Тандурустӣ</a></li>
-                                                <li class="sp-menu-item"><a href="news.php?category=shubai_zanon">Шӯъбаи занон</a></li>
-                                                <li class="sp-menu-item"><a href="news.php?category=javonon">Ҷавонон</a></li>
-                                                <li class="sp-menu-item"><a href="news.php?category=farhang">Фарҳанг</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=18">Маориф</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=19">Тандурустӣ</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=20">Шӯъбаи занон</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=21">Ҷавонон</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=22">Фарҳанг</a></li>
                                             </ul>
                                         </div>
                                     </div></li>
-                                <li class="sp-menu-item sp-has-child"><a href="news.php?category=infrasohtor">Инфрасохтор</a>
+                                <li class="sp-menu-item sp-has-child"><a href="category.php?id=23">Инфрасохтор</a>
                                     <div class="sp-dropdown sp-dropdown-main sp-menu-right"
                                          style="width: 240px;">
                                         <div class="sp-dropdown-inner">
                                             <ul class="sp-dropdown-items">
-                                                <li class="sp-menu-item"><a href="news.php?category=naqliyot">Нақлиёт ва хизматрасонӣ</a></li>
-                                                <li class="sp-menu-item"><a href="news.php?category=shsa">ШСА</a></li>
-                                                <li class="sp-menu-item"><a href="news.php?category=memor">Меъмор</a></li>
-                                                <li class="sp-menu-item"><a href="news.php?category=roh">Роҳ</a></li>
-                                                <li class="sp-menu-item"><a href="news.php?category=barq">Барқ</a></li>
-                                                <li class="sp-menu-item"><a href="news.php?category=hifzi_muhiti_zist">Ҳифзи муҳити зист</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=24">Нақлиёт ва хизматрасонӣ</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=25">ШСА</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=26">Меъмор</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=27">Роҳ</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=28">Барқ</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=29">Ҳифзи муҳити зист</a></li>
                                             </ul>
                                         </div>
                                     </div></li>
-                                <li class="sp-menu-item sp-has-child"><a href="news.php?category=sayohi">Сайёҳӣ</a>
+                                <li class="sp-menu-item sp-has-child"><a href="category.php?id=30">Сайёҳӣ</a>
                                     <div class="sp-dropdown sp-dropdown-main sp-menu-right"
                                          style="width: 240px;">
                                         <div class="sp-dropdown-inner">
                                             <ul class="sp-dropdown-items">
-                                                <li class="sp-menu-item"><a href="news.php?category=tarihi_isfara">Таърихи Исфара</a></li>
-                                                <li class="sp-menu-item"><a href="news.php?category=mitaqai_sayohi">Минтақаҳои сайёҳӣ</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=31">Таърихи Исфара</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=32">Минтақаҳои сайёҳӣ</a></li>
                                             </ul>
                                         </div>
                                     </div></li>

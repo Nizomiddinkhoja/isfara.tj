@@ -88,42 +88,42 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="../news/news.php">
+                    <a class="nav-link " href="/management/news/news.php">
                         <i class="ni ni-planet text-blue"></i> Новости
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="../category/category.php">
+                    <a class="nav-link " href="/management/category/category.php">
                         <i class="ni ni-ungroup text-orange"></i> Категория
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../slider/slider.php">
+                    <a class="nav-link" href="/management/slider/slider.php">
                         <i class="ni ni-album-2 text-purple"></i> Слайдер
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="../gallery/gallery.php">
+                    <a class="nav-link " href="/management/gallery/gallery.php">
                         <i class="ni ni-image text-blue"></i> Галерея
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../Who_is/who_is.php">
+                    <a class="nav-link" href="/management/Who_is/who_is.php">
                         <i class="ni ni-badge text-yellow"></i> Кто Что
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../questions/questions.php">
+                    <a class="nav-link" href="/management/questions/questions.php">
                         <i class="fa fa-question text-info"></i> Вопросы
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../request/request.php">
+                    <a class="nav-link" href="/management/request/request.php">
                         <i class="ni ni-email-83 text-blue"></i> Электронная очередь
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../video/video.php">
+                    <a class="nav-link" href="/management/video/video.php">
                         <i class="ni ni-button-play text-red"></i> Видео
                     </a>
                 </li>

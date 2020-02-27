@@ -8,15 +8,20 @@ if ($_SESSION["is_auth"]) {
     if(isset($_POST["submit"])){
         $title_ru = $_POST["title_ru"]; $title_tj = $_POST["title_tj"]; $title_en = $_POST["title_en"];
         $src=$_POST["src"];
-        if (empty($src)){
+
+        if(isset($_FILES)){
             $is_youtube='0';
-            $video=$_POST["filename"];
-        }else{
-            $is_youtube='1';
-            $video=$_POST["src"];
+            echo var_dump($_FILES);
+            if(move_uploaded_file($_FILES["filename"]["tmp_name"], "../../img/" . $_FILES["filename"]["name"])) {
+                $video = $_FILES["filename"]["name"];
+                $dbOperation->editVideo($id, $video,  $is_youtube);
+            }else if (!empty($src)){
+                $is_youtube='1';
+                $video=$_POST["src"];
+                $dbOperation->editVideo($id, $video,  $is_youtube);
+            }
         }
         try{
-            $dbOperation->editVideo($id, $video,  $is_youtube);
             $dbOperation->editVideoText($id, $title_tj,  "tj");
             $dbOperation->editVideoText($id, $title_ru,  "ru");
             $dbOperation->editVideoText($id, $title_en,  "en");
@@ -62,7 +67,7 @@ if ($_SESSION["is_auth"]) {
         <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
 
         </div>
-        <form role="form" method="post" enctype="multipart/form-dataq">
+        <form role="form" method="post" enctype="multipart/form-data">
             <div class="container-fluid mt--7">
                 <div class="row">
 
@@ -85,7 +90,7 @@ if ($_SESSION["is_auth"]) {
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                             </div>
-                                            <input class="form-control" placeholder="Ном" value="<?=$row_tj[0]?>" name="$row_tj" type="text">
+                                            <input class="form-control" placeholder="Ном" value="<?=$row_tj[0]?>" name="title_tj" type="text">
                                         </div>
                                     </div>
                                 </div>
@@ -112,7 +117,7 @@ if ($_SESSION["is_auth"]) {
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                             </div>
-                                            <input class="form-control" placeholder="Название" value="<?=$row_ru[0]?>" name="$row_ru" type="text">
+                                            <input class="form-control" placeholder="Название" value="<?=$row_ru[0]?>" name="title_ru" type="text">
                                         </div>
                                     </div>
                                 </div>
@@ -139,7 +144,7 @@ if ($_SESSION["is_auth"]) {
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                             </div>
-                                            <input class="form-control" placeholder="Name" value="<?=$row_en[0]?>" name="$row_en" type="text">
+                                            <input class="form-control" placeholder="Name" value="<?=$row_en[0]?>" name="title_en" type="text">
                                         </div>
                                     </div>
                                 </div>
@@ -168,7 +173,7 @@ if ($_SESSION["is_auth"]) {
                                     <div class="form-group mb-4">
                                         <div class="input-group input-group-alternative">
                                             <?
-                                            if($row_ru[2]==0 && $row_tj[1]!=""){
+                                            if($row_ru[2]==0 && $row_ru[1]!=""){
 
                                                 echo '<img src="../img/video-player.png" class="form-control-file"><br>
                                             <a href="delete_video_.php?id='.$id.'">Удалить</a><br><br>';
@@ -179,7 +184,7 @@ if ($_SESSION["is_auth"]) {
                                             </div>
                                             <!--  <label>Фото: </label> -->
 
-                                            <input type="file" name="filename" required="required" class="form-control"">
+                                            <input type="file" name="filename"  class="form-control"">
                                         ';
                                             }
                                             ?>
@@ -187,7 +192,7 @@ if ($_SESSION["is_auth"]) {
                                     </div>
                                 </div>
                                 <div class="text-center">
-                                    <button type="button" class="btn btn-primary my-4">Сохранить</button>
+                                    <button type="submit" name="submit" class="btn btn-primary my-4">Сохранить</button>
                                 </div>
                             </div>
                         </div>

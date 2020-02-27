@@ -1247,7 +1247,7 @@
         }
 
         #sp-footer {
-            background-color: #000000;
+            background-color: #1c4dad;
         }
     </style>
     <script type="application/json" class="joomla-script-options new">{

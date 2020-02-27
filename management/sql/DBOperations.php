@@ -76,7 +76,6 @@ WHERE l.`name`='ru' AND w.`status`=1 AND cn.`name`='who_is'";
     public function editWhoIs($id, $img){
         $com = new DbConnect();
         $sql = "UPDATE who_is SET img='$img' WHERE id=$id";
-        echo $sql;
         mysqli_query($com->getDb(), $sql);
     }
 
@@ -94,7 +93,6 @@ WHERE l.`name`='ru' AND w.`status`=1 AND cn.`name`='who_is'";
 										'$description',
 										'',
 										(SELECT id FROM locale WHERE `name`='$locale'))";
-        echo $sql;
         return mysqli_query($com->getDb(), $sql);
     }
 
@@ -120,13 +118,23 @@ WHERE l.`name`='$locale' AND w.`status`=1 AND cn.`name`='who_is' AND w.id=$id";
         return mysqli_query($com->getDb(), $sql);
     }
 
-    public function  get_news(){
+    public function getNewsByCategoryById($id, $locale){
+        $com = new DbConnect();
+        $sql = "SELECT n.id, t.title, t.description, n.img, n.category_id, n.date FROM  news n JOIN texts t ON t.id_menu = n.id 
+JOIN category c ON t.id_menu = c.id 
+JOIN locale l ON l.id=t.locale 
+JOIN content cn ON cn.id=t.id_content 
+WHERE l.name='ru' AND n.status=1 AND cn.name='news' AND n.category_id=$id";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function  get_news($locale = "ru"){
         $com = new DbConnect();
         $sql = "SELECT n.id, t.title, t.description, n.img, n.category_id, n.date  FROM  news n JOIN texts t ON t.id_menu = n.id 
 JOIN category c ON t.id_menu = c.id 
 JOIN locale l ON l.id=t.locale 
 JOIN content cn ON cn.id=t.id_content 
-WHERE l.name=\"ru\" AND n.status=1 AND cn.name=\"news\" ";
+WHERE l.name='$locale' AND n.status=1 AND cn.name=\"news\" ORDER BY n.id DESC";
         return mysqli_query($com->getDb(), $sql);
     }
 
@@ -188,7 +196,6 @@ WHERE l.`name`='en' AND c.`status`=1 AND cn.`name`='category'";
         $com = new DbConnect();
 
         $sql = "INSERT INTO `news`(`id`, `category_id`, `date`, `author_id`, `img`, `visitor_id`, `status`) VALUES (DEFAULT, $category_id,'$date', DEFAULT, '$img', DEFAULT, 1 )";
-        echo $sql;
         return mysqli_query($com->getDb(), $sql);
     }
 
@@ -253,7 +260,6 @@ WHERE l.`name`='en' AND c.`status`=1 AND cn.`name`='category'";
     public function addSlider($img){
         $com = new DbConnect();
         $sql = "INSERT INTO `slider`(`id`, `img`, `status`) VALUES (DEFAULT, '$img', 1)";
-        echo $sql;
         return mysqli_query($com->getDb(), $sql);
     }
 
@@ -554,7 +560,13 @@ WHERE l.`name`='tj' AND a.`status`=1 AND cn.`name`='answer' and q.id = '$id_ques
         return mysqli_query($com->getDb(), $sql);
     }
 
-
+    public function addRequest($firstName, $lastName, $email, $phone, $title, $text){
+        $com = new DbConnect();
+        $sql = "INSERT INTO request(last_name, first_name, email, phone	,title, `text`, `date`, is_view, `status`) VALUES (
+'$firstName', '$lastName', '$email', '$phone', '$title', '$text',now(),0,1
+)";
+        return mysqli_query($com->getDb(), $sql);
+    }
     public function getRequest()
     {
         $com = new DbConnect();
