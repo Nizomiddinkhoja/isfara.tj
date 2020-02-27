@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
         $dbOperation->addAnswer();
         $dbOperation->addQuestionText($question_en, $answer1_en, $answer2_en, $answer3_en, $answer4_en, 'en');
         $dbOperation->addQuestionText($question_tj, $answer1_tj, $answer2_tj, $answer3_tj, $answer4_tj, 'tj');
-        $dbOperation->addQuestionText($question_en, $answer1_ru, $answer2_ru, $answer3_ru, $answer4_ru, 'ru');
+        $dbOperation->addQuestionText($question_ru, $answer1_ru, $answer2_ru, $answer3_ru, $answer4_ru, 'ru');
         $message = "<h4 class='text-success'>Успешно сохранено!</h4>";
     }catch (Exception $exception){
         $message = "<h4 class='text-danger'>Ошибка: " . $exception->getMessage() . "</h4>";
