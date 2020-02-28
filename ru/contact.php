@@ -24,7 +24,7 @@ if (isset($_POST["submit"])){
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <base/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <title>Электронная приемная - Newsberg</title>
+    <title>Электронная приемная - Официальный сайт исполнительный орган городского правительства Исфара</title>
     <link href="templates/newsberg/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
     <link href="components/com_sppagebuilder/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="components/com_sppagebuilder/assets/css/animate.min.css" rel="stylesheet" type="text/css"/>
@@ -892,62 +892,4 @@ if (isset($_POST["submit"])){
     </div>
 </div>
 
-<div class="offcanvas-overlay"></div>
-<div class="offcanvas-menu">
-    <a href="#" class="close-offcanvas"><span class="fa fa-remove"></span></a>
-    <div class="offcanvas-inner">
-        <div class="sp-module ">
-            <div class="sp-module-content">
-                <ul class="menu">
-                    <li class="item-101 menu-deeper menu-parent"><a
-                                href="http://demo2.joomshaper.com/2019/newsberg/index.php">Home<span
-                                    class="menu-toggler"></span></a>
-                        <ul class="menu-child">
-                            <li class="item-219"><a
-                                        href="http://demo2.joomshaper.com/2019/newsberg/index.php/home/news-bulletin">News
-                                    Bulletin</a></li>
-                            <li class="item-245"><a href="http://demo2.joomshaper.com/2019/newsberg/index.php">Business
-                                    Insight (Default)</a></li>
-                        </ul>
-                    </li>
-                    <li class="item-115"><a href="http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog">Business</a>
-                    </li>
-                    <li class="item-222"><a href="http://demo2.joomshaper.com/2019/newsberg/index.php/food">Food</a>
-                    </li>
-                    <li class="item-223"><a href="http://demo2.joomshaper.com/2019/newsberg/index.php/sports">Sports</a>
-                    </li>
-                    <li class="item-224"><a href="http://demo2.joomshaper.com/2019/newsberg/index.php/entertainment">Entertainment</a>
-                    </li>
-                    <li class="item-217"><a
-                                href="http://demo2.joomshaper.com/2019/newsberg/index.php/authors">Authors</a></li>
-                    <li class="item-121"><a href="#">Mega</a></li>
-                    <li class="item-108 active menu-deeper menu-parent"><a href="#">Pages<span
-                                    class="menu-toggler"></span></a>
-                        <ul class="menu-child">
-                            <li class="item-218"><a
-                                        href="http://demo2.joomshaper.com/2019/newsberg/index.php/pages/bookmarks">Bookmarks</a>
-                            </li>
-                            <li class="item-113 current active"><a
-                                        href="http://demo2.joomshaper.com/2019/newsberg/index.php/pages/contact">Contact</a>
-                            </li>
-                            <li class="item-109"><a
-                                        href="http://demo2.joomshaper.com/2019/newsberg/index.php/pages/login">Login</a>
-                            </li>
-                            <li class="item-110"><a
-                                        href="http://demo2.joomshaper.com/2019/newsberg/index.php/pages/registration">Registration</a>
-                            </li>
-                            <li class="item-111"><a
-                                        href="http://demo2.joomshaper.com/2019/newsberg/index.php?Itemid=404">404</a>
-                            </li>
-                            <li class="item-112"><a href="http://demo2.joomshaper.com/2019/newsberg/?tmpl=comingsoon">Coming
-                                    Soon</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<a href="#" class="sp-scroll-up" aria-label="Scroll Up"><span class="fa fa-chevron-up" aria-hidden="true"></span></a>
 </html>

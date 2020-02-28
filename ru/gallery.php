@@ -18,7 +18,7 @@ $dbOperations = new DBOperations();
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="author" content="Kawshar Ahmed"/>
     <meta name="generator" content="Joomla! - Open Source Content Management"/>
-    <title></title>
+    <title>Галерея</title>
     <link href="templates/newsberg/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
     <link href="components/com_sppagebuilder/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="components/com_sppagebuilder/assets/css/animate.min.css" rel="stylesheet" type="text/css"/>

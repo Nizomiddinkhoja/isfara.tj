@@ -19,7 +19,7 @@ $news = mysqli_fetch_array($result_news);
     <base/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="generator" content="Joomla! - Open Source Content Management"/>
-    <title>Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара — Сомонаи расмии МИҲД Исфара</title>
+    <title>Официальный сайт исполнительный орган городского правительства Исфара</title>
     <link href="index.php/fr/index.html" rel="alternate" hreflang="fr-FR"/>
     <link href="index.php/ar/index.html" rel="alternate" hreflang="ar-AA"/>
     <link href="index-2.html" rel="alternate" hreflang="en-GB"/>
@@ -1681,7 +1681,7 @@ $news = mysqli_fetch_array($result_news);
                                                              class="sppb-addon-wrapper">
                                                             <div id="sppb-addon-1574765723526" class="clearfix ">
                                                                 <div class="sppb-addon sppb-addon-header heading-arrow sppb-text-left">
-                                                                    <h2 class="sppb-addon-title">Хабархои нав</h2></div>
+                                                                    <h2 class="sppb-addon-title">Последние новости</h2></div>
                                                             </div>
                                                         </div>
                                                         <div id="sppb-addon-wrapper-1574763938320"
@@ -2116,7 +2116,8 @@ $news = mysqli_fetch_array($result_news);
                                                                                          class="clearfix ">
                                                                                         <div class="sppb-addon sppb-addon-header sppb-text-left">
                                                                                             <h2 class="sppb-addon-title">
-                                                                                                Президенти Чумхурии Точикистон</h2></div>
+                                                                                                Президент Республики Таджикистан
+                                                                                            </h2></div>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div id="sppb-addon-wrapper-1574765554041"
@@ -2129,7 +2130,7 @@ $news = mysqli_fetch_array($result_news);
                                                                                                         <a href="http://www.president.tj/"
                                                                                                            target="_blank"
 <!--                                                                                                           rel="noopener noreferrer"-->
-                                                                                                           <title="Президенти Чумхурии Точикистон">
+                                                                                                           <title="Президент Республики Таджикистан">
                                                                                                             <img src="../img/president.jpg"
                                                                                                                  alt="president.jpg" style="border: none;"/>
                                                                                                         </a>
@@ -2162,7 +2163,7 @@ $news = mysqli_fetch_array($result_news);
                                                                                          class="clearfix ">
                                                                                         <div class="sppb-addon sppb-addon-header sppb-text-left">
                                                                                             <h2 class="sppb-addon-title">
-                                                                                                Кисту Чист?</h2></div>
+                                                                                                Кто Что?</h2></div>
                                                                                     </div>
                                                                                 </div>
                                                                                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -2528,7 +2529,7 @@ $news = mysqli_fetch_array($result_news);
                                                                                          class="clearfix ">
                                                                                         <div class="sppb-addon sppb-addon-header sppb-text-left">
                                                                                             <h2 class="sppb-addon-title">
-                                                                                                Курби асъор</h2></div>
+                                                                                                Курс валют</h2></div>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div id="sppb-addon-wrapper-1574765554041"
@@ -2572,7 +2573,7 @@ $news = mysqli_fetch_array($result_news);
                                                                                          class="clearfix ">
                                                                                         <div class="sppb-addon sppb-addon-header sppb-text-left">
                                                                                             <h2 class="sppb-addon-title">
-                                                                                                Ташрифкунандагон</h2></div>
+                                                                                                Посетители</h2></div>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div id="sppb-addon-wrapper-1574765554041"
@@ -2663,7 +2664,8 @@ $news = mysqli_fetch_array($result_news);
                                                                                                                                          class="clearfix ">
                                                                                                                                         <div class="sppb-addon sppb-addon-header sppb-text-left">
                                                                                                                                             <h2 class="sppb-addon-title">
-                                                                                                                                                Воҳидҳои сохторӣ</h2>
+                                                                                                                                                Структурные единицы
+                                                                                                                                            </h2>
                                                                                                                                         </div>
                                                                                                                                         <style type="text/css">#sppb-addon-1574411095394 {
                                                                                                                                                 box-shadow: 0 0 0 0 #ffffff;
@@ -2712,31 +2714,31 @@ $news = mysqli_fetch_array($result_news);
                                                                                                                                                     <li>
                                                                                                                                                         <h4 style="font-size: 10pt;">
                                                                                                                                                             <a href="index.php/categories/explore/today-s-issue.html">
-                                                                                                                                                                Маҷлиси вакилони халқ </a>
+                                                                                                                                                                Собрание народных депутатов </a>
                                                                                                                                                         </h4>
                                                                                                                                                     </li>
                                                                                                                                                     <li>
                                                                                                                                                         <h4 style="font-size: 10pt;">
                                                                                                                                                             <a href="index.php/categories/explore/good-weekend.html">
-                                                                                                                                                                Мақомоти иҷроия</a>
+                                                                                                                                                                Исполнительный орган</a>
                                                                                                                                                         </h4>
                                                                                                                                                     </li>
                                                                                                                                                     <li>
                                                                                                                                                         <h4 style="font-size: 10pt;">
                                                                                                                                                             <a href="index.php/categories/explore/editorial.html">
-                                                                                                                                                                Сохторҳо </a>
+                                                                                                                                                                Сооружения </a>
                                                                                                                                                         </h4>
                                                                                                                                                     </li>
                                                                                                                                                     <li>
                                                                                                                                                         <h4 style="font-size: 10pt;">
                                                                                                                                                             <a href="index.php/categories/explore/today-s-cartoon.html">
-                                                                                                                                                                Ҷамоатҳои шаҳраку деҳот </a>
+                                                                                                                                                                Пригородные и сельские джамоаты </a>
                                                                                                                                                         </h4>
                                                                                                                                                     </li>
                                                                                                                                                     <li>
                                                                                                                                                         <h4  style="font-size: 10pt;">
                                                                                                                                                             <a href="index.php/categories/explore/today-s-weather.html">
-                                                                                                                                                                Соҳаҳо </a>
+                                                                                                                                                                Отрасли  </a>
                                                                                                                                                         </h4>
                                                                                                                                                     </li>
                                                                                                                                                 </ul>
@@ -2871,42 +2873,6 @@ $news = mysqli_fetch_array($result_news);
     </div>
 </div>
 
-<div class="offcanvas-overlay"></div>
-<div class="offcanvas-menu">
-    <a href="#" class="close-offcanvas"><span class="fa fa-remove"></span></a>
-    <div class="offcanvas-inner">
-        <div class="sp-module ">
-            <div class="sp-module-content">
-                <ul class="menu">
-                    <li class="item-101 menu-deeper menu-parent"><a href="index-2.html">Home<span
-                                    class="menu-toggler"></span></a>
-                        <ul class="menu-child">
-                            <li class="item-219"><a href="index.php/home/news-bulletin.html">News Bulletin</a></li>
-                            <li class="item-245"><a href="index-2.html">Business Insight (Default)</a></li>
-                        </ul>
-                    </li>
-                    <li class="item-115"><a href="index.php/business-blog.html">Business</a></li>
-                    <li class="item-222"><a href="index.php/food.html">Food</a></li>
-                    <li class="item-223"><a href="index.php/sports.html">Sports</a></li>
-                    <li class="item-224"><a href="index.php/entertainment.html">Entertainment</a></li>
-                    <li class="item-217"><a href="index.php/authors.html">Authors</a></li>
-                    <li class="item-121"><a href="#">Mega</a></li>
-                    <li class="item-108 menu-deeper menu-parent"><a href="#">Pages<span class="menu-toggler"></span></a>
-                        <ul class="menu-child">
-                            <li class="item-218"><a href="index.php/pages/bookmarks.html">Bookmarks</a></li>
-                            <li class="item-113"><a href="index.php/pages/contact.html">Contact</a></li>
-                            <li class="item-109"><a href="index.php/pages/login.html">Login</a></li>
-                            <li class="item-110"><a href="index.php/pages/login.html">Registration</a></li>
-                            <li class="item-111"><a href="indexf2ce.html?Itemid=404">404</a></li>
-                            <li class="item-112"><a href="index114a.html?tmpl=comingsoon">Coming Soon</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-<a href="#" class="sp-scroll-up" aria-label="Scroll Up"><span class="fa fa-chevron-up" aria-hidden="true"></span></a>
 </body>
 
 </html>
