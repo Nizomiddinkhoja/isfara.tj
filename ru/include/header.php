@@ -19,7 +19,7 @@
                                     <div class="icon-top-wrapper">
                                         <form method="post" class="search-form">
                                             <div class="form-group d-flex align-items-center">
-                                                <input placeholder="Чустучу" class="form-control">
+                                                <input placeholder="Поиск" class="form-control">
                                                 <i class="fa fa-search" style="padding: 10px;cursor:pointer"></i>
                                             </div>
                                         </form>
@@ -80,78 +80,78 @@
                         <nav class="sp-megamenu-wrapper" role="navigation">
                             <ul class="sp-megamenu-parent menu-animation-fade-up d-none d-lg-block">
                                 <li class="sp-menu-item"><a href="/">Асосӣ</a></li>
-                                <li class="sp-menu-item sp-has-child"><a href="category.php?id=1">Иқтисод</a>
+                                <li class="sp-menu-item sp-has-child"><a href="category.php?id=1">Экономика</a>
                                     <div class="sp-dropdown sp-dropdown-main sp-menu-right"
                                          style="width: 240px;">
                                         <div class="sp-dropdown-inner">
                                             <ul class="sp-dropdown-items">
-                                                <li class="sp-menu-item"><a href="category.php?id=2">Шуғли аҳолӣ</a></li>
-                                                <li class="sp-menu-item"><a href="category.php?id=3">Муҳоҷират</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=2">Занятости населения </a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=3">Эмиграция</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </li>
-                                <li class="sp-menu-item sp-has-child"><a href="category.php?id=4">Сармоягузори</a>
+                                <li class="sp-menu-item sp-has-child"><a href="category.php?id=4">Инвестиция</a>
                                     <div class="sp-dropdown sp-dropdown-main sp-menu-right"
                                          style="width: 240px;">
                                         <div class="sp-dropdown-inner">
                                             <ul class="sp-dropdown-items">
-                                                <li class="sp-menu-item"><a href="category.php?id=5">Бахши робитаҳои иқтисодии хориҷӣ</a></li>
-                                                <li class="sp-menu-item"><a href="category.php?id=6">Мухочират</a></li>
-                                                <li class="sp-menu-item"><a href="category.php?id=7">Шӯрои машваратӣ</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=5">Отдел внешнеэкономических связей</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=6">Эмиграция</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=7">Консультативный совет </a></li>
                                                 <li class="sp-menu-item"><a href="category.php?id=8">Исфара Гайд</a></li>
-                                                <li class="sp-menu-item"><a href="category.php?id=9">Сармоягузорон</a></li>
-                                                <li class="sp-menu-item"><a href="category.php?id=10">Ҳамкорони рушд</a></li>
-                                                <li class="sp-menu-item"><a href="category.php?id=11">Созишномаҳо</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=9">Инвесторы</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=10">Партнеры по развитию</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=11">Соглашения </a></li>
                                             </ul>
                                         </div>
                                     </div></li>
-                                <li class="sp-menu-item sp-has-child"><a href="category.php?id=12">Кишоварзӣ</a>
+                                <li class="sp-menu-item sp-has-child"><a href="category.php?id=12">Сельское хозяйство</a>
                                     <div class="sp-dropdown sp-dropdown-main sp-menu-right"
                                          style="width: 240px;">
                                         <div class="sp-dropdown-inner">
                                             <ul class="sp-dropdown-items">
-                                                <li class="sp-menu-item"><a href="category.php?id=13">Боғпарварӣ</a></li>
-                                                <li class="sp-menu-item"><a href="category.php?id=14">Растанипарварӣ</a></li>
-                                                <li class="sp-menu-item"><a href="category.php?id=15">Чорводорӣ</a></li>
-                                                <li class="sp-menu-item"><a href="category.php?id=16">Обёрӣ</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=13">Садоводство</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=14">Растениеводство</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=15">Разведение животных</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=16">Орошение</a></li>
                                             </ul>
                                         </div>
                                     </div></li>
-                                <li class="sp-menu-item sp-has-child"><a href="category.php?id=17">Иҷтимоиёт</a>
+                                <li class="sp-menu-item sp-has-child"><a href="category.php?id=17">Социальное</a>
                                     <div class="sp-dropdown sp-dropdown-main sp-menu-right"
                                          style="width: 240px;">
                                         <div class="sp-dropdown-inner">
                                             <ul class="sp-dropdown-items">
-                                                <li class="sp-menu-item"><a href="category.php?id=18">Маориф</a></li>
-                                                <li class="sp-menu-item"><a href="category.php?id=19">Тандурустӣ</a></li>
-                                                <li class="sp-menu-item"><a href="category.php?id=20">Шӯъбаи занон</a></li>
-                                                <li class="sp-menu-item"><a href="category.php?id=21">Ҷавонон</a></li>
-                                                <li class="sp-menu-item"><a href="category.php?id=22">Фарҳанг</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=18">Образование</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=19">Здравоохранение</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=20">Отдел для женщин</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=21">Молодёжь</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=22">Культура</a></li>
                                             </ul>
                                         </div>
                                     </div></li>
-                                <li class="sp-menu-item sp-has-child"><a href="category.php?id=23">Инфрасохтор</a>
+                                <li class="sp-menu-item sp-has-child"><a href="category.php?id=23">Инфраструктура</a>
                                     <div class="sp-dropdown sp-dropdown-main sp-menu-right"
                                          style="width: 240px;">
                                         <div class="sp-dropdown-inner">
                                             <ul class="sp-dropdown-items">
-                                                <li class="sp-menu-item"><a href="category.php?id=24">Нақлиёт ва хизматрасонӣ</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=24">Транспортные услуги</a></li>
                                                 <li class="sp-menu-item"><a href="category.php?id=25">ШСА</a></li>
-                                                <li class="sp-menu-item"><a href="category.php?id=26">Меъмор</a></li>
-                                                <li class="sp-menu-item"><a href="category.php?id=27">Роҳ</a></li>
-                                                <li class="sp-menu-item"><a href="category.php?id=28">Барқ</a></li>
-                                                <li class="sp-menu-item"><a href="category.php?id=29">Ҳифзи муҳити зист</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=26">Архитектор</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=27">Дорога</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=28">Электричество</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=29">Охрана окружающей среды</a></li>
                                             </ul>
                                         </div>
                                     </div></li>
-                                <li class="sp-menu-item sp-has-child"><a href="category.php?id=30">Сайёҳӣ</a>
+                                <li class="sp-menu-item sp-has-child"><a href="category.php?id=30">Путешествие</a>
                                     <div class="sp-dropdown sp-dropdown-main sp-menu-right"
                                          style="width: 240px;">
                                         <div class="sp-dropdown-inner">
                                             <ul class="sp-dropdown-items">
-                                                <li class="sp-menu-item"><a href="category.php?id=31">Таърихи Исфара</a></li>
-                                                <li class="sp-menu-item"><a href="category.php?id=32">Минтақаҳои сайёҳӣ</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=31">История Исфары</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=32">Туристические зоны </a></li>
                                             </ul>
                                         </div>
                                     </div></li>

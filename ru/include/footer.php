@@ -359,9 +359,9 @@
                     <div class="row">
                         <div id="sp-bottom1" class="col-3 col-sm-4 col-lg-4 ">
                             <div class="sp-column ">
-                                <div class="sp-module "><h3 class="sp-module-title">Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара</h3>
+                                <div class="sp-module "><h3 class="sp-module-title">Официальный сайт исполнительный орган городского правительства Исфара</h3>
                                     <div class="sp-module-content">
-                                        <p>Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара. Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара</p>
+                                        <p>Официальный сайт исполнительный орган городского правительства Исфара</p>
                                     </div>
                                 </div>
                             </div>
@@ -372,12 +372,13 @@
                                     <div class="sp-module-content">
                                         <ul class="menu">
                                             <li class="sp-menu-item"><a href="/">Асосӣ</a></li>
-                                            <li class="sp-menu-item sp-has-child"><a href="news.php?category=iqtisod">Иқтисод</a>
-                                            <li class="sp-menu-item sp-has-child"><a href="news.php?category=sarmoya">Сармоягузори</a>
-                                            <li class="sp-menu-item sp-has-child"><a href="news.php?category=kishovarzi">Кишоварзӣ</a>
-                                            <li class="sp-menu-item sp-has-child"><a href="news.php?category=ijtimoiyot">Иҷтимоиёт</a>
-                                            <li class="sp-menu-item sp-has-child"><a href="news.php?category=infrasohtor">Инфрасохтор</a>
-                                            <li class="sp-menu-item sp-has-child"><a href="news.php?category=sayohi">Сайёҳӣ</a>
+                                            <li class="sp-menu-item sp-has-child"><a href="news.php?category=iqtisod">Экономика</a>
+                                            <li class="sp-menu-item sp-has-child"><a href="news.php?category=sarmoya">Инвестиция</a>
+                                            <li class="sp-menu-item sp-has-child"><a href="news.php?category=kishovarzi">Сельское хозяйство
+                                                </a>
+                                            <li class="sp-menu-item sp-has-child"><a href="news.php?category=ijtimoiyot">Социальные</a>
+                                            <li class="sp-menu-item sp-has-child"><a href="news.php?category=infrasohtor">Инфраструктура</a>
+                                            <li class="sp-menu-item sp-has-child"><a href="news.php?category=sayohi">Путешествие</a>
                                         </ul>
                                     </div>
                                 </div>

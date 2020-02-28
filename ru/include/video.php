@@ -101,7 +101,7 @@ if(isset($_POST["submit"])) {
                                                              class="sppb-addon-wrapper">
                                                             <div id="sppb-addon-1574066045843" class="clearfix ">
                                                                 <div class="sppb-addon sppb-addon-header heading-arrow sppb-text-left">
-                                                                    <h2 class="sppb-addon-title">Наворхо</h2>
+                                                                    <h2 class="sppb-addon-title">Видео</h2>
                                                                 </div>
                                                             </div>
                                                         </div>
