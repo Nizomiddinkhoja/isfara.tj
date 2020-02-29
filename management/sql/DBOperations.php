@@ -627,7 +627,46 @@ WHERE l.`name`='$locale' AND a.`status`=1 AND cn.`name`='answer' and q.id = '$id
         return mysqli_query($com->getDb(), $sql);
     }
 
+    public  function addVisitor($userhash, $ip, $uri, $ref, $browser, $date){
+        $com = new DbConnect();
+        $sql = "INSERT INTO `visitors` (`userhash`, `ip`, `uri`, `ref`, `date`, `browser`) VALUES ('$userhash', '$ip', '$uri', '$ref', '$date', '$browser')";
+        mysqli_query($com->getDb(), $sql);
+    }
 
+    public function getStatistic($limit = 0){
+        $com = new DbConnect();
+        if($limit == 0)
+            $sql = "SELECT ip, DATE(`date`), browser, uri FROM visitors ORDER BY id DESC";
+        else
+            $sql = "SELECT ip, DATE(`date`), browser, uri FROM visitors ORDER BY id DESC Limit $limit";
+        return mysqli_query($com->getDb(), $sql);
+    }
 
+    public function getTodayStatistic(){
+        $com = new DbConnect();
+        $sql = "SELECT COUNT(DISTINCT userhash) FROM visitors WHERE DATE(`date`) = DATE(NOW()) ";
+        return mysqli_query($com->getDb(), $sql);
+    }
+    public function getWEEKStatistic(){
+        $com = new DbConnect();
+        $sql = "SELECT COUNT(DISTINCT userhash) FROM visitors WHERE WEEK(`date`) = WEEK(NOW());
+";
+        return mysqli_query($com->getDb(), $sql);
+    }
+    public function getMONTHStatistic(){
+        $com = new DbConnect();
+        $sql = "SELECT COUNT(DISTINCT userhash) FROM visitors WHERE MONTH(`date`) = MONTH(NOW());";
+        return mysqli_query($com->getDb(), $sql);
+    }
+    public function getYearStatistic(){
+        $com = new DbConnect();
+        $sql = "SELECT COUNT(DISTINCT userhash) FROM visitors WHERE YEAR(`date`) = YEAR(NOW());";
+        return mysqli_query($com->getDb(), $sql);
+    }
+    public function getAllStatistic(){
+        $com = new DbConnect();
+        $sql = "SELECT COUNT(DISTINCT userhash) FROM visitors ";
+        return mysqli_query($com->getDb(), $sql);
+    }
 
 }

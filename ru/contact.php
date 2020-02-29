@@ -1,6 +1,8 @@
 <?php
 include ("../management/sql/DBOperations.php");
 $dbOperations = new DBOperations();
+include("../counter.php");
+
 if (isset($_POST["submit"])){
 
    $firstName = $_POST["first_name"];

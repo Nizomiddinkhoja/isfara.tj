@@ -1,6 +1,8 @@
 <?php
 include("../management/sql/DBOperations.php");
 $dbOperations = new DBOperations();
+include("../counter.php");
+
 if(isset($_GET["id"])){
     $id = $_GET["id"];
     $category_id = $_GET["category"];

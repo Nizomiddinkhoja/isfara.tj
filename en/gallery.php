@@ -1,6 +1,8 @@
 <?php
 include("../management/sql/DBOperations.php");
 $dbOperations = new DBOperations();
+include("../counter.php");
+
 
 ?>
 <!doctype html>

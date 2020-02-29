@@ -1,6 +1,8 @@
 <?php
     include ("../management/sql/DBOperations.php");
-    $dbOperations = new DBOperations();
+include("../counter.php");
+
+$dbOperations = new DBOperations();
     if(isset($_GET['id'])){
         $id = $_GET["id"];
         $all_news = $dbOperations->getNewsByCategoryById($id, "ru");

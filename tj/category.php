@@ -1,7 +1,9 @@
 <?php
     include ("../management/sql/DBOperations.php");
     $dbOperations = new DBOperations();
-    if(isset($_GET['id'])){
+include("../counter.php");
+
+if(isset($_GET['id'])){
         $id = $_GET["id"];
         $all_news = $dbOperations->getNewsByCategoryById($id, "tj");
         $news = mysqli_fetch_array($all_news);

@@ -1,6 +1,8 @@
 <?php
 session_start();
 if($_SESSION["is_auth"]) {
+    include ("sql/DBOperations.php");
+    $dbOperation = new DBOperations();
     ?>
     <!DOCTYPE html>
     <html lang="ru">
@@ -126,7 +128,7 @@ if($_SESSION["is_auth"]) {
         </div>
         <div class="container-fluid mt--7">
             <div class="row">
-                <div class="col-xl-8 mb-5 mb-xl-0">
+                <div class="col-xl-12 mb-5 mb-xl-0">
                     <div class="card shadow">
                         <div class="card-header border-0">
                             <div class="row align-items-center">
@@ -134,7 +136,7 @@ if($_SESSION["is_auth"]) {
                                     <h3 class="mb-0">Статистика посещаемости сайта</h3>
                                 </div>
                                 <div class="col text-right">
-                                    <a href="#!" class="btn btn-sm btn-primary">See all</a>
+                                    <a href="#" class="btn btn-sm btn-primary">Посмотреть все</a>
                                 </div>
                             </div>
                         </div>
@@ -143,83 +145,35 @@ if($_SESSION["is_auth"]) {
                             <table class="table align-items-center table-flush">
                                 <thead class="thead-light">
                                 <tr>
-                                    <th scope="col">Страница</th>
-                                    <th scope="col">Посетители</th>
+                                    <th scope="col">IP</th>
+                                    <th scope="col">Дата</th>
+                                    <th scope="col">Ссылка</th>
                                     <th scope="col">Устройство</th>
-                                    <th scope="col">Страна</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <th scope="row">
-                                        /argon/
-                                    </th>
-                                    <td>
-                                        4,569
-                                    </td>
-                                    <td>
-                                        340
-                                    </td>
-                                    <td>
-                                        <i class="fas fa-arrow-up text-success mr-3"></i> 46,53%
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        /argon/index.html
-                                    </th>
-                                    <td>
-                                        3,985
-                                    </td>
-                                    <td>
-                                        319
-                                    </td>
-                                    <td>
-                                        <i class="fas fa-arrow-down text-warning mr-3"></i> 46,53%
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        /argon/charts.html
-                                    </th>
-                                    <td>
-                                        3,513
-                                    </td>
-                                    <td>
-                                        294
-                                    </td>
-                                    <td>
-                                        <i class="fas fa-arrow-down text-warning mr-3"></i> 36,49%
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        /argon/tables.html
-                                    </th>
-                                    <td>
-                                        2,050
-                                    </td>
-                                    <td>
-                                        147
-                                    </td>
-                                    <td>
-                                        <i class="fas fa-arrow-up text-success mr-3"></i> 50,87%
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        /argon/profile.html
-                                    </th>
-                                    <td>
-                                        1,795
-                                    </td>
-                                    <td>
-                                        190
-                                    </td>
-                                    <td>
-                                        <i class="fas fa-arrow-down text-danger mr-3"></i> 46,53%
-                                    </td>
-                                </tr>
+                                <?php
+
+                                $result = $dbOperation->getStatistic(20);
+                                while ($row = mysqli_fetch_array($result)){
+                                    ?>
+                                    <tr>
+                                        <th scope="row">
+                                           <?=$row[0]?>
+                                        </th>
+                                        <td>
+                                            <?=$row[1]?>
+                                        </td>
+                                        <td>
+                                            <?=$row[3]?>
+                                        </td>
+                                        <td>
+                                            <?=$row[2]?>
+                                        </td>
+                                    </tr>
+                                    <?php
+                                }
+                                ?>
                                 </tbody>
                             </table>
                         </div>
@@ -227,24 +181,24 @@ if($_SESSION["is_auth"]) {
                 </div>
 
 
-                <div class="col-xl-4">
-                    <div class="card shadow">
-                        <div class="card-header bg-transparent">
-                            <div class="row align-items-center">
-                                <div class="col">
-                                    <h6 class="text-uppercase text-muted ls-1 mb-1">Масячная статистика</h6>
-                                    <h2 class="mb-0">Посетители</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <!-- Chart -->
-                            <div class="chart">
-                                <canvas id="chart-orders" class="chart-canvas"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!--                <div class="col-xl-4">-->
+<!--                    <div class="card shadow">-->
+<!--                        <div class="card-header bg-transparent">-->
+<!--                            <div class="row align-items-center">-->
+<!--                                <div class="col">-->
+<!--                                    <h6 class="text-uppercase text-muted ls-1 mb-1">Масячная статистика</h6>-->
+<!--                                    <h2 class="mb-0">Посетители</h2>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="card-body">-->
+<!--                             Chart -->
+<!--                            <div class="chart">-->
+<!--                                <canvas id="chart-orders" class="chart-canvas"></canvas>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
             <?php
             include("include/footer.php")
