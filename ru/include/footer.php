@@ -8,7 +8,7 @@
                                         <div class="icon-top-wrapper">
                                             <form method="post" class="search-form">
                                                 <div class="form-group d-flex align-items-center">
-                                                    <input placeholder="Чустучу" class="form-control">
+                                                    <input placeholder="Поиск" class="form-control">
                                                     <i class="fa fa-search" style="padding: 10px;cursor:pointer"></i>
                                                 </div>
                                             </form>
@@ -21,9 +21,10 @@
                             <div class="sp-column "><a id="offcanvas-toggler" aria-label="Navigation"
                                                        class="offcanvas-toggler-left d-block d-lg-none" href="#"><span
                                         class="fa fa-bars" aria-hidden="true" title="Navigation"></span></a>
-                                <div class="logo"><a href="index.html"><img class="logo-image"
-                                                                            src="templates/newsberg/images/presets/preset1/logo.svg"
-                                                                            alt="Newsberg"></a></div>
+                                <div class="logo"><a href="./index.php"><img class="logo-image"
+                                                                             src="../img/logo.png"
+
+                                                                             alt="Официальный сайт исполнительный орган городского правительства Исфара" style="height: 80px;"></a></div>
                             </div>
                         </div>
                         <div id="sp-bottom-top3" class="col-md-2 col-lg-4 ">
@@ -371,7 +372,6 @@
                                 <div class="sp-module "><h3 class="sp-module-title">Меню</h3>
                                     <div class="sp-module-content">
                                         <ul class="menu">
-                                            <li class="sp-menu-item"><a href="/">Асосӣ</a></li>
                                             <li class="sp-menu-item sp-has-child"><a href="news.php?category=iqtisod">Экономика</a>
                                             <li class="sp-menu-item sp-has-child"><a href="news.php?category=sarmoya">Инвестиция</a>
                                             <li class="sp-menu-item sp-has-child"><a href="news.php?category=kishovarzi">Сельское хозяйство

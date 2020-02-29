@@ -18,7 +18,7 @@ $news = mysqli_fetch_array($result_news);
     <base/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title>Official website executive body of the city government of Isfara</title>
-    <link href="templates/newsberg/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+    <link href="../img/logo.png" rel="shortcut icon"/>
     <link href="index.php/component/search/indexe1ab.html?id=1&amp;Itemid=216&amp;format=opensearch" rel="search"
           title="Search Newsberg" type="application/opensearchdescription+xml"/>
     <link href="components/com_sppagebuilder/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>

@@ -7,9 +7,10 @@
                     <div class="sp-column "><a id="offcanvas-toggler" aria-label="Navigation"
                                                class="offcanvas-toggler-left d-block d-lg-none" href="#"><span
                                 class="fa fa-bars" aria-hidden="true" title="Navigation"></span></a>
-                        <div class="logo"><a href="index.html"><img class="logo-image"
-                                                                    src="templates/newsberg/images/presets/preset1/logo.svg"
-                                                                    alt="Newsberg"></a></div>
+                        <div class="logo" style="text-align: center;"><a href="./index.php"><img class="logo-image"
+                                                                     src="../img/logo.png"
+
+                                                                     alt="Сомонаи расмии МИҲД Исфара" style="DISPLAY: -webkit-inline-box;">Сомонаи расмии МИҲД Исфара</a></div>
                     </div>
                 </div>
                 <div id="sp-top1" class="col-sm-1 col-md-1 col-lg-3">
@@ -59,7 +60,7 @@
                         <ul class="social-icons">
                             <li class="social-icon-facebook"><a href="../tj/"
                                                                 aria-label="facebook"><img style="width: 24px" src="../img/icons8_tajikistan_96px.png"></a></li>
-                            <li class="social-icon-twitter"><a href="/"
+                            <li class="social-icon-twitter"><a href="../ru/"
                                                                aria-label="twitter"><img style="width: 24px" src="../img/icons8_russian_federation_96px_1.png"></a>
                             </li>
                             <li class="social-icon-instagram"><a href="../en/"
@@ -79,7 +80,6 @@
                     <div class="sp-column ">
                         <nav class="sp-megamenu-wrapper" role="navigation">
                             <ul class="sp-megamenu-parent menu-animation-fade-up d-none d-lg-block">
-                                <li class="sp-menu-item"><a href="/">Асосӣ</a></li>
                                 <li class="sp-menu-item sp-has-child"><a href="category.php?id=1">Иқтисод</a>
                                     <div class="sp-dropdown sp-dropdown-main sp-menu-right"
                                          style="width: 240px;">
