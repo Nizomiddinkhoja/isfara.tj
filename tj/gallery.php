@@ -571,26 +571,26 @@ include("../counter.php");
                                                                 <div class="row">
 
                                                                                     <div class="col-sm-12">
-                                                            <div class="article-info">
+                                                            <div class="article-info"  style="display: block;">
 
 
 
-                                                <section id="portfolio" style="padding: 20px;">
+                                                                <section id="portfolio" style="padding: 20px;">
+                                                                    <div id="sp-title" class="col-lg-12 ">
 
+                                                                        <div class="row portfolio-container">
+                                                                            <?php
+                                                                            do{
 
-                                                    <div class="row portfolio-container">
-                                                       <?php
-                                                            do{
-
-                                                                echo
-                                                                    '            
-                                                                <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+                                                                                echo
+                                                                                    '            
+                                                                <div class="col-lg-3 col-md-6 portfolio-item filter-app wow fadeInUp">
                                                                     <div class="portfolio-wrap">
                                                                         <figure>
-                                                                            <img src="../img/'.$gal[2].'" class="img-fluid" alt="" style="    max-width: 200%; height: auto;">
-                                                                            <a href="../img/'.$gal[2].'" data-lightbox="portfolio" data-title="'.$gal[1].'" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
-                                                    
-                                                                        </figure>
+                        
+                        <a href="../img/'.$gal[2].'" data-lightbox="portfolio" data-title="'.$gal[1].'" class="link-preview" style="left: calc(0% ); top: calc(0% ); visibility: inherit; border-radius: inherit; width: 100%; background: 0; */"><img src="../img/'.$gal[2].'" class="img-fluid" alt="" style="    max-width: 100%;  max-height: 900%; margin:0 auto;display: table; height: 700%;    max-height: 700%;"></a>
+
+                    </figure>
                                                     
                                                                         <div class="portfolio-info" style="height: inherit; padding: 10px; margin-bottom: 1px;">
                                                                             <h4 style="line-height: normal;"><a href="#">'.$gal[1].'</a></h4>
@@ -599,11 +599,12 @@ include("../counter.php");
                                                                     </div>
                                                                 </div>
                                                                 ';}while ($gal = mysqli_fetch_array($gallery))
-                                                        ?>
+                                                                            ?>
 
-                                                    </div>
+                                                                        </div>
+                                                                    </div>
 
-                                                </section>
+                                                                </section>
 
 <div class="col-12">
 <div class="row">

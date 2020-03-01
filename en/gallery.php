@@ -534,7 +534,8 @@ include("../counter.php");
                 <div id="sp-title" class="col-lg-12 ">
                     <div class="sp-column ">
                         <div class="sp-page-title">
-                            <div class="container" style="text-align: center;"><h2 class="sp-page-title-heading" >Галерея</h2></div>
+                            <div class="container" style="text-align: center;"><h2 class="sp-page-title-heading">
+                                    Gallery</h2></div>
                         </div>
                     </div>
                 </div>
@@ -542,56 +543,57 @@ include("../counter.php");
         </section>
         <?php
 
-                                                        $limit = 9;
-                                                        $targetpage = "gallery.php?ru";
+        $limit = 9;
+        $targetpage = "gallery.php?ru";
 
-                                                        $countGallery = $dbOperations->getCountGallery('en');
-                                                        $row = mysqli_fetch_array($countGallery);
-                                                        $total_pages = $row[0];
-                                                        $stages = 3;
-                                                        $page = ($_GET['page']);
-                                                        if($page){
-                                                            $start = ($page - 1) * $limit;
-                                                        }else{
-                                                            $start = 0;
-                                                        }
+        $countGallery = $dbOperations->getCountGallery('en');
+        $row = mysqli_fetch_array($countGallery);
+        $total_pages = $row[0];
+        $stages = 3;
+        $page = ($_GET['page']);
+        if ($page) {
+            $start = ($page - 1) * $limit;
+        } else {
+            $start = 0;
+        }
 
-                                                        $gallery = $dbOperations->getGalleryForPage('en',$start,$limit);
-                                                        $gal = mysqli_fetch_array($gallery);
-
-
-                                                        if ($page <= 0){$page = 1;}
-                                                        $prev = $page - 1;
-                                                        $next = $page + 1;
-                                                        $lastpage = ceil($total_pages/$limit);
-                                                        $LastPagem1 = $lastpage - 1;
-                                                        ?>
-                                                        <section id="sp-main-body">
-                                                        <div class="container">
-                                                            <div class="container-inner">
-                                                                <div class="row">
-
-                                                                                    <div class="col-sm-12">
-                                                            <div class="article-info">
+        $gallery = $dbOperations->getGalleryForPage('en', $start, $limit);
+        $gal = mysqli_fetch_array($gallery);
 
 
+        if ($page <= 0) {
+            $page = 1;
+        }
+        $prev = $page - 1;
+        $next = $page + 1;
+        $lastpage = ceil($total_pages / $limit);
+        $LastPagem1 = $lastpage - 1;
+        ?>
+        <section id="sp-main-body">
+            <div class="container">
+                <div class="container-inner">
+                    <div class="row">
 
-                                                <section id="portfolio" style="padding: 20px;">
+                        <div class="col-sm-12">
+                            <div class="article-info" style="display: block;">
 
 
-                                                    <div class="row portfolio-container">
-                                                       <?php
-                                                            do{
+                                <section id="portfolio" style="padding: 20px;">
+                                    <div id="sp-title" class="col-lg-12 ">
 
-                                                                echo
-                                                                    '            
-                                                                <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+                                        <div class="row portfolio-container">
+                                            <?php
+                                            do{
+
+                                                echo
+                                                    '            
+                                                                <div class="col-lg-3 col-md-6 portfolio-item filter-app wow fadeInUp">
                                                                     <div class="portfolio-wrap">
                                                                         <figure>
-                                                                            <img src="../img/'.$gal[2].'" class="img-fluid" alt="" style="    max-width: 200%; height: auto;">
-                                                                            <a href="../img/'.$gal[2].'" data-lightbox="portfolio" data-title="'.$gal[1].'" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
-                                                    
-                                                                        </figure>
+                        
+                        <a href="../img/'.$gal[2].'" data-lightbox="portfolio" data-title="'.$gal[1].'" class="link-preview" style="left: calc(0% ); top: calc(0% ); visibility: inherit; border-radius: inherit; width: 100%; background: 0; */"><img src="../img/'.$gal[2].'"  class="img-fluid" alt="" style="    max-width: 100%;  max-height: 900%; margin:0 auto;display: table; height: 700%;    max-height: 700%; "></a>
+
+                    </figure>
                                                     
                                                                         <div class="portfolio-info" style="height: inherit; padding: 10px; margin-bottom: 1px;">
                                                                             <h4 style="line-height: normal;"><a href="#">'.$gal[1].'</a></h4>
@@ -600,109 +602,106 @@ include("../counter.php");
                                                                     </div>
                                                                 </div>
                                                                 ';}while ($gal = mysqli_fetch_array($gallery))
-                                                        ?>
+                                            ?>
 
-                                                    </div>
+                                        </div>
+                                    </div>
 
-                                                </section>
+                                </section>
 
-<div class="col-12">
-<div class="row">
+                                <div class="col-12">
+                                    <div class="row">
 
-    <?php
+                                        <?php
 
-    $paginate = '';
-    if($lastpage > 1)
-    {
-
-
+                                        $paginate = '';
+                                        if ($lastpage > 1) {
 
 
-        $paginate .= "<div class='paginate col-12 col-md-12 col-lg-12' class='pager pagenav'>";
-        // Previous
-        if ($page > 1){
-            $paginate.= "<a href='$targetpage&page=$prev'><</a>";
-        }else{
-            $paginate.= "<span class='disabled'><</span>";   }
+                                            $paginate .= "<div class='paginate col-12 col-md-12 col-lg-12' class='pager pagenav'>";
+                                            // Previous
+                                            if ($page > 1) {
+                                                $paginate .= "<a href='$targetpage&page=$prev'><</a>";
+                                            } else {
+                                                $paginate .= "<span class='disabled'><</span>";
+                                            }
 
 
+                                            // Pages
+                                            if ($lastpage < 7 + ($stages * 2))  // Not enough pages to breaking it up
+                                            {
+                                                for ($counter = 1; $counter <= $lastpage; $counter++) {
+                                                    if ($counter == $page) {
+                                                        $paginate .= "<span class='current'>$counter</span>";
+                                                    } else {
+                                                        $paginate .= "<a href='$targetpage&page=$counter'>$counter</a>";
+                                                    }
+                                                }
+                                            } elseif ($lastpage > 5 + ($stages * 2))   // Enough pages to hide a few?
+                                            {
+                                                // Beginning only hide later pages
+                                                if ($page < 1 + ($stages * 2)) {
+                                                    for ($counter = 1; $counter < 4 + ($stages * 2); $counter++) {
+                                                        if ($counter == $page) {
+                                                            $paginate .= "<span class='current'>$counter</span>";
+                                                        } else {
+                                                            $paginate .= "<a href='$targetpage&page=$counter'>$counter</a>";
+                                                        }
+                                                    }
+                                                    $paginate .= "<span id='sp'>...</span>";
+                                                    $paginate .= "<a href='$targetpage&page=$LastPagem1'>$LastPagem1</a>";
+                                                    $paginate .= "<a href='$targetpage&page=$lastpage'>$lastpage</a>";
+                                                } // Middle hide some front and some back
+                                                elseif ($lastpage - ($stages * 2) > $page && $page > ($stages * 2)) {
+                                                    $paginate .= "<a href='$targetpage&page=1'>1</a>";
+                                                    $paginate .= "<a href='$targetpage&page=2'>2</a>";
+                                                    $paginate .= "<span id='sp'>...</span>";
+                                                    for ($counter = $page - $stages; $counter <= $page + $stages; $counter++) {
+                                                        if ($counter == $page) {
+                                                            $paginate .= "<span class='current'>$counter</span>";
+                                                        } else {
+                                                            $paginate .= "<a href='$targetpage&page=$counter'>$counter</a>";
+                                                        }
+                                                    }
+                                                    $paginate .= "<span id='sp'>...</span>";
+                                                    $paginate .= "<a href='$targetpage&page=$LastPagem1'>$LastPagem1</a>";
+                                                    $paginate .= "<a href='$targetpage&page=$lastpage'>$lastpage</a>";
+                                                } // End only hide early pages
+                                                else {
+                                                    $paginate .= "<a href='$targetpage&page=1'>1</a>";
+                                                    $paginate .= "<a href='$targetpage&page=2'>2</a>";
+                                                    $paginate .= "<span id='sp'>...</span>";
+                                                    for ($counter = $lastpage - (2 + ($stages * 2)); $counter <= $lastpage; $counter++) {
+                                                        if ($counter == $page) {
+                                                            $paginate .= "<span class='current'>$counter</span>";
+                                                        } else {
+                                                            $paginate .= "<a href='$targetpage&page=$counter'>$counter</a>";
+                                                        }
+                                                    }
+                                                }
+                                            }
 
-        // Pages
-        if ($lastpage < 7 + ($stages * 2))  // Not enough pages to breaking it up
-        {
-            for ($counter = 1; $counter <= $lastpage; $counter++)
-            {
-                if ($counter == $page){
-                    $paginate.= "<span class='current'>$counter</span>";
-                }else{
-                    $paginate.= "<a href='$targetpage&page=$counter'>$counter</a>";}
-            }
-        }
-        elseif($lastpage > 5 + ($stages * 2))   // Enough pages to hide a few?
-        {
-            // Beginning only hide later pages
-            if($page < 1 + ($stages * 2))
-            {
-                for ($counter = 1; $counter < 4 + ($stages * 2); $counter++)
-                {
-                    if ($counter == $page){
-                        $paginate.= "<span class='current'>$counter</span>";
-                    }else{
-                        $paginate.= "<a href='$targetpage&page=$counter'>$counter</a>";}
-                }
-                $paginate.= "<span id='sp'>...</span>";
-                $paginate.= "<a href='$targetpage&page=$LastPagem1'>$LastPagem1</a>";
-                $paginate.= "<a href='$targetpage&page=$lastpage'>$lastpage</a>";
-            }
-            // Middle hide some front and some back
-            elseif($lastpage - ($stages * 2) > $page && $page > ($stages * 2))
-            {
-                $paginate.= "<a href='$targetpage&page=1'>1</a>";
-                $paginate.= "<a href='$targetpage&page=2'>2</a>";
-                $paginate.= "<span id='sp'>...</span>";
-                for ($counter = $page - $stages; $counter <= $page + $stages; $counter++)
-                {
-                    if ($counter == $page){
-                        $paginate.= "<span class='current'>$counter</span>";
-                    }else{
-                        $paginate.= "<a href='$targetpage&page=$counter'>$counter</a>";}
-                }
-                $paginate.= "<span id='sp'>...</span>";
-                $paginate.= "<a href='$targetpage&page=$LastPagem1'>$LastPagem1</a>";
-                $paginate.= "<a href='$targetpage&page=$lastpage'>$lastpage</a>";
-            }
-            // End only hide early pages
-            else
-            {
-                $paginate.= "<a href='$targetpage&page=1'>1</a>";
-                $paginate.= "<a href='$targetpage&page=2'>2</a>";
-                $paginate.= "<span id='sp'>...</span>";
-                for ($counter = $lastpage - (2 + ($stages * 2)); $counter <= $lastpage; $counter++)
-                {
-                    if ($counter == $page){
-                        $paginate.= "<span class='current'>$counter</span>";
-                    }else{
-                        $paginate.= "<a href='$targetpage&page=$counter'>$counter</a>";}
-                }
-            }
-        }
+                                            // Next
+                                            if ($page < $counter - 1) {
+                                                $paginate .= "<a href='$targetpage&page=$next'>></a>";
+                                            } else {
+                                                $paginate .= "<span class='disabled'>></span>";
+                                            }
 
-                // Next
-        if ($page < $counter - 1){
-            $paginate.= "<a href='$targetpage&page=$next'>></a>";
-        }else{
-            $paginate.= "<span class='disabled'>></span>";
-            }
-
-        $paginate.= "</div>";
+                                            $paginate .= "</div>";
 
 
-} // pagination
- echo $paginate;
-    ?>
-                                                            </div>
-                                                                                    </div>
-                                            </div></div></div></div></div></section>
+                                        } // pagination
+                                        echo $paginate;
+                                        ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <?php
         include("include/footer.php");
