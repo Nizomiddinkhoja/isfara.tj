@@ -27,7 +27,7 @@ if (isset($_POST["submit"])){
     <base/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title>Электронная приемная - Официальный сайт исполнительный орган городского правительства Исфара</title>
-    <link href="templates/newsberg/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+    <link href="../img/favicon.ico" rel="shortcut icon"/>
     <link href="components/com_sppagebuilder/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="components/com_sppagebuilder/assets/css/animate.min.css" rel="stylesheet" type="text/css"/>
     <link href="components/com_sppagebuilder/assets/css/sppagebuilder.css" rel="stylesheet" type="text/css"/>
@@ -820,7 +820,7 @@ if (isset($_POST["submit"])){
                                                                                                                 id="sppb-form-builder-field-1"
                                                                                                                 name="last_name"
                                                                                                                 class="sppb-form-control"
-                                                                                                                placeholder="Ваше имя"
+                                                                                                                placeholder="Ваша фамилия"
                                                                                                                 required><span
                                                                                                                 class="sppb-form-builder-required">Заполните объязательные поля.</span>
                                                                                                     </div>

@@ -79,7 +79,6 @@
                     <div class="sp-column ">
                         <nav class="sp-megamenu-wrapper" role="navigation">
                             <ul class="sp-megamenu-parent menu-animation-fade-up d-none d-lg-block">
-                                <li class="sp-menu-item"><a href="/">Асосӣ</a></li>
                                 <li class="sp-menu-item sp-has-child"><a href="category.php?id=1">Иқтисод</a>
                                     <div class="sp-dropdown sp-dropdown-main sp-menu-right"
                                          style="width: 240px;">
@@ -155,6 +154,8 @@
                                             </ul>
                                         </div>
                                     </div></li>
+
+                                <li class="sp-menu-item"><a href="contact.php">Қабулгоҳи электронӣ</a></li>
                             </ul>
                         </nav>
                     </div>

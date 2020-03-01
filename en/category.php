@@ -5,26 +5,40 @@ include("../counter.php");
 $dbOperations = new DBOperations();
     if(isset($_GET['id'])){
         $id = $_GET["id"];
-        $all_news = $dbOperations->getNewsByCategoryById($id, "ru");
+
+        if (isset($_GET['pageno'])) {
+            $pageno = $_GET['pageno'];
+        } else {
+            $pageno = 1;
+        }
+
+
+        $no_of_records_per_page = 10;
+        $offset = ($pageno-1) * $no_of_records_per_page;
+
+        $total_rows = $dbOperations->getNewsCount();
+        $total_pages = ceil($total_rows / $no_of_records_per_page);
+
+
+
+        $all_news = $dbOperations->getNewsByCategoryById($id, "en", $offset, $no_of_records_per_page);
         $news = mysqli_fetch_array($all_news);
 
-        $category = mysqli_fetch_array($dbOperations->getCategoryByID($id, "ru"));
+        $category = mysqli_fetch_array($dbOperations->getCategoryByID($id, "en"));
     }
 
 ?>
 <!doctype html>
-<html lang="ru" dir="ltr">
+<html lang="en" dir="ltr">
 
-<!-- Mirrored from demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Feb 2020 09:15:52 GMT -->
-<!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=utf-8"/><!-- /Added by HTTrack -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <base/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <title>Категория <?=$category[0]?> - Официальный сайт исполнительный орган городского правительства Исфара</title>
-    <link href="templates/newsberg/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+    <title>Category <?=$category[0]?> - Официальный сайт исполнительный орган городского правительства Исфара</title>
+    <link href="../img/favicon.ico" rel="shortcut icon"/>
     <link href="components/com_sppagebuilder/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="components/com_sppagebuilder/assets/css/animate.min.css" rel="stylesheet" type="text/css"/>
     <link href="components/com_sppagebuilder/assets/css/sppagebuilder.css" rel="stylesheet" type="text/css"/>
@@ -240,7 +254,7 @@ $dbOperations = new DBOperations();
                                 <div id="system-message-container">
                                 </div>
                                 <div class="blog">
-                                    <h3 class="newsberg-blog-title">Новости</h3>
+                                    <h3 class="newsberg-blog-title">News</h3>
                                     <div class="items-leading clearfix">
                                         <article class="item leading-0 item-featured">
                                             <div class="article-body">
@@ -248,10 +262,10 @@ $dbOperations = new DBOperations();
                                                     <div class="newsberg-article-content col-sm-5">
                                                         <div class="newsberg-title-top">
                                                             <div class="article-info">
-                                                                <span class="category-name" title="Категория: <?=$category[0]?>">
+                                                                <span class="category-name" title="Category: <?=$category[0]?>">
                                                                     <a href="#"><?=$category[0]?></a>
                                                                 </span>
-                                                                <span class="published" title="Опубликовано: <?=$news[5]?>">
+                                                                <span class="published" title="Published: <?=$news[5]?>">
                                                             <time><?=$news[5]?></time>
                                                             </span>
                                                             </div>
@@ -265,8 +279,8 @@ $dbOperations = new DBOperations();
                                                             <p><?=$news[2]?></p>
                                                             <div class="newsberg-article-introtext-bottom">
                                                                 <div class="article-info">
-                                                                    <span class="category-name" title="Категория: <?=$category[0]?>"><a href="#>"><?=$category[0]?>></a></span>
-                                                                    <span class="published" title="Опубликовано: <?=$news[5]?>"><time><?=$news[5]?></time></span>
+                                                                    <span class="category-name" title="Category: <?=$category[0]?>"><a href="#>"><?=$category[0]?>></a></span>
+                                                                    <span class="published" title="Published: <?=$news[5]?>"><time><?=$news[5]?></time></span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -287,11 +301,6 @@ $dbOperations = new DBOperations();
                                     <div class="items-row row clearfix">
                                         <?php
 
-                                        if (isset($_GET['pageno'])) {
-                                            $pageno = $_GET['pageno'];
-                                        } else {
-                                            $pageno = 1;
-                                        }
                                         while($news = mysqli_fetch_array($all_news)) {
                                             ?>
                                             <div class="col-sm-4">
@@ -335,16 +344,16 @@ $dbOperations = new DBOperations();
                                         ?>
                                     </div>
 
-
                                     <div class="pagination-wrapper">
                                         <ul class="pagination">
-                                            <li class="page-item active"><a class="page-link">1</a></li>
-                                            <li class="page-item"><a class="page-link "
-                                                                     href="http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics?start=10"
-                                                                     title="2">2</a></li>
-                                            <li class="page-item"><a class="page-link next"
-                                                                     href="http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics?start=10"
-                                                                     title="Next">Next</a></li>
+                                            <li><a class="page-link next" href="?id=<?=$id?>&pageno=1">First</a></li>
+                                            <li class="page-item <?if($pageno <= 1){ echo 'disabled'; } ?>">
+                                                <a  class="page-link next" href="<?php if($pageno <= 1){ echo '#'; } else { echo "?id=".$id."&pageno=".($pageno - 1); } ?>">Prev</a>
+                                            </li>
+                                            <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
+                                                <a  class="page-link next" href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?id=".$id."&pageno=".($pageno + 1); } ?>">Next</a>
+                                            </li>
+                                            <li><a  class="page-link next" href="?id=<?=$id?>&pageno=<?php echo $total_pages; ?>">Last</a></li>
                                         </ul>
                                     </div>
                                 </div>

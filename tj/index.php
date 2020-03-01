@@ -8,7 +8,7 @@ $result_news = $dbOperation->get_news('tj');
 $news = mysqli_fetch_array($result_news);
 ?>
 <!doctype html>
-<html lang="en-gb" dir="ltr">
+<html lang="tj" dir="ltr">
 
 <meta http-equiv="content-type" content="text/html;charset=utf-8"/><!-- /Added by HTTrack -->
 <head>
@@ -16,11 +16,8 @@ $news = mysqli_fetch_array($result_news);
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <base/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta name="generator" content="Joomla! - Open Source Content Management"/>
     <title>Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара — Сомонаи расмии МИҲД Исфара</title>
-    <link href="templates/newsberg/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
-    <link href="index.php/component/search/indexe1ab.html?id=1&amp;Itemid=216&amp;format=opensearch" rel="search"
-          title="Search Newsberg" type="application/opensearchdescription+xml"/>
+    <link href="../img/favicon.ico" rel="shortcut icon"/>
     <link href="components/com_sppagebuilder/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="components/com_sppagebuilder/assets/css/animate.min.css" rel="stylesheet" type="text/css"/>
     <link href="components/com_sppagebuilder/assets/css/sppagebuilder.css" rel="stylesheet" type="text/css"/>
@@ -1688,7 +1685,7 @@ $news = mysqli_fetch_array($result_news);
                                                                                 <div class="sppb-addon-article "
                                                                                      style="background-image: url(../img/'.$news[3].')">
                                                                                     <a class="sppb-article-img-wrap"
-                                                                                       href="index.php/business-blog/the-exact-same-briefcase-soap-sorry-i-make.html"
+                                                                                       href="view_news.php?id='.$news[0].'&category='.$news[4].'"
                                                                                        itemprop="url"><img
                                                                                             class="sppb-img-responsive"
                                                                                             src="../img/'.$news[3].'"
@@ -1696,11 +1693,11 @@ $news = mysqli_fetch_array($result_news);
                                                                                     <div class="sppb-article-info-wrap">
                                                                                         <p class="sppb-meta-category">
                                                                                             <a
-                                                                                                href="index.php/business-blog.html"
+                                                                                                href="category.php?id='.$news[4].'"
                                                                                                 itemprop="genre">'. $cat[0] .'</a>
                                                                                         </p>
                                                                                         <h3>
-                                                                                            <a href="index.php/business-blog/the-exact-same-briefcase-soap-sorry-i-make.html"
+                                                                                            <a href="view_news.php?id='.$news[0].'&category='.$news[4].'"
                                                                                                itemprop="url">'.$news[2].'</a></h3>
                                                                                         <div class="sppb-article-spbookmark-wrap d-flex">
                                                                                             <div class="sppb-article-meta">
@@ -1723,7 +1720,7 @@ $news = mysqli_fetch_array($result_news);
                                                                                 <div class="sppb-addon-article "
                                                                                      style="background-image: url(../img/<?=$news[3]?>)">
                                                                                     <a class="sppb-article-img-wrap"
-                                                                                       href="index.php/business-blog/the-exact-same-briefcase-soap-sorry-i-make.html"
+                                                                                       href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
                                                                                        itemprop="url"><img
                                                                                             class="sppb-img-responsive"
                                                                                             src="../img/<?=$news[3]?>"
@@ -1731,11 +1728,11 @@ $news = mysqli_fetch_array($result_news);
                                                                                     <div class="sppb-article-info-wrap">
                                                                                         <p class="sppb-meta-category">
                                                                                             <a
-                                                                                                href="index.php/business-blog.html"
+                                                                                                href="category.php?id=<?=$news[4]?>"
                                                                                                 itemprop="genre"><?=$cat[0]?></a>
                                                                                         </p>
                                                                                         <h3>
-                                                                                            <a href="index.php/business-blog/the-exact-same-briefcase-soap-sorry-i-make.html"
+                                                                                            <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[0]?>"
                                                                                                itemprop="url"><?=$news[2]?></a></h3>
                                                                                         <div class="sppb-article-spbookmark-wrap d-flex">
                                                                                             <div class="sppb-article-meta">

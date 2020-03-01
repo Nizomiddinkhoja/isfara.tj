@@ -201,6 +201,6 @@ include("../include/navbar.php");
 </html>
     <?php
 } else {
-    header("Location: login.php");
+    header("Location: ../login.php");
 }
 ?>

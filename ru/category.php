@@ -4,11 +4,27 @@
 include("../counter.php");
 
 if(isset($_GET['id'])){
-        $id = $_GET["id"];
-        $all_news = $dbOperations->getNewsByCategoryById($id, "ru");
-        $news = mysqli_fetch_array($all_news);
+    $id = $_GET["id"];
 
-        $category = mysqli_fetch_array($dbOperations->getCategoryByID($id, "ru"));
+    if (isset($_GET['pageno'])) {
+        $pageno = $_GET['pageno'];
+    } else {
+        $pageno = 1;
+    }
+
+
+    $no_of_records_per_page = 10;
+    $offset = ($pageno-1) * $no_of_records_per_page;
+
+    $total_rows = $dbOperations->getNewsCount();
+    $total_pages = ceil($total_rows / $no_of_records_per_page);
+
+
+
+    $all_news = $dbOperations->getNewsByCategoryById($id, "ru", $offset, $no_of_records_per_page);
+    $news = mysqli_fetch_array($all_news);
+
+    $category = mysqli_fetch_array($dbOperations->getCategoryByID($id, "ru"));
     }
 
 ?>
@@ -24,7 +40,7 @@ if(isset($_GET['id'])){
     <base/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title>Категория <?=$category[0]?> - Официальный сайт исполнительный орган городского правительства Исфара</title>
-    <link href="templates/newsberg/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+    <link href="../img/favicon.ico" rel="shortcut icon"/>
     <link href="components/com_sppagebuilder/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="components/com_sppagebuilder/assets/css/animate.min.css" rel="stylesheet" type="text/css"/>
     <link href="components/com_sppagebuilder/assets/css/sppagebuilder.css" rel="stylesheet" type="text/css"/>
@@ -335,18 +351,19 @@ if(isset($_GET['id'])){
                                         ?>
                                     </div>
 
-
                                     <div class="pagination-wrapper">
                                         <ul class="pagination">
-                                            <li class="page-item active"><a class="page-link">1</a></li>
-                                            <li class="page-item"><a class="page-link "
-                                                                     href="http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics?start=10"
-                                                                     title="2">2</a></li>
-                                            <li class="page-item"><a class="page-link next"
-                                                                     href="http://demo2.joomshaper.com/2019/newsberg/index.php/categories/newsberg/politics?start=10"
-                                                                     title="Next">Next</a></li>
+                                            <li><a class="page-link next" href="?id=<?=$id?>&pageno=1">В начало</a></li>
+                                            <li class="page-item <?if($pageno <= 1){ echo 'disabled'; } ?>">
+                                                <a  class="page-link next" href="<?php if($pageno <= 1){ echo '#'; } else { echo "?id=".$id."&pageno=".($pageno - 1); } ?>">Пред.</a>
+                                            </li>
+                                            <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
+                                                <a  class="page-link next" href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?id=".$id."&pageno=".($pageno + 1); } ?>">След.</a>
+                                            </li>
+                                            <li><a  class="page-link next" href="?id=<?=$id?>&pageno=<?php echo $total_pages; ?>">В конец</a></li>
                                         </ul>
                                     </div>
+<!--
                                 </div>
                             </div>
                         </main>

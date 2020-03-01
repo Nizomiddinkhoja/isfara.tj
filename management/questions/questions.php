@@ -2,7 +2,6 @@
 session_start();
 include("../sql/DBOperations.php");
 if ($_SESSION["is_auth"]) {
-$dbOperation = new DBOperations();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +52,22 @@ include("../include/navbar.php");
               <div class="row" style="margin: unset;">
 
                   <?php
-                  $result = $dbOperation->getQuestions();
+
+                  if (isset($_GET['pageno'])) {
+                      $pageno = $_GET['pageno'];
+                  } else {
+                      $pageno = 1;
+                  }
+
+
+                  $dbOperations = new DBOperations();
+                  $no_of_records_per_page = 9;
+                  $offset = ($pageno-1) * $no_of_records_per_page;
+
+                  $total_rows = $dbOperations->getQuestionsCount();
+                  $total_pages = ceil($total_rows / $no_of_records_per_page);
+
+                  $result = $dbOperations->getQuestions("ru", $offset, $no_of_records_per_page);
                   if($result) {
                   while ($questions = mysqli_fetch_array($result)) {
                   ?>
@@ -69,31 +83,24 @@ include("../include/navbar.php");
           </div>
             </div>
 
-            <div class="card-footer py-4">
-              <nav aria-label="...">
-                <ul class="pagination justify-content-end mb-0">
-                  <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1">
-                      <i class="fas fa-angle-left"></i>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                  </li>
-                  <li class="page-item active">
-                    <a class="page-link" href="#">1</a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">
-                      <i class="fas fa-angle-right"></i>
-                      <span class="sr-only">Next</span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+              <div class="card-footer py-4">
+                  <nav aria-label="...">
+                      <ul class="pagination justify-content-end mb-0">
+                          <li class="page-item <?php if($pageno <= 1){ echo 'disabled'; } ?>">
+                              <a class="page-link" href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>" tabindex="-1">
+                                  <i class="fas fa-angle-left"></i>
+                                  <span class="sr-only">Previous</span>
+                              </a>
+                          </li>
+                          <li class="page-item <?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
+                              <a class="page-link" href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>">
+                                  <i class="fas fa-angle-right"></i>
+                                  <span class="sr-only">Next</span>
+                              </a>
+                          </li>
+                      </ul>
+                  </nav>
+              </div>
           </div>
         </div>
       </div>
@@ -116,6 +123,6 @@ include("../include/navbar.php");
     <?php
 }
 else{
-    header("Location: login.php");
+    header("Location: ../login.php");
 }
 ?>

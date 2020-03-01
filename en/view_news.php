@@ -14,20 +14,14 @@ if(isset($_GET["id"])){
 }
 ?>
 <!doctype html>
-<html lang="ru" dir="ltr">
+<html lang="en" dir="ltr">
 
-<!-- Mirrored from demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Feb 2020 09:15:58 GMT -->
-<!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=utf-8"/><!-- /Added by HTTrack -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="canonical"
-          href="http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up">
     <base/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta name="author" content="Kawshar Ahmed"/>
-    <meta name="generator" content="Joomla! - Open Source Content Management"/>
     <title>News: <?=$news[1]?></title>
     <link href="templates/newsberg/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
     <link href="components/com_sppagebuilder/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
@@ -556,10 +550,10 @@ if(isset($_GET["id"])){
                                         <div class="img-top-wrap">
                                             <div class="article-info">
 
-                                                <span class="category-name" title="Категория: <?=$category[0]?>">
+                                                <span class="category-name" title="Category: <?=$category[0]?>">
                                                     <a href="category.php?id=<?=$category_id?>"> <?=$category[0]?></a>
                                                 </span>
-                                                <span class="published" title="Published: 21 November 2019">
+                                                <span class="published" title="Published: ">
                                                     <time><?=$news[5]?></time>
                                                 </span>
                                                 <span class="hits">
@@ -693,7 +687,7 @@ if(isset($_GET["id"])){
 
                                         <div class="col-sm-3 col-sm-pull-1">
                                             <div class="authors-posts-wrap">
-                                                <h3>Хабарҳои нав</h3>
+                                                <h3>Latest news</h3>
                                                 <ul class="author-post-items">
                                                     <?php
                                                     $result = $dbOperations->get_news('en');
