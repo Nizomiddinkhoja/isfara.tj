@@ -65,6 +65,28 @@ $news = mysqli_fetch_array($result_news);
             box-shadow: 0 0 0 0 #ffffff;
         }
 
+
+        @media (min-width: 100px) and (max-width: 991px) {
+            #section-id-1574157062618 {
+                max-width: 50%;
+            }
+            .who_is {
+                display: flex;
+                align-items: flex-end;
+                padding-bottom: 10px !important;
+            }
+
+
+            .president {
+                display: flex;
+            }
+
+            .visitors {
+                display: flex;
+            }
+
+        }
+
         @media (min-width: 768px) and (max-width: 991px) {
             #sppb-addon-wrapper-1573624794184 {
                 margin-top: 0px;
@@ -185,6 +207,7 @@ $news = mysqli_fetch_array($result_news);
 
         #column-id-1573711718215 {
             box-shadow: 0 0 0 0 #fff;
+
         }
 
         .sp-page-builder .page-content #section-id-1574157062618 {
@@ -2087,7 +2110,7 @@ $news = mysqli_fetch_array($result_news);
                                             </div>
                                             <div class="sppb-col-md-3" id="column-wrap-id-1573711718215">
                                                 <div id="column-id-1573711718215" class="sppb-column">
-                                                    <div class="sppb-column-addons">
+                                                    <div class="sppb-column-addons president" >
                                                         <div id="section-id-1574157062618"
                                                              class="sppb-section newsberg-card">
                                                             <div class="sppb-container-inner">
@@ -2096,7 +2119,7 @@ $news = mysqli_fetch_array($result_news);
                                                                          id="column-wrap-id-1574157062619">
                                                                         <div id="column-id-1574157062619"
                                                                              class="sppb-column">
-                                                                            <div class="sppb-column-addons">
+                                                                            <div class="sppb-column-addons" style="">
                                                                                 <div id="sppb-addon-wrapper-1573712171080"
                                                                                      class="sppb-addon-wrapper">
                                                                                     <div id="sppb-addon-1573712171080"
@@ -2135,7 +2158,7 @@ $news = mysqli_fetch_array($result_news);
                                                         </div>
 
                                                         <div id="section-id-1574157062618"
-                                                             class="sppb-section newsberg-card">
+                                                             class="sppb-section newsberg-card who_is">
                                                             <div class="sppb-container-inner">
                                                                 <div class="sppb-row">
                                                                     <div class="sppb-col-md-12"
@@ -2499,7 +2522,7 @@ $news = mysqli_fetch_array($result_news);
 
                                             <div class="sppb-col-md-3" id="column-wrap-id-1573711718215">
                                                 <div id="column-id-1573711718215" class="sppb-column">
-                                                    <div class="sppb-column-addons">
+                                                    <div class="sppb-column-addons visitors">
                                                         <div id="section-id-1574157062618"
                                                              class="sppb-section newsberg-card">
                                                             <div class="sppb-container-inner">
