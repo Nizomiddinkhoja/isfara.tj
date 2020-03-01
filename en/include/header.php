@@ -7,9 +7,10 @@
                     <div class="sp-column "><a id="offcanvas-toggler" aria-label="Navigation"
                                                class="offcanvas-toggler-left d-block d-lg-none" href="#"><span
                                 class="fa fa-bars" aria-hidden="true" title="Navigation"></span></a>
-                        <div class="logo"><a href="index.html"><img class="logo-image"
-                                                                    src="templates/newsberg/images/presets/preset1/logo.svg"
-                                                                    alt="Newsberg"></a></div>
+                        <div class="logo" style="text-align: center;"><a href="./index.php"><img class="logo-image"
+                                                                    src="../img/logo.png"
+
+                                                                   alt="Official website executive body of the city government of Isfara" style="DISPLAY: -webkit-inline-box; ">Executive body of the city government of Isfara</a></div>
                     </div>
                 </div>
                 <div id="sp-top1" class="col-sm-1 col-md-1 col-lg-3">
@@ -60,7 +61,7 @@
                         <ul class="social-icons">
                             <li class="social-icon-facebook"><a href="../tj/"
                                                                 aria-label="facebook"><img style="width: 24px" src="../img/icons8_tajikistan_96px.png"></a></li>
-                            <li class="social-icon-twitter"><a href="/"
+                            <li class="social-icon-twitter"><a href="../ru/"
                                                                aria-label="twitter"><img style="width: 24px" src="../img/icons8_russian_federation_96px_1.png"></a>
                             </li>
                             <li class="social-icon-instagram"><a href="../en/"

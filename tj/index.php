@@ -17,7 +17,7 @@ $news = mysqli_fetch_array($result_news);
     <base/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title>Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара — Сомонаи расмии МИҲД Исфара</title>
-    <link href="../img/favicon.ico" rel="shortcut icon"/>
+    <link href="../img/logo.png" rel="shortcut icon"/>
     <link href="components/com_sppagebuilder/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="components/com_sppagebuilder/assets/css/animate.min.css" rel="stylesheet" type="text/css"/>
     <link href="components/com_sppagebuilder/assets/css/sppagebuilder.css" rel="stylesheet" type="text/css"/>
