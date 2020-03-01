@@ -1,6 +1,6 @@
 <?php
 $l=0;
-$resul = $dbOperation->getQuestions();
+$resul = $dbOperation->getQuestions("tj");
 if(mysqli_num_rows($resul)>0) {
 while ($quest = mysqli_fetch_array($resul)) {
     $l++;

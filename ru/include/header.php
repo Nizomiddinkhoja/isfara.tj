@@ -155,6 +155,8 @@
                                             </ul>
                                         </div>
                                     </div></li>
+
+                                <li class="sp-menu-item"><a href="contact.php">Контакт</a></li>
                             </ul>
                         </nav>
                     </div>

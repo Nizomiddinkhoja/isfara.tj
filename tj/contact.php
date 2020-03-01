@@ -19,7 +19,7 @@ if (isset($_POST["submit"])){
 }
 ?>
 <!doctype html>
-<html lang="ru" dir="ltr">
+<html lang="tj" dir="ltr">
 <meta http-equiv="content-type" content="text/html;charset=utf-8"/><!-- /Added by HTTrack -->
 <head>
     <meta charset="utf-8">
@@ -27,7 +27,7 @@ if (isset($_POST["submit"])){
     <base/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title>Кабулгохи электрони</title>
-    <link href="templates/newsberg/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+    <link href="../img/favicon.ico" rel="shortcut icon"/>
     <link href="components/com_sppagebuilder/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="components/com_sppagebuilder/assets/css/animate.min.css" rel="stylesheet" type="text/css"/>
     <link href="components/com_sppagebuilder/assets/css/sppagebuilder.css" rel="stylesheet" type="text/css"/>

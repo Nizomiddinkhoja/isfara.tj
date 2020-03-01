@@ -117,6 +117,6 @@ if ($_SESSION["is_auth"]) {
     <?php
 }
 else{
-    header("Location: login.php");
+    header("Location: ../login.php");
 }
 ?>

@@ -58,14 +58,20 @@ WHERE l.`name`='$locale' AND c.`status`=1 AND cn.`name`='category' AND c.id=$id"
         return mysqli_query($com->getDb(), $sql);
     }
 
-    public function getWhoIs($locale){
+    public function getWhoIs($locale, $offset=0, $no_of_records_per_page=1000){
         $com = new DbConnect();
         $sql = "SELECT w.`id`, t.`title`, t.`description`, w.img FROM  who_is w JOIN texts t ON t.`id_menu` = w.`id` 
 JOIN locale l ON l.`id`=t.`locale` 
 JOIN content cn ON cn.`id`=t.`id_content` 
-WHERE l.`name`='$locale' AND w.`status`=1 AND cn.`name`='who_is'";
+WHERE l.`name`='$locale' AND w.`status`=1 AND cn.`name`='who_is' Limit $offset, $no_of_records_per_page";
         return mysqli_query($com->getDb(), $sql);
     }
+    public function getWhoISCount(){
+        $com = new DbConnect();
+        $sql = "SELECT COUNT(*) From who_is";
+        return mysqli_fetch_array(mysqli_query($com->getDb(), $sql))[0];
+    }
+
 
     public function addWhoIs($img){
         $com = new DbConnect();
@@ -118,25 +124,31 @@ WHERE l.`name`='$locale' AND w.`status`=1 AND cn.`name`='who_is' AND w.id=$id";
         return mysqli_query($com->getDb(), $sql);
     }
 
-    public function getNewsByCategoryById($id, $locale){
+    public function getNewsByCategoryById($id, $locale, $offset=0, $no_of_records_per_page=1000){
         $com = new DbConnect();
         $sql = "SELECT n.id, t.title, t.description, n.img, n.category_id, n.date FROM  news n JOIN texts t ON t.id_menu = n.id 
 JOIN category c ON t.id_menu = c.id 
 JOIN locale l ON l.id=t.locale 
 JOIN content cn ON cn.id=t.id_content 
-WHERE l.name='ru' AND n.status=1 AND cn.name='news' AND n.category_id=$id";
+WHERE l.name='$locale' AND n.status=1 AND cn.name='news' AND n.category_id=$id Limit $offset, $no_of_records_per_page";
         return mysqli_query($com->getDb(), $sql);
     }
 
-    public function  get_news($locale = "ru"){
+    public function  get_news($locale = "ru", $offset=0, $no_of_records_per_page=1000){
         $com = new DbConnect();
         $sql = "SELECT n.id, t.title, t.description, n.img, n.category_id, n.date  FROM  news n JOIN texts t ON t.id_menu = n.id 
 
 JOIN locale l ON l.id=t.locale 
 JOIN content cn ON cn.id=t.id_content 
-WHERE l.name='$locale' AND n.status=1 AND cn.name=\"news\" ORDER BY n.id DESC";
+WHERE l.name='$locale' AND n.status=1 AND cn.name=\"news\" ORDER BY n.id DESC Limit $offset, $no_of_records_per_page";
         return mysqli_query($com->getDb(), $sql);
     }
+
+    public function getNewsCount(){
+        $com = new DbConnect();
+        $sql = "SELECT COUNT(*) From news where status=1";
+        return mysqli_fetch_array(mysqli_query($com->getDb(), $sql))[0];
+}
 
 
     public function  get_edit_news_tj($id){
@@ -246,13 +258,19 @@ WHERE l.`name`='en' AND c.`status`=1 AND cn.`name`='category'";
 
 
 
+    public function getSliderCount(){
 
-    public function getSlider(){
+        $com = new DbConnect();
+        $sql = "SELECT COUNT(*) From slider where status=1";
+        return mysqli_fetch_array(mysqli_query($com->getDb(), $sql))[0];
+    }
+
+    public function getSlider($locale, $offset=0, $no_of_records_per_page=1000){
         $com = new DbConnect();
         $sql = "SELECT s.`id`, t.`title`, s.img FROM  slider s JOIN texts t ON t.`id_menu` = s.`id` 
     JOIN locale l ON l.`id`=t.`locale` 
     JOIN content cn ON cn.`id`=t.`id_content` 
-    WHERE l.`name`='tj' AND s.`status`=1 AND cn.`name`='slider'";
+    WHERE l.`name`='$locale' AND s.`status`=1 AND cn.`name`='slider' Limit  $offset, $no_of_records_per_page";
         return mysqli_query($com->getDb(), $sql);
     }
 
@@ -326,14 +344,19 @@ WHERE l.`name`='$locale' AND s.`status`=1 AND cn.`name`='slider' AND s.id=$id";
 
 
 
-    public function getGallery($locale){
+    public function getGallery($locale, $offset=0, $no_of_records_per_page=1000){
         $com = new DbConnect();
         $sql = "SELECT g.`id`, t.`title`, g.img, g.date FROM  gallery g JOIN texts t ON t.`id_menu` = g.`id`
 JOIN locale l ON l.`id`=t.locale
 JOIN content cn ON cn.`id`=t.`id_content`
-WHERE l.`name`='$locale' AND g.`status`=1 AND cn.`name` = 'gallery' ORDER by id DESC";
+WHERE l.`name`='$locale' AND g.`status`=1 AND cn.`name` = 'gallery' ORDER by id DESC Limit  $offset, $no_of_records_per_page";
         return mysqli_query($com->getDb(), $sql);
     }
+    public function getGalleryCount(){
+    $com = new DbConnect();
+    $sql = "SELECT COUNT(*) From gallery where status =1";
+    return mysqli_fetch_array(mysqli_query($com->getDb(), $sql))[0];
+}
 
 
     public function getGalleryForPage($locale, $start,$limit){
@@ -410,13 +433,18 @@ WHERE l.`name`='$locale' AND g.`status`=1 AND cn.`name` = 'gallery' ORDER by id 
         return mysqli_query($com->getDb(), $sql);
     }
 
-    public function getVideo($locale){
+    public function getVideo($locale, $offset=0, $no_of_records_per_page=1000){
         $com = new DbConnect();
         $sql = "SELECT v.`id`, t.`title`, v.source, v.is_youtube FROM  video v JOIN texts t ON t.`id_menu` = v.`id`
 JOIN locale l ON l.`id`=t.locale
 JOIN content cn ON cn.`id`=t.`id_content`
-WHERE l.`name`='ru' AND v.`status`=1 AND cn.`name` = 'video'";
+WHERE l.`name`='$locale' AND v.`status`=1 AND cn.`name` = 'video' Limit $offset, $no_of_records_per_page";
         return mysqli_query($com->getDb(), $sql);
+    }
+    public function getVideoCount(){
+        $com = new DbConnect();
+        $sql = "SELECT COUNT(*) FROM video";
+        return mysqli_fetch_array(mysqli_query($com->getDb(), $sql))[0];
     }
 
     public function deleteVideo($id){
@@ -474,13 +502,18 @@ JOIN content cn ON cn.`id`=t.`id_content`
         return mysqli_query($com->getDb(), $sql);
     }
 
-    public function getQuestions(){
+    public function getQuestions($locale, $offset=0, $no_of_records_per_page=1000){
         $com = new DbConnect();
         $sql = "SELECT q.`id`, t.`title` FROM  questions q JOIN texts t ON t.`id_menu` = q.`id`
 JOIN locale l ON l.`id`=t.locale
 JOIN content cn ON cn.`id`=t.`id_content`
-WHERE l.`name`='tj' AND q.`status`=1 AND cn.`name` = 'question'";
+WHERE l.`name`='$locale' AND q.`status`=1 AND cn.`name` = 'question' Limit $offset, $no_of_records_per_page";
         return mysqli_query($com->getDb(), $sql);
+    }
+    public function getQuestionsCount(){
+        $com = new DbConnect();
+        $sql = "SELECT COUNT(*) From questions";
+        return mysqli_fetch_array(mysqli_query($com->getDb(), $sql))[0];
     }
 
     public function addQuestion(){
@@ -584,10 +617,17 @@ WHERE l.`name`='$locale' AND a.`status`=1 AND cn.`name`='answer' and q.id = '$id
 )";
         return mysqli_query($com->getDb(), $sql);
     }
-    public function getRequest()
+    public function getRequest($offset=0, $no_of_records_per_page=1000)
     {
         $com = new DbConnect();
-        $sql = "SELECT `id`, `last_name`, `first_name`, `email`, `phone`, `title`, `text`, `date`, `is_view` FROM `request` WHERE  `status`=1  ORDER BY `id` DESC";
+        $sql = "SELECT `id`, `last_name`, `first_name`, `email`, `phone`, `title`, `text`, `date`, `is_view` FROM `request` 
+WHERE  `status`=1  ORDER BY `id` DESC Limit $offset, $no_of_records_per_page";
+        return mysqli_query($com->getDb(), $sql);
+    }
+    public function getRequestCount()
+    {
+        $com = new DbConnect();
+        $sql = "SELECT COUNT(*) FROM request where status = 1";
         return mysqli_query($com->getDb(), $sql);
     }
     public function deleteRequest($id){

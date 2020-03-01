@@ -5,7 +5,7 @@ include("../counter.php");
 
 ?>
 <!doctype html>
-<html lang="ru" dir="ltr">
+<html lang="tj" dir="ltr">
 
 <!-- Mirrored from demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Feb 2020 09:15:58 GMT -->
 <!-- Added by HTTrack -->
@@ -13,14 +13,10 @@ include("../counter.php");
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="canonical"
-          href="http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up">
     <base/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta name="author" content="Kawshar Ahmed"/>
-    <meta name="generator" content="Joomla! - Open Source Content Management"/>
     <title>Галерея</title>
-    <link href="templates/newsberg/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+    <link href="../img/favicon.ico" rel="shortcut icon"/>
     <link href="components/com_sppagebuilder/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="components/com_sppagebuilder/assets/css/animate.min.css" rel="stylesheet" type="text/css"/>
     <link href="components/com_sppagebuilder/assets/css/sppagebuilder.css" rel="stylesheet" type="text/css"/>
