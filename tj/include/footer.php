@@ -360,9 +360,15 @@
                     <div class="row">
                         <div id="sp-bottom1" class="col-3 col-sm-4 col-lg-4 ">
                             <div class="sp-column ">
-                                <div class="sp-module "><h3 class="sp-module-title">Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара</h3>
+                                <div class="sp-module "><h3 class="sp-module-title">Маълумот дар бораи Исфара</h3>
                                     <div class="sp-module-content">
-                                        <p>Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара. Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара</p>
+                                        <p>Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара.
+                                            Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара.
+                                            Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара.
+                                            Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара.
+                                            Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара.
+                                            Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара.
+                                            Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара</p>
                                     </div>
                                 </div>
                             </div>
@@ -385,18 +391,19 @@
                         </div>
                         <div id="sp-bottom3" class="col-3 col-sm-4 col-lg-4 ">
                             <div class="sp-column ">
-                                <div class="sp-module "><h3 class="sp-module-title">Politics</h3>
+                                <div class="sp-module "><h3 class="sp-module-title">Сомонахои расмии Чумхурии Точикистон</h3>
                                     <div class="sp-module-content">
                                         <ul class="menu">
-                                            <li class="item-190"><a href="#">Political Polarization</a></li>
-                                            <li class="item-191"><a href="#">Political Movement</a></li>
-                                            <li class="item-192"><a href="#">Political Journalism</a></li>
-                                            <li class="item-193"><a href="#">Libertarian Aarchism</a></li>
-                                            <li class="item-194"><a href="#">Human Rights</a></li>
-                                            <li class="item-195"><a href="#">Action Alert</a></li>
-                                            <li class="item-196"><a href="#">Anti-incumbency</a></li>
-                                            <li class="item-197"><a href="#">Body Politic</a></li>
-                                            <li class="item-198"><a href="#">Political Crisis</a></li>
+                                            <li class="item-190"><a href="http://www.president.tj/">Сомонаи расмии Президенти Ҷумҳурии Тоҷикистон</a></li>
+                                            <li class="item-191"><a href="http://www.parlament.tj/">Сомонаи расмии Парламенти Ҷумҳурии Тоҷикистон</a></li>
+                                            <li class="item-192"><a href="http://www.stat.tj/">Сомонаи расмии Агентии омори назди Президенти Ҷумҳурии Тоҷикистон</a></li>
+                                            <li class="item-193"><a href="http://www.khovar.tj/">Сомонаи расмии АГЕНТИИ МИЛЛИИ ИТТИЛООТИИ ТОҶИКИСТОН</a></li>
+                                            <li class="item-194"><a href="http://www.fezsughd.tj/">Сомонаи расмии Минтақаи озоди иқтисодии вилояти Суғд</a></li>
+                                            <li class="item-195"><a href="http://www.khujand.tj/">Сомонаи расмии шаҳри Хуҷанд</a></li>
+                                            <li class="item-196"><a href="http://www.buston.tj/">Сомонаи расмии Агентии омори назди Президенти Ҷумҳурии Тоҷикистон</a></li>
+                                            <li class="item-197"><a href="http://www.konibodom.tj/">Сомонаи расмии шаҳри Конибодом</a></li>
+                                            <li class="item-198"><a href="http://devashtich.tj/">Сомонаи расмии Деваштич</a></li>
+                                            <li class="item-198"><a href="http://sugd.tj/">Мақомоти иҷроияи ҳокимияти давлатии вилояти Суғд</a></li>
                                         </ul>
                                     </div>
                                 </div>
