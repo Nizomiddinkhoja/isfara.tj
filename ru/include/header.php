@@ -58,12 +58,12 @@
                 <div id="sp-top4" class="col-sm-3 col-md-3 col-lg-2">
                     <div class="sp-column ">
                         <ul class="social-icons">
-                            <li class="social-icon-facebook"><a href="../tj/"
+                            <li class="social-icon-facebook"><a href="../tj/index.php"
                                                                 aria-label="facebook"><img style="width: 24px" src="../img/icons8_tajikistan_96px.png"></a></li>
-                            <li class="social-icon-twitter"><a href="../ru/"
+                            <li class="social-icon-twitter"><a href="../ru/index.php"
                                                                aria-label="twitter"><img style="width: 24px" src="../img/icons8_russian_federation_96px_1.png"></a>
                             </li>
-                            <li class="social-icon-instagram"><a href="../en/"
+                            <li class="social-icon-instagram"><a href="../en/index.php"
                                                                  aria-label="Instagram"><img style="width: 24px" src="../img/icons8_great_britain_96px.png"></a></li>
                         </ul>
                     </div>
