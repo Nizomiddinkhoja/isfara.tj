@@ -1,4 +1,4 @@
-<link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!--<link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
 <link href="../gallary/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
 <link href="../gallary/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 <link href="../gallary/css/style.css" rel="stylesheet">

@@ -54,6 +54,7 @@
       <workItem from="1582779800389" duration="12824000" />
       <workItem from="1582872872747" duration="7199000" />
       <workItem from="1582985254569" duration="9642000" />
+      <workItem from="1583118013507" duration="695000" />
     </task>
     <servers />
   </component>
@@ -65,9 +66,13 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1582719215780" />
-    <state x="378" y="192" key="com.intellij.ide.util.TipDialog" timestamp="1582985254590">
+    <state x="378" y="192" key="com.intellij.ide.util.TipDialog" timestamp="1583118040892">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="378" y="192" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1582985254590" />
+    <state x="378" y="192" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1583118040892" />
+    <state x="339" y="22" width="670" height="676" key="search.everywhere.popup" timestamp="1583068264342">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="339" y="22" width="670" height="676" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1583068264342" />
   </component>
 </project>

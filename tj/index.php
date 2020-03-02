@@ -50,6 +50,26 @@ $news = mysqli_fetch_array($result_news);
 <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
 
     <style type="text/css">
+
+
+        .toggle {
+            width: 100%;
+            height: 300px;
+            background: #2c3d4e;
+            position: absolute;
+            z-index: 1;
+            transition: all 1s ease-in-out;
+        }
+
+        .toggle-closed {
+            top: -245px;
+        }
+
+        .toggle-opened {
+            top: 0
+        }
+
+
         #column-id-1573624776028 {
             box-shadow: 0 0 0 0 #fff;
         }

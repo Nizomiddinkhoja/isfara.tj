@@ -4,10 +4,11 @@
             <div class="row">
 
                 <div id="sp-logo" class="col-sm-6 col-md-6 col-lg-4 ">
-                    <div class="sp-column "><a id="offcanvas-toggler" aria-label="Navigation"
+                    <div class="sp-column ">
+                        <a id="offcanvas-toggler" aria-label="Navigation"
                                                class="offcanvas-toggler-left d-block d-lg-none" href="#"><span
                                 class="fa fa-bars" aria-hidden="true" title="Navigation"></span></a>
-                        <div class="logo" style="text-align: center;"><a href="./index.php"><img class="logo-image"
+                                              <div class="logo" style="text-align: center;"><a href="./index.php"><img class="logo-image"
                                                                      src="../img/logo.png"
 
                                                                      alt="Сомонаи расмии МИҲД Исфара" style="DISPLAY: -webkit-inline-box;">Сомонаи расмии МИҲД Исфара</a></div>
