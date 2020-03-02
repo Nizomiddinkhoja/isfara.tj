@@ -7,7 +7,7 @@
         </button>
         <!-- Brand -->
         <a class="navbar-brand pt-0" href="../index.php">
-            <img src="./../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+            <img src="./../../img/logo.png" class="navbar-brand-img" alt="...">
         </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
@@ -92,11 +92,11 @@
                         <i class="ni ni-planet text-blue"></i> Новости
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="/management/category/category.php">
-                        <i class="ni ni-ungroup text-orange"></i> Категория
-                    </a>
-                </li>
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link " href="/management/category/category.php">-->
+<!--                        <i class="ni ni-ungroup text-orange"></i> Категория-->
+<!--                    </a>-->
+<!--                </li>-->
                 <li class="nav-item">
                     <a class="nav-link" href="/management/slider/slider.php">
                         <i class="ni ni-album-2 text-purple"></i> Слайдер

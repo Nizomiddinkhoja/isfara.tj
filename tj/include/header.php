@@ -26,7 +26,7 @@
                                             <ul class="menu-child" style="min-width: 100%;">
                                                 <li class="sp-menu-item"><a href="category.php?id=5">Бахши робитаҳои
                                                         иқтисодии хориҷӣ</a></li>
-                                                <li class="sp-menu-item"><a href="category.php?id=6">Мухочират</a></li>
+<!--                                                <li class="sp-menu-item"><a href="category.php?id=6">Мухочират</a></li>-->
                                                 <li class="sp-menu-item"><a href="category.php?id=7">Шӯрои машваратӣ</a>
                                                 </li>
                                                 <li class="sp-menu-item"><a href="category.php?id=8">Исфара Гайд</a>
@@ -71,8 +71,7 @@
                                                 <li class="sp-menu-item"><a href="category.php?id=26">Меъмор</a></li>
                                                 <li class="sp-menu-item"><a href="category.php?id=27">Роҳ</a></li>
                                                 <li class="sp-menu-item"><a href="category.php?id=28">Барқ</a></li>
-                                                <li class="sp-menu-item"><a href="category.php?id=29">Ҳифзи муҳити
-                                                        зист</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=29">Ҳифзи муҳити зист</a></li>
                                             </ul>
                                         </li>
                                         <li class="item- menu-deeper menu-parent"><a
@@ -81,8 +80,7 @@
                                             <ul class="menu-child" style="min-width: 100%;">
                                                 <li class="sp-menu-item"><a href="category.php?id=31">Таърихи Исфара</a>
                                                 </li>
-                                                <li class="sp-menu-item"><a href="category.php?id=32">Минтақаҳои
-                                                        сайёҳӣ</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=32">Минтақаҳои сайёҳӣ</a></li>
 
                                             </ul>
                                         </li>
@@ -148,20 +146,8 @@
                 <div id="sp-top4" class="col-sm-3 col-md-3 col-lg-2">
                     <div class="sp-column ">
                         <ul class="social-icons">
-<<<<<<< HEAD
-                            <li class="social-icon-facebook"><a href="../tj/"
-                                                                aria-label="facebook"><img style="width: 24px"
-                                                                                           src="../img/icons8_tajikistan_96px.png"></a>
-                            </li>
-                            <li class="social-icon-twitter"><a href="../ru/"
-                                                               aria-label="twitter"><img style="width: 24px"
-                                                                                         src="../img/icons8_russian_federation_96px_1.png"></a>
-                            </li>
-                            <li class="social-icon-instagram"><a href="../en/"
-                                                                 aria-label="Instagram"><img style="width: 24px"
-                                                                                             src="../img/icons8_great_britain_96px.png"></a>
-                            </li>
-=======
+
+
                             <li class="social-icon-facebook"><a href="../tj/index.php"
                                                                 aria-label="facebook"><img style="width: 24px" src="../img/icons8_tajikistan_96px.png"></a></li>
                             <li class="social-icon-twitter"><a href="../ru/index.php"
@@ -169,7 +155,6 @@
                             </li>
                             <li class="social-icon-instagram"><a href="../en/index.php"
                                                                  aria-label="Instagram"><img style="width: 24px" src="../img/icons8_great_britain_96px.png"></a></li>
->>>>>>> e7619a8dbaccbb055deae4a40e75820995be0ec2
                         </ul>
                     </div>
                 </div>

@@ -28,7 +28,7 @@
 
                                             <ul class="menu-child" style="min-width: 100%;">
                                                 <li class="sp-menu-item"><a href="category.php?id=5">Department of Foreign Economic Relations</a></li>
-                                                <li class="sp-menu-item"><a href="category.php?id=6">Emigration</a></li>
+<!--                                                <li class="sp-menu-item"><a href="category.php?id=6">Emigration</a></li>-->
                                                 <li class="sp-menu-item"><a href="category.php?id=7">Advisory Board</a>
                                                 </li>
                                                 <li class="sp-menu-item"><a href="category.php?id=8">Isfara Hyde</a>
