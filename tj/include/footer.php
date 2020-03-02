@@ -378,12 +378,13 @@
                                 <div class="sp-module "><h3 class="sp-module-title">Меню</h3>
                                     <div class="sp-module-content">
                                         <ul class="menu">
-                                            <li class="sp-menu-item sp-has-child"><a href="news.php?category=iqtisod">Иқтисод</a>
-                                            <li class="sp-menu-item sp-has-child"><a href="news.php?category=sarmoya">Сармоягузори</a>
-                                            <li class="sp-menu-item sp-has-child"><a href="news.php?category=kishovarzi">Кишоварзӣ</a>
-                                            <li class="sp-menu-item sp-has-child"><a href="news.php?category=ijtimoiyot">Иҷтимоиёт</a>
-                                            <li class="sp-menu-item sp-has-child"><a href="news.php?category=infrasohtor">Инфрасохтор</a>
-                                            <li class="sp-menu-item sp-has-child"><a href="news.php?category=sayohi">Сайёҳӣ</a>
+                                            <li class="sp-menu-item sp-has-child"><a href="category.php?id=1">Иқтисод</a>
+                                            <li class="sp-menu-item sp-has-child"><a href="category.php?id=4">Сармоягузори</a>
+                                            <li class="sp-menu-item sp-has-child"><a href="category.php?id=12">Кишоварзӣ</a>
+                                            <li class="sp-menu-item sp-has-child"><a href="category.php?id=17">Иҷтимоиёт</a>
+                                            <li class="sp-menu-item sp-has-child"><a href="category.php?id=23">Инфрасохтор</a>
+                                            <li class="sp-menu-item sp-has-child"><a href="category.php?id=30">Сайёҳӣ</a>
+                                            <li class="sp-menu-item sp-has-child"><a href="contact.php">Қабулгоҳи электронӣ</a>
                                         </ul>
                                     </div>
                                 </div>

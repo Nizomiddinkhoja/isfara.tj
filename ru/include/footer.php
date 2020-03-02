@@ -378,13 +378,13 @@
                                 <div class="sp-module "><h3 class="sp-module-title">Меню</h3>
                                     <div class="sp-module-content">
                                         <ul class="menu">
-                                            <li class="sp-menu-item sp-has-child"><a href="news.php?category=iqtisod">Экономика</a>
-                                            <li class="sp-menu-item sp-has-child"><a href="news.php?category=sarmoya">Инвестиция</a>
-                                            <li class="sp-menu-item sp-has-child"><a href="news.php?category=kishovarzi">Сельское хозяйство
-                                                </a>
-                                            <li class="sp-menu-item sp-has-child"><a href="news.php?category=ijtimoiyot">Социальные</a>
-                                            <li class="sp-menu-item sp-has-child"><a href="news.php?category=infrasohtor">Инфраструктура</a>
-                                            <li class="sp-menu-item sp-has-child"><a href="news.php?category=sayohi">Путешествие</a>
+                                            <li class="sp-menu-item sp-has-child"><a href="category.php?id=1">Экономика</a>
+                                            <li class="sp-menu-item sp-has-child"><a href="category.php?id=4">Инвестиция</a>
+                                            <li class="sp-menu-item sp-has-child"><a href="category.php?id=12">Сельское хозяйство</a>
+                                            <li class="sp-menu-item sp-has-child"><a href="category.php?id=17">Социальные</a>
+                                            <li class="sp-menu-item sp-has-child"><a href="category.php?id=23">Инфраструктура</a>
+                                            <li class="sp-menu-item sp-has-child"><a href="category.php?id=30">Путешествие</a>
+                                            <li class="sp-menu-item sp-has-child"><a href="contact.php">Электронная очередь</a>
                                         </ul>
                                     </div>
                                 </div>

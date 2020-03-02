@@ -2284,11 +2284,11 @@ $news = mysqli_fetch_array($result_news);
                                                                                          style="background-image: url(../img/<?=$news[3]?>);"></div>
                                                                                     <div class="sppb-article-info-wrap">
                                                                                         <p class="sppb-meta-category"><a
-                                                                                                    href="index.php/business-blog.html"
+                                                                                                    href="category.php?id=<?=$news[4]?>"
                                                                                                     itemprop="genre"><?=$cat[0]?></a>
                                                                                         </p>
                                                                                         <h3>
-                                                                                            <a href="index.php/business-blog/what-sick-desperation-in-your-laugh-we-have.html"
+                                                                                            <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
                                                                                                itemprop="url"><?=$news[1]?></a></h3>
                                                                                         <div class="sppb-article-introtext">
                                                                                             <?=$news[2]?>
@@ -2314,19 +2314,19 @@ $news = mysqli_fetch_array($result_news);
                                                                                             <div class="sppb-addon-article "
                                                                                                  style=""><a
                                                                                                         class="sppb-article-img-wrap"
-                                                                                                        href="index.php/entertainment/what-sick-desperation-in-your-laugh-we-have.html"
+                                                                                                        href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
                                                                                                         itemprop="url"><img
                                                                                                             class="sppb-img-responsive"
                                                                                                             src="../img/<?=$news[3]?>"
-                                                                                                            alt="What sick desperation in your laugh? We have"
+                                                                                                            alt=""
                                                                                                             itemprop="thumbnailUrl"></a>
                                                                                                 <div class="sppb-article-info-wrap">
                                                                                                     <p class="sppb-meta-category">
-                                                                                                        <a href="index.php/entertainment.html"
+                                                                                                        <a href="category.php?id=<?=$news[4]?>"
                                                                                                            itemprop="genre"><?=$cat[0]?></a>
                                                                                                     </p>
                                                                                                     <h3>
-                                                                                                        <a href="index.php/entertainment/what-sick-desperation-in-your-laugh-we-have.html"
+                                                                                                        <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
                                                                                                            itemprop="url"><?=$news[1]?></a>
                                                                                                     </h3>
                                                                                                     <div class="sppb-article-introtext">
@@ -2350,19 +2350,19 @@ $news = mysqli_fetch_array($result_news);
                                                                                             <div class="sppb-addon-article "
                                                                                                  style=""><a
                                                                                                         class="sppb-article-img-wrap"
-                                                                                                        href="index.php/entertainment/what-sick-desperation-in-your-laugh-we-have.html"
+                                                                                                        href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
                                                                                                         itemprop="url"><img
                                                                                                             class="sppb-img-responsive"
                                                                                                             src="../img/<?=$news[3]?>"
-                                                                                                            alt="What sick desperation in your laugh? We have"
+                                                                                                            alt=""
                                                                                                             itemprop="thumbnailUrl"></a>
                                                                                                 <div class="sppb-article-info-wrap">
                                                                                                     <p class="sppb-meta-category">
-                                                                                                        <a href="index.php/entertainment.html"
+                                                                                                        <a href="category.php?id=<?=$news[4]?>"
                                                                                                            itemprop="genre"><?=$cat[0]?></a>
                                                                                                     </p>
                                                                                                     <h3>
-                                                                                                        <a href="index.php/entertainment/what-sick-desperation-in-your-laugh-we-have.html"
+                                                                                                        <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
                                                                                                            itemprop="url"><?=$news[1]?></a>
                                                                                                     </h3>
                                                                                                     <div class="sppb-article-introtext">
@@ -2382,25 +2382,6 @@ $news = mysqli_fetch_array($result_news);
                                                                                 <div class="sppb-col-sm-4 intro-items"
                                                                                      has-scrollbar>
 
-                                                                                    <?php
-                                                                                    $news = mysqli_fetch_array($result_news);
-                                                                                    $category = $dbOperation->getCategoryByID($news[4],'en');
-                                                                                    $cat = mysqli_fetch_array($category);
-                                                                                    ?>
-                                                                                    <div class="intro-item  sppb-col-sm-12">
-                                                                                        <div class="sppb-addon-article "
-                                                                                             style="">
-                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                <p class="sppb-meta-category">
-                                                                                                    <a href="index.php/sports.html"
-                                                                                                       itemprop="genre"><?=$cat[0]?></a>
-                                                                                                </p>
-                                                                                                <h3>
-                                                                                                    <a href="index.php/sports/what-sick-desperation-in-your-laugh-we-have.html">
-                                                                                                       <?=$news[1]?></a></h3>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
 
 
                                                                                     <?php
@@ -2413,15 +2394,17 @@ $news = mysqli_fetch_array($result_news);
                                                                                              style="">
                                                                                             <div class="sppb-article-info-wrap">
                                                                                                 <p class="sppb-meta-category">
-                                                                                                    <a href="index.php/sports.html"
+                                                                                                    <a href="category.php?id=<?=$news[4]?>"
                                                                                                        itemprop="genre"><?=$cat[0]?></a>
                                                                                                 </p>
                                                                                                 <h3>
-                                                                                                    <a href="index.php/sports/what-sick-desperation-in-your-laugh-we-have.html">
+                                                                                                    <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>">
                                                                                                         <?=$news[1]?></a></h3>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
+
+
 
                                                                                     <?php
                                                                                     $news = mysqli_fetch_array($result_news);
@@ -2433,15 +2416,18 @@ $news = mysqli_fetch_array($result_news);
                                                                                              style="">
                                                                                             <div class="sppb-article-info-wrap">
                                                                                                 <p class="sppb-meta-category">
-                                                                                                    <a href="index.php/sports.html"
+                                                                                                    <a href="category.php?id=<?=$news[4]?>"
                                                                                                        itemprop="genre"><?=$cat[0]?></a>
                                                                                                 </p>
                                                                                                 <h3>
-                                                                                                    <a href="index.php/sports/what-sick-desperation-in-your-laugh-we-have.html">
+                                                                                                    <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>">
                                                                                                         <?=$news[1]?></a></h3>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
+
+
+
 
                                                                                     <?php
                                                                                     $news = mysqli_fetch_array($result_news);
@@ -2453,15 +2439,18 @@ $news = mysqli_fetch_array($result_news);
                                                                                              style="">
                                                                                             <div class="sppb-article-info-wrap">
                                                                                                 <p class="sppb-meta-category">
-                                                                                                    <a href="index.php/sports.html"
+                                                                                                    <a href="category.php?id=<?=$news[4]?>"
                                                                                                        itemprop="genre"><?=$cat[0]?></a>
                                                                                                 </p>
                                                                                                 <h3>
-                                                                                                    <a href="index.php/sports/what-sick-desperation-in-your-laugh-we-have.html">
+                                                                                                    <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>">
                                                                                                         <?=$news[1]?></a></h3>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
+
+
+
 
                                                                                     <?php
                                                                                     $news = mysqli_fetch_array($result_news);
@@ -2473,15 +2462,18 @@ $news = mysqli_fetch_array($result_news);
                                                                                              style="">
                                                                                             <div class="sppb-article-info-wrap">
                                                                                                 <p class="sppb-meta-category">
-                                                                                                    <a href="index.php/sports.html"
+                                                                                                    <a href="category.php?id=<?=$news[4]?>"
                                                                                                        itemprop="genre"><?=$cat[0]?></a>
                                                                                                 </p>
                                                                                                 <h3>
-                                                                                                    <a href="index.php/sports/what-sick-desperation-in-your-laugh-we-have.html">
+                                                                                                    <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>">
                                                                                                         <?=$news[1]?></a></h3>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
+
+
+
 
                                                                                     <?php
                                                                                     $news = mysqli_fetch_array($result_news);
@@ -2493,35 +2485,86 @@ $news = mysqli_fetch_array($result_news);
                                                                                              style="">
                                                                                             <div class="sppb-article-info-wrap">
                                                                                                 <p class="sppb-meta-category">
-                                                                                                    <a href="index.php/sports.html"
+                                                                                                    <a href="category.php?id=<?=$news[4]?>"
                                                                                                        itemprop="genre"><?=$cat[0]?></a>
                                                                                                 </p>
                                                                                                 <h3>
-                                                                                                    <a href="index.php/sports/what-sick-desperation-in-your-laugh-we-have.html">
+                                                                                                    <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>">
                                                                                                         <?=$news[1]?></a></h3>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
 
+
+
+
                                                                                     <?php
                                                                                     $news = mysqli_fetch_array($result_news);
                                                                                     $category = $dbOperation->getCategoryByID($news[4],'en');
                                                                                     $cat = mysqli_fetch_array($category);
-                                                                                    Opinions        ?>
+                                                                                    ?>
                                                                                     <div class="intro-item  sppb-col-sm-12">
                                                                                         <div class="sppb-addon-article "
                                                                                              style="">
                                                                                             <div class="sppb-article-info-wrap">
                                                                                                 <p class="sppb-meta-category">
-                                                                                                    <a href="index.php/sports.html"
+                                                                                                    <a href="category.php?id=<?=$news[4]?>"
                                                                                                        itemprop="genre"><?=$cat[0]?></a>
                                                                                                 </p>
                                                                                                 <h3>
-                                                                                                    <a href="index.php/sports/what-sick-desperation-in-your-laugh-we-have.html">
+                                                                                                    <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>">
                                                                                                         <?=$news[1]?></a></h3>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
+
+
+
+
+                                                                                    <?php
+                                                                                    $news = mysqli_fetch_array($result_news);
+                                                                                    $category = $dbOperation->getCategoryByID($news[4],'en');
+                                                                                    $cat = mysqli_fetch_array($category);
+                                                                                    ?>
+                                                                                    <div class="intro-item  sppb-col-sm-12">
+                                                                                        <div class="sppb-addon-article "
+                                                                                             style="">
+                                                                                            <div class="sppb-article-info-wrap">
+                                                                                                <p class="sppb-meta-category">
+                                                                                                    <a href="category.php?id=<?=$news[4]?>"
+                                                                                                       itemprop="genre"><?=$cat[0]?></a>
+                                                                                                </p>
+                                                                                                <h3>
+                                                                                                    <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>">
+                                                                                                        <?=$news[1]?></a></h3>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+
+
+
+                                                                                    <?php
+                                                                                    $news = mysqli_fetch_array($result_news);
+                                                                                    $category = $dbOperation->getCategoryByID($news[4],'en');
+                                                                                    $cat = mysqli_fetch_array($category);
+                                                                                    ?>
+                                                                                    <div class="intro-item  sppb-col-sm-12">
+                                                                                        <div class="sppb-addon-article "
+                                                                                             style="">
+                                                                                            <div class="sppb-article-info-wrap">
+                                                                                                <p class="sppb-meta-category">
+                                                                                                    <a href="category.php?id=<?=$news[4]?>"
+                                                                                                       itemprop="genre"><?=$cat[0]?></a>
+                                                                                                </p>
+                                                                                                <h3>
+                                                                                                    <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>">
+                                                                                                        <?=$news[1]?></a></h3>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+
                                                                                 </div>
                                                                             </div>
                                                                         </div>

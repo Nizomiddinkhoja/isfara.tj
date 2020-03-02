@@ -241,7 +241,7 @@
                                         </div>
                                     </div></li>
 
-                                <li class="sp-menu-item"><a href="contact.php">Contact</a></li>
+                                <li class="sp-menu-item"><a href="contact.php">Electronic queue</a></li>
                             </ul>
                         </nav>
                     </div>
