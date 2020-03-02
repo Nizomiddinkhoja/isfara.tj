@@ -360,9 +360,15 @@
                     <div class="row">
                         <div id="sp-bottom1" class="col-3 col-sm-4 col-lg-4 ">
                             <div class="sp-column ">
-                                <div class="sp-module "><h3 class="sp-module-title">Официальный сайт исполнительный орган городского правительства Исфара</h3>
+                                <div class="sp-module "><h3 class="sp-module-title">Информация про Исфару</h3>
                                     <div class="sp-module-content">
-                                        <p>Официальный сайт исполнительный орган городского правительства Исфара</p>
+                                        <p style="line-height: inherit;">Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара.
+                                            Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара.
+                                            Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара.
+                                            Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара.
+                                            Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара.
+                                            Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара.
+                                            Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара</p>
                                     </div>
                                 </div>
                             </div>
@@ -386,18 +392,19 @@
                         </div>
                         <div id="sp-bottom3" class="col-3 col-sm-4 col-lg-4 ">
                             <div class="sp-column ">
-                                <div class="sp-module "><h3 class="sp-module-title">Politics</h3>
+                                <div class="sp-module "><h3 class="sp-module-title">Официальные сайты Республики Таджикистан</h3>
                                     <div class="sp-module-content">
                                         <ul class="menu">
-                                            <li class="item-190"><a href="#">Political Polarization</a></li>
-                                            <li class="item-191"><a href="#">Political Movement</a></li>
-                                            <li class="item-192"><a href="#">Political Journalism</a></li>
-                                            <li class="item-193"><a href="#">Libertarian Aarchism</a></li>
-                                            <li class="item-194"><a href="#">Human Rights</a></li>
-                                            <li class="item-195"><a href="#">Action Alert</a></li>
-                                            <li class="item-196"><a href="#">Anti-incumbency</a></li>
-                                            <li class="item-197"><a href="#">Body Politic</a></li>
-                                            <li class="item-198"><a href="#">Political Crisis</a></li>
+                                            <li class="item-190"><a href="http://www.president.tj/">Официальный сайт Президента Республики Таджикистан</a></li>
+                                            <li class="item-191"><a href="http://www.parlament.tj/">Официальный сайт Парламента Республики Таджикистан</a></li>
+                                            <li class="item-192"><a href="http://www.stat.tj/">Официальный сайт Агентства по статистике при Президенте Республики Таджикистан</a></li>
+                                            <li class="item-193"><a href="http://www.khovar.tj/">Официальный сайт Национального информационного агентства Таджикистана</a></li>
+                                            <li class="item-194"><a href="http://www.fezsughd.tj/">Официальный сайт СЭЗ Согдийской области</a></li>
+                                            <li class="item-195"><a href="http://www.khujand.tj/">Официальный сайт города Худжанд</a></li>
+                                            <li class="item-196"><a href="http://www.buston.tj/">Официальный сайт города Бустон</a></li>
+                                            <li class="item-197"><a href="http://www.konibodom.tj/">Официальный сайт города Канибадам</a></li>
+                                            <li class="item-198"><a href="http://devashtich.tj/">Официальный сайт города Деваштич</a></li>
+                                            <li class="item-198"><a href="http://sugd.tj/">Официальный сайт исполнительный орган правительства области Согд</a></li>
                                         </ul>
                                     </div>
                                 </div>

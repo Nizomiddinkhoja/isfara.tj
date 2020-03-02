@@ -360,9 +360,15 @@
                     <div class="row">
                         <div id="sp-bottom1" class="col-3 col-sm-4 col-lg-4 ">
                             <div class="sp-column ">
-                                <div class="sp-module "><h3 class="sp-module-title">Official website executive body of the city government of Isfara</h3>
+                                <div class="sp-module "><h3 class="sp-module-title">Information about Isfara</h3>
                                     <div class="sp-module-content">
-                                        <p>Official website executive body of the city government of Isfara</p>
+                                        <p>Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара.
+                                            Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара.
+                                            Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара.
+                                            Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара.
+                                            Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара.
+                                            Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара.
+                                            Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара</p>
                                     </div>
                                 </div>
                             </div>
@@ -386,18 +392,19 @@
                         </div>
                         <div id="sp-bottom3" class="col-3 col-sm-4 col-lg-4 ">
                             <div class="sp-column ">
-                                <div class="sp-module "><h3 class="sp-module-title">Politics</h3>
+                                <div class="sp-module "><h3 class="sp-module-title">Official website of the Republic of Tajikistan</h3>
                                     <div class="sp-module-content">
                                         <ul class="menu">
-                                            <li class="item-190"><a href="#">Political Polarization</a></li>
-                                            <li class="item-191"><a href="#">Political Movement</a></li>
-                                            <li class="item-192"><a href="#">Political Journalism</a></li>
-                                            <li class="item-193"><a href="#">Libertarian Aarchism</a></li>
-                                            <li class="item-194"><a href="#">Human Rights</a></li>
-                                            <li class="item-195"><a href="#">Action Alert</a></li>
-                                            <li class="item-196"><a href="#">Anti-incumbency</a></li>
-                                            <li class="item-197"><a href="#">Body Politic</a></li>
-                                            <li class="item-198"><a href="#">Political Crisis</a></li>
+                                            <li class="item-190"><a href="http://www.president.tj/">Official site of the President of the Republic of Tajikistan</a></li>
+                                            <li class="item-191"><a href="http://www.parlament.tj/">Официальный сайт Парламента Республики Таджикистан</a></li>
+                                            <li class="item-192"><a href="http://www.stat.tj/">Official website of the Parliament of the Republic of Tajikistan</a></li>
+                                            <li class="item-193"><a href="http://www.khovar.tj/">Official website of the National News Agency of Tajikistan</a></li>
+                                            <li class="item-194"><a href="http://www.fezsughd.tj/">Official website of the FEZ of Sughd region</a></li>
+                                            <li class="item-195"><a href="http://www.khujand.tj/">Official site of Khujand</a></li>
+                                            <li class="item-196"><a href="http://www.buston.tj/">Official site of Buston</a></li>
+                                            <li class="item-197"><a href="http://www.konibodom.tj/">Official site of Kanibadam</a></li>
+                                            <li class="item-198"><a href="http://devashtich.tj/">Official site of Devashtich</a></li>
+                                            <li class="item-198"><a href="http://sugd.tj/">Official site executive body of the government of the region of Sogd</a></li>
                                         </ul>
                                     </div>
                                 </div>
