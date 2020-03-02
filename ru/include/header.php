@@ -3,11 +3,93 @@
         <div class="container-inner">
             <div class="row">
 
+
                 <div id="sp-logo" class="col-sm-6 col-md-6 col-lg-4 ">
                     <div class="sp-column "><a id="offcanvas-toggler" aria-label="Navigation"
                                                class="offcanvas-toggler-left d-block d-lg-none" href="#"><span
                                 class="fa fa-bars" aria-hidden="true" title="Navigation"></span></a>
-                        <div class="logo" style="    text-align: -webkit-center;"><a href="./index.php" ><img class="logo-image"
+                        <div class="logo" style="    text-align: -webkit-center;">
+                            <div class="sp-module main-megamenu">
+                                <div class="sp-module-content">
+                                    <ul class="menu" style="    min-width: inherit; height: inherit; text-align: left;">
+                                        <li class="item-101"><a
+                                                href="#">Главная</a>
+                                        </li>
+                                        <li class="item-115 menu-deeper menu-parent"><a href="category.php?id=1">Экономика<span
+                                                    class="menu-toggler"></span></a>
+                                            <ul class="menu-child" style="min-width: 100%;">
+                                                <li class="sp-menu-item"><a href="category.php?id=2">Занятости населения</a>
+                                                </li>
+                                                <li class="sp-menu-item"><a href="category.php?id=3">Эмиграция</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="item-222 menu-deeper menu-parent"><a href="category.php?id=4">Инвестиция<span
+                                                    class="menu-toggler"></span></a>
+
+                                            <ul class="menu-child" style="min-width: 100%;">
+                                                <li class="sp-menu-item"><a href="category.php?id=5">Отдел внешнеэкономических связей</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=6">Эмиграция</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=7">Консультативный совет</a>
+                                                </li>
+                                                <li class="sp-menu-item"><a href="category.php?id=8">Исфара Гайд</a>
+                                                </li>
+                                                <li class="sp-menu-item"><a href="category.php?id=9">Инвесторы</a>
+                                                </li>
+                                                <li class="sp-menu-item"><a href="category.php?id=10">Партнеры по развитию</a>
+                                                </li>
+                                                <li class="sp-menu-item"><a href="category.php?id=11">Соглашения</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="item-223 menu-deeper menu-parent"><a href="category.php?id=12">Сельское хозяйство<span
+                                                    class="menu-toggler"></span></a>
+                                            <ul class="menu-child" style="min-width: 100%;">
+                                                <li class="sp-menu-item"><a href="category.php?id=13">Садоводство</a>
+                                                </li>
+                                                <li class="sp-menu-item"><a href="category.php?id=14">Растениеводство</a>
+                                                </li>
+                                                <li class="sp-menu-item"><a href="category.php?id=15">Разведение животных</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=16">Орошение</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="item-224 menu-deeper menu-parent"><a href="category.php?id=17">Социальное<span
+                                                    class="menu-toggler"></span></a>
+                                            <ul class="menu-child" style="min-width: 100%;">
+                                                <li class="sp-menu-item"><a href="category.php?id=18">Образование</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=19">Здравоохранение</a>
+                                                </li>
+                                                <li class="sp-menu-item"><a href="category.php?id=20">Отдел для женщин</a>
+                                                </li>
+                                                <li class="sp-menu-item"><a href="category.php?id=21">Молодёжь</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=22">Культура</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="item-217 menu-deeper menu-parent"><a href="category.php?id=23">Инфраструктура<span
+                                                    class="menu-toggler"></span></a>
+                                            <ul class="menu-child" style="min-width: 100%;">
+                                                <li class="sp-menu-item"><a href="category.php?id=24">Транспортные услуги</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=25">ШСА</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=26">Архитектор</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=27">Дорога</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=28">Электричество</a></li>
+                                                <li class="sp-menu-item"><a href="category.php?id=29">Охрана окружающей среды</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="item- menu-deeper menu-parent"><a
+                                                href="category.php?id=30">Путешествие<span
+                                                    class="menu-toggler"></span></a>
+                                            <ul class="menu-child" style="min-width: 100%;">
+                                                <li class="sp-menu-item"><a href="category.php?id=31">История Исфары</a>
+                                                </li>
+                                                <li class="sp-menu-item"><a href="category.php?id=32">Туристические зоны</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li class="item-108"><a href="contact.php">Электронная очередь</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="./index.php" ><img class="logo-image"
                                                                      src="../img/logo.png"
 
                                                                      alt="Официальный сайт исполнительный орган правительства Исфары" style="DISPLAY: -webkit-inline-box;">Исполнительный орган правительство г.Исфары</a></div>
@@ -156,7 +238,7 @@
                                         </div>
                                     </div></li>
 
-                                <li class="sp-menu-item"><a href="contact.php">Контакт</a></li>
+                                <li class="sp-menu-item"><a href="contact.php">"Электронная очередь"</a></li>
                             </ul>
                         </nav>
                     </div>
