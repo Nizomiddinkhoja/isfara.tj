@@ -107,10 +107,10 @@
                         <div class="sp-module">
                             <div class="sp-module-content">
                                     <div class="icon-top-wrapper">
-                                        <form method="post" class="search-form">
+                                        <form method="post" class="search-form" action="search_result.php">
                                             <div class="form-group d-flex align-items-center">
-                                                <input placeholder="Поиск" class="form-control">
-                                                <i class="fa fa-search" style="padding: 10px;cursor:pointer"></i>
+                                                <input placeholder="Поиск" name="search_text" class="form-control">
+                                                <button style="border: none; background: #ffffff; height: 90%; margin-right: 10px" class="fa fa-search"type="submit" name="submit">
                                             </div>
                                         </form>
                                     </div>
@@ -245,7 +245,11 @@
                                         </div>
                                     </div></li>
 
+<<<<<<< HEAD
                                 <li class="sp-menu-item"><a href="contact.php">Контакты</a></li>
+=======
+                                <li class="sp-menu-item"><a href="contact.php">Электронная очередь</a></li>
+>>>>>>> d2ad5acfcef8dc07ef1a13f574218c20bf41a419
                             </ul>
                         </nav>
                     </div>

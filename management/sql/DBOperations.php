@@ -708,6 +708,16 @@ WHERE  `status`=1  ORDER BY `id` DESC Limit $offset, $no_of_records_per_page";
         $sql = "SELECT COUNT(DISTINCT userhash) FROM visitors ";
         return mysqli_query($com->getDb(), $sql);
     }
+    public function search($text){
+        $com = new DbConnect();
+        $sql = "SELECT c.name, t.id_menu, t.title, t.description, l.name FROM texts t JOIN content c ON c.`id`=t.`id_content` JOIN locale l ON t.`locale`=l.`id` WHERE t.`title` LIKE '%$text%'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+    public function getCategoryID($newsID){
+        $com = new DbConnect();
+        $sql = "SELECT category_id, n.date,n.img FROM news n WHERE id=$newsID";
+        return mysqli_query($com->getDb(), $sql);
+    }
 
     public function  getJamoatsInfo($locale){
         $com = new DbConnect();
