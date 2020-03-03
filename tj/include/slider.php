@@ -29,7 +29,7 @@ $dbOperation = new DBOperations();
                                                                                     <div class="container">
                                                                                         <div class="sppb-article-info-wrap">
                                                                                             <h3>
-                                                                                                <a href="index.php/categories/newsberg/politics/the-exact-same-briefcase-soap-sorry-i-make.html"
+                                                                                                <a href="#"
                                                                                                    itemprop="url">' . $row[1] . '</a>
                                                                                             </h3>
                                                                                         </div>

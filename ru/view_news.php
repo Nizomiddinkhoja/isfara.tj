@@ -687,7 +687,7 @@ if(isset($_GET["id"])){
 
                                         <div class="col-sm-3 col-sm-pull-1">
                                             <div class="authors-posts-wrap">
-                                                <h3>Хабарҳои нав</h3>
+                                                <h3>Новости</h3>
                                                 <ul class="author-post-items">
                                                     <?php
                                                     $result = $dbOperations->get_news('ru');

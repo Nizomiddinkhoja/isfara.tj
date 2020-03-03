@@ -28,7 +28,7 @@
 
                                             <ul class="menu-child" style="min-width: 100%;">
                                                 <li class="sp-menu-item"><a href="category.php?id=5">Отдел внешнеэкономических связей</a></li>
-                                                <li class="sp-menu-item"><a href="category.php?id=6">Эмиграция</a></li>
+<!--                                                <li class="sp-menu-item"><a href="category.php?id=6">Эмиграция</a></li>-->
                                                 <li class="sp-menu-item"><a href="category.php?id=7">Консультативный совет</a>
                                                 </li>
                                                 <li class="sp-menu-item"><a href="category.php?id=8">Исфара Гайд</a>
