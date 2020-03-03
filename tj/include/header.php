@@ -85,6 +85,15 @@
                                             </ul>
                                         </li>
                                         <li class="item-108"><a href="contact.php">Қабулгоҳи электронӣ</a></li>
+                                        <li class="item- menu-deeper menu-parent"><a>Забон</a><span
+                                                class="menu-toggler"></span>
+                                            <ul class="menu-child" style="min-width: 100%;">
+                                                <li class="sp-menu-item"><a href="../tj/index.php">Тоҷикӣ</a></li>
+                                                <li class="sp-menu-item"><a href="../ru/index.php">Русский</a></li>
+                                                <li class="sp-menu-item"><a href="../en/index.php">English</a></li>
+
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>

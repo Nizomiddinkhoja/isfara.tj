@@ -3,28 +3,19 @@ include("../management/sql/DBOperations.php");
 $dbOperations = new DBOperations();
 include("../counter.php");
 
-if(isset($_GET["id"])){
-    $id = $_GET["id"];
-    $category_id = $_GET["category"];
-    $news = mysqli_fetch_array($dbOperations->get_edit_news_tj($id));
-
-
-    $category = mysqli_fetch_array($dbOperations->getCategoryByID($category_id, "tj"));
-
-}
 ?>
 <!doctype html>
 <html lang="tj" dir="ltr">
 
+<!-- Mirrored from demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Feb 2020 09:15:58 GMT -->
+<!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=utf-8"/><!-- /Added by HTTrack -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <base/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta name="author" content="Kawshar Ahmed"/>
-    <meta name="generator" content="Joomla! - Open Source Content Management"/>
-    <title><?=$news[1]?></title>
+    <title>Ҷамоатҳо</title>
     <link href="../img/favicon.ico" rel="shortcut icon"/>
     <link href="components/com_sppagebuilder/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="components/com_sppagebuilder/assets/css/animate.min.css" rel="stylesheet" type="text/css"/>
@@ -52,7 +43,10 @@ if(isset($_GET["id"])){
     <link href="modules/mod_sp_weather/assets/css/flat.css" rel="stylesheet" type="text/css"/>
 
     <link href="templates/newsberg/css/main.css" rel="stylesheet" type="text/css"/>
-
+    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../gallary/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="../gallary/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="../gallary/css/style.css" rel="stylesheet">
     <style type="text/css">
         .sp-page-builder .page-content #section-id-1573800678987 {
             padding-top: 10px;
@@ -528,196 +522,72 @@ if(isset($_GET["id"])){
 <div class="body-wrapper">
     <div class="body-innerwrapper">
         <?php
-            include("include/header.php");
+        include("include/header.php");
         ?>
-
-        <section id="sp-main-body">
-            <div class="container">
-                <div class="container-inner">
-                    <div class="row">
-                        <main id="sp-component" class="col-lg-12 " role="main">
-                            <div class="sp-column ">
-                                <div id="system-message-container">
-                                </div>
-                                <div class="article-details">
-                                    <meta itemprop="inLanguage" content="en-GB">
-                                    <div class="newsberg-details-img-wrapper">
-                                        <div class="img-top-wrap">
-                                            <div class="article-info">
-
-                                                <span class="category-name" title="Категория: <?=$category[0]?>">
-                                                    <a href="category.php?id=<?=$category_id?>"> <?=$category[0]?></a>
-                                                </span>
-                                                <span class="published" title="Нашр шудааст: <?=$news[5]?>">
-                                                    <time><?=$news[5]?></time>
-                                                </span>
-<!--                                                <span class="hits">-->
-<!--                                                    <span class="fa fa-eye-o" aria-hidden="true"></span>-->
-<!--                                                    <meta itemprop="interactionCount" content="UserPageVisits:57">Hits: 57</span>-->
-
-
-                                            </div>
-                                            <div class="article-header">
-                                                <h1 itemprop="headline">
-                                                    <?=$news[1]?> </h1>
-                                            </div>
-                                            <div class="article-info">
-                                                <span class="category-name" title="Категория:  <?=$category[0]?>">
-                                                    <a href="category.php?id=<?=$category_id?>"> <?=$category[0]?></a>
-                                                </span>
-                                                <span class="published" title="Нашр шудааст:  <?=$news[5]?>">
-                                                    <time><?=$news[5]?></time>
-                                                </span>
-<!--                                                <span class="hits">-->
-<!--                                                    <span class="fa fa-eye-o" aria-hidden="true"></span>-->
-<!--                                                    <meta itemprop="interactionCount" content="UserPageVisits:57">Hits: 57</span>-->
-                                            </div>
-                                        </div>
-                                        <div class="article-full-image">
-                                            <img src="../img/<?=$news[3]?>">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-1 offset-sm-1">
-                                            <div class="article-ratings-social-share d-flex justify-content-end">
-                                                <div class="mr-auto align-self-center">
-                                                </div>
-                                                <div>
-                                                    <div class="article-social-share">
-                                                        <div class="social-share-icon">
-                                                            <ul>
-                                                                <li>
-                                                                    <a class="facebook"
-                                                                       onClick="window.open('https://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                       href="https://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up"
-                                                                       title="Facebook">
-                                                                        <span class="fa fa-facebook"></span>
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a class="twitter" title="Twitter"
-                                                                       onClick="window.open('https://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up&amp;text=For%20you?%20What?%20Being%20clever.%20Great.%20Keep%20it%20up.','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                       href="https://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up&amp;text=For%20you?%20What?%20Being%20clever.%20Great.%20Keep%20it%20up.">
-                                                                        <span class="fa fa-twitter"></span>
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a class="linkedin" title="LinkedIn"
-                                                                       onClick="window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;"
-                                                                       href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up">
-                                                                        <span class="fa fa-linkedin-square"></span>
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="article-can-edit d-flex flex-wrap justify-content-between">
-                                            </div>
-                                            <div class="article-info">
-
-                                                <span class="category-name" title="Категория: Business">
-                                                    <a href="">Business</a>
-                                                </span>
-                                                <span class="published" title="Нашр шудааст: <?=$news[5]?>">
-                                                    <time><?=$news[5]?></time>
-                                                </span>
-                                                <span class="hits">
-<!--                                                    <span class="fa fa-eye-o" aria-hidden="true"></span>-->
-<!--                                                    <meta itemprop="interactionCount" content="UserPageVisits:57">Hits: 57</span>-->
-                                            </div>
-                                            <div itemprop="articleBody">
-                                                <div id="sp-page-builder"
-                                                     class="sp-page-builder sppb-article-page-wrapper">
-                                                    <div class="page-content">
-                                                        <section id="section-id-1573800678987" class="sppb-section">
-                                                            <div class="sppb-row-container">
-                                                                <div class="sppb-row">
-                                                                    <div class="sppb-col-md-12"
-                                                                         id="column-wrap-id-1573800678986">
-                                                                        <div id="column-id-1573800678986"
-                                                                             class="sppb-column">
-                                                                            <div class="sppb-column-addons">
-                                                                                <div id="sppb-addon-wrapper-1573808445338"
-                                                                                     class="sppb-addon-wrapper">
-                                                                                    <div id="sppb-addon-1573808445338"
-                                                                                         class="clearfix ">
-                                                                                        <div class="sppb-addon sppb-addon-text-block  ">
-                                                                                            <div class="sppb-addon-content">
-                                                                                                <?=$news[4]?>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </section>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <ul class="pager pagenav">
-                                                <li class="previous">
-                                                    <a class="hasTooltip"
-                                                       href="view_news.php?id=<?=$id>1?$id-1:''?>&category=<?=$category_id?>"
-                                                       rel="prev">
-                                                        <span class="icon-chevron-left" aria-hidden="true"></span> <span
-                                                                aria-hidden="true">Кафо</span> </a>
-                                                </li>
-                                                <li class="next">
-                                                    <a class="hasTooltip"
-                                                    href="view_news.php?id=<?=$id+1?>&category=<?=$category_id?>">
-                                                        <span aria-hidden="true">Пеш</span> <span
-                                                                class="icon-chevron-right" aria-hidden="true"></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-
-                                        <div class="col-sm-3 col-sm-pull-1">
-                                            <div class="authors-posts-wrap">
-                                                <h3>Хабарҳои нав</h3>
-                                                <ul class="author-post-items">
-                                                    <?php
-                                                    $result = $dbOperations->get_news('ru');
-                                                    for($i=1;$i<=5;$i++){
-
-                                                        if($row = mysqli_fetch_array($result)){
-                                                            if($row[0]!=$id) {
-                                                                ?>
-                                                                <li>
-                                                                    <a href="view_news.php?id=<?= $row[0]?>&category=<?=$category_id?>">
-                                                                        <h3><?= $row[1] ?></h3>
-                                                                    </a>
-                                                                    <p>
-                                                                    <p><?= $row[2] ?></p>
-                                                                    <p><?= $row[5] ?></p>
-                                                                </li>
-                                                                <?
-                                                            }
-                                                        }
-
-
-                                                    }
-                                                    ?>
-
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </main>
+        <section id="sp-section-3">
+            <div class="row">
+                <div id="sp-title" class="col-lg-12 ">
+                    <div class="sp-column ">
+                        <div class="sp-page-title">
+                            <div class="container" style="text-align: center;"><h2 class="sp-page-title-heading">
+                                    Ҷамоатҳо</h2></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+        <section id="sp-main-body">
+            <div class="container">
+                <div class="container-inner">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="article-info" style="display: block;">
+                                <section id="portfolio" style="padding: 20px;">
+                                    <div id="sp-title" class="col-lg-12 ">
+                                        <div class="row portfolio-container">
+                                            <?php
+                                            $jamoats = $dbOperations-> getJamoats('tj');
+                                            $jamoat = mysqli_fetch_array($jamoats);
+
+
+                                            do {
+                                                echo
+                                                    '            
+                                                                <div class="col-lg-3 col-md-6 portfolio-item filter-app wow fadeInUp">
+                                                                    <div class="portfolio-wrap">
+                                                                        <figure>                        
+                        <a href="view_jamoats.php?id=' . $jamoat[0] . '"   data-title="' . $gal[1] . '"   style="left: calc(0% ); top: calc(0% ); visibility: inherit; border-radius: inherit; width: 100%; background: 0; */">
+                        <img src="../img/' . $jamoat[3] . '" class="img-fluid" alt="" style="    max-width: 100%;  max-height: 900%; margin:0 auto;display: table; height: 700%;    max-height: 700%;">
+                        </a>
+                    </figure>
+                                                    
+                                                                        <div class="portfolio-info" style="height: inherit; padding: 10px; margin-bottom: 1px;">
+                                                                            <h4 style="line-height: normal;"><a href="#">' . $jamoat[1] . '</a></h4>
+                                                                            <p>' . $jamoat[2] . '</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                ';
+                                            } while ($jamoat = mysqli_fetch_array($jamoats))
+                                            ?>
+
+                                        </div>
+                                    </div>
+
+                                </section>
+
+                                <div class="col-12">
+                                    <div class="row">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <?php
         include("include/footer.php");
         ?>
@@ -726,5 +596,6 @@ if(isset($_GET["id"])){
 
 </body>
 
+<script src="../gallary/lib/lightbox/js/lightbox.min.js"></script>
 <!-- Mirrored from demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Feb 2020 09:15:58 GMT -->
 </html>

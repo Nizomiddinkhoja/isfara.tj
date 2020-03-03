@@ -582,8 +582,7 @@ include("../counter.php");
                                                                     <div class="portfolio-wrap">
                                                                         <figure>
                         
-                        <a href="../img/'.$gal[2].'" data-lightbox="portfolio" data-title="'.$gal[1].'" class="link-preview" style="left: calc(0% ); top: calc(0% ); visibility: inherit; border-radius: inherit; width: 100%; background: 0; */"><img src="../img/'.$gal[2].'" class="img-fluid" alt="" style="    max-width: 100%;  max-height: 900%; margin:0 auto;display: table; height: 700%;    max-height: 700%;"></a>
-
+                       <a href="../img/'.$gal[2].'" data-lightbox="portfolio" data-title="'.$gal[1].'" class="link-preview" style="left: calc(0% ); top: calc(0% ); visibility: inherit; border-radius: inherit; width: 100%; background: 0; */"><img src="../img/'.$gal[2].'" class="img-fluid" alt="" style="    max-width: 100%;  max-height: 900%; margin:0 auto;display: table; height: 700%;    max-height: 700%;"></a>
                     </figure>
                                                     
                                                                         <div class="portfolio-info" style="height: inherit; padding: 10px; margin-bottom: 1px;">

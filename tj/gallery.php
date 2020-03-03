@@ -386,7 +386,7 @@ include("../counter.php");
         }
 
         #sp-footer {
-            background-color: #000000;
+            background-color: #1c4dad;
         }
     </style>
     <script src="media/jui/js/jquery.min4f50.js?0fe5eabe7d411626b85406bf464c07ff" type="text/javascript"></script>
@@ -537,7 +537,7 @@ include("../counter.php");
         </section>
         <?php
 
-                                                        $limit = 9;
+                                                        $limit = 12;
                                                         $targetpage = "gallery.php?ru";
 
                                                         $countGallery = $dbOperations->getCountGallery('ru');

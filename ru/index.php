@@ -2748,8 +2748,7 @@ $news = mysqli_fetch_array($result_news);
                                                                                                                                     <div id="sppb-addon-1574411095394"
                                                                                                                                          class="clearfix ">
                                                                                                                                         <div class="sppb-addon sppb-addon-header sppb-text-left">
-                                                                                                                                            <h2 class="sppb-addon-title">
-                                                                                                                                                Структурные единицы
+                                                                                                                                            <h2 class="sppb-addon-title"><a href="jamoats.php">Джамоаты</a>
                                                                                                                                             </h2>
                                                                                                                                         </div>
                                                                                                                                         <style type="text/css">#sppb-addon-1574411095394 {
@@ -2796,36 +2795,22 @@ $news = mysqli_fetch_array($result_news);
                                                                                                                                         <div class="sppb-addon sppb-addon-module ">
                                                                                                                                             <div class="sppb-addon-content">
                                                                                                                                                 <ul class="categories-module mod-list" >
-                                                                                                                                                    <li>
-                                                                                                                                                        <h4 style="font-size: 10pt;">
-                                                                                                                                                            <a href="index.php/categories/explore/today-s-issue.html">
-                                                                                                                                                                Собрание народных депутатов </a>
-                                                                                                                                                        </h4>
-                                                                                                                                                    </li>
-                                                                                                                                                    <li>
-                                                                                                                                                        <h4 style="font-size: 10pt;">
-                                                                                                                                                            <a href="index.php/categories/explore/good-weekend.html">
-                                                                                                                                                                Исполнительный орган</a>
-                                                                                                                                                        </h4>
-                                                                                                                                                    </li>
-                                                                                                                                                    <li>
-                                                                                                                                                        <h4 style="font-size: 10pt;">
-                                                                                                                                                            <a href="index.php/categories/explore/editorial.html">
-                                                                                                                                                                Сооружения </a>
-                                                                                                                                                        </h4>
-                                                                                                                                                    </li>
-                                                                                                                                                    <li>
-                                                                                                                                                        <h4 style="font-size: 10pt;">
-                                                                                                                                                            <a href="index.php/categories/explore/today-s-cartoon.html">
-                                                                                                                                                                Пригородные и сельские джамоаты </a>
-                                                                                                                                                        </h4>
-                                                                                                                                                    </li>
-                                                                                                                                                    <li>
-                                                                                                                                                        <h4  style="font-size: 10pt;">
-                                                                                                                                                            <a href="index.php/categories/explore/today-s-weather.html">
-                                                                                                                                                                Отрасли  </a>
-                                                                                                                                                        </h4>
-                                                                                                                                                    </li>
+                                                                                                                                                    <?php
+
+                                                                                                                                                    $jamoats = $dbOperations->getJamoats( "ru");
+                                                                                                                                                    if(mysqli_num_rows($jamoats)> 0){
+                                                                                                                                                        while ($jamoat = mysqli_fetch_array($jamoats)) {
+                                                                                                                                                            ?>
+                                                                                                                                                            <li>
+                                                                                                                                                                <h4 style="font-size: 10pt;">
+                                                                                                                                                                    <a href="view_jamoats.php?id=<?= $jamoat[0] ?>">
+                                                                                                                                                                        <?= $jamoat[1] ?></a>
+                                                                                                                                                                </h4>
+                                                                                                                                                            </li>
+                                                                                                                                                            <?php
+                                                                                                                                                        }}
+                                                                                                                                                    ?>
+
                                                                                                                                                 </ul>
                                                                                                                                             </div>
                                                                                                                                         </div>

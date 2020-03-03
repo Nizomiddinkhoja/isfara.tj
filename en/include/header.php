@@ -5,9 +5,7 @@
 
 
                 <div id="sp-logo" class="col-sm-6 col-md-6 col-lg-4 ">
-                    <div class="sp-column "><a id="offcanvas-toggler" aria-label="Navigation"
-                                               class="offcanvas-toggler-left d-block d-lg-none" href="#"><span
-                                class="fa fa-bars" aria-hidden="true" title="Navigation"></span></a>
+                    <div class="sp-column ">
                         <div class="logo" style="text-align: center;">
                             <div class="sp-module main-megamenu">
                                 <div class="sp-module-content">
@@ -86,6 +84,15 @@
                                             </ul>
                                         </li>
                                         <li class="item-108"><a href="contact.php">Electronic queue</a></li>
+                                        <li class="item- menu-deeper menu-parent"><a>Language</a><span
+                                                class="menu-toggler"></span>
+                                            <ul class="menu-child" style="min-width: 100%;">
+                                                <li class="sp-menu-item"><a href="../tj/index.php">Тоҷикӣ</a></li>
+                                                <li class="sp-menu-item"><a href="../ru/index.php">Русский</a></li>
+                                                <li class="sp-menu-item"><a href="../en/index.php">English</a></li>
+
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>

@@ -709,4 +709,95 @@ WHERE  `status`=1  ORDER BY `id` DESC Limit $offset, $no_of_records_per_page";
         return mysqli_query($com->getDb(), $sql);
     }
 
+    public function  getJamoatsInfo($locale){
+        $com = new DbConnect();
+        $sql = "SELECT n.id, t.title, t.description  FROM  jamoats_info n JOIN texts t ON t.id_menu = n.id
+JOIN jamoats j on j.id=n.id_jamoats
+JOIN locale l ON l.id=t.locale 
+JOIN content cn ON cn.id=t.id_content 
+WHERE l.name='$locale' AND n.status=1 AND cn.name=\"jamoats_info\" ORDER BY n.id DESC ";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+
+    public function  getJamoats($locale){
+        $com = new DbConnect();
+        $sql = "SELECT n.id, t.title, t.description, n.img  FROM  jamoats n JOIN texts t ON t.id_menu = n.id
+JOIN locale l ON l.id=t.locale 
+JOIN content cn ON cn.id=t.id_content 
+WHERE l.name='$locale' AND n.status=1 AND cn.name='jamoats'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+
+
+    public function addJamoatsInfo($category){
+        $com = new DbConnect();
+
+        $sql = "INSERT INTO `jamoats_info`(`id`, `id_jamoats`, `status`) VALUES (DEFAULT, '$category',  1 )";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function addJamoatsInfoText($title, $description, $locale)
+    {
+        $com = new DbConnect();
+        $sql = "INSERT INTO texts(id_content, id_menu, title, description, body, locale) VALUES((SELECT id FROM content WHERE `name`='jamoats_info'),
+										(SELECT MAX(id) FROM jamoats_info),
+										'$title',
+										'$description',
+										'',
+										(SELECT id FROM locale WHERE `name`='$locale'))";
+
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function deleteJamoatsInfo($id){
+        $com = new DbConnect();
+        $sql = "UPDATE jamoats_info SET status=0 Where id=$id";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function  getEditJamoatInfo($locale,$id){
+        $com = new DbConnect();
+        $sql = "SELECT n.id, t.title, t.description FROM  jamoats_info n JOIN texts t ON t.id_menu = n.id 
+JOIN locale l ON l.id=t.locale 
+JOIN content cn ON cn.id=t.id_content 
+WHERE l.name=\"$locale\" AND n.status=1 AND cn.name=\"jamoats_info\" and n.`id`='$id'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+
+    public function editJamoatInfo($id, $id_jamoats){
+        $com = new DbConnect();
+        $sql = "UPDATE `jamoats_info` SET  `id_jamoats`='$id_jamoats'  WHERE id='$id'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function editJamoatInfoText($id, $title,$description, $locale){
+        $com = new DbConnect();
+        $sql = "UPDATE texts SET `title`='$title',`description`='$description'  WHERE id_menu = '$id' AND locale=(SELECT id FROM locale WHERE `name`='$locale') AND id_content=(SELECT id FROM content WHERE `name`='jamoats_info')";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function  getJamoatsById($id, $locale){
+        $com = new DbConnect();
+        $sql = "SELECT  t.title, t.description FROM  jamoats n JOIN texts t ON t.id_menu = n.id
+JOIN locale l ON l.id=t.locale 
+JOIN content cn ON cn.id=t.id_content 
+WHERE l.name='$locale' AND n.status=1 AND cn.name='jamoats' and n.id='$id'";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function  getJamoatsInfoById($id,$locale){
+        $com = new DbConnect();
+        $sql = "SELECT  t.title, t.description  FROM  jamoats_info n JOIN texts t ON t.id_menu = n.id
+JOIN jamoats j on j.id=n.id_jamoats
+JOIN locale l ON l.id=t.locale
+JOIN content cn ON cn.id=t.id_content
+WHERE l.name='$locale' AND n.status=1 AND cn.name=\"jamoats_info\" and n.id_jamoats='$id' ";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+
+
 }

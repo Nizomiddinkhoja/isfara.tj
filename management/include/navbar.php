@@ -127,6 +127,12 @@
                         <i class="ni ni-button-play text-red"></i> Видео
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/management/jamoats/jamoats.php">
+                        <i class="ni ni-square-pin text-green"></i> Джамоаты
+                    </a>
+                </li>
+<!--                 fa-map-marker-->
             </ul>
 
         </div>
