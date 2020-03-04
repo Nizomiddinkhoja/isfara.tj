@@ -2196,7 +2196,7 @@ $news = mysqli_fetch_array($result_news);
                                                                                          class="clearfix ">
                                                                                         <div class="sppb-addon sppb-addon-header sppb-text-left">
                                                                                             <h2 class="sppb-addon-title">
-                                                                                                Who what?</h2></div>
+                                                                                                Who is?</h2></div>
                                                                                     </div>
                                                                                 </div>
 
@@ -2207,31 +2207,47 @@ $news = mysqli_fetch_array($result_news);
                                                                                         $who_is = mysqli_fetch_array($result)
                                                                                         ?>
                                                                                         <div class="carousel-item active">
-                                                                                            <img src="../img/<?=$who_is[3]?>" alt="<?=$who_is[1]?>" style="width:100%;">
-                                                                                            <div class="carousel-caption d-none d-md-block" style="margin-bottom:  0px; padding-bottom: 0px;">
-                                                                                                <h2 class="display-4" style="margin-bottom:  0px;font-size: 18px;"><?=$who_is[1]?></h2>
-                                                                                                <p class="lead" style="margin-bottom:  0px; font-size: 14px;"><?=$who_is[2]?></p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <?php if(mysqli_num_rows($result)>0) {
-                                                                                        while ($who_is = mysqli_fetch_array($result)) {
-                                                                                            ?>
-                                                                                            <div class="carousel-item">
-                                                                                                <img
-                                                                                                    src="../img/<?= $who_is[3] ?>"
-                                                                                                    alt="<?= $who_is[1] ?>"
-                                                                                                    style="width:100%;">
-                                                                                                <div
-                                                                                                        class="carousel-caption d-none d-md-block"
-                                                                                                    style="margin-bottom:  0px; padding-bottom: 0px;">
+                                                                                            <a
+                                                                                                    data-toggle="modal"
+                                                                                                    data-target="#exampleModalLong<?= $who_is[0] ?>"
+                                                                                                    style="cursor: pointer;">
+                                                                                                <img src="../img/<?= $who_is[3] ?>"
+                                                                                                     alt="<?= $who_is[1] ?>"
+                                                                                                     style="width:100%;">
+                                                                                                <div class="carousel-caption d-none d-md-block"
+                                                                                                     style="margin-bottom:  0px; padding-bottom: 0px;">
                                                                                                     <h2 class="display-4"
                                                                                                         style="margin-bottom:  0px;font-size: 18px;"><?= $who_is[1] ?></h2>
                                                                                                     <p class="lead"
                                                                                                        style="margin-bottom:  0px; font-size: 14px;"><?= $who_is[2] ?></p>
                                                                                                 </div>
-                                                                                            </div>
-                                                                                            <?php
-                                                                                        }}?>
+                                                                                            </a>
+                                                                                        </div>
+
+                                                                                        <?php if (mysqli_num_rows($result)) {
+                                                                                            while ($who_is = mysqli_fetch_array($result)) {
+                                                                                                ?>
+                                                                                                <div class="carousel-item">
+                                                                                                    <a
+                                                                                                            data-toggle="modal"
+                                                                                                            data-target="#exampleModalLong<?= $who_is[0] ?>"
+                                                                                                            style="cursor: pointer;">
+                                                                                                        <img
+                                                                                                                src="../img/<?= $who_is[3] ?>"
+                                                                                                                alt="<?= $who_is[1] ?>"
+                                                                                                                style="width:100%;">
+                                                                                                        <div
+                                                                                                                class="carousel-caption d-none d-md-block"
+                                                                                                                style="margin-bottom:  0px; padding-bottom: 0px;">
+                                                                                                            <h2 class="display-4"
+                                                                                                                style="margin-bottom:  0px;font-size: 18px;"><?= $who_is[1] ?></h2>
+                                                                                                            <p class="lead"
+                                                                                                               style="margin-bottom:  0px; font-size: 14px;"><?= $who_is[2] ?></p>
+                                                                                                        </div>
+                                                                                                    </a>
+                                                                                                </div>
+                                                                                                <?php
+                                                                                            }}?>
 
                                                                                     </div>
 
@@ -2953,6 +2969,53 @@ $news = mysqli_fetch_array($result_news);
         ?>
     </div>
 </div>
+
+
+
+<?php
+$result = $dbOperation->getWhoIs('en');
+while ($who_is = mysqli_fetch_array($result)) {
+    ?>
+    <div class="modal fade"
+         id="exampleModalLong<?= $who_is[0] ?>"
+         tabindex="1"
+         role="dialog"
+         aria-labelledby="exampleModalLongTitle"
+         aria-hidden="true">
+        <div class="modal-dialog"
+             role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"> Who is?</h5>
+                    <button type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img
+                            src="../img/<?= $who_is[3] ?>"
+                            alt="<?= $who_is[1] ?>"
+                            style="width:100%;">
+                    <h3 style="text-align :   center;">
+                        <?= $who_is[1] ?></h3>
+                    <h5 style="text-align :  center;"><?= $who_is[2] ?></h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button"
+                            class="btn btn-secondary"
+                            data-dismiss="modal">
+                        Cancel
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<?php }?>
+
 
 </body>
 

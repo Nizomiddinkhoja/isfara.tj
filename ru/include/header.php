@@ -244,12 +244,8 @@
                                             </ul>
                                         </div>
                                     </div></li>
-
-<<<<<<< HEAD
                                 <li class="sp-menu-item"><a href="contact.php">Контакты</a></li>
-=======
-                                <li class="sp-menu-item"><a href="contact.php">Электронная очередь</a></li>
->>>>>>> d2ad5acfcef8dc07ef1a13f574218c20bf41a419
+
                             </ul>
                         </nav>
                     </div>

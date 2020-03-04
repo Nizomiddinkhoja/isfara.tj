@@ -43,7 +43,7 @@ if(isset($_POST["submit"])){
     <nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark">
       <div class="container px-4">
         <a class="navbar-brand" href="../index.html">
-          <img src="../assets/img/brand/white.png" />
+          <img src="../img/logo.png" />
         </a>
      
       </div>
