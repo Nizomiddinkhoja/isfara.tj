@@ -6,10 +6,10 @@
                                 <div class="sp-module">
                                     <div class="sp-module-content">
                                         <div class="icon-top-wrapper">
-                                            <form method="post" class="search-form">
+                                            <form method="post" class="search-form" action="search_result.php">
                                                 <div class="form-group d-flex align-items-center">
-                                                    <input placeholder="Search" class="form-control">
-                                                    <i class="fa fa-search" style="padding: 10px;cursor:pointer"></i>
+                                                    <input placeholder="Search" name="search_text" class="form-control">
+                                                    <button style="border: none; background: #ffffff; height: 90%; margin-right: 10px" class="fa fa-search"type="submit" name="submit">
                                                 </div>
                                             </form>
                                         </div>
@@ -22,9 +22,9 @@
                                                        class="offcanvas-toggler-left d-block d-lg-none" href="#"><span
                                         class="fa fa-bars" aria-hidden="true" title="Navigation"></span></a>
                                 <div class="logo"><a href="./index.php"><img class="logo-image"
-                                                                            src="../img/logo.png"
+                                                                             src="../img/logo.png"
 
-                                                                            alt="Official website executive body of the city government of Isfara" style="height: 80px;"></a></div>
+                                                                             alt="Official website executive body of the city government of Isfara" style="DISPLAY: -webkit-inline-box; ">Executive body of the city government of Isfara</a></div>
                             </div>
                         </div>
                         <div id="sp-bottom-top3" class="col-md-2 col-lg-4 ">

@@ -43,7 +43,7 @@ if(isset($_POST["submit"])) {
                                                             <div id="sppb-addon-1573810048723" class="clearfix ">
                                                                 <div class="sppb-addon sppb-addon-module newsberg-card">
                                                                     <div class="sppb-addon-content"><h3
-                                                                                class="sppb-addon-title">Саволхо?</h3>
+                                                                                class="sppb-addon-title">Саволҳо?</h3>
                                                                         <div class="mod-sppoll ">
 
                                                                             <form method="post" method="post" style="margin-left: 40px;">
@@ -101,7 +101,7 @@ if(isset($_POST["submit"])) {
                                                              class="sppb-addon-wrapper">
                                                             <div id="sppb-addon-1574066045843" class="clearfix ">
                                                                 <div class="sppb-addon sppb-addon-header heading-arrow sppb-text-left">
-                                                                    <h2 class="sppb-addon-title">Наворхо</h2>
+                                                                    <h2 class="sppb-addon-title">Наворҳо</h2>
                                                                 </div>
                                                             </div>
                                                         </div>

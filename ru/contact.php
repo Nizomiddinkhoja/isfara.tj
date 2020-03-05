@@ -721,7 +721,7 @@ if (isset($_POST["submit"])){
                 <div id="sp-title" class="col-lg-12 ">
                     <div class="sp-column ">
                         <div class="sp-page-title">
-                            <div class="container"><h2 class="sp-page-title-heading">Электронная приемная</h2></div>
+                            <div class="container"><h2 class="sp-page-title-heading" style="text-align: center;">Электронная приемная</h2></div>
                         </div>
                     </div>
                 </div>
@@ -748,7 +748,7 @@ if (isset($_POST["submit"])){
                                                                     <div class="sppb-addon-content">
                                                                         <div class="sppb-addon-single-image-container">
                                                                             <img class="sppb-img-responsive"
-                                                                                 src="http://demo2.joomshaper.com/2019/newsberg/images/2019/12/10/contact-form-image.jpg"
+                                                                                 src="../img/electronic_queue.png"
                                                                                  alt="Image" title=""></div>
                                                                     </div>
                                                                 </div>
@@ -758,7 +758,7 @@ if (isset($_POST["submit"])){
                                                              class="sppb-addon-wrapper">
                                                             <div id="sppb-addon-1575282768118" class="clearfix ">
                                                                 <div class="sppb-addon sppb-addon-header link-color sppb-text-left">
-                                                                    <h2 class="sppb-addon-title">Электронная приемная</h2></div>
+                                                                    <h2 class="sppb-addon-title"">Электронная приемная</h2></div>
                                                             </div>
                                                         </div>
                                                         <div id="sppb-addon-wrapper-1575282981869"
@@ -849,7 +849,7 @@ if (isset($_POST["submit"])){
                                                                                                                 name="title"
                                                                                                                 id="sppb-form-builder-field-3"
                                                                                                                 class="sppb-form-control not-resize"
-                                                                                                                placeholder="Write your message here …"
+                                                                                                                placeholder="Какой темы касается Ваше обращение?"
                                                                                                                 required/><span
                                                                                                                 class="sppb-form-builder-required">Какой темы касается Ваше обращение?</span>
                                                                                                     </div>

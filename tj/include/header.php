@@ -198,7 +198,6 @@
                                             <ul class="sp-dropdown-items">
                                                 <li class="sp-menu-item"><a href="category.php?id=5">Бахши робитаҳои
                                                         иқтисодии хориҷӣ</a></li>
-                                                <li class="sp-menu-item"><a href="category.php?id=6">Мухочират</a></li>
                                                 <li class="sp-menu-item"><a href="category.php?id=7">Шӯрои машваратӣ</a>
                                                 </li>
                                                 <li class="sp-menu-item"><a href="category.php?id=8">Исфара Гайд</a>

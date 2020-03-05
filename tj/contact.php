@@ -721,7 +721,7 @@ if (isset($_POST["submit"])){
                 <div id="sp-title" class="col-lg-12 ">
                     <div class="sp-column ">
                         <div class="sp-page-title">
-                            <div class="container"><h2 class="sp-page-title-heading">Кабулгохи электрони</h2></div>
+                            <div class="container"><h2 class="sp-page-title-heading" style="text-align: center;">Қабулгоҳи электронӣ</h2></div>
                         </div>
                     </div>
                 </div>
@@ -748,7 +748,7 @@ if (isset($_POST["submit"])){
                                                                     <div class="sppb-addon-content">
                                                                         <div class="sppb-addon-single-image-container">
                                                                             <img class="sppb-img-responsive"
-                                                                                 src="http://demo2.joomshaper.com/2019/newsberg/images/2019/12/10/contact-form-image.jpg"
+                                                                                 src="../img/electronic_queue.png"
                                                                                  alt="Image" title=""></div>
                                                                     </div>
                                                                 </div>
@@ -809,7 +809,7 @@ if (isset($_POST["submit"])){
                                                                                                                 id="sppb-form-builder-field-1"
                                                                                                                 name="first_name"
                                                                                                                 class="sppb-form-control"
-                                                                                                                placeholder="Ваше имя"
+                                                                                                                placeholder="Номи Шумо"
                                                                                                                 required><span
                                                                                                                 class="sppb-form-builder-required">Ин майдончаро пур кунед.</span>
                                                                                                     </div>
@@ -820,7 +820,7 @@ if (isset($_POST["submit"])){
                                                                                                                 id="sppb-form-builder-field-1"
                                                                                                                 name="last_name"
                                                                                                                 class="sppb-form-control"
-                                                                                                                placeholder="Ваше имя"
+                                                                                                                placeholder="Насаби Шумо"
                                                                                                                 required><span
                                                                                                                 class="sppb-form-builder-required">Ин майдончаро пур кунед.</span>
                                                                                                     </div>
@@ -830,7 +830,7 @@ if (isset($_POST["submit"])){
                                                                                                                 id="sppb-form-builder-field-2"
                                                                                                                 name="email"
                                                                                                                 class="sppb-form-control"
-                                                                                                                placeholder="Ваш email"
+                                                                                                                placeholder="email"
                                                                                                                 required><span
                                                                                                                 class="sppb-form-builder-required">Ин майдончаро пур кунед.</span>
                                                                                                     </div>
@@ -840,7 +840,7 @@ if (isset($_POST["submit"])){
                                                                                                                 id="sppb-form-builder-field-2"
                                                                                                                 name="phone"
                                                                                                                 class="sppb-form-control"
-                                                                                                                placeholder="Номер вашего телефона"
+                                                                                                                placeholder="Рақами телефонии Шумо"
                                                                                                                 required><span
                                                                                                                 class="sppb-form-builder-required">Ин майдончаро пур кунед.</span>
                                                                                                     </div>
@@ -849,7 +849,7 @@ if (isset($_POST["submit"])){
                                                                                                                 name="title"
                                                                                                                 id="sppb-form-builder-field-3"
                                                                                                                 class="sppb-form-control not-resize"
-                                                                                                                placeholder="Write your message here …"
+                                                                                                                placeholder="Мавзуи арзу шикояти худро нависед …"
                                                                                                                 required/><span
                                                                                                                 class="sppb-form-builder-required">Мавзуи арзу шикояти Шумо кадом аст?</span>
                                                                                                     </div>
@@ -858,7 +858,7 @@ if (isset($_POST["submit"])){
                                                                                                                 name="message"
                                                                                                                 id="sppb-form-builder-field-3"
                                                                                                                 class="sppb-form-control not-resize"
-                                                                                                                placeholder="Напишиите текст своего обращения в этом поле"
+                                                                                                                placeholder="Матни арзу шикояти худро нависед "
                                                                                                                 required></textarea><span
                                                                                                                 class="sppb-form-builder-required"></span>
                                                                                                     </div>

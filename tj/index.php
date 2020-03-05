@@ -1737,7 +1737,7 @@ $news = mysqli_fetch_array($result_news);
                                                              class="sppb-addon-wrapper">
                                                             <div id="sppb-addon-1574765723526" class="clearfix ">
                                                                 <div class="sppb-addon sppb-addon-header heading-arrow sppb-text-left">
-                                                                    <h2 class="sppb-addon-title">Хабархои нав</h2></div>
+                                                                    <h2 class="sppb-addon-title">Хабарҳои нав</h2></div>
                                                             </div>
                                                         </div>
                                                         <div id="sppb-addon-wrapper-1574763938320"
@@ -2170,7 +2170,7 @@ $news = mysqli_fetch_array($result_news);
                                                                                          class="clearfix ">
                                                                                         <div class="sppb-addon sppb-addon-header sppb-text-left">
                                                                                             <h2 class="sppb-addon-title">
-                                                                                                Президенти Чумхурии Точикистон</h2></div>
+                                                                                                Президенти Ҷумҳурии Тоҷикистон</h2></div>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div id="sppb-addon-wrapper-1574765554041"
@@ -2183,7 +2183,7 @@ $news = mysqli_fetch_array($result_news);
                                                                                                         <a href="http://www.president.tj/"
                                                                                                            target="_blank"
 <!--                                                                                                           rel="noopener noreferrer"-->
-                                                                                                           <title="Президенти Чумхурии Точикистон">
+                                                                                                           <title="Президенти Ҷумҳурии Тоҷикистон">
                                                                                                             <img src="../img/president.jpg"
                                                                                                                  alt="president.jpg" style="border: none;"/>
                                                                                                         </a>
@@ -2302,7 +2302,7 @@ $news = mysqli_fetch_array($result_news);
                                                              class="sppb-addon-wrapper">
                                                             <div id="sppb-addon-1573711718259" class="clearfix ">
                                                                 <div class="sppb-addon sppb-addon-header heading-arrow sppb-text-left">
-                                                                    <h2 class="sppb-addon-title">Хабархо</h2></div>
+                                                                    <h2 class="sppb-addon-title">Хабарҳо</h2></div>
                                                             </div>
                                                         </div>
                                                         <div id="sppb-addon-wrapper-1574765774388"
@@ -2599,7 +2599,7 @@ $news = mysqli_fetch_array($result_news);
                                                                                          class="clearfix ">
                                                                                         <div class="sppb-addon sppb-addon-header sppb-text-left">
                                                                                             <h2 class="sppb-addon-title">
-                                                                                                Курби асъор</h2></div>
+                                                                                                Қурби асъор</h2></div>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div id="sppb-addon-wrapper-1574765554041"

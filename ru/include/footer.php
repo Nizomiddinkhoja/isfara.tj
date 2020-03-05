@@ -6,10 +6,10 @@
                                 <div class="sp-module">
                                     <div class="sp-module-content">
                                         <div class="icon-top-wrapper">
-                                            <form method="post" class="search-form">
+                                            <form method="post" class="search-form" action="search_result.php">
                                                 <div class="form-group d-flex align-items-center">
-                                                    <input placeholder="Поиск" class="form-control">
-                                                    <i class="fa fa-search" style="padding: 10px;cursor:pointer"></i>
+                                                    <input placeholder="Поиск" name="search_text" class="form-control">
+                                                    <button style="border: none; background: #ffffff; height: 90%; margin-right: 10px" class="fa fa-search"type="submit" name="submit">
                                                 </div>
                                             </form>
                                         </div>
@@ -21,10 +21,10 @@
                             <div class="sp-column "><a id="offcanvas-toggler" aria-label="Navigation"
                                                        class="offcanvas-toggler-left d-block d-lg-none" href="#"><span
                                         class="fa fa-bars" aria-hidden="true" title="Navigation"></span></a>
-                                <div class="logo"><a href="./index.php"><img class="logo-image"
-                                                                             src="../img/logo.png"
+                                <div class="logo" style=" text-align: center;"><a href="./index.php" ><img class="logo-image"
+                                                                              src="../img/logo.png"
 
-                                                                             alt="Официальный сайт исполнительный орган городского правительства Исфара" style="height: 80px;"></a></div>
+                                                                              alt="Официальный сайт исполнительный орган правительства Исфары" style="DISPLAY: -webkit-inline-box;  height: 60px;">Исполнительный орган правительство г.Исфары</a></div>
                             </div>
                         </div>
                         <div id="sp-bottom-top3" class="col-md-2 col-lg-4 ">

@@ -26,7 +26,7 @@ if (isset($_POST["submit"])){
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <base/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>Electronic queue</title>
     <link href="../img/favicon.ico" rel="shortcut icon"/>
     <link href="components/com_sppagebuilder/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="components/com_sppagebuilder/assets/css/animate.min.css" rel="stylesheet" type="text/css"/>
@@ -721,7 +721,7 @@ if (isset($_POST["submit"])){
                 <div id="sp-title" class="col-lg-12 ">
                     <div class="sp-column ">
                         <div class="sp-page-title">
-                            <div class="container"><h2 class="sp-page-title-heading">Электронная приемная</h2></div>
+                            <div class="container"><h2 class="sp-page-title-heading" style="text-align: center;">Electronic queue</h2></div>
                         </div>
                     </div>
                 </div>
@@ -748,7 +748,7 @@ if (isset($_POST["submit"])){
                                                                     <div class="sppb-addon-content">
                                                                         <div class="sppb-addon-single-image-container">
                                                                             <img class="sppb-img-responsive"
-                                                                                 src="http://demo2.joomshaper.com/2019/newsberg/images/2019/12/10/contact-form-image.jpg"
+                                                                                 src="../img/electronic_queue.png"
                                                                                  alt="Image" title=""></div>
                                                                     </div>
                                                                 </div>
@@ -758,15 +758,16 @@ if (isset($_POST["submit"])){
                                                              class="sppb-addon-wrapper">
                                                             <div id="sppb-addon-1575282768118" class="clearfix ">
                                                                 <div class="sppb-addon sppb-addon-header link-color sppb-text-left">
-                                                                    <h2 class="sppb-addon-title">Электронная приемная</h2></div>
+                                                                    <h2 class="sppb-addon-title">Electronic queue</h2></div>
                                                             </div>
                                                         </div>
                                                         <div id="sppb-addon-wrapper-1575282981869"
                                                              class="sppb-addon-wrapper">
                                                             <div id="sppb-addon-1575282981869" class="clearfix ">
                                                                 <div class="sppb-addon sppb-addon-text-block  "><h3
-                                                                            class="sppb-addon-title">Уважаемые граждане!</h3>
-                                                                    <div class="sppb-addon-content">Вы можете отправить нам любые обращения, воспользовавшись формой.
+                                                                            class="sppb-addon-title">
+                                                                        Dear citizens!</h3>
+                                                                    <div class="sppb-addon-content">You can send us any requests using the form.
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -803,26 +804,26 @@ if (isset($_POST["submit"])){
                                                                                             <div class="sppb-addon-content">
                                                                                                 <form class="" method="post">
                                                                                                     <div class="sppb-form-group sppb-form-builder-field-0">
-                                                                                                        <label for="sppb-form-builder-field-0">Имя</label>
+                                                                                                        <label for="sppb-form-builder-field-0">Name</label>
                                                                                                         <input
                                                                                                                 type="text"
                                                                                                                 id="sppb-form-builder-field-1"
                                                                                                                 name="first_name"
                                                                                                                 class="sppb-form-control"
-                                                                                                                placeholder="Ваше имя"
+                                                                                                                placeholder="Your name"
                                                                                                                 required><span
-                                                                                                                class="sppb-form-builder-required">Заполните объязательные поля.</span>
+                                                                                                                class="sppb-form-builder-required">Fill in the required fields.</span>
                                                                                                     </div>
                                                                                                     <div class="sppb-form-group sppb-form-builder-field-0">
-                                                                                                        <label for="sppb-form-builder-field-0">Фамилия</label>
+                                                                                                        <label for="sppb-form-builder-field-0">Surname</label>
                                                                                                         <input
                                                                                                                 type="text"
                                                                                                                 id="sppb-form-builder-field-1"
                                                                                                                 name="last_name"
                                                                                                                 class="sppb-form-control"
-                                                                                                                placeholder="Ваше имя"
+                                                                                                                placeholder="Your surname"
                                                                                                                 required><span
-                                                                                                                class="sppb-form-builder-required">Заполните объязательные поля.</span>
+                                                                                                                class="sppb-form-builder-required">Fill in the required fields.</span>
                                                                                                     </div>
                                                                                                     <div class="sppb-form-group sppb-form-builder-field-2">
                                                                                                         <label for="sppb-form-builder-field-2">Email</label><input
@@ -830,40 +831,40 @@ if (isset($_POST["submit"])){
                                                                                                                 id="sppb-form-builder-field-2"
                                                                                                                 name="email"
                                                                                                                 class="sppb-form-control"
-                                                                                                                placeholder="Ваш email"
+                                                                                                                placeholder="Your email"
                                                                                                                 required><span
-                                                                                                                class="sppb-form-builder-required">Заполните объязательные поля.</span>
+                                                                                                                class="sppb-form-builder-required">Fill in the required fields.</span>
                                                                                                     </div>
                                                                                                     <div class="sppb-form-group sppb-form-builder-field-2">
-                                                                                                        <label for="sppb-form-builder-field-2">Телефон</label><input
+                                                                                                        <label for="sppb-form-builder-field-2">Phone</label><input
                                                                                                                 type="text"
                                                                                                                 id="sppb-form-builder-field-2"
                                                                                                                 name="phone"
                                                                                                                 class="sppb-form-control"
-                                                                                                                placeholder="Номер вашего телефона"
+                                                                                                                placeholder="Your phone"
                                                                                                                 required><span
-                                                                                                                class="sppb-form-builder-required">Заполните объязательные поля.</span>
+                                                                                                                class="sppb-form-builder-required">Fill in the required fields.</span>
                                                                                                     </div>
                                                                                                     <div class="sppb-form-group sppb-form-builder-field-3">
-                                                                                                        <label for="sppb-form-builder-field-3">Тема</label><input
+                                                                                                        <label for="sppb-form-builder-field-3">Theme</label><input
                                                                                                                 name="title"
                                                                                                                 id="sppb-form-builder-field-3"
                                                                                                                 class="sppb-form-control not-resize"
                                                                                                                 placeholder="Write your message here …"
                                                                                                                 required/><span
-                                                                                                                class="sppb-form-builder-required">Какой темы касается Ваше обращение?</span>
+                                                                                                                class="sppb-form-builder-required">Write your message here</span>
                                                                                                     </div>
                                                                                                     <div class="sppb-form-group sppb-form-builder-field-3">
-                                                                                                        <label for="sppb-form-builder-field-3">Сообщение</label><textarea
+                                                                                                        <label for="sppb-form-builder-field-3">Messege</label><textarea
                                                                                                                 name="message"
                                                                                                                 id="sppb-form-builder-field-3"
                                                                                                                 class="sppb-form-control not-resize"
-                                                                                                                placeholder="Напишиите текст своего обращения в этом поле"
+                                                                                                                placeholder="Write the text of your appeal in this field"
                                                                                                                 required></textarea><span
                                                                                                                 class="sppb-form-builder-required"></span>
                                                                                                     </div>
                                                                                                     <div class="sppb-form-builder-btn sppb-text-left ">
-                                                                                                        <input  type="submit" name="submit" value="Отправить"/>
+                                                                                                        <input  type="submit" name="submit" value="Send"/>
                                                                                                     </div>
                                                                                                 </form>
                                                                                             </div>

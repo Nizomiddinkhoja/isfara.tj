@@ -23,7 +23,7 @@ if(isset($_GET["id"])){
     <base/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title>News: <?=$news[1]?></title>
-    <link href="templates/newsberg/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+    <link href="../img/logo.png" rel="shortcut icon" type=" "/>
     <link href="components/com_sppagebuilder/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="components/com_sppagebuilder/assets/css/animate.min.css" rel="stylesheet" type="text/css"/>
     <link href="components/com_sppagebuilder/assets/css/sppagebuilder.css" rel="stylesheet" type="text/css"/>
@@ -672,12 +672,12 @@ if(isset($_GET["id"])){
                                                        href="view_news.php?id=<?=$id>1?$id-1:''?>"
                                                        rel="prev">
                                                         <span class="icon-chevron-left" aria-hidden="true"></span> <span
-                                                                aria-hidden="true">Пред.</span> </a>
+                                                                aria-hidden="true">Previous</span> </a>
                                                 </li>
                                                 <li class="next">
                                                     <a class="hasTooltip"
                                                     href="view_news.php?id=<?=$id+1?>">
-                                                        <span aria-hidden="true">След.</span> <span
+                                                        <span aria-hidden="true">Next</span> <span
                                                                 class="icon-chevron-right" aria-hidden="true"></span>
                                                     </a>
                                                 </li>

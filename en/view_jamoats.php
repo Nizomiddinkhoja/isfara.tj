@@ -538,8 +538,7 @@ $row = mysqli_fetch_array($result);
                         <div class="sp-page-title">
 
                             <div class="container" style="text-align: center;"><h2 class="sp-page-title-heading">
-                                    <?=$row['title']?><br />
-                                    председатель джамоата - <?=$row['description']?>
+                                    <?=$row['title']?><br /> head of jamoat - <?=$row['description']?>
                                 </h2></div>
                         </div>
                     </div>
@@ -556,8 +555,8 @@ $row = mysqli_fetch_array($result);
                                     <table class="table">
                                         <thead class="thead-light">
                                         <tr>
-                                            <th scope="col">Категория</th>
-                                            <th scope="col">Значение</th>
+                                            <th scope="col">Category</th>
+                                            <th scope="col">Value</th>
                                         </tr>
                                         </thead>
                                         <tbody>
