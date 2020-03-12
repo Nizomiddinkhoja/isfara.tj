@@ -687,6 +687,9 @@ WHERE  `status`=1  ORDER BY `id` DESC Limit $offset, $no_of_records_per_page";
         return mysqli_query($com->getDb(), $sql);
     }
 
+
+
+
     public function getSliderByLang($locale){
         $com = new DbConnect();
         $sql = "SELECT c.`id`, t.`title`, c.`img` FROM  slider c JOIN texts t ON t.`id_menu` = c.`id` 
@@ -852,6 +855,38 @@ WHERE l.name='$locale' AND n.status=1 AND cn.name=\"jamoats_info\" and n.id_jamo
         return mysqli_query($com->getDb(), $sql);
     }
 
+    public function getComment($offset=0, $no_of_records_per_page=1000)
+    {
+        $com = new DbConnect();
+        $sql = "SELECT `id`, `id_news`, `name`, `text`, `phone`, `date`, `status` FROM `comments` WHERE `status`=1  ORDER BY `id` DESC Limit $offset, $no_of_records_per_page";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function getCommentById($id,$offset=0, $no_of_records_per_page=1000)
+    {
+        $com = new DbConnect();
+        $sql = "SELECT `id`, `id_news`, `name`, `text`, `phone`, `date`, `status` FROM `comments` WHERE `status`=1 and id_news=$id  ORDER BY `id` DESC Limit $offset, $no_of_records_per_page";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+
+    public function getCommentCount()
+    {
+        $com = new DbConnect();
+        $sql = "SELECT COUNT(*) FROM comments where status = 1";
+        return mysqli_query($com->getDb(), $sql);
+    }
+    public function deleteComment($id){
+        $com = new DbConnect();
+        $sql = "UPDATE comments SET status=0 Where id=$id";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
+    public function addComment($id_news,$name, $text,  $phone, $date, $status='1'){
+        $com = new DbConnect();
+        $sql = "INSERT INTO `comments`(`id`, `id_news`, `name`, `text`, `phone`, `date`, `status`) VALUES (DEFAULT,'$id_news','$name','$text','$phone', '$date','$status')";
+        return mysqli_query($com->getDb(), $sql);
+    }
 
 
 }
