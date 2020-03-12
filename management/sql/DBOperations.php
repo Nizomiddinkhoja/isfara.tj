@@ -163,10 +163,10 @@ WHERE l.name='$locale' AND n.status=1 AND cn.name=\"news\" ORDER BY n.id DESC";
 
     public function  get_edit_news_tj($id){
         $com = new DbConnect();
-        $sql = "SELECT n.id, t.title, t.description, n.img, t.body, n.date,n.category_id  FROM  news n JOIN texts t ON t.id_menu = n.id 
+        $sql = "SELECT n.id, t.title, t.description, n.img, n.img2, n.img3, n.img4, n.img5, t.body, n.date,n.category_id  FROM  news n JOIN texts t ON t.id_menu = n.id 
 JOIN locale l ON l.id=t.locale 
 JOIN content cn ON cn.id=t.id_content 
-WHERE l.name=\"tj\" AND n.status=1 AND cn.name=\"news\" and n.`id`='".$id."' ORDER BY n.id DESC ";
+WHERE l.name='tj' AND n.status=1 AND cn.name='news' and n.`id`='".$id."' ORDER BY n.id DESC ";
         return mysqli_query($com->getDb(), $sql);
     }
     public function  get_edit_news_ru($id){
@@ -214,10 +214,10 @@ WHERE l.`name`='en' AND c.`status`=1 AND cn.`name`='category'";
     }
 
 
-    public function addNews($category_id,$date, $img){
+    public function addNews($category_id,$date, $img1, $img2, $img3, $img4, $img5){
         $com = new DbConnect();
 
-        $sql = "INSERT INTO `news`(`id`, `category_id`, `date`, `author_id`, `img`, `visitor_id`, `status`) VALUES (DEFAULT, $category_id,'$date', 1, '$img', 1, 1 )";
+        $sql = "INSERT INTO `news`(`id`, `category_id`, `date`, `author_id`, `img`, `img2`, `img3`, `img4`, `img5`, `visitor_id`, `status`) VALUES (DEFAULT, $category_id,'$date', 1, '$img1', '$img2', '$img3', '$img4', '$img5', 1, 1 )";
         return mysqli_query($com->getDb(), $sql);
     }
 
@@ -247,9 +247,26 @@ WHERE l.`name`='en' AND c.`status`=1 AND cn.`name`='category'";
 
     }
 
-    public function editNewsImg($id, $img){
+    public function editNewsImg($id, $img, $number){
         $com = new DbConnect();
-        $sql = "UPDATE `news` SET `img`='$img' WHERE id='$id'";
+        switch ($number){
+            case 1:
+                $sql = "UPDATE news SET img='$img' Where id=$id";
+                break;
+            case 2:
+                $sql = "UPDATE news SET img2='$img' Where id=$id";
+                break;
+            case 3:
+                $sql = "UPDATE news SET img3='$img' Where id=$id";
+                break;
+            case 4:
+                $sql = "UPDATE news SET img4='$img' Where id=$id";
+                break;
+            case 5:
+                $sql = "UPDATE news SET img5='$img' Where id=$id";
+                break;
+        }
+        echo $sql;
         return mysqli_query($com->getDb(), $sql);
 
     }
@@ -259,9 +276,26 @@ WHERE l.`name`='en' AND c.`status`=1 AND cn.`name`='category'";
         return mysqli_query($com->getDb(), $sql);
     }
 
-    public function deleteNewsImg($id){
+    public function deleteNewsImg($id, $img){
         $com = new DbConnect();
-        $sql = "UPDATE news SET img=''Where id=$id";
+        switch ($img){
+            case 1:
+                $sql = "UPDATE news SET img=' ' Where id=$id";
+                break;
+            case 2:
+                $sql = "UPDATE news SET img2=' ' Where id=$id";
+                break;
+            case 3:
+                $sql = "UPDATE news SET img3=' ' Where id=$id";
+                break;
+            case 4:
+                $sql = "UPDATE news SET img4=' ' Where id=$id";
+                break;
+            case 5:
+                $sql = "UPDATE news SET img5=' ' Where id=$id";
+                break;
+        }
+
         return mysqli_query($com->getDb(), $sql);
     }
 
