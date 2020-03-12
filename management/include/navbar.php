@@ -128,6 +128,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="/management/comments/comments.php">
+                        <i class="ni ni-chat-round text-blue"></i> Комментарии
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="/management/jamoats/jamoats.php">
                         <i class="ni ni-square-pin text-green"></i> Джамоаты
                     </a>
