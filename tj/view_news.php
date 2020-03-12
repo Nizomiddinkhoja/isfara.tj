@@ -6,7 +6,8 @@ include("../counter.php");
 $result_news1 = $dbOperations->get_new('tj');
 $news1 = mysqli_fetch_array($result_news1);
 
-if(isset($_GET["id"])){
+
+if (isset($_GET["id"])) {
     $id = $_GET["id"];
     $category_id = $_GET["category"];
     $news = mysqli_fetch_array($dbOperations->get_edit_news_tj($id));
@@ -14,7 +15,17 @@ if(isset($_GET["id"])){
 
     $category = mysqli_fetch_array($dbOperations->getCategoryByID($category_id, "tj"));
 
+
 }
+
+if (isset($_POST['ok'])) {
+    $name = $_POST["name"];
+    $text = $_POST["text"];
+    $phone = $_POST["phone"];
+    $date = date("Y-m-d H:i:s");
+    $comment_result = $dbOperations->addComment($id, $name, $text, $phone, $date, $status = '1');
+}
+
 ?>
 <!doctype html>
 <html lang="tj" dir="ltr">
@@ -27,7 +38,7 @@ if(isset($_GET["id"])){
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="author" content="Kawshar Ahmed"/>
     <meta name="generator" content="Joomla! - Open Source Content Management"/>
-    <title><?=$news[1]?></title>
+    <title><?= $news[1] ?></title>
     <link href="../img/favicon.ico" rel="shortcut icon"/>
     <link href="components/com_sppagebuilder/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="components/com_sppagebuilder/assets/css/animate.min.css" rel="stylesheet" type="text/css"/>
@@ -531,7 +542,7 @@ if(isset($_GET["id"])){
 <div class="body-wrapper">
     <div class="body-innerwrapper">
         <?php
-            include("include/header.php");
+        include("include/header.php");
         ?>
 
         <section id="sp-main-body">
@@ -548,36 +559,28 @@ if(isset($_GET["id"])){
                                         <div class="img-top-wrap">
                                             <div class="article-info">
 
-                                                <span class="category-name" title="Категория: <?=$category[0]?>">
-                                                    <a href="category.php?id=<?=$category_id?>"> <?=$category[0]?></a>
+                                                <span class="category-name" title="Категория: <?= $category[0] ?>">
+                                                    <a href="category.php?id=<?= $category_id ?>"> <?= $category[0] ?></a>
                                                 </span>
-                                                <span class="published" title="Нашр шудааст: <?=$news[5]?>">
-                                                    <time><?=$news[5]?></time>
+                                                <span class="published" title="Нашр шудааст: <?= $news[5] ?>">
+                                                    <time><?= $news[5] ?></time>
                                                 </span>
-<!--                                                <span class="hits">-->
-<!--                                                    <span class="fa fa-eye-o" aria-hidden="true"></span>-->
-<!--                                                    <meta itemprop="interactionCount" content="UserPageVisits:57">Hits: 57</span>-->
-
-
                                             </div>
                                             <div class="article-header">
                                                 <h1 itemprop="headline">
-                                                    <?=$news[1]?> </h1>
+                                                    <?= $news[1] ?> </h1>
                                             </div>
                                             <div class="article-info">
-                                                <span class="category-name" title="Категория:  <?=$category[0]?>">
-                                                    <a href="category.php?id=<?=$category_id?>"> <?=$category[0]?></a>
+                                                <span class="category-name" title="Категория:  <?= $category[0] ?>">
+                                                    <a href="category.php?id=<?= $category_id ?>"> <?= $category[0] ?></a>
                                                 </span>
-                                                <span class="published" title="Нашр шудааст:  <?=$news[5]?>">
-                                                    <time><?=$news[5]?></time>
+                                                <span class="published" title="Нашр шудааст:  <?= $news[5] ?>">
+                                                    <time><?= $news[5] ?></time>
                                                 </span>
-<!--                                                <span class="hits">-->
-<!--                                                    <span class="fa fa-eye-o" aria-hidden="true"></span>-->
-<!--                                                    <meta itemprop="interactionCount" content="UserPageVisits:57">Hits: 57</span>-->
                                             </div>
                                         </div>
                                         <div class="article-full-image">
-                                            <img src="../img/<?=$news[3]?>">
+                                            <img src="../img/<?= $news[3] ?>">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -585,36 +588,6 @@ if(isset($_GET["id"])){
                                             <div class="article-ratings-social-share d-flex justify-content-end">
                                                 <div class="mr-auto align-self-center">
                                                 </div>
-<!--                                                <div>-->
-<!--                                                    <div class="article-social-share">-->
-<!--                                                        <div class="social-share-icon">-->
-<!--                                                            <ul>-->
-<!--                                                                <li>-->
-<!--                                                                    <a class="facebook"-->
-<!--                                                                       onClick="window.open('https://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"-->
-<!--                                                                       href="https://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up"-->
-<!--                                                                       title="Facebook">-->
-<!--                                                                        <span class="fa fa-facebook"></span>-->
-<!--                                                                    </a>-->
-<!--                                                                </li>-->
-<!--                                                                <li>-->
-<!--                                                                    <a class="twitter" title="Twitter"-->
-<!--                                                                       onClick="window.open('https://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up&amp;text=For%20you?%20What?%20Being%20clever.%20Great.%20Keep%20it%20up.','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"-->
-<!--                                                                       href="https://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up&amp;text=For%20you?%20What?%20Being%20clever.%20Great.%20Keep%20it%20up.">-->
-<!--                                                                        <span class="fa fa-twitter"></span>-->
-<!--                                                                    </a>-->
-<!--                                                                </li>-->
-<!--                                                                <li>-->
-<!--                                                                    <a class="linkedin" title="LinkedIn"-->
-<!--                                                                       onClick="window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;"-->
-<!--                                                                       href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up">-->
-<!--                                                                        <span class="fa fa-linkedin-square"></span>-->
-<!--                                                                    </a>-->
-<!--                                                                </li>-->
-<!--                                                            </ul>-->
-<!--                                                        </div>-->
-<!--                                                    </div>-->
-<!--                                                </div>-->
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -625,65 +598,93 @@ if(isset($_GET["id"])){
                                                 <span class="category-name" title="Категория: Business">
                                                     <a href="">Business</a>
                                                 </span>
-                                                <span class="published" title="Нашр шудааст: <?=$news[5]?>">
-                                                    <time><?=$news[5]?></time>
+                                                <span class="published" title="Нашр шудааст: <?= $news[5] ?>">
+                                                    <time><?= $news[5] ?></time>
                                                 </span>
                                                 <span class="hits">
 <!--                                                    <span class="fa fa-eye-o" aria-hidden="true"></span>-->
-<!--                                                    <meta itemprop="interactionCount" content="UserPageVisits:57">Hits: 57</span>-->
+                                                    <!--                                                    <meta itemprop="interactionCount" content="UserPageVisits:57">Hits: 57</span>-->
                                             </div>
                                             <div itemprop="articleBody">
                                                 <div id="sp-page-builder"
                                                      class="sp-page-builder sppb-article-page-wrapper">
                                                     <div class="page-content">
                                                         <section id="section-id-1573800678987" class="sppb-section">
-<!--                                                            <div class="sppb-row-container">-->
-                                                                <div class="sppb-row">
-                                                                    <div class="sppb-col-md-12"
-                                                                         id="column-wrap-id-1573800678986">
-                                                                        <div id="column-id-1573800678986"
-                                                                             class="sppb-column">
-                                                                            <div class="sppb-column-addons">
-                                                                                <div id="sppb-addon-wrapper-1573808445338"
-                                                                                     class="sppb-addon-wrapper">
-                                                                                    <div id="sppb-addon-1573808445338"
-                                                                                         class="clearfix ">
-                                                                                        <div class="sppb-addon sppb-addon-text-block  ">
-                                                                                            <div class="sppb-addon-content">
-                                                                                                <?=$news[4]?>
-                                                                                            </div>
+                                                            <!--                                                            <div class="sppb-row-container">-->
+                                                            <div class="sppb-row">
+                                                                <div class="sppb-col-md-12"
+                                                                     id="column-wrap-id-1573800678986">
+                                                                    <div id="column-id-1573800678986"
+                                                                         class="sppb-column">
+                                                                        <div class="sppb-column-addons">
+                                                                            <div id="sppb-addon-wrapper-1573808445338"
+                                                                                 class="sppb-addon-wrapper">
+                                                                                <div id="sppb-addon-1573808445338"
+                                                                                     class="clearfix ">
+                                                                                    <div class="sppb-addon sppb-addon-text-block  ">
+                                                                                        <div class="sppb-addon-content">
+                                                                                            <?= $news[4] ?>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-<!--                                                                </div>-->
+                                                                </div>
+                                                                <!--                                                                </div>-->
                                                             </div>
                                                         </section>
                                                     </div>
                                                 </div>
+
+
+                                                <div class="col-xl-12">
+                                                    <div class="card shadow">
+                                                        <div class="card-header bg-transparent">
+                                                            <div class="row align-items-center">
+                                                <div class="col">
+                                                <h3>
+                                                    Коментарияҳо</h3>
                                             </div>
-
-
-
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            </div>
                                             <?php
-                                            $file='comments/'.$news[0].'.txt';
-                                            if (isset($_REQUEST['ok'])) {
-
-                                                $string = '<p>'.$_REQUEST['username'].'<br>'.$_REQUEST['msg'];
-                                                file_put_contents($file, $string, FILE_APPEND);
-//                                                header("Location: view_news.php?id={$news1[0]}&category={$news1[4]}");
-//                                                exit();
+                                            $result = $dbOperations->getCommentById($id);
+                                            While($row=mysqli_fetch_array($result)) {
+                                                ?>
+                                                <div class="col-xl-12 mt-2">
+                                                    <div class="card shadow">
+                                                        <div class="card-header bg-transparent">
+                                                            <div class="row align-items-center">
+                                                                <div class="col-md-8">
+                                                                    <h3 style="color: #1d55c1;">
+                                                                        <?= $row['name'] ?>
+                                                                    </h3>
+                                                                    <h4>
+                                                                        <?= $row['text'] ?></h4>
+                                                                </div>
+                                                                <div class="col-md-4 text-right"
+                                                                     style="font-size: small;">
+                                                                    <p><?= $date ?></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <?php
                                             }
                                             ?>
-                                            <div class="col-xl-12">
+
+                                            <div class="col-xl-12 mt-2">
                                                 <div class="card shadow">
                                                     <div class="card-header bg-transparent">
                                                         <div class="row align-items-center">
+
                                                             <div class="col">
-                                                                <h6 class="text-uppercase text-muted ls-1 mb-1">Коментарияҳо</h6>
-                                                                <!--                                                                            <h2 class="mb-0">Бо забони точики</h2>-->
+                                                                <h5 class="text-uppercase text-muted ls-1 mb-1">
+                                                                    Коментария гузоштан</h5>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -692,31 +693,39 @@ if(isset($_GET["id"])){
                                                     <form role="form" method="post" enctype="multipart/form-data">
                                                         <div class="container-fluid mt--8">
                                                             <div class="row">
-                                                    <div class="card-body">
-                                                        <!-- Chart -->
-                                                        <div class="chart" style="height:auto">
-                                                            <div class="form-group mb-3">
-                                                                <div class="input-group input-group-alternative">
-                                                                    <input class="form-control" placeholder="Ном" name="username" type="text" required>
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group mb-3">
-                                                                <div class="input-group input-group-alternative">
-                                                                    <textarea class="form-control" placeholder="Матни пурра"   name="msg"  style="height :150px" required ></textarea>
+                                                                <div class="card-body">
+                                                                    <!-- Chart -->
+                                                                    <div class="chart" style="height:auto">
+                                                                        <div class="form-group mb-3">
+                                                                            <div class="input-group input-group-alternative">
+                                                                                <input class="form-control"
+                                                                                       placeholder="Ном" name="name"
+                                                                                       type="text" required>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group mb-3">
+                                                                            <div class="input-group input-group-alternative">
+                                                                                <input class="form-control"
+                                                                                       placeholder="Рақами телефон"
+                                                                                       name="phone" type="text"
+                                                                                       required>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group mb-3">
+                                                                            <div class="input-group input-group-alternative">
+                                                                                <textarea class="form-control"
+                                                                                          placeholder="Матни пурра"
+                                                                                          name="text"
+                                                                                          style="height :150px"
+                                                                                          required></textarea>
 
+                                                                            </div>
+                                                                        </div>
+                                                                        <input type="submit" name="ok"
+                                                                               class="btn btn-primary my-4"
+                                                                               value="Сабт кардан">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <input type="submit" name="ok" class="btn btn-primary my-4"  value="Фирсондан">
-                                                        </div>
-                                                        <?php
-                                                        if (isset($file)) {
-                                                            include($file);
-                                                        }
-                                                        else{
-                                                            echo 'Ҳоло коментарияҳо нестанд';
-                                                        }
-                                                        ?>
-                                                    </div>
 
                                                             </div>
                                                         </div>
@@ -725,35 +734,23 @@ if(isset($_GET["id"])){
                                                 </div>
                                             </div>
 
-<!--                                            <form action="" method="post">-->
-<!--                                                <input name="username">-->
-<!--                                                <br><textarea name="msg" rows="10"></textarea>-->
-<!--                                                <br><br>-->
-<!--                                                <input type="submit" name="ok" value="Отправить" >-->
-<!--                                            </form>-->
-
-
-
-
-
-
-
                                             <ul class="pager pagenav">
                                                 <li class="previous">
                                                     <a class="hasTooltip"
-                                                       href="view_news.php?id=<?=$id>1?$id-1:''?>&category=<?=$category_id?>"
+                                                       href="view_news.php?id=<?= $id > 1 ? $id - 1 : '' ?>&category=<?= $category_id ?>"
                                                        rel="prev">
                                                         <span class="icon-chevron-left" aria-hidden="true"></span> <span
                                                                 aria-hidden="true">Кафо</span> </a>
                                                 </li>
                                                 <li class="next">
                                                     <a class="hasTooltip"
-                                                    href="view_news.php?id=<?=$id+1?>&category=<?=$category_id?>">
+                                                       href="view_news.php?id=<?= $id + 1 ?>&category=<?= $category_id ?>">
                                                         <span aria-hidden="true">Пеш</span> <span
                                                                 class="icon-chevron-right" aria-hidden="true"></span>
                                                     </a>
                                                 </li>
                                             </ul>
+                                        </div>
                                         </div>
 
 
@@ -763,13 +760,13 @@ if(isset($_GET["id"])){
                                                 <ul class="author-post-items">
                                                     <?php
                                                     $result = $dbOperations->get_new('tj');
-                                                    for($i=1;$i<=5;$i++){
+                                                    for ($i = 1; $i <= 5; $i++) {
 
-                                                        if($row = mysqli_fetch_array($result)){
-                                                            if($row[0]!=$id) {
+                                                        if ($row = mysqli_fetch_array($result)) {
+                                                            if ($row[0] != $id) {
                                                                 ?>
                                                                 <li>
-                                                                    <a href="view_news.php?id=<?= $row[0]?>&category=<?=$category_id?>">
+                                                                    <a href="view_news.php?id=<?= $row[0] ?>&category=<?= $category_id ?>">
                                                                         <h3><?= $row[1] ?></h3>
                                                                     </a>
                                                                     <p>
