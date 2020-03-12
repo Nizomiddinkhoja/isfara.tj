@@ -9,6 +9,7 @@ class DbConnect{
         $query  = "SET NAMES 'utf8mb4'";
         $query .= "SET GLOBAL max_allowed_packet=16777216";
         mysqli_query($this->connect,$query);
+        mysqli_set_charset($this->connect, 'utf8');
 
         if (mysqli_connect_errno($this->connect))
         {

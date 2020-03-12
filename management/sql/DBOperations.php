@@ -28,7 +28,7 @@ WHERE l.`name`='ru' AND c.`status`=1 AND cn.`name`='category'";
     public function getCategoryByID($id, $locale){
         $com = new DbConnect();
         $sql = "
-SELECT t.`title`, t.`description` FROM  category c JOIN texts t ON t.`id_menu` = c.`id` 
+SELECT t.`title`, t.`description`, t.`id` FROM  category c JOIN texts t ON t.`id_menu` = c.`id` 
 JOIN locale l ON l.`id`=t.`locale` 
 JOIN content cn ON cn.`id`=t.`id_content` 
 WHERE l.`name`='$locale' AND c.`status`=1 AND cn.`name`='category' AND c.id=$id";
@@ -124,13 +124,13 @@ WHERE l.`name`='$locale' AND w.`status`=1 AND cn.`name`='who_is' AND w.id=$id";
         return mysqli_query($com->getDb(), $sql);
     }
 
-    public function getNewsByCategoryById($id, $locale, $offset=0, $no_of_records_per_page=1000){
+    public function getNewsByCategoryById($id, $locale, $offset, $no_of_records_per_page){
         $com = new DbConnect();
-        $sql = "SELECT n.id, t.title, t.description, n.img, n.category_id, n.date FROM  news n JOIN texts t ON t.id_menu = n.id 
-JOIN category c ON t.id_menu = c.id 
+        $sql = "SELECT n.id, t.title, t.description, n.img, n.category_id, n.date FROM  news n JOIN texts t on t.id_menu = n.id 
+
 JOIN locale l ON l.id=t.locale 
 JOIN content cn ON cn.id=t.id_content 
-WHERE l.name='$locale' AND n.status=1 AND cn.name='news' AND n.category_id=$id Limit $offset, $no_of_records_per_page";
+WHERE l.name='$locale' AND n.status=1 AND cn.name='news' AND n.category_id=$id ORDER BY n.id DESC  Limit $offset, $no_of_records_per_page";
         return mysqli_query($com->getDb(), $sql);
     }
 
@@ -144,6 +144,16 @@ WHERE l.name='$locale' AND n.status=1 AND cn.name=\"news\" ORDER BY n.id DESC Li
         return mysqli_query($com->getDb(), $sql);
     }
 
+    public function  get_new($locale){
+        $com = new DbConnect();
+        $sql = "SELECT n.id, t.title, t.description, n.img, n.category_id, n.date  FROM  news n JOIN texts t ON t.id_menu = n.id 
+
+JOIN locale l ON l.id=t.locale 
+JOIN content cn ON cn.id=t.id_content 
+WHERE l.name='$locale' AND n.status=1 AND cn.name=\"news\" ORDER BY n.id DESC";
+        return mysqli_query($com->getDb(), $sql);
+    }
+
     public function getNewsCount(){
         $com = new DbConnect();
         $sql = "SELECT COUNT(*) From news where status=1";
@@ -153,10 +163,10 @@ WHERE l.name='$locale' AND n.status=1 AND cn.name=\"news\" ORDER BY n.id DESC Li
 
     public function  get_edit_news_tj($id){
         $com = new DbConnect();
-        $sql = "SELECT n.id, t.title, t.description, n.img, t.body, n.date  FROM  news n JOIN texts t ON t.id_menu = n.id 
+        $sql = "SELECT n.id, t.title, t.description, n.img, t.body, n.date,n.category_id  FROM  news n JOIN texts t ON t.id_menu = n.id 
 JOIN locale l ON l.id=t.locale 
 JOIN content cn ON cn.id=t.id_content 
-WHERE l.name=\"tj\" AND n.status=1 AND cn.name=\"news\" and n.`id`='".$id."'";
+WHERE l.name=\"tj\" AND n.status=1 AND cn.name=\"news\" and n.`id`='".$id."' ORDER BY n.id DESC ";
         return mysqli_query($com->getDb(), $sql);
     }
     public function  get_edit_news_ru($id){
@@ -207,7 +217,7 @@ WHERE l.`name`='en' AND c.`status`=1 AND cn.`name`='category'";
     public function addNews($category_id,$date, $img){
         $com = new DbConnect();
 
-        $sql = "INSERT INTO `news`(`id`, `category_id`, `date`, `author_id`, `img`, `visitor_id`, `status`) VALUES (DEFAULT, $category_id,'$date', DEFAULT, '$img', DEFAULT, 1 )";
+        $sql = "INSERT INTO `news`(`id`, `category_id`, `date`, `author_id`, `img`, `visitor_id`, `status`) VALUES (DEFAULT, $category_id,'$date', 1, '$img', 1, 1 )";
         return mysqli_query($com->getDb(), $sql);
     }
 
@@ -265,7 +275,7 @@ WHERE l.`name`='en' AND c.`status`=1 AND cn.`name`='category'";
         return mysqli_fetch_array(mysqli_query($com->getDb(), $sql))[0];
     }
 
-    public function getSlider($locale, $offset=0, $no_of_records_per_page=1000){
+    public function getSlider($locale='tj', $offset=0, $no_of_records_per_page=1000){
         $com = new DbConnect();
         $sql = "SELECT s.`id`, t.`title`, s.img FROM  slider s JOIN texts t ON t.`id_menu` = s.`id` 
     JOIN locale l ON l.`id`=t.`locale` 

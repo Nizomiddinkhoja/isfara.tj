@@ -3,6 +3,9 @@ include("../management/sql/DBOperations.php");
 $dbOperations = new DBOperations();
 include("../counter.php");
 
+$result_news1 = $dbOperations->get_new('tj');
+$news1 = mysqli_fetch_array($result_news1);
+
 if(isset($_GET["id"])){
     $id = $_GET["id"];
     $category_id = $_GET["category"];
@@ -582,36 +585,36 @@ if(isset($_GET["id"])){
                                             <div class="article-ratings-social-share d-flex justify-content-end">
                                                 <div class="mr-auto align-self-center">
                                                 </div>
-                                                <div>
-                                                    <div class="article-social-share">
-                                                        <div class="social-share-icon">
-                                                            <ul>
-                                                                <li>
-                                                                    <a class="facebook"
-                                                                       onClick="window.open('https://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                       href="https://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up"
-                                                                       title="Facebook">
-                                                                        <span class="fa fa-facebook"></span>
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a class="twitter" title="Twitter"
-                                                                       onClick="window.open('https://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up&amp;text=For%20you?%20What?%20Being%20clever.%20Great.%20Keep%20it%20up.','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-                                                                       href="https://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up&amp;text=For%20you?%20What?%20Being%20clever.%20Great.%20Keep%20it%20up.">
-                                                                        <span class="fa fa-twitter"></span>
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a class="linkedin" title="LinkedIn"
-                                                                       onClick="window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;"
-                                                                       href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up">
-                                                                        <span class="fa fa-linkedin-square"></span>
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
+<!--                                                <div>-->
+<!--                                                    <div class="article-social-share">-->
+<!--                                                        <div class="social-share-icon">-->
+<!--                                                            <ul>-->
+<!--                                                                <li>-->
+<!--                                                                    <a class="facebook"-->
+<!--                                                                       onClick="window.open('https://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"-->
+<!--                                                                       href="https://www.facebook.com/sharer.php?u=http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up"-->
+<!--                                                                       title="Facebook">-->
+<!--                                                                        <span class="fa fa-facebook"></span>-->
+<!--                                                                    </a>-->
+<!--                                                                </li>-->
+<!--                                                                <li>-->
+<!--                                                                    <a class="twitter" title="Twitter"-->
+<!--                                                                       onClick="window.open('https://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up&amp;text=For%20you?%20What?%20Being%20clever.%20Great.%20Keep%20it%20up.','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"-->
+<!--                                                                       href="https://twitter.com/share?url=http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up&amp;text=For%20you?%20What?%20Being%20clever.%20Great.%20Keep%20it%20up.">-->
+<!--                                                                        <span class="fa fa-twitter"></span>-->
+<!--                                                                    </a>-->
+<!--                                                                </li>-->
+<!--                                                                <li>-->
+<!--                                                                    <a class="linkedin" title="LinkedIn"-->
+<!--                                                                       onClick="window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;"-->
+<!--                                                                       href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://demo2.joomshaper.com/2019/newsberg/index.php/business-blog/for-you-what-being-clever-great-keep-it-up">-->
+<!--                                                                        <span class="fa fa-linkedin-square"></span>-->
+<!--                                                                    </a>-->
+<!--                                                                </li>-->
+<!--                                                            </ul>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -634,7 +637,7 @@ if(isset($_GET["id"])){
                                                      class="sp-page-builder sppb-article-page-wrapper">
                                                     <div class="page-content">
                                                         <section id="section-id-1573800678987" class="sppb-section">
-                                                            <div class="sppb-row-container">
+<!--                                                            <div class="sppb-row-container">-->
                                                                 <div class="sppb-row">
                                                                     <div class="sppb-col-md-12"
                                                                          id="column-wrap-id-1573800678986">
@@ -655,12 +658,86 @@ if(isset($_GET["id"])){
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
+<!--                                                                </div>-->
                                                             </div>
                                                         </section>
                                                     </div>
                                                 </div>
                                             </div>
+
+
+
+                                            <?php
+                                            $file='comments/'.$news[0].'.txt';
+                                            if (isset($_REQUEST['ok'])) {
+
+                                                $string = '<p>'.$_REQUEST['username'].'<br>'.$_REQUEST['msg'];
+                                                file_put_contents($file, $string, FILE_APPEND);
+//                                                header("Location: view_news.php?id={$news1[0]}&category={$news1[4]}");
+//                                                exit();
+                                            }
+                                            ?>
+                                            <div class="col-xl-12">
+                                                <div class="card shadow">
+                                                    <div class="card-header bg-transparent">
+                                                        <div class="row align-items-center">
+                                                            <div class="col">
+                                                                <h6 class="text-uppercase text-muted ls-1 mb-1">Коментарияҳо</h6>
+                                                                <!--                                                                            <h2 class="mb-0">Бо забони точики</h2>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <form role="form" method="post" enctype="multipart/form-data">
+                                                        <div class="container-fluid mt--8">
+                                                            <div class="row">
+                                                    <div class="card-body">
+                                                        <!-- Chart -->
+                                                        <div class="chart" style="height:auto">
+                                                            <div class="form-group mb-3">
+                                                                <div class="input-group input-group-alternative">
+                                                                    <input class="form-control" placeholder="Ном" name="username" type="text" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group mb-3">
+                                                                <div class="input-group input-group-alternative">
+                                                                    <textarea class="form-control" placeholder="Матни пурра"   name="msg"  style="height :150px" required ></textarea>
+
+                                                                </div>
+                                                            </div>
+                                                            <input type="submit" name="ok" class="btn btn-primary my-4"  value="Фирсондан">
+                                                        </div>
+                                                        <?php
+                                                        if (isset($file)) {
+                                                            include($file);
+                                                        }
+                                                        else{
+                                                            echo 'Ҳоло коментарияҳо нестанд';
+                                                        }
+                                                        ?>
+                                                    </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </form>
+
+                                                </div>
+                                            </div>
+
+<!--                                            <form action="" method="post">-->
+<!--                                                <input name="username">-->
+<!--                                                <br><textarea name="msg" rows="10"></textarea>-->
+<!--                                                <br><br>-->
+<!--                                                <input type="submit" name="ok" value="Отправить" >-->
+<!--                                            </form>-->
+
+
+
+
+
+
+
                                             <ul class="pager pagenav">
                                                 <li class="previous">
                                                     <a class="hasTooltip"
@@ -685,7 +762,7 @@ if(isset($_GET["id"])){
                                                 <h3>Хабарҳои нав</h3>
                                                 <ul class="author-post-items">
                                                     <?php
-                                                    $result = $dbOperations->get_news('ru');
+                                                    $result = $dbOperations->get_new('tj');
                                                     for($i=1;$i<=5;$i++){
 
                                                         if($row = mysqli_fetch_array($result)){

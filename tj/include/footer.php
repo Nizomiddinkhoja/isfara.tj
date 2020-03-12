@@ -20,9 +20,7 @@
                     </div>
                 </div>
                 <div id="sp-logo" class="col-sm-6 col-md-6 col-lg-4 ">
-                    <div class="sp-column "><a id="offcanvas-toggler" aria-label="Navigation"
-                                               class="offcanvas-toggler-left d-block d-lg-none" href="#"><span
-                                    class="fa fa-bars" aria-hidden="true" title="Navigation"></span></a>
+                    <div class="sp-column ">
                         <div class="logo"><a href="./index.php"><img class="logo-image"
                                                                      src="../img/logo.png"
 
@@ -367,13 +365,9 @@
                     <div class="sp-column ">
                         <div class="sp-module "><h3 class="sp-module-title">Маълумот дар бораи Исфара</h3>
                             <div class="sp-module-content">
-                                <p>Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара.
-                                    Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара.
-                                    Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара.
-                                    Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара.
-                                    Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара.
-                                    Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара.
-                                    Сомонаи расмии мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара</p>
+                                <p>Мақомоти иҷроияи ҳокимияти давлатии шаҳри Исфара бо мақсади ҳалли мушкилоти соҳаҳои гуногун, фароҳам овардани зиндагии шоиста ва густариши робитаи мустақим бо аҳолӣ, сари вақт огоҳ кардан аз хабару навгониҳо сомонаи расмии худро бо тарҳи наву ҷолиб пешкаши хонандагон гардонид.
+                                    Минбаъд Шумо метавонед сари вақт тавассути сомонаи мазкур аз рӯйдодҳо воқиф шавед.</p><br />
+                                <p>Қабулгоҳ: (83462) 2 22 44</p>
                             </div>
                         </div>
                     </div>
@@ -400,25 +394,25 @@
                         <div class="sp-module "><h3 class="sp-module-title">Сомонахои расмии Чумхурии Точикистон</h3>
                             <div class="sp-module-content">
                                 <ul class="menu">
-                                    <li class="item-190"><a href="http://www.president.tj/">Сомонаи расмии Президенти
+                                    <li class="item-190"><a href="http://www.president.tj/" target="_blank">Сомонаи расмии Президенти
                                             Ҷумҳурии Тоҷикистон</a></li>
-                                    <li class="item-191"><a href="http://www.parlament.tj/">Сомонаи расмии Парламенти
+                                    <li class="item-191"><a href="http://www.parlament.tj/" target="_blank">Сомонаи расмии Парламенти
                                             Ҷумҳурии Тоҷикистон</a></li>
-                                    <li class="item-192"><a href="http://www.stat.tj/">Сомонаи расмии Агентии омори
+                                    <li class="item-192"><a href="http://www.stat.tj/" target="_blank">Сомонаи расмии Агентии омори
                                             назди Президенти Ҷумҳурии Тоҷикистон</a></li>
-                                    <li class="item-193"><a href="http://www.khovar.tj/">Сомонаи расмии АГЕНТИИ МИЛЛИИ
+                                    <li class="item-193"><a href="http://www.khovar.tj/" target="_blank">Сомонаи расмии АГЕНТИИ МИЛЛИИ
                                             ИТТИЛООТИИ ТОҶИКИСТОН</a></li>
-                                    <li class="item-194"><a href="http://www.fezsughd.tj/">Сомонаи расмии Минтақаи озоди
+                                    <li class="item-194"><a href="http://www.fezsughd.tj/" target="_blank">Сомонаи расмии Минтақаи озоди
                                             иқтисодии вилояти Суғд</a></li>
-                                    <li class="item-195"><a href="http://www.khujand.tj/">Сомонаи расмии шаҳри
+                                    <li class="item-195"><a href="http://www.khujand.tj/" target="_blank">Сомонаи расмии шаҳри
                                             Хуҷанд</a></li>
-                                    <li class="item-196"><a href="http://www.buston.tj/">Сомонаи расмии Агентии омори
+                                    <li class="item-196"><a href="http://www.buston.tj/" target="_blank">Сомонаи расмии Агентии омори
                                             назди Президенти Ҷумҳурии Тоҷикистон</a></li>
-                                    <li class="item-197"><a href="http://www.konibodom.tj/">Сомонаи расмии шаҳри
+                                    <li class="item-197"><a href="http://www.konibodom.tj/" target="_blank">Сомонаи расмии шаҳри
                                             Конибодом</a></li>
-                                    <li class="item-198"><a href="http://devashtich.tj/">Сомонаи расмии Деваштич</a>
+                                    <li class="item-198"><a href="http://devashtich.tj/" target="_blank">Сомонаи расмии Деваштич</a>
                                     </li>
-                                    <li class="item-198"><a href="http://sugd.tj/">Мақомоти иҷроияи ҳокимияти давлатии
+                                    <li class="item-198"><a href="http://sugd.tj/" target="_blank">Мақомоти иҷроияи ҳокимияти давлатии
                                             вилояти Суғд</a></li>
                                 </ul>
                             </div>
@@ -435,7 +429,7 @@
             <div class="row">
                 <div id="sp-footer1" class="col-md-6 col-lg-6 ">
                     <div class="sp-column "><span class="sp-copyright">© <?= date("Y") ?> <a target="_blank"
-                                                                                             href="komnet.tj">KomNet</a>. Хамаи хукукхо хифз када шудаанд.</span>
+                                                                                             href="http://komnet.tj/" target="_blank">KomNet</a>. Хамаи хукукхо хифз када шудаанд.</span>
                     </div>
                 </div>
                 <div id="sp-footer2" class="col-md-6 col-lg-6 ">

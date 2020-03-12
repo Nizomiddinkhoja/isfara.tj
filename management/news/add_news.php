@@ -4,6 +4,13 @@ include("../sql/DBOperations.php");
 if ($_SESSION["is_auth"]) {
 $dbOperation = new DBOperations();
 $message="";
+
+//
+//    $result1 = $dbOperation->maxNews();
+//    $max = mysqli_fetch_array($result1);
+
+
+
 if(isset($_POST["submit"])){
     $title_ru = $_POST["title_ru"]; $title_tj = $_POST["title_tj"]; $title_en = $_POST["title_en"];
     $date= $_POST["date"];
@@ -14,6 +21,10 @@ $full_description_ru = $_POST["full_description_ru"]; $full_description_tj = $_P
         if (isset($_FILES["filename"]) && $_FILES["photo"]["error"] == 0) {
             if(move_uploaded_file($_FILES["filename"]["tmp_name"], "../../img/" . $_FILES["filename"]["name"])) {
                 $file = $_FILES["filename"]["name"];
+
+
+
+
                     $dbOperation->addNews($category_tj, $date, $file);
                     $dbOperation->addNewsText($title_tj, $short_description_tj, $full_description_tj, "tj");
                     $dbOperation->addNewsText($title_ru, $short_description_ru, $full_description_ru, "ru");
@@ -133,137 +144,137 @@ include("../include/navbar.php");
               </div>
             </div>
 
-            <div class="col-xl-4">
-              <div class="card shadow">
-                <div class="card-header bg-transparent">
-                  <div class="row align-items-center">
-                    <div class="col">
-                      <h6 class="text-uppercase text-muted ls-1 mb-1">Добавление новостей</h6>
-                      <h2 class="mb-0">На русском языке</h2>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <!-- Chart -->
-                  <div class="chart" style="height:auto">
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>
-                        </div>
-                        <input class="form-control" placeholder="Название" name="title_ru" type="text" required>
-                      </div>
-                    </div>
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>
-                        </div>
-                        <textarea class="form-control" placeholder="Краткое описание" name="short_description_ru" style="height :50px" required></textarea>
-                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->
-                      </div>
-                    </div>
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>
-                        </div>
-                        <textarea class="form-control" placeholder="Полное описание" name="full_description_ru" style="height :150px" required ></textarea>
-                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->
-                      </div>
-                    </div>
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="fa fa-arrow-alt-circle-down"></i></span>
-                        </div>
-                        <select class="form-control" id="" name="category_ru">
-<!--                          <option value="none" hidden="">Выберите категорию</option>-->
-                            <?php
-                            $result = $dbOperation->get_Categories_ru();
-                            if(mysqli_num_rows($result)> 0){
-                                while ($row = mysqli_fetch_array($result)){
-                                    echo
-                                        ' 
-                                    <option value="'.$row['id'].'" >'.$row['title'].'</option>            
-            ' ;
-                                }
-                            }
-                            ?>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+<!--            <div class="col-xl-4">-->
+<!--              <div class="card shadow">-->
+<!--                <div class="card-header bg-transparent">-->
+<!--                  <div class="row align-items-center">-->
+<!--                    <div class="col">-->
+<!--                      <h6 class="text-uppercase text-muted ls-1 mb-1">Добавление новостей</h6>-->
+<!--                      <h2 class="mb-0">На русском языке</h2>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="card-body">-->
+<!--                  <!-- Chart -->-->
+<!--                  <div class="chart" style="height:auto">-->
+<!--                    <div class="form-group mb-3">-->
+<!--                      <div class="input-group input-group-alternative">-->
+<!--                        <div class="input-group-prepend">-->
+<!--                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>-->
+<!--                        </div>-->
+<!--                        <input class="form-control" placeholder="Название" name="title_ru" type="text" required>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group mb-3">-->
+<!--                      <div class="input-group input-group-alternative">-->
+<!--                        <div class="input-group-prepend">-->
+<!--                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>-->
+<!--                        </div>-->
+<!--                        <textarea class="form-control" placeholder="Краткое описание" name="short_description_ru" style="height :50px" required></textarea>-->
+<!--                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group mb-3">-->
+<!--                      <div class="input-group input-group-alternative">-->
+<!--                        <div class="input-group-prepend">-->
+<!--                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>-->
+<!--                        </div>-->
+<!--                        <textarea class="form-control" placeholder="Полное описание" name="full_description_ru" style="height :150px" required ></textarea>-->
+<!--                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group mb-3">-->
+<!--                      <div class="input-group input-group-alternative">-->
+<!--                        <div class="input-group-prepend">-->
+<!--                          <span class="input-group-text"><i class="fa fa-arrow-alt-circle-down"></i></span>-->
+<!--                        </div>-->
+<!--                        <select class="form-control" id="" name="category_ru">-->
+<!--<!--                          <option value="none" hidden="">Выберите категорию</option>-->-->
+<!--                            --><?php
+//                            $result = $dbOperation->get_Categories_ru();
+//                            if(mysqli_num_rows($result)> 0){
+//                                while ($row = mysqli_fetch_array($result)){
+//                                    echo
+//                                        '
+//                                    <option value="'.$row['id'].'" >'.$row['title'].'</option>
+//            ' ;
+//                                }
+//                            }
+//                            ?>
+<!--                        </select>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
 
-            <div class="col-xl-4">
-              <div class="card shadow">
-                <div class="card-header bg-transparent">
-                  <div class="row align-items-center">
-                    <div class="col">
-                      <h6 class="text-uppercase text-muted ls-1 mb-1">Add news</h6>
-                      <h2 class="mb-0">In English</h2>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <!-- Chart -->
-                  <div class="chart" style="height:auto">
-                   <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>
-                        </div>
-                        <input class="form-control" placeholder="Title" name="title_en" type="text" required>
-                      </div>
-                    </div>
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>
-                        </div>
-                        <textarea class="form-control" placeholder="Short description" name="short_description_en" style="height :50px" required></textarea>
-                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->
-                      </div>
-                    </div>
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>
-                        </div>
-                        <textarea class="form-control" placeholder="Full description" name="full_description_en"  style="height :150px" required></textarea>
-                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->
-                      </div>
-                    </div>
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="fa fa-arrow-alt-circle-down"></i></span>
-                        </div>
-                        <select class="form-control" id="" name="category_en">
-<!--                          <option value="none" hidden="">Choose category</option>-->
-                            <?php
-                            $result = $dbOperation->get_Categories_en();
-                            if(mysqli_num_rows($result)> 0){
-                                while ($row = mysqli_fetch_array($result)){
-                                    echo
-                                        ' 
-                                    <option value="'.$row['id'].'">'.$row['title'].'</option>            
-            ' ;
-                                }
-                            }
-                            ?>
-                        </select>
-                      </div>
-                    </div>
-
-
-                  </div>
-                </div>
-              </div>
-            </div>
+<!--            <div class="col-xl-4">-->
+<!--              <div class="card shadow">-->
+<!--                <div class="card-header bg-transparent">-->
+<!--                  <div class="row align-items-center">-->
+<!--                    <div class="col">-->
+<!--                      <h6 class="text-uppercase text-muted ls-1 mb-1">Add news</h6>-->
+<!--                      <h2 class="mb-0">In English</h2>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="card-body">-->
+<!--                  <!-- Chart -->-->
+<!--                  <div class="chart" style="height:auto">-->
+<!--                   <div class="form-group mb-3">-->
+<!--                      <div class="input-group input-group-alternative">-->
+<!--                        <div class="input-group-prepend">-->
+<!--                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>-->
+<!--                        </div>-->
+<!--                        <input class="form-control" placeholder="Title" name="title_en" type="text" required>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group mb-3">-->
+<!--                      <div class="input-group input-group-alternative">-->
+<!--                        <div class="input-group-prepend">-->
+<!--                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>-->
+<!--                        </div>-->
+<!--                        <textarea class="form-control" placeholder="Short description" name="short_description_en" style="height :50px" required></textarea>-->
+<!--                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group mb-3">-->
+<!--                      <div class="input-group input-group-alternative">-->
+<!--                        <div class="input-group-prepend">-->
+<!--                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>-->
+<!--                        </div>-->
+<!--                        <textarea class="form-control" placeholder="Full description" name="full_description_en"  style="height :150px" required></textarea>-->
+<!--                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group mb-3">-->
+<!--                      <div class="input-group input-group-alternative">-->
+<!--                        <div class="input-group-prepend">-->
+<!--                          <span class="input-group-text"><i class="fa fa-arrow-alt-circle-down"></i></span>-->
+<!--                        </div>-->
+<!--                        <select class="form-control" id="" name="category_en">-->
+<!--<!--                          <option value="none" hidden="">Choose category</option>-->-->
+<!--                            --><?php
+//                            $result = $dbOperation->get_Categories_en();
+//                            if(mysqli_num_rows($result)> 0){
+//                                while ($row = mysqli_fetch_array($result)){
+//                                    echo
+//                                        '
+//                                    <option value="'.$row['id'].'">'.$row['title'].'</option>
+//            ' ;
+//                                }
+//                            }
+//                            ?>
+<!--                        </select>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!---->
+<!---->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
           </div>
         </div>
 

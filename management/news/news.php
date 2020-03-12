@@ -19,7 +19,7 @@ include ("../sql/DBOperations.php");
 
 
 
-        $all_news = $dbOperations->get_news( "ru", $offset, $no_of_records_per_page);
+        $all_news = $dbOperations->get_news( "tj", $offset, $no_of_records_per_page);
 ?>
 
 

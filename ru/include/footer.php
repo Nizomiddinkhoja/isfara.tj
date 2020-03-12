@@ -18,9 +18,7 @@
                             </div>
                         </div>
                         <div id="sp-logo" class="col-sm-6 col-md-6 col-lg-4 ">
-                            <div class="sp-column "><a id="offcanvas-toggler" aria-label="Navigation"
-                                                       class="offcanvas-toggler-left d-block d-lg-none" href="#"><span
-                                        class="fa fa-bars" aria-hidden="true" title="Navigation"></span></a>
+                            <div class="sp-column ">
                                 <div class="logo" style=" text-align: center;"><a href="./index.php" ><img class="logo-image"
                                                                               src="../img/logo.png"
 

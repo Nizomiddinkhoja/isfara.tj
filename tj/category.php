@@ -263,7 +263,7 @@ if(isset($_GET['id'])){
                                                         <div class="newsberg-title-top">
                                                             <div class="article-info">
                                                                 <span class="category-name" title="Категорияи: <?=$category[0]?>">
-                                                                    <a href="#"><?=$category[0]?></a>
+                                                                    <a href="category.php?id=<?=$category[0]?>"></a>
                                                                 </span>
                                                                 <span class="published" title="Нашр шудааст: <?=$news[5]?>">
                                                             <time><?=$news[5]?></time>
@@ -279,7 +279,7 @@ if(isset($_GET['id'])){
                                                             <p><?=$news[2]?></p>
                                                             <div class="newsberg-article-introtext-bottom">
                                                                 <div class="article-info">
-                                                                    <span class="category-name" title="Категорияи: <?=$category[0]?>"><a href="#>"><?=$category[0]?>></a></span>
+                                                                    <span class="category-name" title="Категорияи: <?=$category[0]?>"><a href="category.php?id=<?=$category[0]?>"></a></span>
                                                                     <span class="published" title="Нашр шудааст: <?=$news[5]?>"><time><?=$news[5]?></time></span>
                                                                 </div>
                                                             </div>
@@ -323,7 +323,7 @@ if(isset($_GET['id'])){
                                                                 <div class="newsberg-article-introtext-bottom">
                                                                     <div class="article-info">
                                                                         <span class="category-name" title="Категорияи: <?=$category[0]?>">
-                                                                            <a href="">Politics</a>
+                                                                            <a href="category.php?id=<?=$category[0]?>"></a>
                                                                         </span>
                                                                         <span class="published" title="Нашр шудааст: <?=$news[5]?>">
                                                                             <time><?=$news[5]?></time>

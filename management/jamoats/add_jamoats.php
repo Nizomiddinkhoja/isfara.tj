@@ -115,119 +115,119 @@ include("../include/navbar.php");
               </div>
             </div>
 
-            <div class="col-xl-4">
-              <div class="card shadow">
-                <div class="card-header bg-transparent">
-                  <div class="row align-items-center">
-                    <div class="col">
-                      <h6 class="text-uppercase text-muted ls-1 mb-1">Добавление информаций</h6>
-                      <h2 class="mb-0">На русском языке</h2>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <!-- Chart -->
-                  <div class="chart" style="height:auto">
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>
-                        </div>
-                        <input class="form-control" placeholder="Название" name="title_ru" type="text" required>
-                      </div>
-                    </div>
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>
-                        </div>
-                        <textarea class="form-control" placeholder="Полное описание" name="full_description_ru" style="height :150px" required ></textarea>
-                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->
-                      </div>
-                    </div>
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="fa fa-arrow-alt-circle-down"></i></span>
-                        </div>
-                        <select class="form-control" id="" name="category_ru">
-<!--                          <option value="none" hidden="">Выберите категорию</option>-->
-                            <?php
-                            $jamoat = $dbOperation->getJamoats("ru");
-                            if(mysqli_num_rows($jamoat)> 0){
-                                while ($row = mysqli_fetch_array($jamoat)){
-                                    echo
-                                        ' 
-                                    <option value="'.$row['id'].'">'.$row['title'].'</option>            
-            ' ;
-                                }
-                            }
-                            ?>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+<!--            <div class="col-xl-4">-->
+<!--              <div class="card shadow">-->
+<!--                <div class="card-header bg-transparent">-->
+<!--                  <div class="row align-items-center">-->
+<!--                    <div class="col">-->
+<!--                      <h6 class="text-uppercase text-muted ls-1 mb-1">Добавление информаций</h6>-->
+<!--                      <h2 class="mb-0">На русском языке</h2>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="card-body">-->
+<!--                  <!-- Chart -->-->
+<!--                  <div class="chart" style="height:auto">-->
+<!--                    <div class="form-group mb-3">-->
+<!--                      <div class="input-group input-group-alternative">-->
+<!--                        <div class="input-group-prepend">-->
+<!--                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>-->
+<!--                        </div>-->
+<!--                        <input class="form-control" placeholder="Название" name="title_ru" type="text" required>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group mb-3">-->
+<!--                      <div class="input-group input-group-alternative">-->
+<!--                        <div class="input-group-prepend">-->
+<!--                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>-->
+<!--                        </div>-->
+<!--                        <textarea class="form-control" placeholder="Полное описание" name="full_description_ru" style="height :150px" required ></textarea>-->
+<!--                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group mb-3">-->
+<!--                      <div class="input-group input-group-alternative">-->
+<!--                        <div class="input-group-prepend">-->
+<!--                          <span class="input-group-text"><i class="fa fa-arrow-alt-circle-down"></i></span>-->
+<!--                        </div>-->
+<!--                        <select class="form-control" id="" name="category_ru">-->
+<!--<!--                          <option value="none" hidden="">Выберите категорию</option>-->-->
+<!--                            --><?php
+//                            $jamoat = $dbOperation->getJamoats("ru");
+//                            if(mysqli_num_rows($jamoat)> 0){
+//                                while ($row = mysqli_fetch_array($jamoat)){
+//                                    echo
+//                                        '
+//                                    <option value="'.$row['id'].'">'.$row['title'].'</option>
+//            ' ;
+//                                }
+//                            }
+//                            ?>
+<!--                        </select>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
 
-            <div class="col-xl-4">
-              <div class="card shadow">
-                <div class="card-header bg-transparent">
-                  <div class="row align-items-center">
-                    <div class="col">
-                      <h6 class="text-uppercase text-muted ls-1 mb-1">Add information</h6>
-                      <h2 class="mb-0">In English</h2>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <!-- Chart -->
-                  <div class="chart" style="height:auto">
-                   <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>
-                        </div>
-                        <input class="form-control" placeholder="Title" name="title_en" type="text" required>
-                      </div>
-                    </div>
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>
-                        </div>
-                        <textarea class="form-control" placeholder="Full description" name="full_description_en"  style="height :150px" required></textarea>
-                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->
-                      </div>
-                    </div>
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="fa fa-arrow-alt-circle-down"></i></span>
-                        </div>
-                        <select class="form-control" id="" name="category_en">
-<!--                          <option value="none" hidden="">Choose category</option>-->
-                            <?php
-                            $jamoat = $dbOperation->getJamoats("en");
-                            if(mysqli_num_rows($jamoat)> 0){
-                                while ($row = mysqli_fetch_array($jamoat)){
-                                    echo
-                                        ' 
-                                    <option value="'.$row['id'].'">'.$row['title'].'</option>            
-            ' ;
-                                }
-                            }
-                            ?>
-                        </select>
-                      </div>
-                    </div>
-
-
-                  </div>
-                </div>
-              </div>
-            </div>
+<!--            <div class="col-xl-4">-->
+<!--              <div class="card shadow">-->
+<!--                <div class="card-header bg-transparent">-->
+<!--                  <div class="row align-items-center">-->
+<!--                    <div class="col">-->
+<!--                      <h6 class="text-uppercase text-muted ls-1 mb-1">Add information</h6>-->
+<!--                      <h2 class="mb-0">In English</h2>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="card-body">-->
+<!--                  <!-- Chart -->-->
+<!--                  <div class="chart" style="height:auto">-->
+<!--                   <div class="form-group mb-3">-->
+<!--                      <div class="input-group input-group-alternative">-->
+<!--                        <div class="input-group-prepend">-->
+<!--                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>-->
+<!--                        </div>-->
+<!--                        <input class="form-control" placeholder="Title" name="title_en" type="text" required>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group mb-3">-->
+<!--                      <div class="input-group input-group-alternative">-->
+<!--                        <div class="input-group-prepend">-->
+<!--                          <span class="input-group-text"><i class="fa fa-newspaper"></i></span>-->
+<!--                        </div>-->
+<!--                        <textarea class="form-control" placeholder="Full description" name="full_description_en"  style="height :150px" required></textarea>-->
+<!--                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group mb-3">-->
+<!--                      <div class="input-group input-group-alternative">-->
+<!--                        <div class="input-group-prepend">-->
+<!--                          <span class="input-group-text"><i class="fa fa-arrow-alt-circle-down"></i></span>-->
+<!--                        </div>-->
+<!--                        <select class="form-control" id="" name="category_en">-->
+<!--<!--                          <option value="none" hidden="">Choose category</option>-->-->
+<!--                            --><?php
+//                            $jamoat = $dbOperation->getJamoats("en");
+//                            if(mysqli_num_rows($jamoat)> 0){
+//                                while ($row = mysqli_fetch_array($jamoat)){
+//                                    echo
+//                                        '
+//                                    <option value="'.$row['id'].'">'.$row['title'].'</option>
+//            ' ;
+//                                }
+//                            }
+//                            ?>
+<!--                        </select>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!---->
+<!---->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
           </div>
         </div>
 

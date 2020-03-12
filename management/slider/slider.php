@@ -73,7 +73,7 @@ include("../include/navbar.php");
 
 
 
-    $result = $dbOperations->getSlider( "ru", $offset, $no_of_records_per_page);
+    $result = $dbOperations->getSlider( "tj", $offset, $no_of_records_per_page);
     if(mysqli_num_rows($result)){
         while ($row = mysqli_fetch_array($result)){
 

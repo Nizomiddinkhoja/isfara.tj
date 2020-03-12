@@ -4,8 +4,11 @@ $dbOperation = new DBOperations();
 
 include("../counter.php");
 
-$result_news = $dbOperation->get_news('tj');
+$result_news = $dbOperation->get_new('tj');
 $news = mysqli_fetch_array($result_news);
+
+$result_news1 = $dbOperation->get_new('tj');
+$news1 = mysqli_fetch_array($result_news1);
 ?>
 <!doctype html>
 <html lang="tj" dir="ltr">
@@ -271,7 +274,7 @@ $news = mysqli_fetch_array($result_news);
         }
 
         #sppb-addon-1573712171080 .sppb-addon-title {
-            font-size: 27px;
+            font-size: 22px;
             line-height: 27px;
             line-height: 38px;
         }
@@ -1244,7 +1247,7 @@ $news = mysqli_fetch_array($result_news);
 
         body {
             font-family: 'Arimo', sans-serif;
-            font-size: 16px;
+            font-size: 14px;
         }
 
         @media (max-width: 767px) {
@@ -1737,7 +1740,7 @@ $news = mysqli_fetch_array($result_news);
                                                              class="sppb-addon-wrapper">
                                                             <div id="sppb-addon-1574765723526" class="clearfix ">
                                                                 <div class="sppb-addon sppb-addon-header heading-arrow sppb-text-left">
-                                                                    <h2 class="sppb-addon-title">Хабарҳои нав</h2></div>
+                                                                    <a href="all_news.php"><h2 class="sppb-addon-title">Хабарҳои нав</h2></a></div>
                                                             </div>
                                                         </div>
                                                         <div id="sppb-addon-wrapper-1574763938320"
@@ -1746,73 +1749,113 @@ $news = mysqli_fetch_array($result_news);
                                                                 <div class="sppb-addon sppb-addon-articles-layout layout-arabica  ">
                                                                     <div class="sppb-addon-content">
                                                                         <div class="sppb-row">
-                                                                            <?php
-                                                                            $news = mysqli_fetch_array($result_news);
-                                                                            $category = $dbOperation->getCategoryByID($news[4],'tj');
-                                                                            $cat = mysqli_fetch_array($category);
-                                                                            echo '
-                                                                            <div class="leading-item  sppb-col-sm-6">
-                                                                                <div class="sppb-addon-article "
-                                                                                     style="background-image: url(../img/'.$news[3].')">
-                                                                                    <a class="sppb-article-img-wrap"
-                                                                                       href="view_news.php?id='.$news[0].'&category='.$news[4].'"
-                                                                                       itemprop="url"><img
-                                                                                            class="sppb-img-responsive"
-                                                                                            src="../img/'.$news[3].'"
-                                                                                            itemprop="thumbnailUrl"></a>
-                                                                                    <div class="sppb-article-info-wrap">
-                                                                                        <p class="sppb-meta-category">
-                                                                                            <a
-                                                                                                href="category.php?id='.$news[4].'"
-                                                                                                itemprop="genre">'. $cat[0] .'</a>
-                                                                                        </p>
-                                                                                        <h3>
-                                                                                            <a href="view_news.php?id='.$news[0].'&category='.$news[4].'"
-                                                                                               itemprop="url">'.$news[2].'</a></h3>
-                                                                                        <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                            <div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-date"
-                                                                                                      itemprop="datePublished">'.$news[5].'</span>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            ';
-                                                                            ?>
+                                                                            <div class="leading-item  sppb-col-sm-12">
 
-                                                                            <?php
-                                                                            $news = mysqli_fetch_array($result_news);
-                                                                            $category = $dbOperation->getCategoryByID($news[4],'tj');
-                                                                            $cat = mysqli_fetch_array($category);
-                                                                            ?>
-                                                                            <div class="leading-item  sppb-col-sm-6">
-                                                                                <div class="sppb-addon-article "
-                                                                                     style="background-image: url(../img/<?=$news[3]?>)">
-                                                                                    <a class="sppb-article-img-wrap"
-                                                                                       href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
-                                                                                       itemprop="url"><img
-                                                                                            class="sppb-img-responsive"
-                                                                                            src="../img/<?=$news[3]?>"
-                                                                                            itemprop="thumbnailUrl"></a>
-                                                                                    <div class="sppb-article-info-wrap">
-                                                                                        <p class="sppb-meta-category">
-                                                                                            <a
-                                                                                                href="category.php?id=<?=$news[4]?>"
-                                                                                                itemprop="genre"><?=$cat[0]?></a>
-                                                                                        </p>
-                                                                                        <h3>
-                                                                                            <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[0]?>"
-                                                                                               itemprop="url"><?=$news[2]?></a></h3>
-                                                                                        <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                            <div class="sppb-article-meta">
-                                                                                                <span class="sppb-meta-date"
-                                                                                                      itemprop="datePublished"><?=$news[5]?></span>
+                                                                            <div id="carouselExampleControls"
+                                                                                 class="carousel slide"
+                                                                                 data-ride="carousel">
+                                                                                <div class="carousel-inner">
+                                                                                    <?php
+                                                                                    $category = $dbOperation->getCategoryByID($news1[4],'tj');
+                                                                                    $cat = mysqli_fetch_array($category);
+                                                                                    ?>
+                                                                                    <div class="carousel-item active">
+
+                                                                                        <div class="sppb-addon-article "
+                                                                                             style="background-image: url(../img/<?=$news[3]?>)">
+                                                                                            <div class="sppb-addon-article "
+                                                                                                 style="">
+                                                                                                <div class="sppb-article-info-wrap">
+                                                                                                    <p class="sppb-meta-category">
+                                                                                                        <a href="category.php?id=<?=$news1[4]?>"
+                                                                                                           itemprop="genre"><?=$cat[0]?></a>
+                                                                                                    </p>
+                                                                                                    <h3>
+                                                                                                        <a href="view_news.php?id=<?=$news1[0]?>&category=<?=$news1[4]?>"
+                                                                                                           itemprop="url"><?=$news1[1]?></a>
+                                                                                                    </h3>
+                                                                                                    <div class="sppb-article-info-intro-wrap d-flex align-items-center">
+                                                                                                        <div>
+                                                                                                            <div class="sppb-article-introtext">
+                                                                                                                <?=$news1[2]?>
+                                                                                                            </div>
+                                                                                                            <div class="sppb-article-spbookmark-wrap d-flex">
+                                                                                                                <div class="sppb-article-meta">
+                                                                                                                    <span class="sppb-meta-date"
+                                                                                                                          itemprop="datePublished"><?=$news1[5]?></span>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <a class="sppb-article-img-wrap"
+                                                                                                           href="view_news.php?id=<?=$news1[0]?>&category=<?=$news1[4]?>"
+                                                                                                           itemprop="url"><img
+                                                                                                                class="sppb-img-responsive"
+                                                                                                                src="../img/<?=$news1[3]?>"
+                                                                                                                alt="<?=$news1[1]?>"
+                                                                                                                itemprop="thumbnailUrl"></a>
+                                                                                                    </div>
+                                                                                                </div>
                                                                                             </div>
-                                                                                        </div>
                                                                                     </div>
+                                                                                    </div>
+                                                                                    <?php if (mysqli_fetch_array($result_news1)) {
+                                                                                        while (($news1 = mysqli_fetch_array($result_news1))&&($k!=3)) {
+                                                                                            $category = $dbOperation->getCategoryByID($news1[4],'tj');
+                                                                                            $cat = mysqli_fetch_array($category);
+                                                                                            ?>
+                                                                                            <div class="carousel-item">
+                                                                                                <div class="sppb-addon-article "
+                                                                                                     style="background-image: url(../img/<?=$news1[3]?>)">
+                                                                                                <div class="swiper-slide  sppb-col-sm-0">
+                                                                                                    <div class="sppb-addon-article "
+                                                                                                         style="">
+                                                                                                        <div class="sppb-article-info-wrap">
+                                                                                                            <p class="sppb-meta-category">
+                                                                                                                <a href="category.php?id=<?=$news1[4]?>"
+                                                                                                                   itemprop="genre"><?=$cat[0]?></a>
+                                                                                                            </p>
+                                                                                                            <h3>
+                                                                                                                <a href="view_news.php?id=<?=$news1[0]?>&category=<?=$news1[4]?>"
+                                                                                                                   itemprop="url"><?=$news1[1]?></a>
+                                                                                                            </h3>
+                                                                                                            <div class="sppb-article-info-intro-wrap d-flex align-items-center">
+                                                                                                                <div>
+                                                                                                                    <div class="sppb-article-introtext">
+                                                                                                                        <?=$news1[2]?>
+                                                                                                                    </div>
+                                                                                                                    <div class="sppb-article-spbookmark-wrap d-flex">
+                                                                                                                        <div class="sppb-article-meta">
+                                                                                                                    <span class="sppb-meta-date"
+                                                                                                                          itemprop="datePublished"><?=$news1[5]?></span>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <a class="sppb-article-img-wrap"
+                                                                                                                   href="view_news.php?id=<?=$news1[0]?>&category=<?=$news1[4]?>"
+                                                                                                                   itemprop="url"><img
+                                                                                                                        class="sppb-img-responsive"
+                                                                                                                        src="../img/<?=$news1[3]?>"
+                                                                                                                        alt="<?=$news1[1]?>"
+                                                                                                                        itemprop="thumbnailUrl"></a>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                    </div>
+
+
+
+                                                                                            <?php
+                                                                                        $k++;
+                                                                                        }
+                                                                                    } ?>
+
                                                                                 </div>
+
                                                                             </div>
+                                                                            </div>
+
 
 
 
@@ -1820,11 +1863,11 @@ $news = mysqli_fetch_array($result_news);
                                                                                 <div class="swiper-container intro-items-slider">
                                                                                     <div class="swiper-wrapper">
                                                                                         <?php
-                                                                                        $news = mysqli_fetch_array($result_news);
+//                                                                                        $news = mysqli_fetch_array($result_news);
                                                                                         $category = $dbOperation->getCategoryByID($news[4],'tj');
                                                                                         $cat = mysqli_fetch_array($category);
                                                                                         ?>
-                                                                                        <div class="swiper-slide  sppb-col-sm-0">
+                                                                                        <div class="swiper-slide  sppb-col-sm-0" style="border: 1px solid rgb(215, 215, 215);">
                                                                                             <div class="sppb-addon-article "
                                                                                                  style="">
                                                                                                 <div class="sppb-article-info-wrap">
@@ -1832,22 +1875,11 @@ $news = mysqli_fetch_array($result_news);
                                                                                                         <a href="category.php?id=<?=$news[4]?>"
                                                                                                            itemprop="genre"><?=$cat[0]?></a>
                                                                                                     </p>
-                                                                                                    <h3>
+                                                                                                    <h4 >
                                                                                                         <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
-                                                                                                           itemprop="url"><?=$news[1]?></a>
-                                                                                                    </h3>
-                                                                                                    <div class="sppb-article-info-intro-wrap d-flex align-items-center">
-                                                                                                        <div>
-                                                                                                            <div class="sppb-article-introtext">
-                                                                                                                <?=$news[2]?>
-                                                                                                            </div>
-                                                                                                            <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                <div class="sppb-article-meta">
-                                                                                                                    <span class="sppb-meta-date"
-                                                                                                                          itemprop="datePublished"><?=$news[5]?></span>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
+                                                                                                           itemprop="url" style="color: #000;"><?=$news[1]?></a>
+                                                                                                    </h4>
+                                                                                                    <div class="sppb-article-info-intro-wrap   align-items-center">
                                                                                                         <a class="sppb-article-img-wrap"
                                                                                                            href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
                                                                                                            itemprop="url"><img
@@ -1855,28 +1887,6 @@ $news = mysqli_fetch_array($result_news);
                                                                                                                     src="../img/<?=$news[3]?>"
                                                                                                                     alt="<?=$news[1]?>"
                                                                                                                     itemprop="thumbnailUrl"></a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <?php
-                                                                                        $news = mysqli_fetch_array($result_news);
-                                                                                        $category = $dbOperation->getCategoryByID($news[4],'tj');
-                                                                                        $cat = mysqli_fetch_array($category);
-                                                                                        ?>
-                                                                                        <div class="swiper-slide  sppb-col-sm-0">
-                                                                                            <div class="sppb-addon-article "
-                                                                                                 style="">
-                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                    <p class="sppb-meta-category">
-                                                                                                        <a href="category.php?id=<?=$news[4]?>"
-                                                                                                           itemprop="genre"><?=$cat[0]?></a>
-                                                                                                    </p>
-                                                                                                    <h3>
-                                                                                                        <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
-                                                                                                           itemprop="url"><?=$news[1]?></a>
-                                                                                                    </h3>
-                                                                                                    <div class="sppb-article-info-intro-wrap d-flex align-items-center">
                                                                                                         <div>
                                                                                                             <div class="sppb-article-introtext">
                                                                                                                 <?=$news[2]?>
@@ -1888,13 +1898,7 @@ $news = mysqli_fetch_array($result_news);
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
-                                                                                                        <a class="sppb-article-img-wrap"
-                                                                                                           href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
-                                                                                                           itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="../img/<?=$news[3]?>"
-                                                                                                                alt="<?=$news[1]?>"
-                                                                                                                itemprop="thumbnailUrl"></a>
+
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
@@ -1904,7 +1908,7 @@ $news = mysqli_fetch_array($result_news);
                                                                                         $category = $dbOperation->getCategoryByID($news[4],'tj');
                                                                                         $cat = mysqli_fetch_array($category);
                                                                                         ?>
-                                                                                        <div class="swiper-slide  sppb-col-sm-0">
+                                                                                        <div class="swiper-slide  sppb-col-sm-0" style="border: 1px solid rgb(215, 215, 215);">
                                                                                             <div class="sppb-addon-article "
                                                                                                  style="">
                                                                                                 <div class="sppb-article-info-wrap">
@@ -1912,11 +1916,18 @@ $news = mysqli_fetch_array($result_news);
                                                                                                         <a href="category.php?id=<?=$news[4]?>"
                                                                                                            itemprop="genre"><?=$cat[0]?></a>
                                                                                                     </p>
-                                                                                                    <h3>
+                                                                                                    <h4 >
                                                                                                         <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
-                                                                                                           itemprop="url"><?=$news[1]?></a>
-                                                                                                    </h3>
-                                                                                                    <div class="sppb-article-info-intro-wrap d-flex align-items-center">
+                                                                                                           itemprop="url" style="color: #000;"><?=$news[1]?></a>
+                                                                                                    </h4>
+                                                                                                    <div class="sppb-article-info-intro-wrap   align-items-center">
+                                                                                                        <a class="sppb-article-img-wrap"
+                                                                                                           href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
+                                                                                                           itemprop="url"><img
+                                                                                                                    class="sppb-img-responsive"
+                                                                                                                    src="../img/<?=$news[3]?>"
+                                                                                                                    alt="<?=$news[1]?>"
+                                                                                                                    itemprop="thumbnailUrl"></a>
                                                                                                         <div>
                                                                                                             <div class="sppb-article-introtext">
                                                                                                                 <?=$news[2]?>
@@ -1928,23 +1939,16 @@ $news = mysqli_fetch_array($result_news);
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
-                                                                                                        <a class="sppb-article-img-wrap"
-                                                                                                           href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
-                                                                                                           itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="../img/<?=$news[3]?>"
-                                                                                                                alt="<?=$news[1]?>"
-                                                                                                                itemprop="thumbnailUrl"></a>
+
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
-                                                                                        </div>
-                                                                                        <?php
+                                                                                        </div><?php
                                                                                         $news = mysqli_fetch_array($result_news);
                                                                                         $category = $dbOperation->getCategoryByID($news[4],'tj');
                                                                                         $cat = mysqli_fetch_array($category);
                                                                                         ?>
-                                                                                        <div class="swiper-slide  sppb-col-sm-0">
+                                                                                        <div class="swiper-slide  sppb-col-sm-0" style="border: 1px solid rgb(215, 215, 215);">
                                                                                             <div class="sppb-addon-article "
                                                                                                  style="">
                                                                                                 <div class="sppb-article-info-wrap">
@@ -1952,11 +1956,18 @@ $news = mysqli_fetch_array($result_news);
                                                                                                         <a href="category.php?id=<?=$news[4]?>"
                                                                                                            itemprop="genre"><?=$cat[0]?></a>
                                                                                                     </p>
-                                                                                                    <h3>
+                                                                                                    <h4 >
                                                                                                         <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
-                                                                                                           itemprop="url"><?=$news[1]?></a>
-                                                                                                    </h3>
-                                                                                                    <div class="sppb-article-info-intro-wrap d-flex align-items-center">
+                                                                                                           itemprop="url" style="color: #000;"><?=$news[1]?></a>
+                                                                                                    </h4>
+                                                                                                    <div class="sppb-article-info-intro-wrap   align-items-center">
+                                                                                                        <a class="sppb-article-img-wrap"
+                                                                                                           href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
+                                                                                                           itemprop="url"><img
+                                                                                                                    class="sppb-img-responsive"
+                                                                                                                    src="../img/<?=$news[3]?>"
+                                                                                                                    alt="<?=$news[1]?>"
+                                                                                                                    itemprop="thumbnailUrl"></a>
                                                                                                         <div>
                                                                                                             <div class="sppb-article-introtext">
                                                                                                                 <?=$news[2]?>
@@ -1968,177 +1979,254 @@ $news = mysqli_fetch_array($result_news);
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
-                                                                                                        <a class="sppb-article-img-wrap"
-                                                                                                           href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
-                                                                                                           itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="../img/<?=$news[3]?>"
-                                                                                                                alt="<?=$news[1]?>"
-                                                                                                                itemprop="thumbnailUrl"></a>
+
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
-                                                                                        <?php
-                                                                                        $news = mysqli_fetch_array($result_news);
-                                                                                        $category = $dbOperation->getCategoryByID($news[4],'tj');
-                                                                                        $cat = mysqli_fetch_array($category);
-                                                                                        ?>
-                                                                                        <div class="swiper-slide  sppb-col-sm-0">
-                                                                                            <div class="sppb-addon-article "
-                                                                                                 style="">
-                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                    <p class="sppb-meta-category">
-                                                                                                        <a href="category.php?id=<?=$news[4]?>"
-                                                                                                           itemprop="genre"><?=$cat[0]?></a>
-                                                                                                    </p>
-                                                                                                    <h3>
-                                                                                                        <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
-                                                                                                           itemprop="url"><?=$news[1]?></a>
-                                                                                                    </h3>
-                                                                                                    <div class="sppb-article-info-intro-wrap d-flex align-items-center">
-                                                                                                        <div>
-                                                                                                            <div class="sppb-article-introtext">
-                                                                                                                <?=$news[2]?>
-                                                                                                            </div>
-                                                                                                            <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                <div class="sppb-article-meta">
-                                                                                                                    <span class="sppb-meta-date"
-                                                                                                                          itemprop="datePublished"><?=$news[5]?></span>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <a class="sppb-article-img-wrap"
-                                                                                                           href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
-                                                                                                           itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="../img/<?=$news[3]?>"
-                                                                                                                alt="<?=$news[1]?>"
-                                                                                                                itemprop="thumbnailUrl"></a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <?php
-                                                                                        $news = mysqli_fetch_array($result_news);
-                                                                                        $category = $dbOperation->getCategoryByID($news[4],'tj');
-                                                                                        $cat = mysqli_fetch_array($category);
-                                                                                        ?>
-                                                                                        <div class="swiper-slide  sppb-col-sm-0">
-                                                                                            <div class="sppb-addon-article "
-                                                                                                 style="">
-                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                    <p class="sppb-meta-category">
-                                                                                                        <a href="category.php?id=<?=$news[4]?>"
-                                                                                                           itemprop="genre"><?=$cat[0]?></a>
-                                                                                                    </p>
-                                                                                                    <h3>
-                                                                                                        <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
-                                                                                                           itemprop="url"><?=$news[1]?></a>
-                                                                                                    </h3>
-                                                                                                    <div class="sppb-article-info-intro-wrap d-flex align-items-center">
-                                                                                                        <div>
-                                                                                                            <div class="sppb-article-introtext">
-                                                                                                                <?=$news[2]?>
-                                                                                                            </div>
-                                                                                                            <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                <div class="sppb-article-meta">
-                                                                                                                    <span class="sppb-meta-date"
-                                                                                                                          itemprop="datePublished"><?=$news[5]?></span>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <a class="sppb-article-img-wrap"
-                                                                                                           href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
-                                                                                                           itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="../img/<?=$news[3]?>"
-                                                                                                                alt="<?=$news[1]?>"
-                                                                                                                itemprop="thumbnailUrl"></a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <?php
-                                                                                        $news = mysqli_fetch_array($result_news);
-                                                                                        $category = $dbOperation->getCategoryByID($news[4],'tj');
-                                                                                        $cat = mysqli_fetch_array($category);
-                                                                                        ?>
-                                                                                        <div class="swiper-slide  sppb-col-sm-0">
-                                                                                            <div class="sppb-addon-article "
-                                                                                                 style="">
-                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                    <p class="sppb-meta-category">
-                                                                                                        <a href="category.php?id=<?=$news[4]?>"
-                                                                                                           itemprop="genre"><?=$cat[0]?></a>
-                                                                                                    </p>
-                                                                                                    <h3>
-                                                                                                        <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
-                                                                                                           itemprop="url"><?=$news[1]?></a>
-                                                                                                    </h3>
-                                                                                                    <div class="sppb-article-info-intro-wrap d-flex align-items-center">
-                                                                                                        <div>
-                                                                                                            <div class="sppb-article-introtext">
-                                                                                                                <?=$news[2]?>
-                                                                                                            </div>
-                                                                                                            <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                <div class="sppb-article-meta">
-                                                                                                                    <span class="sppb-meta-date"
-                                                                                                                          itemprop="datePublished"><?=$news[5]?></span>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <a class="sppb-article-img-wrap"
-                                                                                                           href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
-                                                                                                           itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="../img/<?=$news[3]?>"
-                                                                                                                alt="<?=$news[1]?>"
-                                                                                                                itemprop="thumbnailUrl"></a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <?php
-                                                                                        $news = mysqli_fetch_array($result_news);
-                                                                                        $category = $dbOperation->getCategoryByID($news[4],'tj');
-                                                                                        $cat = mysqli_fetch_array($category);
-                                                                                        ?>
-                                                                                        <div class="swiper-slide  sppb-col-sm-0">
-                                                                                            <div class="sppb-addon-article "
-                                                                                                 style="">
-                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                    <p class="sppb-meta-category">
-                                                                                                        <a href="category.php?id=<?=$news[4]?>"
-                                                                                                           itemprop="genre"><?=$cat[0]?></a>
-                                                                                                    </p>
-                                                                                                    <h3>
-                                                                                                        <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
-                                                                                                           itemprop="url"><?=$news[1]?></a>
-                                                                                                    </h3>
-                                                                                                    <div class="sppb-article-info-intro-wrap d-flex align-items-center">
-                                                                                                        <div>
-                                                                                                            <div class="sppb-article-introtext">
-                                                                                                                <?=$news[2]?>
-                                                                                                            </div>
-                                                                                                            <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                                <div class="sppb-article-meta">
-                                                                                                                    <span class="sppb-meta-date"
-                                                                                                                          itemprop="datePublished"><?=$news[5]?></span>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <a class="sppb-article-img-wrap"
-                                                                                                           href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
-                                                                                                           itemprop="url"><img
-                                                                                                                class="sppb-img-responsive"
-                                                                                                                src="../img/<?=$news[3]?>"
-                                                                                                                alt="<?=$news[1]?>"
-                                                                                                                itemprop="thumbnailUrl"></a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
+
+
+<!--                                                                                        --><?php
+//                                                                                        $news = mysqli_fetch_array($result_news);
+//                                                                                        $category = $dbOperation->getCategoryByID($news[4],'tj');
+//                                                                                        $cat = mysqli_fetch_array($category);
+//                                                                                        ?>
+<!--                                                                                        <div class="swiper-slide  sppb-col-sm-0">-->
+<!--                                                                                            <div class="sppb-addon-article "-->
+<!--                                                                                                 style="">-->
+<!--                                                                                                <div class="sppb-article-info-wrap">-->
+<!--                                                                                                    <p class="sppb-meta-category">-->
+<!--                                                                                                        <a href="category.php?id=--><?//=$news[4]?><!--"-->
+<!--                                                                                                           itemprop="genre">--><?//=$cat[0]?><!--</a>-->
+<!--                                                                                                    </p>-->
+<!--                                                                                                    <h3>-->
+<!--                                                                                                        <a href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--"-->
+<!--                                                                                                           itemprop="url">--><?//=$news[1]?><!--</a>-->
+<!--                                                                                                    </h3>-->
+<!--                                                                                                    <div class="sppb-article-info-intro-wrap   align-items-center">-->
+<!--                                                                                                        <a class="sppb-article-img-wrap"-->
+<!--                                                                                                           href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--"-->
+<!--                                                                                                           itemprop="url"><img-->
+<!--                                                                                                                    class="sppb-img-responsive"-->
+<!--                                                                                                                    src="../img/--><?//=$news[3]?><!--"-->
+<!--                                                                                                                    alt="--><?//=$news[1]?><!--"-->
+<!--                                                                                                                    itemprop="thumbnailUrl"></a>-->
+<!--                                                                                                        <div>-->
+<!--                                                                                                            <div class="sppb-article-introtext">-->
+<!--                                                                                                                --><?//=$news[2]?>
+<!--                                                                                                            </div>-->
+<!--                                                                                                            <div class="sppb-article-spbookmark-wrap d-flex">-->
+<!--                                                                                                                <div class="sppb-article-meta">-->
+<!--                                                                                                                    <span class="sppb-meta-date"-->
+<!--                                                                                                                          itemprop="datePublished">--><?//=$news[5]?><!--</span>-->
+<!--                                                                                                                </div>-->
+<!--                                                                                                            </div>-->
+<!--                                                                                                        </div>-->
+<!---->
+<!--                                                                                                    </div>-->
+<!--                                                                                                </div>-->
+<!--                                                                                            </div>-->
+<!--                                                                                        </div>--><?php
+//                                                                                        $news = mysqli_fetch_array($result_news);
+//                                                                                        $category = $dbOperation->getCategoryByID($news[4],'tj');
+//                                                                                        $cat = mysqli_fetch_array($category);
+//                                                                                        ?>
+<!--                                                                                        <div class="swiper-slide  sppb-col-sm-0">-->
+<!--                                                                                            <div class="sppb-addon-article "-->
+<!--                                                                                                 style="">-->
+<!--                                                                                                <div class="sppb-article-info-wrap">-->
+<!--                                                                                                    <p class="sppb-meta-category">-->
+<!--                                                                                                        <a href="category.php?id=--><?//=$news[4]?><!--"-->
+<!--                                                                                                           itemprop="genre">--><?//=$cat[0]?><!--</a>-->
+<!--                                                                                                    </p>-->
+<!--                                                                                                    <h3>-->
+<!--                                                                                                        <a href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--"-->
+<!--                                                                                                           itemprop="url">--><?//=$news[1]?><!--</a>-->
+<!--                                                                                                    </h3>-->
+<!--                                                                                                    <div class="sppb-article-info-intro-wrap   align-items-center">-->
+<!--                                                                                                        <a class="sppb-article-img-wrap"-->
+<!--                                                                                                           href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--"-->
+<!--                                                                                                           itemprop="url"><img-->
+<!--                                                                                                                    class="sppb-img-responsive"-->
+<!--                                                                                                                    src="../img/--><?//=$news[3]?><!--"-->
+<!--                                                                                                                    alt="--><?//=$news[1]?><!--"-->
+<!--                                                                                                                    itemprop="thumbnailUrl"></a>-->
+<!--                                                                                                        <div>-->
+<!--                                                                                                            <div class="sppb-article-introtext">-->
+<!--                                                                                                                --><?//=$news[2]?>
+<!--                                                                                                            </div>-->
+<!--                                                                                                            <div class="sppb-article-spbookmark-wrap d-flex">-->
+<!--                                                                                                                <div class="sppb-article-meta">-->
+<!--                                                                                                                    <span class="sppb-meta-date"-->
+<!--                                                                                                                          itemprop="datePublished">--><?//=$news[5]?><!--</span>-->
+<!--                                                                                                                </div>-->
+<!--                                                                                                            </div>-->
+<!--                                                                                                        </div>-->
+<!---->
+<!--                                                                                                    </div>-->
+<!--                                                                                                </div>-->
+<!--                                                                                            </div>-->
+<!--                                                                                        </div>--><?php
+//                                                                                        $news = mysqli_fetch_array($result_news);
+//                                                                                        $category = $dbOperation->getCategoryByID($news[4],'tj');
+//                                                                                        $cat = mysqli_fetch_array($category);
+//                                                                                        ?>
+<!--                                                                                        <div class="swiper-slide  sppb-col-sm-0">-->
+<!--                                                                                            <div class="sppb-addon-article "-->
+<!--                                                                                                 style="">-->
+<!--                                                                                                <div class="sppb-article-info-wrap">-->
+<!--                                                                                                    <p class="sppb-meta-category">-->
+<!--                                                                                                        <a href="category.php?id=--><?//=$news[4]?><!--"-->
+<!--                                                                                                           itemprop="genre">--><?//=$cat[0]?><!--</a>-->
+<!--                                                                                                    </p>-->
+<!--                                                                                                    <h3>-->
+<!--                                                                                                        <a href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--"-->
+<!--                                                                                                           itemprop="url">--><?//=$news[1]?><!--</a>-->
+<!--                                                                                                    </h3>-->
+<!--                                                                                                    <div class="sppb-article-info-intro-wrap   align-items-center">-->
+<!--                                                                                                        <a class="sppb-article-img-wrap"-->
+<!--                                                                                                           href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--"-->
+<!--                                                                                                           itemprop="url"><img-->
+<!--                                                                                                                    class="sppb-img-responsive"-->
+<!--                                                                                                                    src="../img/--><?//=$news[3]?><!--"-->
+<!--                                                                                                                    alt="--><?//=$news[1]?><!--"-->
+<!--                                                                                                                    itemprop="thumbnailUrl"></a>-->
+<!--                                                                                                        <div>-->
+<!--                                                                                                            <div class="sppb-article-introtext">-->
+<!--                                                                                                                --><?//=$news[2]?>
+<!--                                                                                                            </div>-->
+<!--                                                                                                            <div class="sppb-article-spbookmark-wrap d-flex">-->
+<!--                                                                                                                <div class="sppb-article-meta">-->
+<!--                                                                                                                    <span class="sppb-meta-date"-->
+<!--                                                                                                                          itemprop="datePublished">--><?//=$news[5]?><!--</span>-->
+<!--                                                                                                                </div>-->
+<!--                                                                                                            </div>-->
+<!--                                                                                                        </div>-->
+<!---->
+<!--                                                                                                    </div>-->
+<!--                                                                                                </div>-->
+<!--                                                                                            </div>-->
+<!--                                                                                        </div>--><?php
+//                                                                                        $news = mysqli_fetch_array($result_news);
+//                                                                                        $category = $dbOperation->getCategoryByID($news[4],'tj');
+//                                                                                        $cat = mysqli_fetch_array($category);
+//                                                                                        ?>
+<!--                                                                                        <div class="swiper-slide  sppb-col-sm-0">-->
+<!--                                                                                            <div class="sppb-addon-article "-->
+<!--                                                                                                 style="">-->
+<!--                                                                                                <div class="sppb-article-info-wrap">-->
+<!--                                                                                                    <p class="sppb-meta-category">-->
+<!--                                                                                                        <a href="category.php?id=--><?//=$news[4]?><!--"-->
+<!--                                                                                                           itemprop="genre">--><?//=$cat[0]?><!--</a>-->
+<!--                                                                                                    </p>-->
+<!--                                                                                                    <h3>-->
+<!--                                                                                                        <a href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--"-->
+<!--                                                                                                           itemprop="url">--><?//=$news[1]?><!--</a>-->
+<!--                                                                                                    </h3>-->
+<!--                                                                                                    <div class="sppb-article-info-intro-wrap   align-items-center">-->
+<!--                                                                                                        <a class="sppb-article-img-wrap"-->
+<!--                                                                                                           href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--"-->
+<!--                                                                                                           itemprop="url"><img-->
+<!--                                                                                                                    class="sppb-img-responsive"-->
+<!--                                                                                                                    src="../img/--><?//=$news[3]?><!--"-->
+<!--                                                                                                                    alt="--><?//=$news[1]?><!--"-->
+<!--                                                                                                                    itemprop="thumbnailUrl"></a>-->
+<!--                                                                                                        <div>-->
+<!--                                                                                                            <div class="sppb-article-introtext">-->
+<!--                                                                                                                --><?//=$news[2]?>
+<!--                                                                                                            </div>-->
+<!--                                                                                                            <div class="sppb-article-spbookmark-wrap d-flex">-->
+<!--                                                                                                                <div class="sppb-article-meta">-->
+<!--                                                                                                                    <span class="sppb-meta-date"-->
+<!--                                                                                                                          itemprop="datePublished">--><?//=$news[5]?><!--</span>-->
+<!--                                                                                                                </div>-->
+<!--                                                                                                            </div>-->
+<!--                                                                                                        </div>-->
+<!---->
+<!--                                                                                                    </div>-->
+<!--                                                                                                </div>-->
+<!--                                                                                            </div>-->
+<!--                                                                                        </div>--><?php
+//                                                                                        $news = mysqli_fetch_array($result_news);
+//                                                                                        $category = $dbOperation->getCategoryByID($news[4],'tj');
+//                                                                                        $cat = mysqli_fetch_array($category);
+//                                                                                        ?>
+<!--                                                                                        <div class="swiper-slide  sppb-col-sm-0">-->
+<!--                                                                                            <div class="sppb-addon-article "-->
+<!--                                                                                                 style="">-->
+<!--                                                                                                <div class="sppb-article-info-wrap">-->
+<!--                                                                                                    <p class="sppb-meta-category">-->
+<!--                                                                                                        <a href="category.php?id=--><?//=$news[4]?><!--"-->
+<!--                                                                                                           itemprop="genre">--><?//=$cat[0]?><!--</a>-->
+<!--                                                                                                    </p>-->
+<!--                                                                                                    <h3>-->
+<!--                                                                                                        <a href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--"-->
+<!--                                                                                                           itemprop="url">--><?//=$news[1]?><!--</a>-->
+<!--                                                                                                    </h3>-->
+<!--                                                                                                    <div class="sppb-article-info-intro-wrap   align-items-center">-->
+<!--                                                                                                        <a class="sppb-article-img-wrap"-->
+<!--                                                                                                           href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--"-->
+<!--                                                                                                           itemprop="url"><img-->
+<!--                                                                                                                    class="sppb-img-responsive"-->
+<!--                                                                                                                    src="../img/--><?//=$news[3]?><!--"-->
+<!--                                                                                                                    alt="--><?//=$news[1]?><!--"-->
+<!--                                                                                                                    itemprop="thumbnailUrl"></a>-->
+<!--                                                                                                        <div>-->
+<!--                                                                                                            <div class="sppb-article-introtext">-->
+<!--                                                                                                                --><?//=$news[2]?>
+<!--                                                                                                            </div>-->
+<!--                                                                                                            <div class="sppb-article-spbookmark-wrap d-flex">-->
+<!--                                                                                                                <div class="sppb-article-meta">-->
+<!--                                                                                                                    <span class="sppb-meta-date"-->
+<!--                                                                                                                          itemprop="datePublished">--><?//=$news[5]?><!--</span>-->
+<!--                                                                                                                </div>-->
+<!--                                                                                                            </div>-->
+<!--                                                                                                        </div>-->
+<!---->
+<!--                                                                                                    </div>-->
+<!--                                                                                                </div>-->
+<!--                                                                                            </div>-->
+<!--                                                                                        </div>--><?php
+//                                                                                        $news = mysqli_fetch_array($result_news);
+//                                                                                        $category = $dbOperation->getCategoryByID($news[4],'tj');
+//                                                                                        $cat = mysqli_fetch_array($category);
+//                                                                                        ?>
+<!--                                                                                        <div class="swiper-slide  sppb-col-sm-0">-->
+<!--                                                                                            <div class="sppb-addon-article "-->
+<!--                                                                                                 style="">-->
+<!--                                                                                                <div class="sppb-article-info-wrap">-->
+<!--                                                                                                    <p class="sppb-meta-category">-->
+<!--                                                                                                        <a href="category.php?id=--><?//=$news[4]?><!--"-->
+<!--                                                                                                           itemprop="genre">--><?//=$cat[0]?><!--</a>-->
+<!--                                                                                                    </p>-->
+<!--                                                                                                    <h3>-->
+<!--                                                                                                        <a href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--"-->
+<!--                                                                                                           itemprop="url">--><?//=$news[1]?><!--</a>-->
+<!--                                                                                                    </h3>-->
+<!--                                                                                                    <div class="sppb-article-info-intro-wrap   align-items-center">-->
+<!--                                                                                                        <a class="sppb-article-img-wrap"-->
+<!--                                                                                                           href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--"-->
+<!--                                                                                                           itemprop="url"><img-->
+<!--                                                                                                                    class="sppb-img-responsive"-->
+<!--                                                                                                                    src="../img/--><?//=$news[3]?><!--"-->
+<!--                                                                                                                    alt="--><?//=$news[1]?><!--"-->
+<!--                                                                                                                    itemprop="thumbnailUrl"></a>-->
+<!--                                                                                                        <div>-->
+<!--                                                                                                            <div class="sppb-article-introtext">-->
+<!--                                                                                                                --><?//=$news[2]?>
+<!--                                                                                                            </div>-->
+<!--                                                                                                            <div class="sppb-article-spbookmark-wrap d-flex">-->
+<!--                                                                                                                <div class="sppb-article-meta">-->
+<!--                                                                                                                    <span class="sppb-meta-date"-->
+<!--                                                                                                                          itemprop="datePublished">--><?//=$news[5]?><!--</span>-->
+<!--                                                                                                                </div>-->
+<!--                                                                                                            </div>-->
+<!--                                                                                                        </div>-->
+<!---->
+<!--                                                                                                    </div>-->
+<!--                                                                                                </div>-->
+<!--                                                                                            </div>-->
+<!--                                                                                        </div>-->
                                                                                     </div>
                                                                                     <div class="thumb-slider-nav swiper-button-next"></div>
                                                                                     <div class="thumb-slider-nav swiper-button-prev"></div>
@@ -2146,17 +2234,17 @@ $news = mysqli_fetch_array($result_news);
                                                                             </div>
                                                                         </div>
                                                                     </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
                                             <div class="sppb-col-md-3" id="column-wrap-id-1573711718215">
                                                 <div id="column-id-1573711718215" class="sppb-column">
                                                     <div class="sppb-column-addons president" >
                                                         <div id="section-id-1574157062618"
-                                                             class="sppb-section newsberg-card">
+                                                             class="sppb-section newsberg-card" style="    background-color: #fff;">
                                                             <div class="sppb-container-inner">
                                                                 <div class="sppb-row">
                                                                     <div class="sppb-col-md-12"
@@ -2200,9 +2288,10 @@ $news = mysqli_fetch_array($result_news);
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                    </div>
 
                                                         <div id="section-id-1574157062618"
-                                                             class="sppb-section newsberg-card who_is">
+                                                             class="sppb-section newsberg-card who_is"  style="    background-color: #fff;">
                                                             <div class="sppb-container-inner">
                                                                 <div class="sppb-row">
                                                                     <div class="sppb-col-md-12"
@@ -2238,10 +2327,10 @@ $news = mysqli_fetch_array($result_news);
                                                                                                      style="width:100%;">
                                                                                                 <div class="carousel-caption d-none d-md-block"
                                                                                                      style="margin-bottom:  0px; padding-bottom: 0px;">
-                                                                                                    <h2 class="display-4"
-                                                                                                        style="margin-bottom:  0px;font-size: 18px;"><?= $who_is[1] ?></h2>
-                                                                                                    <p class="lead"
-                                                                                                       style="margin-bottom:  0px; font-size: 14px;"><?= $who_is[2] ?></p>
+<!--                                                                                                    <h2 class="display-4"-->
+<!--                                                                                                        style="margin-bottom:  0px;font-size: 18px;">--><?//= $who_is[1] ?><!--</h2>-->
+<!--                                                                                                    <p class="lead"-->
+<!--                                                                                                       style="margin-bottom:  0px; font-size: 14px;">--><?//= $who_is[2] ?><!--</p>-->
                                                                                                 </div>
                                                                                             </a>
                                                                                         </div>
@@ -2261,10 +2350,10 @@ $news = mysqli_fetch_array($result_news);
                                                                                                         <div
                                                                                                                 class="carousel-caption d-none d-md-block"
                                                                                                                 style="margin-bottom:  0px; padding-bottom: 0px;">
-                                                                                                            <h2 class="display-4"
-                                                                                                                style="margin-bottom:  0px;font-size: 18px;"><?= $who_is[1] ?></h2>
-                                                                                                            <p class="lead"
-                                                                                                               style="margin-bottom:  0px; font-size: 14px;"><?= $who_is[2] ?></p>
+<!--                                                                                                            <h2 class="display-4"-->
+<!--                                                                                                                style="margin-bottom:  0px;font-size: 18px;">--><?//= $who_is[1] ?><!--</h2>-->
+<!--                                                                                                            <p class="lead"-->
+<!--                                                                                                               style="margin-bottom:  0px; font-size: 14px;">--><?//= $who_is[2] ?><!--</p>-->
                                                                                                         </div>
                                                                                                     </a>
                                                                                                 </div>
@@ -2289,8 +2378,9 @@ $news = mysqli_fetch_array($result_news);
                                                 </div>
 
                                             </div>
+
                                         </div>
-                                    </div>
+                                        </div>
                                 </section>
                                 <section id="section-id-1574064817276" class="sppb-section">
                                     <div class="sppb-row-container">
@@ -2298,280 +2388,357 @@ $news = mysqli_fetch_array($result_news);
                                             <div class="sppb-col-md-9" id="column-wrap-id-1574064817275">
                                                 <div id="column-id-1574064817275" class="sppb-column">
                                                     <div class="sppb-column-addons">
-                                                        <div id="sppb-addon-wrapper-1573711718259"
-                                                             class="sppb-addon-wrapper">
-                                                            <div id="sppb-addon-1573711718259" class="clearfix ">
-                                                                <div class="sppb-addon sppb-addon-header heading-arrow sppb-text-left">
-                                                                    <h2 class="sppb-addon-title">Хабарҳо</h2></div>
-                                                            </div>
-                                                        </div>
+<!--                                                        <div id="sppb-addon-wrapper-1573711718259"-->
+<!--                                                             class="sppb-addon-wrapper">-->
+<!--                                                            <div id="sppb-addon-1573711718259" class="clearfix ">-->
+<!--                                                                <div class="sppb-addon sppb-addon-header heading-arrow sppb-text-left">-->
+<!--                                                                    <a href="all_news.php"><h2 class="sppb-addon-title">Хабарҳо</h2></a></div>-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
                                                         <div id="sppb-addon-wrapper-1574765774388"
                                                              class="sppb-addon-wrapper">
                                                             <div id="sppb-addon-1574765774388" class="clearfix ">
                                                                 <div class="sppb-addon sppb-addon-articles-layout layout-liberica  ">
                                                                     <div class="sppb-addon-content">
                                                                         <div class="sppb-row">
-                                                                            <div class="leading-item  sppb-col-sm-12">
+
+
+
 
                                                                                 <?php
-                                                                                $news = mysqli_fetch_array($result_news);
-                                                                                $category = $dbOperation->getCategoryByID($news[4],'tj');
-                                                                                $cat = mysqli_fetch_array($category);
-                                                                                ?>
-                                                                                <div class="sppb-addon-article "
-                                                                                     style="">
-                                                                                    <div class="bg-img-wrapper"
-                                                                                         style="background-image: url(../img/<?=$news[3]?>);"></div>
-                                                                                    <div class="sppb-article-info-wrap">
-                                                                                        <p class="sppb-meta-category"><a
-                                                                                                    href="category.php?id=<?=$news[4]?>"
-                                                                                                    itemprop="genre"><?=$cat[0]?></a>
-                                                                                        </p>
-                                                                                        <h3>
-                                                                                            <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
-                                                                                               itemprop="url"><?=$news[1]?></a></h3>
-                                                                                        <div class="sppb-article-introtext">
-                                                                                            <?=$news[2]?>
-                                                                                        </div>
-                                                                                        <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                            <div class="sppb-article-meta">
+                                                                                $k=0;
+                                                                                if (mysqli_num_rows($result)) {
+                                                                                while (($news = mysqli_fetch_array($result_news)) && $k!=8) {
+                                                                                    $category = $dbOperation->getCategoryByID($news[4], 'tj');
+                                                                                    $cat = mysqli_fetch_array($category);
+                                                                                    ?>
+
+                                                                            <div class="leading-item  sppb-col-sm-6">
+                                                                                    <div class="sppb-addon-article "
+                                                                                         style="padding: 10px;     border: 1px solid rgb(215, 215, 215);">
+                                                                                        <div class="ice-main-item">
+                                                                                            <div class="ice-description">
+                                                                                                <p style="    margin: 0 0 10px 0;">
+                                                                                                    <a href="category.php?id=<?= $news[4] ?>"
+                                                                                                       itemprop="genre"><?= $cat[0] ?></a>
+                                                                                                </p>
+                                                                                                <h4>
+                                                                                                    <a href="view_news.php?id=<?= $news[0] ?>&category=<?= $news[4] ?>"
+                                                                                                       itemprop="url"
+                                                                                                       style="color: #000;"><?= $news[1] ?></a>
+                                                                                                </h4>
+                                                                                                <!--                                                                                            <h3 class="ice-title">-->
+                                                                                                <!--                                                                                                <a target="_parent"  href="/index.php?option=com_content&amp;view=article&amp;id=5674%3Amuloqot&amp;catid=36%3Anavgoni&amp;Itemid=182&amp;lang=tg" title="Ифтитоҳи мағозаи фурӯши либосҳои бренди итолиёвии "RAYMONDO"">Ифтитоҳи мағозаи фурӯши либосҳои бренди итолиёвии "RAYMONDO"</a>-->
+                                                                                                <!--                                                                                            </h3>-->
+                                                                                                <p style="text-align: justify; margin: 0 0 15px 0;"
+                                                                                                   mce_style="text-align: justify;">
+                                                                                                    <a style="; float:left;"
+                                                                                                       class="thumbnail with-zoomin-img  zoomin-cur"
+                                                                                                       href="../img/pifagorka.jpg"
+                                                                                                       rel="lightbox[]"
+                                                                                                       title="alt"
+                                                                                                       target="_blank">
+                                                                                                        <img src="../img/pifagorka.jpg"
+                                                                                                             mce_src="/images/stories/785.jpg"
+                                                                                                             alt=""
+                                                                                                             align="left"
+                                                                                                             width="200"
+                                                                                                             height="133"
+                                                                                                             style="padding-right: 10px;"/>
+                                                                                                    </a>
+                                                                                                    <?= $news[2] ?>
+                                                                                                </p>
+                                                                                                <div class="sppb-article-meta"
+                                                                                                     style="color: #6b6d83;">
                                                                                                 <span class="sppb-meta-date"
-                                                                                                      itemprop="datePublished"><?=$news[5]?></span>
+                                                                                                      itemprop="datePublished"><?= $news[5] ?></span>
+                                                                                                </div>
+                                                                                                <a class="ice-readmore"
+                                                                                                   target="_parent"
+                                                                                                   href="view_news.php?id=<?= $news[0] ?>&category=<?= $news[4] ?>"
+                                                                                                   title=" <?= $news[1] ?> "
+                                                                                                   RAYMONDO""><span
+                                                                                                        class="round"><span>Муфассал...</span></span></a>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
-                                                                                </div>
                                                                             </div>
-                                                                            <div class="sppb-row">
-                                                                                <div class="sppb-col-sm-8 subleading-items">
-                                                                                    <div>
-                                                                                        <?php
-                                                                                        $news = mysqli_fetch_array($result_news);
-                                                                                        $category = $dbOperation->getCategoryByID($news[4],'tj');
-                                                                                        $cat = mysqli_fetch_array($category);
-                                                                                        ?>
-                                                                                        <div class="subleading-item  sppb-col-sm-12">
-                                                                                            <div class="sppb-addon-article "
-                                                                                                 style=""><a
-                                                                                                        class="sppb-article-img-wrap"
-                                                                                                        href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
-                                                                                                        itemprop="url"><img
-                                                                                                            class="sppb-img-responsive"
-                                                                                                            src="../img/<?=$news[3]?>"
-                                                                                                            alt=""
-                                                                                                            itemprop="thumbnailUrl"></a>
-                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                    <p class="sppb-meta-category">
-                                                                                                        <a href="category.php?id=<?=$news[4]?>"
-                                                                                                           itemprop="genre"><?=$cat[0]?></a>
-                                                                                                    </p>
-                                                                                                    <h3>
-                                                                                                        <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
-                                                                                                           itemprop="url"><?=$news[1]?></a>
-                                                                                                    </h3>
-                                                                                                    <div class="sppb-article-introtext">
-                                                                                                        <?=$news[2]?>
-                                                                                                    </div>
-                                                                                                    <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                        <div class="sppb-article-meta">
-                                                                                                            <span class="sppb-meta-date"
-                                                                                                                  itemprop="datePublished"><?=$news[5]?></span>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <?php
-                                                                                        $news = mysqli_fetch_array($result_news);
-                                                                                        $category = $dbOperation->getCategoryByID($news[4],'tj');
-                                                                                        $cat = mysqli_fetch_array($category);
-                                                                                        ?>
-                                                                                        <div class="subleading-item  sppb-col-sm-12">
-                                                                                            <div class="sppb-addon-article "
-                                                                                                 style=""><a
-                                                                                                    class="sppb-article-img-wrap"
-                                                                                                    href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
-                                                                                                    itemprop="url"><img
-                                                                                                        class="sppb-img-responsive"
-                                                                                                        src="../img/<?=$news[3]?>"
-                                                                                                        alt=""
-                                                                                                        itemprop="thumbnailUrl"></a>
-                                                                                                <div class="sppb-article-info-wrap">
-                                                                                                    <p class="sppb-meta-category">
-                                                                                                        <a href="category.php?id=<?=$news[4]?>"
-                                                                                                           itemprop="genre"><?=$cat[0]?></a>
-                                                                                                    </p>
-                                                                                                    <h3>
-                                                                                                        <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>"
-                                                                                                           itemprop="url"><?=$news[1]?></a>
-                                                                                                    </h3>
-                                                                                                    <div class="sppb-article-introtext">
-                                                                                                        <?=$news[2]?>
-                                                                                                    </div>
-                                                                                                    <div class="sppb-article-spbookmark-wrap d-flex">
-                                                                                                        <div class="sppb-article-meta">
-                                                                                                            <span class="sppb-meta-date"
-                                                                                                                  itemprop="datePublished"><?=$news[5]?></span>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="sppb-col-sm-4 intro-items"
-                                                                                     has-scrollbar>
 
                                                                                     <?php
-                                                                                    $news = mysqli_fetch_array($result_news);
-                                                                                    $category = $dbOperation->getCategoryByID($news[4],'tj');
-                                                                                    $cat = mysqli_fetch_array($category);
-                                                                                    ?>
-                                                                                    <div class="intro-item  sppb-col-sm-12">
-                                                                                        <div class="sppb-addon-article "
-                                                                                             style="">
-                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                <p class="sppb-meta-category">
-                                                                                                    <a href="category.php?id=<?=$news[4]?>"
-                                                                                                       itemprop="genre"><?=$cat[0]?></a>
-                                                                                                </p>
-                                                                                                <h3>
-                                                                                                    <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>">
-                                                                                                        <?=$news[1]?></a></h3>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
+                                                                                $k++;
+                                                                                }
+                                                                                }
+                                                                                ?>
 
-
-                                                                                    <?php
-                                                                                    $news = mysqli_fetch_array($result_news);
-                                                                                    $category = $dbOperation->getCategoryByID($news[4],'tj');
-                                                                                    $cat = mysqli_fetch_array($category);
-                                                                                    ?>
-                                                                                    <div class="intro-item  sppb-col-sm-12">
-                                                                                        <div class="sppb-addon-article "
-                                                                                             style="">
-                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                <p class="sppb-meta-category">
-                                                                                                    <a href="category.php?id=<?=$news[4]?>"
-                                                                                                       itemprop="genre"><?=$cat[0]?></a>
-                                                                                                </p>
-                                                                                                <h3>
-                                                                                                    <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>">
-                                                                                                        <?=$news[1]?></a></h3>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div><?php
-                                                                                    $news = mysqli_fetch_array($result_news);
-                                                                                    $category = $dbOperation->getCategoryByID($news[4],'tj');
-                                                                                    $cat = mysqli_fetch_array($category);
-                                                                                    ?>
-                                                                                    <div class="intro-item  sppb-col-sm-12">
-                                                                                        <div class="sppb-addon-article "
-                                                                                             style="">
-                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                <p class="sppb-meta-category">
-                                                                                                    <a href="category.php?id=<?=$news[4]?>"
-                                                                                                       itemprop="genre"><?=$cat[0]?></a>
-                                                                                                </p>
-                                                                                                <h3>
-                                                                                                    <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>">
-                                                                                                        <?=$news[1]?></a></h3>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div><?php
-                                                                                    $news = mysqli_fetch_array($result_news);
-                                                                                    $category = $dbOperation->getCategoryByID($news[4],'tj');
-                                                                                    $cat = mysqli_fetch_array($category);
-                                                                                    ?>
-                                                                                    <div class="intro-item  sppb-col-sm-12">
-                                                                                        <div class="sppb-addon-article "
-                                                                                             style="">
-                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                <p class="sppb-meta-category">
-                                                                                                    <a href="category.php?id=<?=$news[4]?>"
-                                                                                                       itemprop="genre"><?=$cat[0]?></a>
-                                                                                                </p>
-                                                                                                <h3>
-                                                                                                    <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>">
-                                                                                                        <?=$news[1]?></a></h3>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div><?php
-                                                                                    $news = mysqli_fetch_array($result_news);
-                                                                                    $category = $dbOperation->getCategoryByID($news[4],'tj');
-                                                                                    $cat = mysqli_fetch_array($category);
-                                                                                    ?>
-                                                                                    <div class="intro-item  sppb-col-sm-12">
-                                                                                        <div class="sppb-addon-article "
-                                                                                             style="">
-                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                <p class="sppb-meta-category">
-                                                                                                    <a href="category.php?id=<?=$news[4]?>"
-                                                                                                       itemprop="genre"><?=$cat[0]?></a>
-                                                                                                </p>
-                                                                                                <h3>
-                                                                                                    <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>">
-                                                                                                        <?=$news[1]?></a></h3>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div><?php
-                                                                                    $news = mysqli_fetch_array($result_news);
-                                                                                    $category = $dbOperation->getCategoryByID($news[4],'tj');
-                                                                                    $cat = mysqli_fetch_array($category);
-                                                                                    ?>
-                                                                                    <div class="intro-item  sppb-col-sm-12">
-                                                                                        <div class="sppb-addon-article "
-                                                                                             style="">
-                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                <p class="sppb-meta-category">
-                                                                                                    <a href="category.php?id=<?=$news[4]?>"
-                                                                                                       itemprop="genre"><?=$cat[0]?></a>
-                                                                                                </p>
-                                                                                                <h3>
-                                                                                                    <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>">
-                                                                                                        <?=$news[1]?></a></h3>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div><?php
-                                                                                    $news = mysqli_fetch_array($result_news);
-                                                                                    $category = $dbOperation->getCategoryByID($news[4],'tj');
-                                                                                    $cat = mysqli_fetch_array($category);
-                                                                                    ?>
-                                                                                    <div class="intro-item  sppb-col-sm-12">
-                                                                                        <div class="sppb-addon-article "
-                                                                                             style="">
-                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                <p class="sppb-meta-category">
-                                                                                                    <a href="category.php?id=<?=$news[4]?>"
-                                                                                                       itemprop="genre"><?=$cat[0]?></a>
-                                                                                                </p>
-                                                                                                <h3>
-                                                                                                    <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>">
-                                                                                                        <?=$news[1]?></a></h3>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div><?php
-                                                                                    $news = mysqli_fetch_array($result_news);
-                                                                                    $category = $dbOperation->getCategoryByID($news[4],'tj');
-                                                                                    $cat = mysqli_fetch_array($category);
-                                                                                    ?>
-                                                                                    <div class="intro-item  sppb-col-sm-12">
-                                                                                        <div class="sppb-addon-article "
-                                                                                             style="">
-                                                                                            <div class="sppb-article-info-wrap">
-                                                                                                <p class="sppb-meta-category">
-                                                                                                    <a href="category.php?id=<?=$news[4]?>"
-                                                                                                       itemprop="genre"><?=$cat[0]?></a>
-                                                                                                </p>
-                                                                                                <h3>
-                                                                                                    <a href="view_news.php?id=<?=$news[0]?>&category=<?=$news[4]?>">
-                                                                                                        <?=$news[1]?></a></h3>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
+                                                                            <div class="pagination-wrapper" style="    margin: auto; margin-top: 0px;">
+                                                                                <ul class="pagination">
+                                                                                    <li><a class="page-link next" href="all_news.php" style="color: #ffffff; background-color: #1d55c1;">Ҳамаи хабарҳо</a></li>
+                                                                                </ul>
                                                                             </div>
+
+<!--                                                                            <div class="leading-item  sppb-col-sm-6">-->
+<!---->
+<!---->
+<!--                                                                                --><?php
+//                                                                                $news = mysqli_fetch_array($result_news);
+//                                                                                $category = $dbOperation->getCategoryByID($news[4],'tj');
+//                                                                                $cat = mysqli_fetch_array($category);
+//                                                                                ?>
+<!--                                                                                <div class="sppb-addon-article "-->
+<!--                                                                                     style="">-->
+<!--                                                                                    <div class="bg-img-wrapper"-->
+<!--                                                                                         style="background-image: url(../img/--><?//=$news[3]?><!--);">-->
+<!--                                                                        </div>-->
+<!--                                                                                     <div class="sppb-article-info-wrap"> -->
+<!--                                                                                         <p class="sppb-meta-category"><a -->
+<!--                                                                                                   href="category.php?id= --><?////=$news[4]?><!-- "-->
+<!--                                                                                                    itemprop="genre">--><?//=$cat[0]?><!--</a>-->
+<!--                                                                                        </p>-->
+<!--                                                                                        <h3>-->
+<!--                                                                                            <a href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--"-->
+<!--                                                                                               itemprop="url">--><?//=$news[1]?><!--</a></h3>-->
+<!--                                                                                        <div class="sppb-article-introtext">-->
+<!--                                                                                            --><?//=$news[2]?>
+<!--                                                                                        </div>-->
+<!--                                                                                        <div class="sppb-article-spbookmark-wrap d-flex">-->
+<!--                                                                                            <div class="sppb-article-meta">-->
+<!--                                                                                                <span class="sppb-meta-date"-->
+<!--                                                                                                      itemprop="datePublished">--><?//=$news[5]?><!--</span>-->
+<!--                                                                                            </div>-->
+<!--                                                                                        </div>-->
+<!--                                                                                    </div>-->
+<!--                                                                                </div>-->
+<!--                                                                            </div>-->
+<!--                                                                            <div class="sppb-row">-->
+<!--                                                                                <div class="sppb-col-sm-8 subleading-items">-->
+<!--                                                                                    <div>-->
+<!--                                                                                        --><?php
+//                                                                                        $news = mysqli_fetch_array($result_news);
+//                                                                                        $category = $dbOperation->getCategoryByID($news[4],'tj');
+//                                                                                        $cat = mysqli_fetch_array($category);
+//                                                                                        ?>
+<!--                                                                                        <div class="subleading-item  sppb-col-sm-12">-->
+<!--                                                                                            <div class="sppb-addon-article "-->
+<!--                                                                                                 style=""><a-->
+<!--                                                                                                        class="sppb-article-img-wrap"-->
+<!--                                                                                                        href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--"-->
+<!--                                                                                                        itemprop="url"><img-->
+<!--                                                                                                            class="sppb-img-responsive"-->
+<!--                                                                                                            src="../img/--><?//=$news[3]?><!--"-->
+<!--                                                                                                            alt=""-->
+<!--                                                                                                            itemprop="thumbnailUrl"></a>-->
+<!--                                                                                                <div class="sppb-article-info-wrap">-->
+<!--                                                                                                    <p class="sppb-meta-category">-->
+<!--                                                                                                        <a href="category.php?id=--><?//=$news[4]?><!--"-->
+<!--                                                                                                           itemprop="genre">--><?//=$cat[0]?><!--</a>-->
+<!--                                                                                                    </p>-->
+<!--                                                                                                    <h3>-->
+<!--                                                                                                        <a href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--"-->
+<!--                                                                                                           itemprop="url">--><?//=$news[1]?><!--</a>-->
+<!--                                                                                                    </h3>-->
+<!--                                                                                                    <div class="sppb-article-introtext">-->
+<!--                                                                                                        --><?//=$news[2]?>
+<!--                                                                                                    </div>-->
+<!--                                                                                                    <div class="sppb-article-spbookmark-wrap d-flex">-->
+<!--                                                                                                        <div class="sppb-article-meta">-->
+<!--                                                                                                            <span class="sppb-meta-date"-->
+<!--                                                                                                                  itemprop="datePublished">--><?//=$news[5]?><!--</span>-->
+<!--                                                                                                        </div>-->
+<!--                                                                                                    </div>-->
+<!--                                                                                                </div>-->
+<!--                                                                                            </div>-->
+<!--                                                                                        </div>-->
+<!--                                                                                        --><?php
+//                                                                                        $news = mysqli_fetch_array($result_news);
+//                                                                                        $category = $dbOperation->getCategoryByID($news[4],'tj');
+//                                                                                        $cat = mysqli_fetch_array($category);
+//                                                                                        ?>
+<!--                                                                                        <div class="subleading-item  sppb-col-sm-12">-->
+<!--                                                                                            <div class="sppb-addon-article "-->
+<!--                                                                                                 style=""><a-->
+<!--                                                                                                    class="sppb-article-img-wrap"-->
+<!--                                                                                                    href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--"-->
+<!--                                                                                                    itemprop="url"><img-->
+<!--                                                                                                        class="sppb-img-responsive"-->
+<!--                                                                                                        src="../img/--><?//=$news[3]?><!--"-->
+<!--                                                                                                        alt=""-->
+<!--                                                                                                        itemprop="thumbnailUrl"></a>-->
+<!--                                                                                                <div class="sppb-article-info-wrap">-->
+<!--                                                                                                    <p class="sppb-meta-category">-->
+<!--                                                                                                        <a href="category.php?id=--><?//=$news[4]?><!--"-->
+<!--                                                                                                           itemprop="genre">--><?//=$cat[0]?><!--</a>-->
+<!--                                                                                                    </p>-->
+<!--                                                                                                    <h3>-->
+<!--                                                                                                        <a href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--"-->
+<!--                                                                                                           itemprop="url">--><?//=$news[1]?><!--</a>-->
+<!--                                                                                                    </h3>-->
+<!--                                                                                                    <div class="sppb-article-introtext">-->
+<!--                                                                                                        --><?//=$news[2]?>
+<!--                                                                                                    </div>-->
+<!--                                                                                                    <div class="sppb-article-spbookmark-wrap d-flex">-->
+<!--                                                                                                        <div class="sppb-article-meta">-->
+<!--                                                                                                            <span class="sppb-meta-date"-->
+<!--                                                                                                                  itemprop="datePublished">--><?//=$news[5]?><!--</span>-->
+<!--                                                                                                        </div>-->
+<!--                                                                                                    </div>-->
+<!--                                                                                                </div>-->
+<!--                                                                                            </div>-->
+<!--                                                                                        </div>-->
+<!--                                                                                    </div>-->
+<!--                                                                                </div>-->
+<!--                                                                                <div class="sppb-col-sm-4 intro-items"-->
+<!--                                                                                     has-scrollbar>-->
+<!---->
+<!--                                                                                    --><?php
+//                                                                                    $news = mysqli_fetch_array($result_news);
+//                                                                                    $category = $dbOperation->getCategoryByID($news[4],'tj');
+//                                                                                    $cat = mysqli_fetch_array($category);
+//                                                                                    ?>
+<!--                                                                                    <div class="intro-item  sppb-col-sm-12">-->
+<!--                                                                                        <div class="sppb-addon-article "-->
+<!--                                                                                             style="">-->
+<!--                                                                                            <div class="sppb-article-info-wrap">-->
+<!--                                                                                                <p class="sppb-meta-category">-->
+<!--                                                                                                    <a href="category.php?id=--><?//=$news[4]?><!--"-->
+<!--                                                                                                       itemprop="genre">--><?//=$cat[0]?><!--</a>-->
+<!--                                                                                                </p>-->
+<!--                                                                                                <h3>-->
+<!--                                                                                                    <a href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--">-->
+<!--                                                                                                        --><?//=$news[1]?><!--</a></h3>-->
+<!--                                                                                            </div>-->
+<!--                                                                                        </div>-->
+<!--                                                                                    </div>-->
+<!---->
+<!---->
+<!--                                                                                    --><?php
+//                                                                                    $news = mysqli_fetch_array($result_news);
+//                                                                                    $category = $dbOperation->getCategoryByID($news[4],'tj');
+//                                                                                    $cat = mysqli_fetch_array($category);
+//                                                                                    ?>
+<!--                                                                                    <div class="intro-item  sppb-col-sm-12">-->
+<!--                                                                                        <div class="sppb-addon-article "-->
+<!--                                                                                             style="">-->
+<!--                                                                                            <div class="sppb-article-info-wrap">-->
+<!--                                                                                                <p class="sppb-meta-category">-->
+<!--                                                                                                    <a href="category.php?id=--><?//=$news[4]?><!--"-->
+<!--                                                                                                       itemprop="genre">--><?//=$cat[0]?><!--</a>-->
+<!--                                                                                                </p>-->
+<!--                                                                                                <h3>-->
+<!--                                                                                                    <a href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--">-->
+<!--                                                                                                        --><?//=$news[1]?><!--</a></h3>-->
+<!--                                                                                            </div>-->
+<!--                                                                                        </div>-->
+<!--                                                                                    </div>--><?php
+//                                                                                    $news = mysqli_fetch_array($result_news);
+//                                                                                    $category = $dbOperation->getCategoryByID($news[4],'tj');
+//                                                                                    $cat = mysqli_fetch_array($category);
+//                                                                                    ?>
+<!--                                                                                    <div class="intro-item  sppb-col-sm-12">-->
+<!--                                                                                        <div class="sppb-addon-article "-->
+<!--                                                                                             style="">-->
+<!--                                                                                            <div class="sppb-article-info-wrap">-->
+<!--                                                                                                <p class="sppb-meta-category">-->
+<!--                                                                                                    <a href="category.php?id=--><?//=$news[4]?><!--"-->
+<!--                                                                                                       itemprop="genre">--><?//=$cat[0]?><!--</a>-->
+<!--                                                                                                </p>-->
+<!--                                                                                                <h3>-->
+<!--                                                                                                    <a href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--">-->
+<!--                                                                                                        --><?//=$news[1]?><!--</a></h3>-->
+<!--                                                                                            </div>-->
+<!--                                                                                        </div>-->
+<!--                                                                                    </div>--><?php
+//                                                                                    $news = mysqli_fetch_array($result_news);
+//                                                                                    $category = $dbOperation->getCategoryByID($news[4],'tj');
+//                                                                                    $cat = mysqli_fetch_array($category);
+//                                                                                    ?>
+<!--                                                                                    <div class="intro-item  sppb-col-sm-12">-->
+<!--                                                                                        <div class="sppb-addon-article "-->
+<!--                                                                                             style="">-->
+<!--                                                                                            <div class="sppb-article-info-wrap">-->
+<!--                                                                                                <p class="sppb-meta-category">-->
+<!--                                                                                                    <a href="category.php?id=--><?//=$news[4]?><!--"-->
+<!--                                                                                                       itemprop="genre">--><?//=$cat[0]?><!--</a>-->
+<!--                                                                                                </p>-->
+<!--                                                                                                <h3>-->
+<!--                                                                                                    <a href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--">-->
+<!--                                                                                                        --><?//=$news[1]?><!--</a></h3>-->
+<!--                                                                                            </div>-->
+<!--                                                                                        </div>-->
+<!--                                                                                    </div>--><?php
+//                                                                                    $news = mysqli_fetch_array($result_news);
+//                                                                                    $category = $dbOperation->getCategoryByID($news[4],'tj');
+//                                                                                    $cat = mysqli_fetch_array($category);
+//                                                                                    ?>
+<!--                                                                                    <div class="intro-item  sppb-col-sm-12">-->
+<!--                                                                                        <div class="sppb-addon-article "-->
+<!--                                                                                             style="">-->
+<!--                                                                                            <div class="sppb-article-info-wrap">-->
+<!--                                                                                                <p class="sppb-meta-category">-->
+<!--                                                                                                    <a href="category.php?id=--><?//=$news[4]?><!--"-->
+<!--                                                                                                       itemprop="genre">--><?//=$cat[0]?><!--</a>-->
+<!--                                                                                                </p>-->
+<!--                                                                                                <h3>-->
+<!--                                                                                                    <a href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--">-->
+<!--                                                                                                        --><?//=$news[1]?><!--</a></h3>-->
+<!--                                                                                            </div>-->
+<!--                                                                                        </div>-->
+<!--                                                                                    </div>--><?php
+//                                                                                    $news = mysqli_fetch_array($result_news);
+//                                                                                    $category = $dbOperation->getCategoryByID($news[4],'tj');
+//                                                                                    $cat = mysqli_fetch_array($category);
+//                                                                                    ?>
+<!--                                                                                    <div class="intro-item  sppb-col-sm-12">-->
+<!--                                                                                        <div class="sppb-addon-article "-->
+<!--                                                                                             style="">-->
+<!--                                                                                            <div class="sppb-article-info-wrap">-->
+<!--                                                                                                <p class="sppb-meta-category">-->
+<!--                                                                                                    <a href="category.php?id=--><?//=$news[4]?><!--"-->
+<!--                                                                                                       itemprop="genre">--><?//=$cat[0]?><!--</a>-->
+<!--                                                                                                </p>-->
+<!--                                                                                                <h3>-->
+<!--                                                                                                    <a href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--">-->
+<!--                                                                                                        --><?//=$news[1]?><!--</a></h3>-->
+<!--                                                                                            </div>-->
+<!--                                                                                        </div>-->
+<!--                                                                                    </div>--><?php
+//                                                                                    $news = mysqli_fetch_array($result_news);
+//                                                                                    $category = $dbOperation->getCategoryByID($news[4],'tj');
+//                                                                                    $cat = mysqli_fetch_array($category);
+//                                                                                    ?>
+<!--                                                                                    <div class="intro-item  sppb-col-sm-12">-->
+<!--                                                                                        <div class="sppb-addon-article "-->
+<!--                                                                                             style="">-->
+<!--                                                                                            <div class="sppb-article-info-wrap">-->
+<!--                                                                                                <p class="sppb-meta-category">-->
+<!--                                                                                                    <a href="category.php?id=--><?//=$news[4]?><!--"-->
+<!--                                                                                                       itemprop="genre">--><?//=$cat[0]?><!--</a>-->
+<!--                                                                                                </p>-->
+<!--                                                                                                <h3>-->
+<!--                                                                                                    <a href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--">-->
+<!--                                                                                                        --><?//=$news[1]?><!--</a></h3>-->
+<!--                                                                                            </div>-->
+<!--                                                                                        </div>-->
+<!--                                                                                    </div>--><?php
+//                                                                                    $news = mysqli_fetch_array($result_news);
+//                                                                                    $category = $dbOperation->getCategoryByID($news[4],'tj');
+//                                                                                    $cat = mysqli_fetch_array($category);
+//                                                                                    ?>
+<!--                                                                                    <div class="intro-item  sppb-col-sm-12">-->
+<!--                                                                                        <div class="sppb-addon-article "-->
+<!--                                                                                             style="">-->
+<!--                                                                                            <div class="sppb-article-info-wrap">-->
+<!--                                                                                                <p class="sppb-meta-category">-->
+<!--                                                                                                    <a href="category.php?id=--><?//=$news[4]?><!--"-->
+<!--                                                                                                       itemprop="genre">--><?//=$cat[0]?><!--</a>-->
+<!--                                                                                                </p>-->
+<!--                                                                                                <h3>-->
+<!--                                                                                                    <a href="view_news.php?id=--><?//=$news[0]?><!--&category=--><?//=$news[4]?><!--">-->
+<!--                                                                                                        --><?//=$news[1]?><!--</a></h3>-->
+<!--                                                                                            </div>-->
+<!--                                                                                        </div>-->
+<!--                                                                                    </div>-->
+<!--                                                                                </div>-->
+<!--                                                                            </div>-->
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -2585,7 +2752,7 @@ $news = mysqli_fetch_array($result_news);
                                                 <div id="column-id-1573711718215" class="sppb-column">
                                                     <div class="sppb-column-addons visitors">
                                                         <div id="section-id-1574157062618"
-                                                             class="sppb-section newsberg-card">
+                                                             class="sppb-section newsberg-card"  style="    background-color: #fff;">
                                                             <div class="sppb-container-inner">
                                                                 <div class="sppb-row">
                                                                     <div class="sppb-col-md-12"
@@ -2629,7 +2796,7 @@ $news = mysqli_fetch_array($result_news);
                                                         </div>
 
                                                         <div id="section-id-1574157062618"
-                                                             class="sppb-section newsberg-card">
+                                                             class="sppb-section newsberg-card"  style="    background-color: #fff;">
                                                             <div class="sppb-container-inner">
                                                                 <div class="sppb-row">
                                                                     <div class="sppb-col-md-12"
@@ -2641,9 +2808,9 @@ $news = mysqli_fetch_array($result_news);
                                                                                      class="sppb-addon-wrapper">
                                                                                     <div id="sppb-addon-1573712171080"
                                                                                          class="clearfix ">
-                                                                                        <div class="sppb-addon sppb-addon-header sppb-text-left">
-                                                                                            <h2 class="sppb-addon-title">
-                                                                                                Ташрифкунандагон</h2></div>
+                                                                                        <div class="sppb-addon sppb-addon-header sppb-text-left" style="font-size: 22pX;">
+                                                                                            <h3 class="sppb-addon-title">
+                                                                                                Ташрифкунандагон</h3></div>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div id="sppb-addon-wrapper-1574765554041"
@@ -2848,6 +3015,100 @@ $news = mysqli_fetch_array($result_news);
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
+
+
+
+                                                                                                        <div id="section-id-1574411095392"
+                                                                                                             class="sppb-section newsberg-card">
+                                                                                                            <div class="sppb-container-inner">
+                                                                                                                <div class="sppb-row">
+                                                                                                                    <div class="sppb-col-md-12"
+                                                                                                                         id="column-wrap-id-1574411095393">
+                                                                                                                        <div id="column-id-1574411095393"
+                                                                                                                             class="sppb-column">
+                                                                                                                            <div class="sppb-column-addons">
+                                                                                                                                <div id="sppb-addon-wrapper-1574411095394"
+                                                                                                                                     class="sppb-addon-wrapper">
+                                                                                                                                    <div id="sppb-addon-1574411095394"
+                                                                                                                                         class="clearfix ">
+                                                                                                                                        <div class="sppb-addon sppb-addon-header sppb-text-left">
+                                                                                                                                            <h2 class="sppb-addon-title"><a href="jamoats.php">Тақвим</a></h2>
+                                                                                                                                        </div>
+                                                                                                                                        <style type="text/css">#sppb-addon-1574411095394 {
+                                                                                                                                                box-shadow: 0 0 0 0 #ffffff;
+                                                                                                                                            }
+
+                                                                                                                                            #sppb-addon-1574411095394 .sppb-addon-title {
+                                                                                                                                                font-size: 27px;
+                                                                                                                                                line-height: 27px;
+                                                                                                                                                line-height: 38px;
+                                                                                                                                            }
+
+                                                                                                                                            @media (min-width: 768px) and (max-width: 991px) {
+                                                                                                                                                #sppb-addon-1574411095394 {
+                                                                                                                                                }
+                                                                                                                                            }
+
+                                                                                                                                            @media (max-width: 767px) {
+                                                                                                                                                #sppb-addon-1574411095394 {
+                                                                                                                                                }
+
+                                                                                                                                                #sppb-addon-1574411095394 .sppb-addon-title {
+                                                                                                                                                    font-size: 20px;
+                                                                                                                                                    line-height: 20px;
+                                                                                                                                                    line-height: 24px;
+                                                                                                                                                }
+                                                                                                                                            }</style>
+                                                                                                                                        <style type="text/css">#sppb-addon-1574411095394 h2.sppb-addon-title {
+                                                                                                                                                margin: 10px 0px 0px 0px;
+                                                                                                                                                text-transform: none;
+                                                                                                                                            }
+
+                                                                                                                                            @media (max-width: 767px) {
+                                                                                                                                                #sppb-addon-1574411095394 h2.sppb-addon-title {
+                                                                                                                                                    margin: 0px 0px 5px 0px;
+                                                                                                                                                }
+                                                                                                                                            }</style>
+                                                                                                                                    </div>
+                                                                                                                                </div>
+                                                                                                                                <div id="sppb-addon-wrapper-1574411095398"
+                                                                                                                                     class="sppb-addon-wrapper">
+                                                                                                                                    <div id="sppb-addon-1574411095398"
+                                                                                                                                         class="clearfix ">
+                                                                                                                                        <div class="sppb-addon sppb-addon-module ">
+                                                                                                                                            <div class="sppb-addon-content" id="caleandar">
+                                                                                                                                                <link rel="stylesheet" href="../css/demo.css"/>
+                                                                                                                                                <link rel="stylesheet" href="../css/theme2.css"/>
+                                                                                                                                                <div  >
+
+                                                                                                                                                </div>
+
+                                                                                                                                                <script type="text/javascript" src="../js/caleandar.js"></script>
+                                                                                                                                                <script type="text/javascript" src="../js/demo.js"></script>
+                                                                                                                                            </div>
+                                                                                                                                        </div>
+                                                                                                                                        <style type="text/css">#sppb-addon-1574411095398 {
+                                                                                                                                                box-shadow: 0 0 0 0 #ffffff;
+                                                                                                                                            }
+
+                                                                                                                                            @media (min-width: 768px) and (max-width: 991px) {
+                                                                                                                                                #sppb-addon-1574411095398 {
+                                                                                                                                                }
+                                                                                                                                            }
+
+                                                                                                                                            @media (max-width: 767px) {
+                                                                                                                                                #sppb-addon-1574411095398 {
+                                                                                                                                                }
+                                                                                                                                            }</style>
+                                                                                                                                    </div>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+
                                                                                                         <style type="text/css">.sp-page-builder .page-content #section-id-1574411095389 {
                                                                                                                 padding-top: 0px;
                                                                                                                 padding-right: 0px;
@@ -2984,9 +3245,9 @@ while ($who_is = mysqli_fetch_array($result)) {
                         src="../img/<?= $who_is[3] ?>"
                         alt="<?= $who_is[1] ?>"
                         style="width:100%;">
-                <h3 style="text-align :   center;">
-                    <?= $who_is[1] ?></h3>
-                <h5 style="text-align :  center;"><?= $who_is[2] ?></h5>
+<!--                <h3 style="text-align :   center;">-->
+<!--                    --><?//= $who_is[1] ?><!--</h3>-->
+<!--                <h5 style="text-align :  center;">--><?//= $who_is[2] ?><!--</h5>-->
             </div>
             <div class="modal-footer">
                 <button type="button"

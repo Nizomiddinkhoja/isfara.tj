@@ -125,122 +125,122 @@ include("../include/navbar.php");
             </div>
 
 
-            <div class="col-xl-4">
-              <div class="card shadow">
-                <div class="card-header bg-transparent">
-                  <div class="row align-items-center">
-                    <div class="col">
-                      <h6 class="text-uppercase text-muted ls-1 mb-1">Добавление вопроса</h6>
-                      <h2 class="mb-0">На русском языке</h2>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <!-- Chart -->
-                  <div class="chart" style="height:auto">
-                    <div class="form-group mb-3">
-                          <div class="input-group input-group-alternative">
-                              <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                              </div>
-                              <input class="form-control"  name="question_ru" placeholder="Вопрос" type="text">
-                          </div>
-                      </div>
-                      <div class="form-group mb-3">
-                          <div class="input-group input-group-alternative">
-                              <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                              </div>
-                              <input class="form-control" name="answer1_ru" placeholder="Чавоб" type="text">
-                          </div>
-                      </div>
-                      <div class="form-group mb-3">
-                          <div class="input-group input-group-alternative">
-                              <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                              </div>
-                              <input class="form-control" name="answer2_ru" placeholder="Чавоб" type="text">
-                          </div>
-                      </div>
-                      <div class="form-group mb-3">
-                          <div class="input-group input-group-alternative">
-                              <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                              </div>
-                              <input class="form-control" name="answer3_ru" placeholder="Чавоб" type="text">
-                          </div>
-                      </div>
-                      <div class="form-group mb-3">
-                          <div class="input-group input-group-alternative">
-                              <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                              </div>
-                              <input class="form-control" name="answer4_ru" placeholder="Чавоб" type="text">
-                          </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+<!--            <div class="col-xl-4">-->
+<!--              <div class="card shadow">-->
+<!--                <div class="card-header bg-transparent">-->
+<!--                  <div class="row align-items-center">-->
+<!--                    <div class="col">-->
+<!--                      <h6 class="text-uppercase text-muted ls-1 mb-1">Добавление вопроса</h6>-->
+<!--                      <h2 class="mb-0">На русском языке</h2>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="card-body">-->
+<!--                  <!-- Chart -->-->
+<!--                  <div class="chart" style="height:auto">-->
+<!--                    <div class="form-group mb-3">-->
+<!--                          <div class="input-group input-group-alternative">-->
+<!--                              <div class="input-group-prepend">-->
+<!--                                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>-->
+<!--                              </div>-->
+<!--                              <input class="form-control"  name="question_ru" placeholder="Вопрос" type="text">-->
+<!--                          </div>-->
+<!--                      </div>-->
+<!--                      <div class="form-group mb-3">-->
+<!--                          <div class="input-group input-group-alternative">-->
+<!--                              <div class="input-group-prepend">-->
+<!--                                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>-->
+<!--                              </div>-->
+<!--                              <input class="form-control" name="answer1_ru" placeholder="Чавоб" type="text">-->
+<!--                          </div>-->
+<!--                      </div>-->
+<!--                      <div class="form-group mb-3">-->
+<!--                          <div class="input-group input-group-alternative">-->
+<!--                              <div class="input-group-prepend">-->
+<!--                                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>-->
+<!--                              </div>-->
+<!--                              <input class="form-control" name="answer2_ru" placeholder="Чавоб" type="text">-->
+<!--                          </div>-->
+<!--                      </div>-->
+<!--                      <div class="form-group mb-3">-->
+<!--                          <div class="input-group input-group-alternative">-->
+<!--                              <div class="input-group-prepend">-->
+<!--                                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>-->
+<!--                              </div>-->
+<!--                              <input class="form-control" name="answer3_ru" placeholder="Чавоб" type="text">-->
+<!--                          </div>-->
+<!--                      </div>-->
+<!--                      <div class="form-group mb-3">-->
+<!--                          <div class="input-group input-group-alternative">-->
+<!--                              <div class="input-group-prepend">-->
+<!--                                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>-->
+<!--                              </div>-->
+<!--                              <input class="form-control" name="answer4_ru" placeholder="Чавоб" type="text">-->
+<!--                          </div>-->
+<!--                      </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
 
 
-            <div class="col-xl-4">
-              <div class="card shadow">
-                <div class="card-header bg-transparent">
-                  <div class="row align-items-center">
-                    <div class="col">
-                      <h6 class="text-uppercase text-muted ls-1 mb-1">Add question</h6>
-                      <h2 class="mb-0">In English</h2>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <!-- Chart -->
-                  <div class="chart" style="height:auto">
-                   <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                        </div>
-                        <input class="form-control" name="question_en" placeholder="Question" type="text">
-                      </div>
-                    </div>
-                      <div class="form-group mb-3">
-                          <div class="input-group input-group-alternative">
-                              <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                              </div>
-                              <input class="form-control" name="answer1_en" placeholder="Answer" type="text">
-                          </div>
-                      </div>
-                      <div class="form-group mb-3">
-                          <div class="input-group input-group-alternative">
-                              <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                              </div>
-                              <input class="form-control" name="answer2_en" placeholder="Answer" type="text">
-                          </div>
-                      </div>
-                      <div class="form-group mb-3">
-                          <div class="input-group input-group-alternative">
-                              <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                              </div>
-                              <input class="form-control" name="answer3_en" placeholder="Answer" type="text">
-                          </div>
-                      </div>
-                      <div class="form-group mb-3">
-                          <div class="input-group input-group-alternative">
-                              <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                              </div>
-                              <input class="form-control" name="answer4_en" placeholder="Answer" type="text">
-                          </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+<!--            <div class="col-xl-4">-->
+<!--              <div class="card shadow">-->
+<!--                <div class="card-header bg-transparent">-->
+<!--                  <div class="row align-items-center">-->
+<!--                    <div class="col">-->
+<!--                      <h6 class="text-uppercase text-muted ls-1 mb-1">Add question</h6>-->
+<!--                      <h2 class="mb-0">In English</h2>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="card-body">-->
+<!--                  <!-- Chart -->-->
+<!--                  <div class="chart" style="height:auto">-->
+<!--                   <div class="form-group mb-3">-->
+<!--                      <div class="input-group input-group-alternative">-->
+<!--                        <div class="input-group-prepend">-->
+<!--                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>-->
+<!--                        </div>-->
+<!--                        <input class="form-control" name="question_en" placeholder="Question" type="text">-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                      <div class="form-group mb-3">-->
+<!--                          <div class="input-group input-group-alternative">-->
+<!--                              <div class="input-group-prepend">-->
+<!--                                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>-->
+<!--                              </div>-->
+<!--                              <input class="form-control" name="answer1_en" placeholder="Answer" type="text">-->
+<!--                          </div>-->
+<!--                      </div>-->
+<!--                      <div class="form-group mb-3">-->
+<!--                          <div class="input-group input-group-alternative">-->
+<!--                              <div class="input-group-prepend">-->
+<!--                                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>-->
+<!--                              </div>-->
+<!--                              <input class="form-control" name="answer2_en" placeholder="Answer" type="text">-->
+<!--                          </div>-->
+<!--                      </div>-->
+<!--                      <div class="form-group mb-3">-->
+<!--                          <div class="input-group input-group-alternative">-->
+<!--                              <div class="input-group-prepend">-->
+<!--                                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>-->
+<!--                              </div>-->
+<!--                              <input class="form-control" name="answer3_en" placeholder="Answer" type="text">-->
+<!--                          </div>-->
+<!--                      </div>-->
+<!--                      <div class="form-group mb-3">-->
+<!--                          <div class="input-group input-group-alternative">-->
+<!--                              <div class="input-group-prepend">-->
+<!--                                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>-->
+<!--                              </div>-->
+<!--                              <input class="form-control" name="answer4_en" placeholder="Answer" type="text">-->
+<!--                          </div>-->
+<!--                      </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
           </div>
         </div>
 

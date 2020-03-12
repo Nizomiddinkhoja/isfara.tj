@@ -147,158 +147,158 @@ include("../include/navbar.php");
               </div>
             </div>
 
-    <?php
-    $result = $dbOperation->get_edit_news_ru($id);
-    if(mysqli_num_rows($result)> 0) {
-        $row = mysqli_fetch_array($result);
-    }
-
-    echo '
-            <div class="col-xl-4">
-              <div class="card shadow">
-                <div class="card-header bg-transparent">
-                  <div class="row align-items-center">
-                    <div class="col">
-                      <h6 class="text-uppercase text-muted ls-1 mb-1">Добавление новостей</h6>
-                      <h2 class="mb-0">На русском языке</h2>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <!-- Chart -->
-                  <div class="chart" style="height:auto">
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                        </div>
-                        <input class="form-control" placeholder="Название" name="title_ru"  type="text" value="'.$row['title'].'">
-                      </div>
-                    </div>
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                        </div>
-                        <textarea class="form-control" placeholder="Краткое описание"  name="short_description_ru"  style="height :50px" >'.$row['description'].'</textarea>
-                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->
-                      </div>
-                    </div>
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                        </div>
-                        <textarea class="form-control" placeholder="Полное описание"  name="full_description_ru"  style="height :150px" >'.$row['body'].'</textarea>
-                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->
-                      </div>
-                    </div>
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                        </div>
-                                                <select class="form-control" id="" name="category_tj">
-<!--                          <option value="none" hidden="">Категорияро интихоб кунед</option>-->
-
-                            '?>
-                            <?php
-                            $result = $dbOperation->get_Categories_tj();
-                            if(mysqli_num_rows($result)> 0){
-                                while ($row = mysqli_fetch_array($result)){
-                                    echo
-                                        '
-                                    <option value="'.$row['id'].'">'.$row['title'].'</option>            
-            ' ;
-                                }
-                            }
-                            ?>
-
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-    <?php
-    $result = $dbOperation->get_edit_news_en($id);
-    if(mysqli_num_rows($result)> 0) {
-        $row = mysqli_fetch_array($result);
-    }
-
-    echo '
-            <div class="col-xl-4">
-              <div class="card shadow">
-                <div class="card-header bg-transparent">
-                  <div class="row align-items-center">
-                    <div class="col">
-                      <h6 class="text-uppercase text-muted ls-1 mb-1">Add news</h6>
-                      <h2 class="mb-0">In English</h2>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <!-- Chart -->
-                  <div class="chart" style="height:auto">
-                   <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                        </div>
-                        <input class="form-control" placeholder="Title"  name="title_en" type="text" value="'.$row['title'].'">
-                      </div>
-                    </div>
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                        </div>
-                        <textarea class="form-control" placeholder="Short description"  name="short_description_en"  style="height :50px" >'.$row['description'].'</textarea>
-                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->
-                      </div>
-                    </div>
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                        </div>
-                        <textarea class="form-control" placeholder="Full description"  name="full_description_en"   style="height :150px" >'.$row['body'].'</textarea>
-                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->
-                      </div>
-                    </div>
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                        </div>
-                        <select class="form-control" id="" name="category_tj">
-<!--                          <option value="none" hidden="">Категорияро интихоб кунед</option>-->
-
-                            '?>
-                            <?php
-                            $result1 = $dbOperation->get_Categories_tj();
-                            if(mysqli_num_rows($result1)> 0){
-                                while ($row1 = mysqli_fetch_array($result1)){
-                                    echo
-                                        ' 
-                                    <option value="'.$row1['id'].'">'.$row1['title'].'</option>            
-            ' ;
-                                }
-                            }
-                            ?>
-
-                        </select>
-                      </div>
-                    </div>
-
-
-                  </div>
-                </div>
-              </div>
-            </div>
+<!--    --><?php
+//    $result = $dbOperation->get_edit_news_ru($id);
+//    if(mysqli_num_rows($result)> 0) {
+//        $row = mysqli_fetch_array($result);
+//    }
+//
+//    echo '
+//            <div class="col-xl-4">
+//              <div class="card shadow">
+//                <div class="card-header bg-transparent">
+//                  <div class="row align-items-center">
+//                    <div class="col">
+//                      <h6 class="text-uppercase text-muted ls-1 mb-1">Добавление новостей</h6>
+//                      <h2 class="mb-0">На русском языке</h2>
+//                    </div>
+//                  </div>
+//                </div>
+//                <div class="card-body">
+//                  <!-- Chart -->
+//                  <div class="chart" style="height:auto">
+//                    <div class="form-group mb-3">
+//                      <div class="input-group input-group-alternative">
+//                        <div class="input-group-prepend">
+//                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+//                        </div>
+//                        <input class="form-control" placeholder="Название" name="title_ru"  type="text" value="'.$row['title'].'">
+//                      </div>
+//                    </div>
+//                    <div class="form-group mb-3">
+//                      <div class="input-group input-group-alternative">
+//                        <div class="input-group-prepend">
+//                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+//                        </div>
+//                        <textarea class="form-control" placeholder="Краткое описание"  name="short_description_ru"  style="height :50px" >'.$row['description'].'</textarea>
+//                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->
+//                      </div>
+//                    </div>
+//                    <div class="form-group mb-3">
+//                      <div class="input-group input-group-alternative">
+//                        <div class="input-group-prepend">
+//                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+//                        </div>
+//                        <textarea class="form-control" placeholder="Полное описание"  name="full_description_ru"  style="height :150px" >'.$row['body'].'</textarea>
+//                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->
+//                      </div>
+//                    </div>
+//                    <div class="form-group mb-3">
+//                      <div class="input-group input-group-alternative">
+//                        <div class="input-group-prepend">
+//                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+//                        </div>
+//                                                <select class="form-control" id="" name="category_tj">
+//<!--                          <option value="none" hidden="">Категорияро интихоб кунед</option>-->
+//
+//                            '?>
+<!--                            --><?php
+//                            $result = $dbOperation->get_Categories_tj();
+//                            if(mysqli_num_rows($result)> 0){
+//                                while ($row = mysqli_fetch_array($result)){
+//                                    echo
+//                                        '
+//                                    <option value="'.$row['id'].'">'.$row['title'].'</option>
+//            ' ;
+//                                }
+//                            }
+//                            ?>
+<!---->
+<!--                        </select>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!---->
+<!---->
+<!--    --><?php
+//    $result = $dbOperation->get_edit_news_en($id);
+//    if(mysqli_num_rows($result)> 0) {
+//        $row = mysqli_fetch_array($result);
+//    }
+//
+//    echo '
+//            <div class="col-xl-4">
+//              <div class="card shadow">
+//                <div class="card-header bg-transparent">
+//                  <div class="row align-items-center">
+//                    <div class="col">
+//                      <h6 class="text-uppercase text-muted ls-1 mb-1">Add news</h6>
+//                      <h2 class="mb-0">In English</h2>
+//                    </div>
+//                  </div>
+//                </div>
+//                <div class="card-body">
+//                  <!-- Chart -->
+//                  <div class="chart" style="height:auto">
+//                   <div class="form-group mb-3">
+//                      <div class="input-group input-group-alternative">
+//                        <div class="input-group-prepend">
+//                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+//                        </div>
+//                        <input class="form-control" placeholder="Title"  name="title_en" type="text" value="'.$row['title'].'">
+//                      </div>
+//                    </div>
+//                    <div class="form-group mb-3">
+//                      <div class="input-group input-group-alternative">
+//                        <div class="input-group-prepend">
+//                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+//                        </div>
+//                        <textarea class="form-control" placeholder="Short description"  name="short_description_en"  style="height :50px" >'.$row['description'].'</textarea>
+//                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->
+//                      </div>
+//                    </div>
+//                    <div class="form-group mb-3">
+//                      <div class="input-group input-group-alternative">
+//                        <div class="input-group-prepend">
+//                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+//                        </div>
+//                        <textarea class="form-control" placeholder="Full description"  name="full_description_en"   style="height :150px" >'.$row['body'].'</textarea>
+//                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->
+//                      </div>
+//                    </div>
+//                    <div class="form-group mb-3">
+//                      <div class="input-group input-group-alternative">
+//                        <div class="input-group-prepend">
+//                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+//                        </div>
+//                        <select class="form-control" id="" name="category_tj">
+//<!--                          <option value="none" hidden="">Категорияро интихоб кунед</option>-->
+//
+//                            '?>
+<!--                            --><?php
+//                            $result1 = $dbOperation->get_Categories_tj();
+//                            if(mysqli_num_rows($result1)> 0){
+//                                while ($row1 = mysqli_fetch_array($result1)){
+//                                    echo
+//                                        '
+//                                    <option value="'.$row1['id'].'">'.$row1['title'].'</option>
+//            ' ;
+//                                }
+//                            }
+//                            ?>
+<!---->
+<!--                        </select>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!---->
+<!---->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
           
 
           </div>

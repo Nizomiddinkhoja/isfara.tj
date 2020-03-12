@@ -71,76 +71,76 @@ include("include/navbar.php");
             </div>
 
 
-            <div class="col-xl-4">
-              <div class="card shadow">
-                <div class="card-header bg-transparent">
-                  <div class="row align-items-center">
-                    <div class="col">
-                      <h6 class="text-uppercase text-muted ls-1 mb-1">Добавление "Кисту чист"</h6>
-                      <h2 class="mb-0">На русском языке</h2>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <!-- Chart -->
-                  <div class="chart" style="height:auto">
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                        </div>
-                        <input class="form-control" placeholder="ФИО" type="text">
-                      </div>
-                    </div>
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                        </div>
-                        <textarea class="form-control" placeholder="Должность" style="height :50px" ></textarea>
-                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+<!--            <div class="col-xl-4">-->
+<!--              <div class="card shadow">-->
+<!--                <div class="card-header bg-transparent">-->
+<!--                  <div class="row align-items-center">-->
+<!--                    <div class="col">-->
+<!--                      <h6 class="text-uppercase text-muted ls-1 mb-1">Добавление "Кисту чист"</h6>-->
+<!--                      <h2 class="mb-0">На русском языке</h2>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="card-body">-->
+<!--                  <!-- Chart -->-->
+<!--                  <div class="chart" style="height:auto">-->
+<!--                    <div class="form-group mb-3">-->
+<!--                      <div class="input-group input-group-alternative">-->
+<!--                        <div class="input-group-prepend">-->
+<!--                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>-->
+<!--                        </div>-->
+<!--                        <input class="form-control" placeholder="ФИО" type="text">-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group mb-3">-->
+<!--                      <div class="input-group input-group-alternative">-->
+<!--                        <div class="input-group-prepend">-->
+<!--                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>-->
+<!--                        </div>-->
+<!--                        <textarea class="form-control" placeholder="Должность" style="height :50px" ></textarea>-->
+<!--                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
 
 
-            <div class="col-xl-4">
-              <div class="card shadow">
-                <div class="card-header bg-transparent">
-                  <div class="row align-items-center">
-                    <div class="col">
-                      <h6 class="text-uppercase text-muted ls-1 mb-1">Add news</h6>
-                      <h2 class="mb-0">In English</h2>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <!-- Chart -->
-                  <div class="chart" style="height:auto">
-                   <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                        </div>
-                        <input class="form-control" placeholder="Full name" type="text">
-                      </div>
-                    </div>
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                        </div>
-                        <textarea class="form-control" placeholder="Position" style="height :50px" ></textarea>
-                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+<!--            <div class="col-xl-4">-->
+<!--              <div class="card shadow">-->
+<!--                <div class="card-header bg-transparent">-->
+<!--                  <div class="row align-items-center">-->
+<!--                    <div class="col">-->
+<!--                      <h6 class="text-uppercase text-muted ls-1 mb-1">Add news</h6>-->
+<!--                      <h2 class="mb-0">In English</h2>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="card-body">-->
+<!--                  <!-- Chart -->-->
+<!--                  <div class="chart" style="height:auto">-->
+<!--                   <div class="form-group mb-3">-->
+<!--                      <div class="input-group input-group-alternative">-->
+<!--                        <div class="input-group-prepend">-->
+<!--                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>-->
+<!--                        </div>-->
+<!--                        <input class="form-control" placeholder="Full name" type="text">-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group mb-3">-->
+<!--                      <div class="input-group input-group-alternative">-->
+<!--                        <div class="input-group-prepend">-->
+<!--                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>-->
+<!--                        </div>-->
+<!--                        <textarea class="form-control" placeholder="Position" style="height :50px" ></textarea>-->
+<!--                        <!-- <input class="form-control" placeholder="Описание" type="text"> -->-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
           </div>
         </div>
 

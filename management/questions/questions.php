@@ -67,7 +67,7 @@ include("../include/navbar.php");
                   $total_rows = $dbOperations->getQuestionsCount();
                   $total_pages = ceil($total_rows / $no_of_records_per_page);
 
-                  $result = $dbOperations->getQuestions("ru", $offset, $no_of_records_per_page);
+                  $result = $dbOperations->getQuestions("tj", $offset, $no_of_records_per_page);
                   if($result) {
                   while ($questions = mysqli_fetch_array($result)) {
                   ?>

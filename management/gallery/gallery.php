@@ -68,7 +68,7 @@ include("../include/navbar.php");
 
                   $total_rows = $dbOperations->getGalleryCount();
                   $total_pages = ceil($total_rows / $no_of_records_per_page);
-                  $result = $dbOperation->getGallery('ru', $offset, $no_of_records_per_page);
+                  $result = $dbOperation->getGallery('tj', $offset, $no_of_records_per_page);
                   if(mysqli_num_rows($result)>0) {
                       while ($gallery = mysqli_fetch_array($result)) {
                           ?>

@@ -835,7 +835,7 @@ if (isset($_POST["submit"])){
                                                                                                                 class="sppb-form-builder-required">Ин майдончаро пур кунед.</span>
                                                                                                     </div>
                                                                                                     <div class="sppb-form-group sppb-form-builder-field-2">
-                                                                                                        <label for="sppb-form-builder-field-2">Телефон</label><input
+                                                                                                        <label for="sppb-form-builder-field-2">Рақами телефон</label><input
                                                                                                                 type="text"
                                                                                                                 id="sppb-form-builder-field-2"
                                                                                                                 name="phone"
@@ -845,7 +845,7 @@ if (isset($_POST["submit"])){
                                                                                                                 class="sppb-form-builder-required">Ин майдончаро пур кунед.</span>
                                                                                                     </div>
                                                                                                     <div class="sppb-form-group sppb-form-builder-field-3">
-                                                                                                        <label for="sppb-form-builder-field-3">Тема</label><input
+                                                                                                        <label for="sppb-form-builder-field-3">Мавзӯъ</label><input
                                                                                                                 name="title"
                                                                                                                 id="sppb-form-builder-field-3"
                                                                                                                 class="sppb-form-control not-resize"

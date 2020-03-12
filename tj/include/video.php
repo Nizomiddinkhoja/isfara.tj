@@ -41,7 +41,7 @@ if(isset($_POST["submit"])) {
                                                         <div id="sppb-addon-wrapper-1573810048723"
                                                              class="sppb-addon-wrapper">
                                                             <div id="sppb-addon-1573810048723" class="clearfix ">
-                                                                <div class="sppb-addon sppb-addon-module newsberg-card">
+                                                                <div class="sppb-addon sppb-addon-module newsberg-card" style="    padding: 1px 10px;">
                                                                     <div class="sppb-addon-content"><h3
                                                                                 class="sppb-addon-title">Саволҳо?</h3>
                                                                         <div class="mod-sppoll ">
@@ -77,7 +77,7 @@ if(isset($_POST["submit"])) {
                                                                                        class="btn btn-default"
                                                                                        value="Ответить">
                                                                             </form>
-                                                                            <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+                                                                            <div class="header bg-gradient-primary pb-8 pt-md-8" style="    margin: 10px 0 10px 0;">
                                                                                 <?php if($message != ""){?>
 
                                                                                         <?=$message?>
@@ -101,7 +101,7 @@ if(isset($_POST["submit"])) {
                                                              class="sppb-addon-wrapper">
                                                             <div id="sppb-addon-1574066045843" class="clearfix ">
                                                                 <div class="sppb-addon sppb-addon-header heading-arrow sppb-text-left">
-                                                                    <h2 class="sppb-addon-title">Наворҳо</h2>
+                                                                    <h2 class="sppb-addon-title" style="color: #2e2a2b;">Наворҳо</h2>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -125,7 +125,8 @@ if(isset($_POST["submit"])) {
                                                                                                poster="../img/video.png">
                                                                                             <source
                                                                                                 src="../../img/<?= $video[2] ?>"
-                                                                                                type="video/mp4"/>
+                                                                                                type="video/mp4"
+                                                                                                type="video/avi"/>
                                                                                         </video>
                                                                                         <?php
                                                                                     }else{
