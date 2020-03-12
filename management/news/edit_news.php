@@ -12,11 +12,36 @@ if ($_SESSION["is_auth"]) {
         $category_tj= $_POST["category_tj"];
         $short_description_ru = $_POST["short_description_ru"]; $short_description_tj = $_POST["short_description_tj"]; $short_description_en = $_POST["short_description_en"];
         $full_description_ru = $_POST["full_description_ru"]; $full_description_tj = $_POST["full_description_tj"]; $full_description_en = $_POST["full_description_en"];
-        $file = "";
+        $file1 = " "; $file2 = " "; $file3 = " "; $file4 = " "; $file5 = " ";
+       var_dump($_FILES);
         if (isset($_FILES["filename"]) && $_FILES["photo"]["error"] == 0) {
             if(move_uploaded_file($_FILES["filename"]["tmp_name"], "../../img/" . $_FILES["filename"]["name"])) {
-                $file = $_FILES["filename"]["name"];
-                $dbOperation->editNewsImg($id, $file);
+                $file1 = $_FILES["filename"]["name"];
+                $dbOperation->editNewsImg($id, $file1, 1);
+            }
+        }
+        if (isset($_FILES["filename2"]) && $_FILES["photo"]["error"] == 0) {
+            if(move_uploaded_file($_FILES["filename2"]["tmp_name"], "../../img/" . $_FILES["filename2"]["name"])) {
+                $file2 = $_FILES["filename2"]["name"];
+                $dbOperation->editNewsImg($id, $file2, 2);
+            }
+        }
+        if (isset($_FILES["filename3"]) && $_FILES["photo"]["error"] == 0) {
+            if(move_uploaded_file($_FILES["filename3"]["tmp_name"], "../../img/" . $_FILES["filename3"]["name"])) {
+                $file3 = $_FILES["filename3"]["name"];
+                $dbOperation->editNewsImg($id, $file3, 3);
+            }
+        }
+        if (isset($_FILES["filename4"]) && $_FILES["photo"]["error"] == 0) {
+            if(move_uploaded_file($_FILES["filename4"]["tmp_name"], "../../img/" . $_FILES["filename4"]["name"])) {
+                $file4 = $_FILES["filename4"]["name"];
+                $dbOperation->editNewsImg($id, $file4, 4);
+            }
+        }
+        if (isset($_FILES["filename5"]) && $_FILES["photo"]["error"] == 0) {
+            if(move_uploaded_file($_FILES["filename5"]["tmp_name"], "../../img/" . $_FILES["filename5"]["name"])) {
+                $file5 = $_FILES["filename5"]["name"];
+                $dbOperation->editNewsImg($id, $file5, 5);
             }
         }
         try {
@@ -126,12 +151,12 @@ include("../include/navbar.php");
 
                             '?>
                             <?php
-                            $result = $dbOperation->get_Categories_tj();
-                            if(mysqli_num_rows($result)> 0){
-                                while ($row = mysqli_fetch_array($result)){
+                            $result1 = $dbOperation->get_Categories_tj();
+                            if(mysqli_num_rows($result1)> 0){
+                                while ($row1 = mysqli_fetch_array($result1)){
                                     echo
                                         ' 
-                                    <option value="'.$row['id'].'">'.$row['title'].'</option>            
+                                    <option value="'.$row1['id'].'">'.$row1['title'].'</option>            
             ' ;
                                 }
                             }
@@ -139,9 +164,17 @@ include("../include/navbar.php");
 
                         </select>
 
-                        </select>
                       </div>
                     </div>
+          <div class="form-group mb-4">
+              <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+
+                      <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                  </div>
+                  <input type="date" id="date" name="date" class="form-control" value="<?=$row['date']?>">
+              </div>
+          </div>
                   </div>
                 </div>
               </div>
@@ -310,7 +343,7 @@ include("../include/navbar.php");
                   <div class="col">
                       <div class="card shadow">
                           <div class="card-body">
-                              <div class="card-columns">
+                              <div class="card-rows">
 <!--                                  <div class="form-group mb-4">-->
 <!--                                      <div class="input-group input-group-alternative">-->
 
@@ -326,22 +359,13 @@ include("../include/navbar.php");
 <!--                                          </select>-->
 <!--                                      </div>-->
 <!--                                  </div>-->
-                                  <div class="form-group mb-4">
-                                      <div class="input-group input-group-alternative">
-                                          <div class="input-group-prepend">
-                                              
-                                              <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                                          </div>
-                                          <input type="date" id="date" name="date" class="form-control" value="<?=$row['date']?>">
-                                      </div>
-                                  </div>
+
                                   <div class="form-group mb-4">
                                       <div class="input-group input-group-alternative">
                                           <?
-                                          if($row[3]){
-
+                                          if($row[3] != " "){
                                               echo '<img src="../../img/'.$row[3].'" class="col-md-4"><br>
-                                            <a href="delete_img_news.php?id='.$id.'">Удалить</a><br><br>';
+                                            <a href="delete_img_news.php?id='.$id.'&img=1">Удалить</a><br><br>';
 
                                           }else{
                                               echo '<div class="input-group-prepend">
@@ -349,10 +373,85 @@ include("../include/navbar.php");
                                             </div>
                                             <!--  <label>Фото: </label> -->
 
-                                            <input type="file" name="filename" required="required" class="form-control" value="<?=$row_tj[3]?>">
+                                            <input type="file" name="filename" required="required" class="form-control">
+                                        ';
+                                          }
+                                          echo "</div>
+                                  </div>
+                                  <div class=\"form-group mb-4\">
+                                      <div class=\"input-group input-group-alternative\">";
+                                          if($row[4] != " "){
+                                              echo '<img src="../../img/'.$row[4].'" class="col-md-4"><br>
+                                            <a href="delete_img_news.php?id='.$id.'&img=2">Удалить</a><br><br>';
+
+                                          }else{
+                                              echo '<div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                            </div>
+                                            <!--  <label>Фото: </label> -->
+
+                                            <input type="file" name="filename2" class="form-control">
+                                        ';
+                                          }
+
+                                          echo "</div>
+                                  </div>
+                                  <div class=\"form-group mb-4\">
+                                      <div class=\"input-group input-group-alternative\">";
+                                          if($row[5] != " "){
+                                              echo '<img src="../../img/'.$row[5].'" class="col-md-4"><br>
+                                            <a href="delete_img_news.php?id='.$id.'&img=3">Удалить</a><br><br>';
+
+                                          }else{
+                                              echo '<div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                            </div>
+                                            <!--  <label>Фото: </label> -->
+
+                                            <input type="file" name="filename3" class="form-control">
+                                        ';
+                                          }
+
+                                          echo "</div>
+                                  </div>
+                                  <div class=\"form-group mb-4\">
+                                      <div class=\"input-group input-group-alternative\">";
+                                          if($row[6] != " "){
+                                              echo '<img src="../../img/'.$row[6].'" class="col-md-4"><br>
+                                            <a href="delete_img_news.php?id='.$id.'&img=4">Удалить</a><br><br>';
+
+                                          }else{
+                                              echo '<div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                            </div>
+                                            <!--  <label>Фото: </label> -->
+
+                                            <input type="file" name="filename4" class="form-control">
+                                        ';
+                                          }
+
+                                          echo "</div>
+                                  </div>
+                                  <div class=\"form-group mb-4\">
+                                      <div class=\"input-group input-group-alternative\">";
+                                          if($row[7] != " "){
+                                              echo '<img src="../../img/'.$row[7].'" class="col-md-4"><br>
+                                            <a href="delete_img_news.php?id='.$id.'&img=5">Удалить</a><br><br>';
+
+                                          }else{
+                                              echo '<div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                            </div>
+                                            <!--  <label>Фото: </label> -->
+
+                                            <input type="file" name="filename5" class="form-control">
                                         ';
                                           }
                                           ?></div>
+                                  </div>
+                                  <div class="form-group mb-9">
+                                      <div class="input-group input-group-alternative">
+                                      </div>
                                   </div>
                               </div>
                               <div class="text-center">

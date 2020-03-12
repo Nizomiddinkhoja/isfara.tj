@@ -16,16 +16,33 @@ if(isset($_POST["submit"])){
     $date= $_POST["date"];
     $category_tj= $_POST["category_tj"];
     $short_description_ru = $_POST["short_description_ru"]; $short_description_tj = $_POST["short_description_tj"]; $short_description_en = $_POST["short_description_en"];
-$full_description_ru = $_POST["full_description_ru"]; $full_description_tj = $_POST["full_description_tj"]; $full_description_en = $_POST["full_description_en"];
+    $file1 = " "; $file2 = " "; $file3 = " "; $file4 = " "; $file5 = " ";
+    $full_description_ru = $_POST["full_description_ru"]; $full_description_tj = $_POST["full_description_tj"]; $full_description_en = $_POST["full_description_en"];
     try{
         if (isset($_FILES["filename"]) && $_FILES["photo"]["error"] == 0) {
             if(move_uploaded_file($_FILES["filename"]["tmp_name"], "../../img/" . $_FILES["filename"]["name"])) {
-                $file = $_FILES["filename"]["name"];
-
-
-
-
-                    $dbOperation->addNews($category_tj, $date, $file);
+                $file1 = $_FILES["filename"]["name"];
+                if (isset($_FILES["filename2"]) && $_FILES["photo"]["error"] == 0) {
+                    if(move_uploaded_file($_FILES["filename2"]["tmp_name"], "../../img/" . $_FILES["filename2"]["name"])) {
+                        $file2 = $_FILES["filename2"]["name"];
+                    }
+                }
+                if (isset($_FILES["filename3"]) && $_FILES["photo"]["error"] == 0) {
+                    if(move_uploaded_file($_FILES["filename3"]["tmp_name"], "../../img/" . $_FILES["filename3"]["name"])) {
+                        $file3 = $_FILES["filename3"]["name"];
+                    }
+                }
+                if (isset($_FILES["filename4"]) && $_FILES["photo"]["error"] == 0) {
+                    if(move_uploaded_file($_FILES["filename4"]["tmp_name"], "../../img/" . $_FILES["filename4"]["name"])) {
+                        $file4 = $_FILES["filename4"]["name"];
+                    }
+                }
+                if (isset($_FILES["filename5"]) && $_FILES["photo"]["error"] == 0) {
+                    if(move_uploaded_file($_FILES["filename5"]["tmp_name"], "../../img/" . $_FILES["filename5"]["name"])) {
+                        $file5 = $_FILES["filename5"]["name"];
+                    }
+                }
+                    $dbOperation->addNews($category_tj, $date, $file1, $file2, $file3, $file4, $file5);
                     $dbOperation->addNewsText($title_tj, $short_description_tj, $full_description_tj, "tj");
                     $dbOperation->addNewsText($title_ru, $short_description_ru, $full_description_ru, "ru");
                     $dbOperation->addNewsText($title_en, $short_description_en, $full_description_en, "en");
@@ -314,6 +331,42 @@ include("../include/navbar.php");
                                           </div>
                                           <!--  <label>Фото: </label> -->
                                           <input  type="file" name="filename" required="required" class="form-control"  >
+                                      </div>
+                                  </div>
+                                  <div class="form-group mb-4">
+                                      <div class="input-group input-group-alternative">
+                                          <div class="input-group-prepend">
+                                              <span class="input-group-text"><i class="fa fa-file"></i></span>
+                                          </div>
+                                          <!--  <label>Фото: </label> -->
+                                          <input  type="file" name="filename2" class="form-control"  >
+                                      </div>
+                                  </div>
+                                  <div class="form-group mb-4">
+                                      <div class="input-group input-group-alternative">
+                                          <div class="input-group-prepend">
+                                              <span class="input-group-text"><i class="fa fa-file"></i></span>
+                                          </div>
+                                          <!--  <label>Фото: </label> -->
+                                          <input  type="file" name="filename3" class="form-control"  >
+                                      </div>
+                                  </div>
+                                  <div class="form-group mb-4">
+                                      <div class="input-group input-group-alternative">
+                                          <div class="input-group-prepend">
+                                              <span class="input-group-text"><i class="fa fa-file"></i></span>
+                                          </div>
+                                          <!--  <label>Фото: </label> -->
+                                          <input  type="file" name="filename4" class="form-control"  >
+                                      </div>
+                                  </div>
+                                  <div class="form-group mb-4">
+                                      <div class="input-group input-group-alternative">
+                                          <div class="input-group-prepend">
+                                              <span class="input-group-text"><i class="fa fa-file"></i></span>
+                                          </div>
+                                          <!--  <label>Фото: </label> -->
+                                          <input  type="file" name="filename5" class="form-control"  >
                                       </div>
                                   </div>
                               </div>
