@@ -7,4 +7,3 @@ $dbOperation = new DBOperations();
 $dbOperation->deleteNews($id);
 
 header("Location: news.php");
-

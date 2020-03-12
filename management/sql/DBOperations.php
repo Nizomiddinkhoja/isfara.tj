@@ -163,7 +163,7 @@ WHERE l.name='$locale' AND n.status=1 AND cn.name=\"news\" ORDER BY n.id DESC";
 
     public function  get_edit_news_tj($id){
         $com = new DbConnect();
-        $sql = "SELECT n.id, t.title, t.description, n.img, n.img2, n.img3, n.img4, n.img5, t.body, n.date,n.category_id  FROM  news n JOIN texts t ON t.id_menu = n.id 
+        $sql = "SELECT n.id, t.title, t.description, n.img, t.body, n.date,n.category_id, n.img2, n.img3, n.img4, n.img5  FROM  news n JOIN texts t ON t.id_menu = n.id 
 JOIN locale l ON l.id=t.locale 
 JOIN content cn ON cn.id=t.id_content 
 WHERE l.name='tj' AND n.status=1 AND cn.name='news' and n.`id`='".$id."' ORDER BY n.id DESC ";

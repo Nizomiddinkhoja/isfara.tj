@@ -536,6 +536,8 @@ if (isset($_POST['ok'])) {
                 }
             });
         });
+
+        $('.carousel').carousel()
     </script>
 </head>
 <body class="site helix-ultimate com-content view-article layout-blog task-none itemid-115 en-gb ltr sticky-header layout-fluid offcanvas-init offcanvs-position-left">
@@ -579,8 +581,55 @@ if (isset($_POST['ok'])) {
                                                 </span>
                                             </div>
                                         </div>
+
                                         <div class="article-full-image">
-                                            <img src="../img/<?= $news[3] ?>">
+                                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                                <ol class="carousel-indicators">
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                                                </ol>
+                                                <div class="carousel-inner">
+                                                    <?php
+                                                    echo "<div class='carousel-item active'>
+                                                                <img class=\"d-block w-100\" src='../img/$news[3]'>
+                                                            </div>";
+                                                        if ($news[7] != " " and $news[7] != null) {
+                                                            echo "<div class=\"carousel-item\">
+                                                                <img class='d-block w-100' src='../img/$news[7]'>
+                                                            </div>";
+                                                        }
+
+                                                    if ($news[8] != " " and $news[8] != null) {
+                                                        echo "<div class=\"carousel-item \">
+                                                                <img class='d-block w-100' src='../img/$news[8]'>
+                                                            </div>";
+                                                    }
+
+                                                    if ($news[9] != " " and $news[9] != null) {
+                                                        echo "<div class=\"carousel-item \">
+                                                                <img class='d-block w-100' src='../img/$news[9]'>
+                                                            </div>";
+                                                    }
+
+                                                    if ($news[10] != " " and $news[10] != null) {
+                                                        echo "<div class=\"carousel-item \">
+                                                                <img class='d-block w-100' src='../img/$news[10]'>
+                                                            </div>";
+                                                    }
+                                                    ?>
+                                                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                        <span class="sr-only">Пред.</span>
+                                                    </a>
+                                                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                        <span class="sr-only">След.</span>
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -652,28 +701,28 @@ if (isset($_POST['ok'])) {
                                             </div>
                                             <?php
                                             $result = $dbOperations->getCommentById($id);
-                                            While($row=mysqli_fetch_array($result)) {
-                                                ?>
-                                                <div class="col-xl-12 mt-2">
-                                                    <div class="card shadow">
-                                                        <div class="card-header bg-transparent">
-                                                            <div class="row align-items-center">
-                                                                <div class="col-md-8">
-                                                                    <h3 style="color: #1d55c1;">
-                                                                        <?= $row['name'] ?>
-                                                                    </h3>
-                                                                    <h4>
-                                                                        <?= $row['text'] ?></h4>
-                                                                </div>
-                                                                <div class="col-md-4 text-right"
-                                                                     style="font-size: small;">
-                                                                    <p><?= $date ?></p>
+                                                While ($row = mysqli_fetch_array($result)) {
+                                                    ?>
+                                                    <div class="col-xl-12 mt-2">
+                                                        <div class="card shadow">
+                                                            <div class="card-header bg-transparent">
+                                                                <div class="row align-items-center">
+                                                                    <div class="col-md-8">
+                                                                        <h3 style="color: #1d55c1;">
+                                                                            <?= $row['name'] ?>
+                                                                        </h3>
+                                                                        <h4>
+                                                                            <?= $row['text'] ?></h4>
+                                                                    </div>
+                                                                    <div class="col-md-4 text-right"
+                                                                         style="font-size: small;">
+                                                                        <p><?= $date ?></p>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <?php
+                                                    <?php
                                             }
                                             ?>
 

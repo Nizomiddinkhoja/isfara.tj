@@ -380,8 +380,8 @@ include("../include/navbar.php");
                                   </div>
                                   <div class=\"form-group mb-4\">
                                       <div class=\"input-group input-group-alternative\">";
-                                          if($row[4] != " "){
-                                              echo '<img src="../../img/'.$row[4].'" class="col-md-4"><br>
+                                          if($row[7] != " "){
+                                              echo '<img src="../../img/'.$row[7].'" class="col-md-4"><br>
                                             <a href="delete_img_news.php?id='.$id.'&img=2">Удалить</a><br><br>';
 
                                           }else{
@@ -398,8 +398,8 @@ include("../include/navbar.php");
                                   </div>
                                   <div class=\"form-group mb-4\">
                                       <div class=\"input-group input-group-alternative\">";
-                                          if($row[5] != " "){
-                                              echo '<img src="../../img/'.$row[5].'" class="col-md-4"><br>
+                                          if($row[8] != " "){
+                                              echo '<img src="../../img/'.$row[8].'" class="col-md-4"><br>
                                             <a href="delete_img_news.php?id='.$id.'&img=3">Удалить</a><br><br>';
 
                                           }else{
@@ -416,8 +416,8 @@ include("../include/navbar.php");
                                   </div>
                                   <div class=\"form-group mb-4\">
                                       <div class=\"input-group input-group-alternative\">";
-                                          if($row[6] != " "){
-                                              echo '<img src="../../img/'.$row[6].'" class="col-md-4"><br>
+                                          if($row[9] != " "){
+                                              echo '<img src="../../img/'.$row[9].'" class="col-md-4"><br>
                                             <a href="delete_img_news.php?id='.$id.'&img=4">Удалить</a><br><br>';
 
                                           }else{
@@ -434,8 +434,8 @@ include("../include/navbar.php");
                                   </div>
                                   <div class=\"form-group mb-4\">
                                       <div class=\"input-group input-group-alternative\">";
-                                          if($row[7] != " "){
-                                              echo '<img src="../../img/'.$row[7].'" class="col-md-4"><br>
+                                          if($row[10] != " "){
+                                              echo '<img src="../../img/'.$row[10].'" class="col-md-4"><br>
                                             <a href="delete_img_news.php?id='.$id.'&img=5">Удалить</a><br><br>';
 
                                           }else{
